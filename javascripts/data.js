@@ -4,6 +4,14 @@ var githubPrefix = 'https://github.com/scottnm/';
 
 var projectData = [
         {
+            'title': 'Scene Graph',
+            'dates': 'Fall 2015',
+            'description': 'Using OpenGL and GLUT, built a scene graph & model viewer with animations',
+            'src': '',
+            'tools': 'C++, OpenGL, GLUI',
+            'videodemo': 'https://www.youtube.com/watch?v=4P6eWLGV2sc'
+        },
+        {
             'title': 'Torus Shader',
             'dates': 'Fall 2015',
             'description': 'Using glsl shaders, transformed a flat sheet into a torus' +
