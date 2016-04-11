@@ -4,6 +4,14 @@ var githubPrefix = 'https://github.com/scottnm/';
 
 var projectData = [
         {
+            'title': '3D Pong-like',
+            'dates': 'Spring 2016',
+            'description': 'Using Ogre3D, SDL, and Bullet, built a 3D ball game with physics simulation, audio playback, keyboard/mouse controls, a GUI system, and both singleplayer and networked multiplayer game modes.',
+            'src': '',
+            'tools': 'C++, Ogre3D, SDL, Bullet',
+            'videodemo': 'https://www.youtube.com/watch?v=6lbZnm3dlUU'
+        },
+        {
             'title': 'Scene Graph',
             'dates': 'Fall 2015',
             'description': 'Using OpenGL and GLUT, built a scene graph & model viewer with animations',
