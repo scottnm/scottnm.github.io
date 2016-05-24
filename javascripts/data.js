@@ -4,6 +4,14 @@ var githubPrefix = 'https://github.com/scottnm/';
 
 var projectData = [
         {
+            'title': 'Ogre JRPG',
+            'dates': 'Spring 2016',
+            'description': 'Using Ogre3D, developed a JRPG battle system',
+            'src': 'https://github.com/scottnm/ogre-jrpg',
+            'tools': 'C++, Ogre3D, SDL',
+            'videodemo': 'https://www.youtube.com/watch?v=PkhYBI-yMf4'
+        },
+        {
             'title': '3D Pong-like',
             'dates': 'Spring 2016',
             'description': 'Using Ogre3D, SDL, and Bullet, built a 3D ball game with physics simulation, audio playback, keyboard/mouse controls, a GUI system, and both singleplayer and networked multiplayer game modes.',
