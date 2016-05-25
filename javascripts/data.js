@@ -1,6 +1,19 @@
-'use strict';
+(function () {'use strict'; }());
 
 var githubPrefix = 'https://github.com/scottnm/';
+
+var currentWorkData = [
+        {
+            'title': 'Pixitor',
+            'description': 'Using the Processing graphics library, building a pixel art editor',
+            'src': 'https://github.com/scottnm/Pixitor'
+        },
+        {
+            'title': 'Summer Reading Blog',
+            'description': 'Using my summer to read a series of books and write a little about each one of them',
+            'link': 'https://scottnm.github.io/SummerReadingBlog'
+        }
+    ];
 
 var projectData = [
         {
@@ -31,7 +44,7 @@ var projectData = [
             'title': 'Torus Shader',
             'dates': 'Fall 2015',
             'description': 'Using glsl shaders, transformed a flat sheet into a torus' +
-                           ' and replicated phong shading, texture mapping, bump mapping, ' + 
+                           ' and replicated phong shading, texture mapping, bump mapping, ' +
                            'and reflective surfaces.',
             'src': '',
             'tools': 'Glsl, C++',
@@ -73,7 +86,7 @@ var projectData = [
                            'probabilities of a player\'s guess being correct ' +
                            'allowing for a player to make more educated guesses',
             'src': 'http://github.com/gordineerandrew/Go-Fish',
-            'tools': 'Java',
+            'tools': 'Java'
         },
         {
             'title': 'Space Raiders (Game)',
@@ -107,7 +120,7 @@ var projectData = [
                            'post-order traversal and outputs the breadth-' +
                            'first traversal of that tree',
             'src': githubPrefix + 'BinaryTreeBuilder.git',
-            'tools': 'Java',
+            'tools': 'Java'
         },
         {
             'title': 'Neural Network Pong',
