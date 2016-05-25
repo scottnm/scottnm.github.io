@@ -32,21 +32,35 @@
       <p class="tagline">contact me @ <a href="mailto:scottnmunro@gmail.com">scottnmunro@gmail.com</a></p>
       <div id="main" role="main">
         <div class="download-bar">
-        <div class="inner">
-          <!--<a href="https://github.com/scottnm/Homepage/tarball/master" class="download-button tar"><span>Download</span></a>
-          <a href="https://github.com/scottnm/Homepage/zipball/master" class="download-button zip"><span>Download</span></a>-->
-          <a href="files/resume_scott_munro.pdf" download>View Scott Munro's Resume</a><br>
-          <a href="https://github.com/scottnm/" class="code">View Scott Munro on GitHub</a>
-        </div>
-        <span class="blc"></span><span class="trc"></span>
+            <div class="inner">
+              <!--<a href="https://github.com/scottnm/Homepage/tarball/master" class="download-button tar"><span>Download</span></a>
+              <a href="https://github.com/scottnm/Homepage/zipball/master" class="download-button zip"><span>Download</span></a>-->
+              <a href="files/resume_scott_munro.pdf" download>View Scott Munro's Resume</a><br>
+              <a href="https://github.com/scottnm/" class="code">View Scott Munro on GitHub</a>
+            </div>
+            <span class="blc"></span><span class="trc"></span>
         </div>
         <article class="markdown-body">
           <h3>
             <a id="welcome" class="anchor" href="#welcome" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome
           </h3>
-          
-          <p>I am an aspiring Software Engineer and full time Computer Science student at the University of Texas at Austin. Most of the projects' source listed on this site can be found on my Github.</p>
-          
+          <p>
+              I am an aspiring Software Engineer and full time Computer Science student at the University of Texas at Austin. Most of the projects' source listed on this site can be found on my Github.
+          </p>
+          <div id="current-work-container" ng-controller="CurrentWorkController">
+            <h3><a id="current-work" class="anchor" href="#current-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>Current Work</h3>
+            <div class="project-container" ng-repeat="project in current_works">
+              <div class="project-title">{{project.title}}</div>
+              <div class="project-description">{{project.description}}</div>
+              <div class="project-button-bar">
+                <div ng-if="project.src" class="src-code"><a target="_blank" href="{{project.src}}"><button class="btn btn-success btn-darkgithub">Source</button></a></div>
+                <div ng-if="project.videodemo" class="video-demo"><a target="_blank" href="{{project.videodemo}}"><button class="btn btn-success btn-darkgithub">Video Demo</button></a></div>
+                <div ng-if="project.liveapp" class="live-demo"><a target="_blank" href="{{project.liveapp}}"><button class="btn btn-success btn-darkgithub">Live App</button></a></div>
+                <div ng-if="project.doc" class="documentation"><a target="_blank" href="{{project.doc}}"><button class="btn btn-success btn-darkgithub">Documentation</button></a></div>
+                <div ng-if="project.link" class="project-link"><a target="_blank" href="{{project.link}}"><button class="btn btn-success btn-darkgithub">Link</button></a></div>
+              </div>
+            </div>
+          </div>
           <div id="interests-and-skills-container">
 	          <div>
 		          <h3>
@@ -59,7 +73,6 @@
 		          <li>Teaching</li>
 		          </ul>
 	          </div>
-
 	          <div>
 		          <h3>
 		          <a id="skills" class="anchor" href="#skills" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills</h3>
@@ -71,7 +84,6 @@
 		          </ul>
 	          </div>
           </div>
-          
           <div id="projects-container" ng-controller="ProjectController">
             <h3><a id="projects" class="anchor" href="#projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Projects</h3>
             <div class="project-container" ng-repeat="project in projects">
@@ -86,8 +98,6 @@
                 <div ng-if="project.doc" class="documentation"><a target="_blank" href="{{project.doc}}"><button class="btn btn-success btn-darkgithub">Documentation</button></a></div>
               </div>
             </div>
-          </div>
-              
           </div>
         </article>
       </div>
