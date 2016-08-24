@@ -7,11 +7,6 @@ var currentWorkData = [
             'title': 'Pixitor',
             'description': 'Using the Processing graphics library, building a pixel art editor',
             'src': 'https://github.com/scottnm/Pixitor'
-        },
-        {
-            'title': 'Summer Reading Blog',
-            'description': 'Using my summer to read a series of books and write a little about each one of them',
-            'link': 'https://scottnm.github.io/SummerReadingBlog'
         }
     ];
 
