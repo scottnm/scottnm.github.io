@@ -10,7 +10,7 @@ var currentWorkData = [
         }
     ];
 
-var projectData = [
+var tech_projectData = [
         {
             'title': 'Ogre JRPG',
             'dates': 'Spring 2016',
@@ -44,16 +44,6 @@ var projectData = [
             'src': '',
             'tools': 'Glsl, C++',
             'videodemo': 'https://www.youtube.com/watch?v=Z1-I8NzdXhw'
-        },
-        {
-            'title': 'Labyrinth',
-            'dates': 'Fall 2015',
-            'description': 'During a 24 hour gamejam, built a game with procedurally ' +
-                           'generated maps, and a lighting effect where only a certain ' +
-                           'radius of the map away from the character is lit (a torch effect)',
-            'src': '',
-            'tools': 'C#, Unity, Gimp',
-            'videodemo': 'https://www.youtube.com/watch?v=sFsm_7buEzA'
         },
         {
             'title': 'Menger Sponge',
@@ -96,19 +86,6 @@ var projectData = [
             'videodemo': 'https://www.youtube.com/watch?v=gu7laqzLF3Y'
         },
         {
-            'title': 'Top Down Shooter (Game)',
-            'dates': 'Winter 2014',
-            'description': 'Developing the framework/basic mechanics for a ' +
-                           'topdown zombie shooter game. Currently only in ' +
-                           'the prototyping phase, but mechanics such as ' +
-                           'walking, turning, shooting, reloading, ' +
-                           'collision, and enemy generation have already ' +
-                           'been implemented',
-            'src': githubPrefix + 'itchnscratch.git',
-            'tools': 'Python, Pygame',
-            'videodemo': 'https://www.youtube.com/watch?v=RpATc4tDGIs'
-        },
-        {
             'title': 'Binary Tree Builder',
             'dates': 'Fall 2014',
             'description': 'Built a program that builds a binary tree from a ' +
@@ -138,5 +115,31 @@ var projectData = [
             'tools': 'Python, Pygame',
             'videodemo': 'https://www.youtube.com/playlist?list=PL32gaNsQmlxtmjOjnfAN15zOAn-oJbRHV',
             'doc': 'files/evolving-boss-behavior-report.pdf'
+        }
+    ];
+
+var creative_projectData = [
+        {
+            'title': 'Labyrinth',
+            'dates': 'Fall 2015',
+            'description': 'During a 24 hour gamejam, built a game with procedurally ' +
+                           'generated maps, and a lighting effect where only a certain ' +
+                           'radius of the map away from the character is lit (a torch effect)',
+            'src': '',
+            'tools': 'C#, Unity, Gimp',
+            'videodemo': 'https://www.youtube.com/watch?v=sFsm_7buEzA'
+        },
+        {
+            'title': 'Top Down Shooter (Game)',
+            'dates': 'Winter 2014',
+            'description': 'Developing the framework/basic mechanics for a ' +
+                           'topdown zombie shooter game. Currently only in ' +
+                           'the prototyping phase, but mechanics such as ' +
+                           'walking, turning, shooting, reloading, ' +
+                           'collision, and enemy generation have already ' +
+                           'been implemented',
+            'src': githubPrefix + 'itchnscratch.git',
+            'tools': 'Python, Pygame',
+            'videodemo': 'https://www.youtube.com/watch?v=RpATc4tDGIs'
         }
     ];
