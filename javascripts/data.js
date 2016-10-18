@@ -120,6 +120,15 @@ var tech_projectData = [
 
 var creative_projectData = [
         {
+            'title': 'Monkey Muck',
+            'dates': 'Fall 2016',
+            'description': 'Designed, modeled, and textured an original 3D character. ' +
+                           'This character was inspired by horriffic figures from franchises like Silent Hill, ' +
+                           'the Legend of Zelda, and the Thing.',
+            'src': 'https://skfb.ly/UuUG',
+            'tools': 'Maya, Photoshop',
+        },
+        {
             'title': 'Labyrinth',
             'dates': 'Fall 2015',
             'description': 'During a 24 hour gamejam, built a game with procedurally ' +
