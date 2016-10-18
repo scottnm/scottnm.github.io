@@ -4,6 +4,11 @@ var githubPrefix = 'https://github.com/scottnm/';
 
 var currentWorkData = [
         {
+            'title': 'Filibusters',
+            'description': 'A 2D, side-scrolling, arena, shooter, collect-athon game featuring light-hearted political satire and tons of fun',
+            'src': 'https://github.com/nanomachines/filibusters-game'
+        },
+        {
             'title': 'Pixitor',
             'description': 'Using the Processing graphics library, building a pixel art editor',
             'src': 'https://github.com/scottnm/Pixitor'
