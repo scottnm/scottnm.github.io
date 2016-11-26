@@ -9,13 +9,21 @@ var currentWorkData = [
             'src': 'https://github.com/nanomachines/filibusters-game'
         },
         {
-            'title': 'Pixitor',
-            'description': 'Using the Processing graphics library, building a pixel art editor',
-            'src': 'https://github.com/scottnm/Pixitor'
+            'title': 'IK2D',
+            'description': 'A simple IK solver for a 2D, 3-point arm',
+            'src': 'https://github.com/scottnm/IK2D'
         }
     ];
 
 var tech_projectData = [
+        {
+            'title': 'Pixitor',
+            'dates': 'Summer 2016',
+            'description': 'Using the Processing graphics library, building a pixel art editor',
+            'src': 'https://github.com/scottnm/Pixitor',
+            'tools': 'Processing, Java',
+            'videodemo': 'https://youtu.be/mx1m7fG-8IM'
+        },
         {
             'title': 'Ogre JRPG',
             'dates': 'Spring 2016',
