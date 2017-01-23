@@ -4,18 +4,33 @@ var githubPrefix = 'https://github.com/scottnm/';
 
 var currentWorkData = [
         {
-            'title': 'Filibusters',
-            'description': 'A 2D, side-scrolling, arena, shooter, collect-athon game featuring light-hearted political satire and tons of fun',
-            'src': 'https://github.com/nanomachines/filibusters-game'
+            'title': 'Squid Mantazord',
+            'description': 'Battle through a top-down 2D gauntlet of seacreatures to take the throne and become the next Squid Mantazord. Made for Global Game Jam 2017.',
+            'videodemo': 'https://www.youtube.com/watch?v=jA9G3lyVIXA&',
+            'src': 'https://github.com/scottnm/squid-mantazord'
+        },
+        {
+            'title': 'Realchair Racing',
+            'src': 'http://realchairracing.com'
         },
         {
             'title': 'IK2D',
             'description': 'A simple IK solver for a 2D, 3-point arm',
+            'videodemo': 'https://www.youtube.com/watch?v=kuFz9OplPNk',
             'src': 'https://github.com/scottnm/IK2D'
         }
     ];
 
 var tech_projectData = [
+        {
+            'title': 'Filibusters',
+            'dates': 'Fall 2016',
+            'description': 'A 2D, side-scrolling, arena, shooter, collect-athon game featuring light-hearted political satire and tons of fun',
+            'src': 'https://github.com/nanomachines/filibusters-game',
+            'tools': 'Unity2D, C#, Photon Unity Networking',
+            'videodemo': 'https://www.youtube.com/watch?v=MjQtU9LpsCc',
+            'liveapp': 'https://nanomachines.itch.io/filibusters'
+        },
         {
             'title': 'Pixitor',
             'dates': 'Summer 2016',
