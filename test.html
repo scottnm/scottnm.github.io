@@ -1,13 +1,22 @@
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="test.css" />
         <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet" /> 
+        <script type="text/javascript" src="test.js"></script>
     </head>
-    <body>
-        <div id="header-bar">
-            <div id="title-pane">
+    <body class="bg-blue">
+        <header class="bg-blue-darkest">
+            <div id="title-pane" class="section-with-buffer">
                 <h1 id="title-text">Scott Munro</h1>
             </div>
-        </div>
+        </header>
+        <section>
+            <div id="welcome-pane" class="section-with-buffer">
+                <h2 class="section-title">Welcome</h2>
+                <!-- this span is filled with js -->
+                <span id="welcome-text"></span>
+            </div>
+        </section>
     </body>
 </html>
