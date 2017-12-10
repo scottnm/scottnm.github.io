@@ -21,7 +21,7 @@ var currentWorkData = [
         }
     ];
 
-var tech_projectData = [
+var technicalProjectData = [
         {
             'title': 'Filibusters',
             'dates': 'Fall 2016',
@@ -146,7 +146,7 @@ var tech_projectData = [
         }
     ];
 
-var creative_projectData = [
+var creativeProjectData = [
         {
             'title': 'Monkey Muck',
             'dates': 'Fall 2016',
