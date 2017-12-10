@@ -63,12 +63,6 @@ function project_tab_clicked_callback(clicked_tab_id)
         }
 
         var project_id = button_id_to_project_id_map[clicked_tab_id];
-        var project_msg = id_to_project_map[project_id].msg;
-        var projects = document.getElementsByClassName("project");
-        for (var i = 0; i < projects.length; i++)
-        {
-            projects[i].innerText = project_msg;
-        }
         reload_project_data(project_id);
     };
 }
@@ -77,17 +71,11 @@ window.onload =
     function()
     {
         document.getElementById("welcome-text").innerText = welcome_message;
-        var projects = document.getElementsByClassName("project");
-        for (var i = 0; i < projects.length; i++)
-        {
-            projects[i].innerText = welcome_message;
-        }
-
         var project_tabs = document.getElementsByClassName("project-tab");
         for (var i = 0; i < project_tabs.length; i++)
         {
             var project_tab = project_tabs[i];
             project_tab.addEventListener("click", project_tab_clicked_callback(project_tab.id));
         }
-        project_tab_clicked_callback(project_tabs[0].id);
+        project_tab_clicked_callback(project_tabs[0].id)();
     };

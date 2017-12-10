@@ -71,17 +71,17 @@ h2 {
 }
 
 #welcome-text {
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 1em;
 }
 
 #projects-test-text {
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 1em;
 }
 
 .project {
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 1em;
 }
 
@@ -91,6 +91,14 @@ h2 {
 
 #projects-tab-nav {
     padding: 2% 0 0 1%;
+}
+
+#project-paginator {
+    transform: translateY(-5%);
+    display: inline;
+    float: right;
+    margin-right: 2%;
+    color: #ffffff;
 }
 
 .project-tab {
@@ -106,23 +114,41 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
 .tab-active {
     background: #717cb2;
     box-shadow: 0 -6px #303E82;
 }
-
 .tab-active:hover {
     transform-origin: 50% 100%;
     transform: scaleY(1.2);
 }
-
 .tab-inactive {
     background: #303E82;
     box-shadow: 0 -6px #0a164d;
 }
-
 .tab-inactive:hover {
     transform-origin: 50% 100%;
     transform: scaleY(1.2);
+}
+
+#prev-page {
+    margin-right: 10px;
+}
+#next-page {
+    margin-left: 10px;
+}
+.pagination-btn:hover, .pagination-btn:active {
+    color: #0e83cd;
+    background: #fff;
+}
+.pagination-btn {
+    border: 2px solid #fff;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    outline: none;
+    transition: all 0.3s;
+    box-sizing: border-box;
 }
