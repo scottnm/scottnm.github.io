@@ -19,7 +19,7 @@ var technicalProjectData = [
         {
             'title': 'Filibusters',
             'dates': 'Fall 2016',
-            'description': 'A 2D, side-scrolling, arena, shooter, collect-athon game featuring light-hearted political satire and tons of fun',
+            'description': 'A 2D, side-scrolling, arena, shooter, collect-athon game featuring a light-hearted political theme',
             'src': 'https://github.com/nanomachines/filibusters-game',
             'tools': 'Unity, C#, Photon Unity Networking',
             'video': 'https://www.youtube.com/watch?v=MjQtU9LpsCc',
@@ -28,7 +28,7 @@ var technicalProjectData = [
         {
             'title': 'Pixitor',
             'dates': 'Summer 2016',
-            'description': 'Using the Processing graphics library, building a pixel art editor',
+            'description': 'A layer-based pixel art editor built using MIT\'s Processing'
             'src': 'https://github.com/scottnm/Pixitor',
             'tools': 'Processing, Java',
             'video': 'https://www.youtube.com/watch?v=mx1m7fG-8IM'
@@ -36,7 +36,7 @@ var technicalProjectData = [
         {
             'title': 'Ogre JRPG',
             'dates': 'Spring 2016',
-            'description': 'Using Ogre3D, developed a JRPG battle system',
+            'description': 'A JRPG battle system demo using Ogre3D',
             'src': 'https://github.com/scottnm/ogre-jrpg',
             'tools': 'C++, Ogre3D, SDL',
             'video': 'https://www.youtube.com/watch?v=PkhYBI-yMf4'
@@ -44,7 +44,8 @@ var technicalProjectData = [
         {
             'title': '3D Pong-like',
             'dates': 'Spring 2016',
-            'description': 'Using Ogre3D, SDL, and Bullet, built a 3D ball game with physics simulation, audio playback, keyboard/mouse controls, a GUI system, and both singleplayer and networked multiplayer game modes.',
+            'description': 'A 3D ball game with physics simulation, audio playback, keyboard/mouse controls, a GUI ' +
+                           'system, and both singleplayer and networked multiplayer game modes.',
             'src': '',
             'tools': 'C++, Ogre3D, SDL, Bullet',
             'video': 'https://www.youtube.com/watch?v=6lbZnm3dlUU'
@@ -52,7 +53,7 @@ var technicalProjectData = [
         {
             'title': 'Scene Graph',
             'dates': 'Fall 2015',
-            'description': 'Using OpenGL and GLUT, built a scene graph & model viewer with animations',
+            'description': 'A scene graph and model viewer that supports animations',
             'src': '',
             'tools': 'C++, OpenGL, GLUI',
             'video': 'https://www.youtube.com/watch?v=4P6eWLGV2sc'
@@ -70,7 +71,7 @@ var technicalProjectData = [
         {
             'title': 'Menger Sponge',
             'dates': 'Fall 2015',
-            'description': 'Built a menger sponge in openGl that can be fully rotated and have ' +
+            'description': 'An OpenGL menger sponge that can be fully rotated and have ' +
                            'the level of recursion updated on the fly via popup menus',
             'src': '',
             'tools': 'C++, OpenGL, GLUT',
@@ -79,7 +80,7 @@ var technicalProjectData = [
         {
             'title': 'Quick-Radio',
             'dates': 'Fall 2015',
-            'description': 'Using the Spotify and Echonest API, this webapp generates ' +
+            'description': 'A webapp generates that' +
                            'radio-like playlist from multiple artist seeds, and launches ' +
                            'the playlist in the spotify webapp',
             'src': githubPrefix + 'Quick-Radio.git',
@@ -89,7 +90,7 @@ var technicalProjectData = [
         {
             'title': 'Go-Fish Probability Simulation',
             'dates': 'Spring 2015',
-            'description': 'Created a simulation of GoFish that displays the ' +
+            'description': 'A simulation of GoFish that displays the ' +
                            'probabilities of a player\'s guess being correct ' +
                            'allowing for a player to make more educated guesses',
             'src': 'http://github.com/gordineerandrew/Go-Fish',
@@ -98,8 +99,7 @@ var technicalProjectData = [
         {
             'title': 'Space Raiders (Game)',
             'dates': 'Spring 2015',
-            'description': 'Developed a simple ' +
-                           'text-based form of the game Space Invaders, ' +
+            'description': 'A simple text-based form of the game Space Invaders, ' +
                            'called Space Raiders. Implemented simple ' +
                            'mechanics such as collisions, win-lose ' +
                            'conditions, and a simple enemy AI.',
@@ -110,7 +110,7 @@ var technicalProjectData = [
         {
             'title': 'Binary Tree Builder',
             'dates': 'Fall 2014',
-            'description': 'Built a program that builds a binary tree from a ' +
+            'description': 'A program that builds a binary tree from a ' +
                            'post-order traversal and outputs the breadth-' +
                            'first traversal of that tree',
             'src': githubPrefix + 'BinaryTreeBuilder.git',
@@ -119,8 +119,7 @@ var technicalProjectData = [
         {
             'title': 'Neural Network Pong',
             'dates': 'Spring 2014',
-            'description': 'Built classic game Pong, with a trained neural ' +
-                           'network opponent',
+            'description': 'Classic game Pong, with a trained neural network opponent',
             'src': githubPrefix + 'Neuroevolution-Pong.git',
             'tools': 'Python, Pygame',
             'video': 'https://www.youtube.com/watch?v=amNObCushrU'
@@ -128,7 +127,7 @@ var technicalProjectData = [
         {
             'title': 'Evolving Boss Battles',
             'dates': 'Spring 2014',
-            'description': 'Developed a neural network and game environment ' +
+            'description': 'A neural network and game environment ' +
                            'to train a simple boss-character to compete ' +
                            'against a player character, and researched the ' +
                            'effects of different training methods and neural ' +
@@ -144,7 +143,8 @@ var creativeProjectData = [
         {
             'title': 'Squid Mantazord',
             'dates': 'Spring 2017',
-            'description': 'Battle through a top-down 2D gauntlet of seacreatures to take the throne and become the next Squid Mantazord. Made for Global Game Jam 2017.',
+            'description': 'A top-down 2D gauntlet of sea-creatures to take the throne and become the next Squid ' + 
+                           'Mantazord. Made for Global Game Jam 2017.',
             'video': 'https://www.youtube.com/watch?v=jA9G3lyVIXA&',
             'src': 'https://github.com/scottnm/squid-mantazord',
             'tools': 'Unity, C#'
@@ -161,9 +161,10 @@ var creativeProjectData = [
         {
             'title': 'Labyrinth',
             'dates': 'Fall 2015',
-            'description': 'During a 24 hour gamejam, built a game with procedurally ' +
+            'description': 'A game with procedurally ' +
                            'generated maps, and a lighting effect where only a certain ' +
-                           'radius of the map away from the character is lit (a torch effect)',
+                           'radius of the map away from the character is lit (a torch effect). ' +
+                           'Built for the 2015 Fall GameJam',
             'src': '',
             'tools': 'C#, Unity, Gimp',
             'video': 'https://www.youtube.com/watch?v=sFsm_7buEzA'
@@ -171,7 +172,7 @@ var creativeProjectData = [
         {
             'title': 'Top Down Shooter (Game)',
             'dates': 'Winter 2014',
-            'description': 'Developing the framework/basic mechanics for a ' +
+            'description': 'The framework/basic mechanics for a ' +
                            'topdown zombie shooter game. Currently only in ' +
                            'the prototyping phase, but mechanics such as ' +
                            'walking, turning, shooting, reloading, ' +
