@@ -23,26 +23,26 @@ var project_display_count = 3;
 
 function format_project_element(project)
 {
-    var project_element_template =
+    var project_element =
         "<div class=\"project_info_frame\">" +
             "<div class=\"project_title\">" +
-                "<h3>{project_title}</h3>" +
+                `<h3>${project.title}</h3>` +
             "</div>" +
-            "<div class=\"project_dates\">{project_dates}</div>" +
-            "<div class=\"project_description\">{project_description}</div>" +
-            "<div class=\"project_tools\">Tools: {project_tools}</div>" +
-        "</div>" +
-        "{project_video}";
+            `<div class="project_dates">${project.dates}</div>` +
+            `<div class="project_description">${project.description}</div>` +
+            `<div class="project_tools">Tools: ${project.tools}</div>` +
+            "<div class=\"project_links\">" +
+                (project.src ? `<a class="project_src" href=${project.src} target="_blank">src</a>` : "") +
+                (project.liveapp ? `<a class="project_liveapp" href=${project.liveapp} target="_blank">try me</a>` : "") +
+            "</div>" +
+        "</div>";
+    if (project.video)
+    {
+        project_element += `<iframe class="video_embed" src=${project.video.replace("watch?v=", "embed/")} ` +
+                           "gesture=\"media\" allow=\"encrypted-media\" allowfullscreen=\"\"></iframe>";
+    }
 
-    var youtube_element_template = "<iframe class=\"video_embed\" src=\"{src}\" gesture=\"media\" allow=\"encrypted-media\" allowfullscreen=\"\"></iframe>";
-
-    return project_element_template
-        .replace("{project_title}", project.title)
-        .replace("{project_dates}", project.dates)
-        .replace("{project_description}", project.description)
-        .replace("{project_tools}", project.tools)
-        .replace("{project_video}", project.video ?
-            youtube_element_template.replace("{src}", project.video.replace("watch?v=", "embed/")) : "");
+    return project_element;
 }
 
 function populate_project_subpane(project_tab_id)
@@ -91,7 +91,6 @@ function project_tab_clicked_callback(clicked_tab_id)
 
 function prev_page()
 {
-    console.log("prev");
     var start_index = project_tab_table[current_project_tab_id].start_index;
     project_tab_table[current_project_tab_id].start_index = Math.max(start_index - project_display_count, 0);
     populate_project_subpane(current_project_tab_id);
@@ -100,7 +99,6 @@ function prev_page()
 
 function next_page()
 {
-    console.log("next");
     project_tab_table[current_project_tab_id].start_index += project_display_count;
     populate_project_subpane(current_project_tab_id);
     update_pagination_controls();
