@@ -8,6 +8,16 @@ var welcomeMessage = "I am a software engineer who loves video game development,
 
 var technicalProjectData = [
         {
+            'title': 'Tinyrenderer',
+            'dates': 'Spring 2017',
+            'description': 'A cpu-based, didactic renderer project from ' +
+                           '<a href="https://github.com/ssloy/tinyrenderer/wiki" target="_blank">Dmitry V. Sokolov\'s Tiny Renderer</a> ' +
+                           'project.',
+            'src': 'https://github.com/scottnm/tinyrenderer',
+            'image': 'https://instagram.fsnc1-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/20225592_128806921055908_7636245869951451136_n.jpg',
+            'tools': 'C++'
+        },
+        {
             'title': 'IK2D',
             'dates': 'Winter 2016',
             'description': 'A simple IK solver for a 2D, 3-point arm',
@@ -28,7 +38,7 @@ var technicalProjectData = [
         {
             'title': 'Pixitor',
             'dates': 'Summer 2016',
-            'description': 'A layer-based pixel art editor built using MIT\'s Processing'
+            'description': 'A layer-based pixel art editor built using MIT\'s Processing',
             'src': 'https://github.com/scottnm/Pixitor',
             'tools': 'Processing, Java',
             'video': 'https://www.youtube.com/watch?v=mx1m7fG-8IM'
@@ -157,6 +167,7 @@ var creativeProjectData = [
                            'the Legend of Zelda, and the Thing.',
             'liveapp': 'https://skfb.ly/UuUG',
             'tools': 'Maya, Photoshop',
+            'image': 'https://78.media.tumblr.com/c5907892d76dd8b506bea4874a0746e1/tumblr_ogs131Ygqq1veryvyo1_r1_500.gif'
         },
         {
             'title': 'Labyrinth',
