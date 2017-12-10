@@ -1,12 +1,39 @@
+function project_tab_clicked_callback(clicked_tab_id)
+{
+    return function () {
+		var project_tabs = document.getElementsByClassName("project-tab");
+        for (var i = 0; i < project_tabs.length; i++)
+        {
+            var project_tab = project_tabs[i];
+            if (project_tab.id === clicked_tab_id)
+            {
+                project_tab.classList.add("tab-active");
+                project_tab.classList.remove("tab-inactive");
+            }
+            else
+            {
+                project_tab.classList.add("tab-inactive");
+                project_tab.classList.remove("tab-active");
+            }
+        }
+    };
+}
+
 window.onload =
     function()
     {
         var welcome_message="Vivamus ut venenatis magna, eu pharetra enim. Sed consectetur finibus ex, at luctus velit tincidunt nec. Aenean sed diam ligula. Cras massa justo, porta at nulla ut, bibendum consequat sem. Donec elementum cursus efficitur. Phasellus at convallis sem, quis rutrum tellus. Quisque quis semper ligula. Sed eros neque, imperdiet et ante sit amet, tristique pulvinar eros. Mauris posuere quis nunc consectetur fringilla. Ut interdum dui sit amet ligula tincidunt sodales. Curabitur tincidunt nulla sit amet metus pretium, nec scelerisque ipsum efficitur. Phasellus nec enim non est fermentum venenatis sed sed turpis. Suspendisse non nisi nulla.";
         document.getElementById("welcome-text").innerText = welcome_message;
-        var project_elements = document.getElementsByClassName("project");
-        for (var i = 0; i < project_elements.length; i++)
+        var projects = document.getElementsByClassName("project");
+        for (var i = 0; i < projects.length; i++)
         {
-            project_elements[i].innerText = welcome_message;
+            projects[i].innerText = welcome_message;
         }
-        
+
+        var project_tabs = document.getElementsByClassName("project-tab");
+        for (var i = 0; i < project_tabs.length; i++)
+        {
+            var project_tab = project_tabs[i];
+            project_tab.addEventListener("click", project_tab_clicked_callback(project_tab.id));
+        }
     };
