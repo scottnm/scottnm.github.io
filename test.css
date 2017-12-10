@@ -30,16 +30,16 @@ section {
 }
 
 .bg-blue-lightest {
-    background-color: #0a164d;
+    background-color: #717cb2;
 }
 .bg-blue-lighter {
-    background-color: #0a164d;
+    background-color: #495796;
 }
 .bg-blue {
     background-color: #303E82;
 }
 .bg-blue-darker {
-    background-color: #0a164d;
+    background-color: #1c2a6a;
 }
 .bg-blue-darkest {
     background-color: #0a164d;
@@ -60,4 +60,20 @@ h2.section-title {
 #welcome-text {
     color: #FFFFFF;
     font-size: 1em;
+}
+
+#projects-test-text {
+    color: #FFFFFF;
+    font-size: 1em;
+}
+
+#projects-pane {
+}
+
+#projects-subpane {
+    padding: 1%;
+}
+
+#projects-tab-nav {
+    padding: 1%;
 }
