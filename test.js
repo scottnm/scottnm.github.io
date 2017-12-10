@@ -1,70 +1,75 @@
 'use strict';
 
-function project_info(id, data, msg)
+function project_tab(id, projects)
 {
     var info = {};
-    info["id"] = id;
-    info["data"] = data;
-    info["start_index"] = 0;
-    info["msg"] = msg;
+    info.id = id;
+    info.projects = projects;
+    info.start_index = 0;
     return info;
 }
 
 
 var welcome_message = "Vivamus ut venenatis magna, eu pharetra enim. Sed consectetur finibus ex, at luctus velit tincidunt nec. Aenean sed diam ligula. Cras massa justo, porta at nulla ut, bibendum consequat sem. Donec elementum cursus efficitur. Phasellus at convallis sem, quis rutrum tellus. Quisque quis semper ligula. Sed eros neque, imperdiet et ante sit amet, tristique pulvinar eros. Mauris posuere quis nunc consectetur fringilla. Ut interdum dui sit amet ligula tincidunt sodales. Curabitur tincidunt nulla sit amet metus pretium, nec scelerisque ipsum efficitur. Phasellus nec enim non est fermentum venenatis sed sed turpis. Suspendisse non nisi nulla.";
 
-var technical_message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit tortor nulla, non hendrerit magna luctus quis. Vestibulum maximus sodales ligula, in suscipit mauris fringilla ac. Nunc non fringilla dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempus pharetra magna, ut pulvinar arcu finibus a. Vestibulum semper nisl leo, eget feugiat enim finibus id. Aenean scelerisque leo non odio faucibus, at gravida nulla pulvinar. Ut sodales ex condimentum facilisis semper. In sodales sem tellus, at malesuada turpis accumsan vitae. Suspendisse ac suscipit nunc, a pretium nibh. Vivamus sed nisl at dui ultricies eleifend non ut nulla.";
-
-var creative_message = "Duis ac quam eget ligula accumsan luctus non a elit. Suspendisse potenti. Duis vestibulum bibendum tellus, vel egestas metus gravida sit amet. Aliquam risus est, commodo vel sapien eget, suscipit porttitor quam. Sed vehicula at lectus a feugiat. Donec quis vehicula sem. Suspendisse eget est a turpis tristique mollis. Maecenas ligula ante, aliquam dapibus dignissim quis, laoreet in tellus. Suspendisse aliquet metus a est hendrerit, et tincidunt lectus varius. Sed condimentum risus purus, nec sollicitudin ante venenatis vel.";
-
-var button_id_to_project_id_map = {"technical-btn": "technical", "creative-btn": "creative"};
-var id_to_project_map = {
-    "technical": project_info("technical", technicalProjectData, technical_message), 
-    "creative": project_info("creative", creativeProjectData, creative_message)
+var button_id_to_project_tab_id_map = {"technical-btn": "technical", "creative-btn": "creative"};
+var project_tab_table = {
+    "technical": project_tab("technical", technicalProjectData),
+    "creative": project_tab("creative", creativeProjectData)
     };
 
-var current_project_id = null;
+var current_project_tab_id = null;
 var project_display_count = 3;
 
-function reload_project_data(project_id)
+function populate_project_subpane(project_tab_id)
 {
-    var project_template = "<section class=\"{section_color}\"><div class=\"project section-with-small-buffer\">{project_data}</div></section>"
-    var project_subpane_elements = "";
-    var project = id_to_project_map[project_id];
-    var project_data = project.data;
+    var project_container_template = "<section class=\"{section_color}\"><div class=\"project section-with-small-buffer\">{project_data}</div></section>"
+    var project_element_template = "<div class=\"project_title\"><h3>{project_title}</h3></div>" +
+                                "<div class=\"project_dates\">" +
+                                "{project_dates}</div><div class=\"project_description\">" +
+                                "{project_description}</div><div class=\"project_tools\">Tools: {project_tools}</div></div>"
 
-    for (var i = project.start_index;
-         i < Math.min(project_data.length, project_display_count + project.start_index);
-         i++)
+    var project_subpane_elements_string = "";
+    var project_tab = project_tab_table[project_tab_id];
+
+    for (var project_index = project_tab.start_index;
+         project_index < Math.min(project_tab.projects.length, project_display_count + project_tab.start_index);
+         project_index++)
     {
-        project_subpane_elements += project_template
-            .replace("{section_color}", i % 2 == 0 ? "bg-blue-lightest" : "bg-blue-lighter")
-            .replace("{project_data}", JSON.stringify(project_data[i]));
+        var project = project_tab.projects[project_index];
+        var project_element_string = project_element_template
+            .replace("{project_title}", project.title)
+            .replace("{project_dates}", project.dates)
+            .replace("{project_description}", project.description)
+            .replace("{project_tools}", project.tools)
+        project_subpane_elements_string += project_container_template
+            .replace("{section_color}", project_index % 2 == 0 ? "bg-blue-lightest" : "bg-blue-lighter")
+            .replace("{project_data}", project_element_string);
     }
-    document.getElementById("projects-subpane").innerHTML = project_subpane_elements;
+    document.getElementById("projects-subpane").innerHTML = project_subpane_elements_string;
 }
 
 function project_tab_clicked_callback(clicked_tab_id)
 {
     return function () {
-		var project_tabs = document.getElementsByClassName("project-tab");
-        for (var i = 0; i < project_tabs.length; i++)
+		var project_tab_elements = document.getElementsByClassName("project-tab");
+        for (var i = 0; i < project_tab_elements.length; i++)
         {
-            var project_tab = project_tabs[i];
-            if (project_tab.id === clicked_tab_id)
+            var project_tab_element = project_tab_elements[i];
+            if (project_tab_element.id === clicked_tab_id)
             {
-                project_tab.classList.add("tab-active");
-                project_tab.classList.remove("tab-inactive");
+                project_tab_element.classList.add("tab-active");
+                project_tab_element.classList.remove("tab-inactive");
             }
             else
             {
-                project_tab.classList.add("tab-inactive");
-                project_tab.classList.remove("tab-active");
+                project_tab_element.classList.add("tab-inactive");
+                project_tab_element.classList.remove("tab-active");
             }
         }
 
-        current_project_id = button_id_to_project_id_map[clicked_tab_id];
-        reload_project_data(current_project_id);
+        current_project_tab_id = button_id_to_project_tab_id_map[clicked_tab_id];
+        populate_project_subpane(current_project_tab_id);
         update_pagination_controls();
     };
 }
@@ -72,23 +77,23 @@ function project_tab_clicked_callback(clicked_tab_id)
 function prev_page()
 {
     console.log("prev");
-    var start_index = id_to_project_map[current_project_id].start_index;
-    id_to_project_map[current_project_id].start_index = Math.max(start_index - project_display_count, 0);
-    reload_project_data(current_project_id);
+    var start_index = project_tab_table[current_project_tab_id].start_index;
+    project_tab_table[current_project_tab_id].start_index = Math.max(start_index - project_display_count, 0);
+    populate_project_subpane(current_project_tab_id);
     update_pagination_controls();
 }
 
 function next_page()
 {
     console.log("next");
-    id_to_project_map[current_project_id].start_index += project_display_count;
-    reload_project_data(current_project_id);
+    project_tab_table[current_project_tab_id].start_index += project_display_count;
+    populate_project_subpane(current_project_tab_id);
     update_pagination_controls();
 }
 
 function update_pagination_controls()
 {
-    var start_index = id_to_project_map[current_project_id].start_index;
+    var start_index = project_tab_table[current_project_tab_id].start_index;
     var prev_page_e = document.getElementById("prev-page");
     if (start_index === 0)
     {
@@ -101,7 +106,7 @@ function update_pagination_controls()
         prev_page_e.classList.remove("hide");
     }
 
-    var end_index = id_to_project_map[current_project_id].data.length - 1;
+    var end_index = project_tab_table[current_project_tab_id].projects.length - 1;
     var next_page_e = document.getElementById("next-page");
     if (start_index + project_display_count >= end_index)
     {
@@ -124,13 +129,13 @@ window.onload =
     function()
     {
         document.getElementById("welcome-text").innerText = welcome_message;
-        var project_tabs = document.getElementsByClassName("project-tab");
-        for (var i = 0; i < project_tabs.length; i++)
+        var project_tab_elements = document.getElementsByClassName("project-tab");
+        for (var i = 0; i < project_tab_elements.length; i++)
         {
-            var project_tab = project_tabs[i];
-            project_tab.addEventListener("click", project_tab_clicked_callback(project_tab.id));
+            var project_tab_element = project_tab_elements[i];
+            project_tab_element.addEventListener("click", project_tab_clicked_callback(project_tab_element.id));
         }
-        project_tab_clicked_callback(project_tabs[0].id)();
+        project_tab_clicked_callback(project_tab_elements[0].id)();
         update_pagination_controls();
 
         document.getElementById("prev-page").addEventListener("click", prev_page);
