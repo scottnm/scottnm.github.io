@@ -85,13 +85,44 @@ h2 {
     font-size: 1em;
 }
 
-#projects-pane {
-}
-
 #projects-subpane {
-    padding: 1%;
+    padding: 0 1% 1% 1%;
 }
 
 #projects-tab-nav {
-    padding: 1%;
+    padding: 2% 0 0 1%;
+}
+
+.project-tab {
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 16px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tab-active {
+    background: #717cb2;
+    box-shadow: 0 -6px #303E82;
+}
+
+.tab-active:hover {
+    transform-origin: 50% 100%;
+    transform: scaleY(1.2);
+}
+
+.tab-inactive {
+    background: #303E82;
+    box-shadow: 0 -6px #0a164d;
+}
+
+.tab-inactive:hover {
+    transform-origin: 50% 100%;
+    transform: scaleY(1.2);
 }
