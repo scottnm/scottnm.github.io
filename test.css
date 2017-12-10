@@ -7,9 +7,14 @@ h2 {
     padding: 0;
 }
 
-#title-pane {
+#header-pane {
     display: flex;
     justify-content: space-between;
+    font-size: 1.5em;
+}
+
+#header-with-links-container {
+    width: 75%;
 }
 
 #header-overlay {
@@ -69,16 +74,12 @@ section {
     background-color: #0a164d;
 }
 
-#title-pane {
-    font-size: 1.5em;
-}
-
 h2 {
     font-size: 1.25em;
 }
 
 .section-title,
-#title-pane {
+#header-pane {
     font-family: 'Bungee', cursive;
     color: #717CB2;
 }
