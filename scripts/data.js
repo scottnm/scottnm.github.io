@@ -6,7 +6,7 @@ var currentWorkData = [
         {
             'title': 'Squid Mantazord',
             'description': 'Battle through a top-down 2D gauntlet of seacreatures to take the throne and become the next Squid Mantazord. Made for Global Game Jam 2017.',
-            'videodemo': 'https://www.youtube.com/watch?v=jA9G3lyVIXA&',
+            'video': 'https://www.youtube.com/watch?v=jA9G3lyVIXA&',
             'src': 'https://github.com/scottnm/squid-mantazord'
         },
         {
@@ -16,7 +16,7 @@ var currentWorkData = [
         {
             'title': 'IK2D',
             'description': 'A simple IK solver for a 2D, 3-point arm',
-            'videodemo': 'https://www.youtube.com/watch?v=kuFz9OplPNk',
+            'video': 'https://www.youtube.com/watch?v=kuFz9OplPNk',
             'src': 'https://github.com/scottnm/IK2D'
         }
     ];
@@ -28,7 +28,7 @@ var technicalProjectData = [
             'description': 'A 2D, side-scrolling, arena, shooter, collect-athon game featuring light-hearted political satire and tons of fun',
             'src': 'https://github.com/nanomachines/filibusters-game',
             'tools': 'Unity2D, C#, Photon Unity Networking',
-            'videodemo': 'https://www.youtube.com/watch?v=MjQtU9LpsCc',
+            'video': 'https://www.youtube.com/watch?v=MjQtU9LpsCc',
             'liveapp': 'https://nanomachines.itch.io/filibusters'
         },
         {
@@ -37,7 +37,7 @@ var technicalProjectData = [
             'description': 'Using the Processing graphics library, building a pixel art editor',
             'src': 'https://github.com/scottnm/Pixitor',
             'tools': 'Processing, Java',
-            'videodemo': 'https://youtu.be/mx1m7fG-8IM'
+            'video': 'https://www.youtube.com/watch?v=mx1m7fG-8IM'
         },
         {
             'title': 'Ogre JRPG',
@@ -45,7 +45,7 @@ var technicalProjectData = [
             'description': 'Using Ogre3D, developed a JRPG battle system',
             'src': 'https://github.com/scottnm/ogre-jrpg',
             'tools': 'C++, Ogre3D, SDL',
-            'videodemo': 'https://www.youtube.com/watch?v=PkhYBI-yMf4'
+            'video': 'https://www.youtube.com/watch?v=PkhYBI-yMf4'
         },
         {
             'title': '3D Pong-like',
@@ -53,7 +53,7 @@ var technicalProjectData = [
             'description': 'Using Ogre3D, SDL, and Bullet, built a 3D ball game with physics simulation, audio playback, keyboard/mouse controls, a GUI system, and both singleplayer and networked multiplayer game modes.',
             'src': '',
             'tools': 'C++, Ogre3D, SDL, Bullet',
-            'videodemo': 'https://www.youtube.com/watch?v=6lbZnm3dlUU'
+            'video': 'https://www.youtube.com/watch?v=6lbZnm3dlUU'
         },
         {
             'title': 'Scene Graph',
@@ -61,7 +61,7 @@ var technicalProjectData = [
             'description': 'Using OpenGL and GLUT, built a scene graph & model viewer with animations',
             'src': '',
             'tools': 'C++, OpenGL, GLUI',
-            'videodemo': 'https://www.youtube.com/watch?v=4P6eWLGV2sc'
+            'video': 'https://www.youtube.com/watch?v=4P6eWLGV2sc'
         },
         {
             'title': 'Torus Shader',
@@ -71,7 +71,7 @@ var technicalProjectData = [
                            'and reflective surfaces.',
             'src': '',
             'tools': 'Glsl, C++',
-            'videodemo': 'https://www.youtube.com/watch?v=Z1-I8NzdXhw'
+            'video': 'https://www.youtube.com/watch?v=Z1-I8NzdXhw'
         },
         {
             'title': 'Menger Sponge',
@@ -80,7 +80,7 @@ var technicalProjectData = [
                            'the level of recursion updated on the fly via popup menus',
             'src': '',
             'tools': 'C++, OpenGL, GLUT',
-            'videodemo': 'https://www.youtube.com/watch?v=vYaWWKJ4s1M'
+            'video': 'https://www.youtube.com/watch?v=vYaWWKJ4s1M'
         },
         {
             'title': 'Quick-Radio',
@@ -111,7 +111,7 @@ var technicalProjectData = [
                            'conditions, and a simple enemy AI.',
             'src': githubPrefix + 'Space-Raiders.git',
             'tools': 'C++, Ncurses',
-            'videodemo': 'https://www.youtube.com/watch?v=gu7laqzLF3Y'
+            'video': 'https://www.youtube.com/watch?v=gu7laqzLF3Y'
         },
         {
             'title': 'Binary Tree Builder',
@@ -129,7 +129,7 @@ var technicalProjectData = [
                            'network opponent',
             'src': githubPrefix + 'Neuroevolution-Pong.git',
             'tools': 'Python, Pygame',
-            'videodemo': 'https://www.youtube.com/watch?v=amNObCushrU'
+            'video': 'https://www.youtube.com/watch?v=amNObCushrU'
         },
         {
             'title': 'Evolving Boss Battles',
@@ -141,7 +141,7 @@ var technicalProjectData = [
                            'network structures',
             'src': githubPrefix + 'Evolving-Boss-Battles.git',
             'tools': 'Python, Pygame',
-            'videodemo': 'https://www.youtube.com/playlist?list=PL32gaNsQmlxtmjOjnfAN15zOAn-oJbRHV',
+            'video': 'https://www.youtube.com/playlist?list=PL32gaNsQmlxtmjOjnfAN15zOAn-oJbRHV',
             'doc': 'files/evolving-boss-behavior-report.pdf'
         }
     ];
@@ -164,7 +164,7 @@ var creativeProjectData = [
                            'radius of the map away from the character is lit (a torch effect)',
             'src': '',
             'tools': 'C#, Unity, Gimp',
-            'videodemo': 'https://www.youtube.com/watch?v=sFsm_7buEzA'
+            'video': 'https://www.youtube.com/watch?v=sFsm_7buEzA'
         },
         {
             'title': 'Top Down Shooter (Game)',
@@ -177,6 +177,6 @@ var creativeProjectData = [
                            'been implemented',
             'src': githubPrefix + 'itchnscratch.git',
             'tools': 'Python, Pygame',
-            'videodemo': 'https://www.youtube.com/watch?v=RpATc4tDGIs'
+            'video': 'https://www.youtube.com/watch?v=RpATc4tDGIs'
         }
     ];
