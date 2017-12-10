@@ -32,6 +32,10 @@ section {
     width: 100%;
 }
 
+.defer {
+    display: none;
+}
+
 .hide {
     visibility: hidden;
 }
