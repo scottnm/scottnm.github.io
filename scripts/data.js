@@ -2,32 +2,26 @@
 
 var githubPrefix = 'https://github.com/scottnm/';
 
-var currentWorkData = [
-        {
-            'title': 'Squid Mantazord',
-            'description': 'Battle through a top-down 2D gauntlet of seacreatures to take the throne and become the next Squid Mantazord. Made for Global Game Jam 2017.',
-            'video': 'https://www.youtube.com/watch?v=jA9G3lyVIXA&',
-            'src': 'https://github.com/scottnm/squid-mantazord'
-        },
-        {
-            'title': 'Realchair Racing',
-            'src': 'http://realchairracing.com'
-        },
-        {
-            'title': 'IK2D',
-            'description': 'A simple IK solver for a 2D, 3-point arm',
-            'video': 'https://www.youtube.com/watch?v=kuFz9OplPNk',
-            'src': 'https://github.com/scottnm/IK2D'
-        }
-    ];
+var welcomeMessage = "I am a software engineer who loves video game development, punk music, and poorly quoting old " + 
+                     "episodes of the Simpsons. Most of the projects' source listed on this site can be found on my " +
+                     "Github. This page is more or less just a dumping ground of things I've created.";
 
 var technicalProjectData = [
+        {
+            'title': 'IK2D',
+            'dates': 'Winter 2016',
+            'description': 'A simple IK solver for a 2D, 3-point arm',
+            'src': 'https://github.com/scottnm/IK2D',
+            'video': 'https://www.youtube.com/watch?v=kuFz9OplPNk',
+            'tools': 'Unity, C#',
+            'video': 'https://www.youtube.com/watch?v=kuFz9OplPNk'
+        },
         {
             'title': 'Filibusters',
             'dates': 'Fall 2016',
             'description': 'A 2D, side-scrolling, arena, shooter, collect-athon game featuring light-hearted political satire and tons of fun',
             'src': 'https://github.com/nanomachines/filibusters-game',
-            'tools': 'Unity2D, C#, Photon Unity Networking',
+            'tools': 'Unity, C#, Photon Unity Networking',
             'video': 'https://www.youtube.com/watch?v=MjQtU9LpsCc',
             'liveapp': 'https://nanomachines.itch.io/filibusters'
         },
@@ -148,12 +142,20 @@ var technicalProjectData = [
 
 var creativeProjectData = [
         {
+            'title': 'Squid Mantazord',
+            'dates': 'Spring 2017',
+            'description': 'Battle through a top-down 2D gauntlet of seacreatures to take the throne and become the next Squid Mantazord. Made for Global Game Jam 2017.',
+            'video': 'https://www.youtube.com/watch?v=jA9G3lyVIXA&',
+            'src': 'https://github.com/scottnm/squid-mantazord',
+            'tools': 'Unity, C#'
+        },
+        {
             'title': 'Monkey Muck',
             'dates': 'Fall 2016',
             'description': 'Designed, modeled, and textured an original 3D character. ' +
                            'This character was inspired by horriffic figures from franchises like Silent Hill, ' +
                            'the Legend of Zelda, and the Thing.',
-            'src': 'https://skfb.ly/UuUG',
+            'liveapp': 'https://skfb.ly/UuUG',
             'tools': 'Maya, Photoshop',
         },
         {
