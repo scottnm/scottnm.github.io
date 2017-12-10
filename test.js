@@ -21,13 +21,33 @@ var project_tab_table = {
 var current_project_tab_id = null;
 var project_display_count = 3;
 
+function format_project_element(project)
+{
+    var project_element_template =
+        "<div class=\"project_info_frame\">" +
+            "<div class=\"project_title\">" +
+                "<h3>{project_title}</h3>" +
+            "</div>" +
+            "<div class=\"project_dates\">{project_dates}</div>" +
+            "<div class=\"project_description\">{project_description}</div>" +
+            "<div class=\"project_tools\">Tools: {project_tools}</div>" +
+        "</div>" +
+        "{project_video}";
+
+    var youtube_element_template = "<iframe class=\"video_embed\" src=\"{src}\" gesture=\"media\" allow=\"encrypted-media\" allowfullscreen=\"\"></iframe>";
+
+    return project_element_template
+        .replace("{project_title}", project.title)
+        .replace("{project_dates}", project.dates)
+        .replace("{project_description}", project.description)
+        .replace("{project_tools}", project.tools)
+        .replace("{project_video}", project.video ?
+            youtube_element_template.replace("{src}", project.video.replace("watch?v=", "embed/")) : "");
+}
+
 function populate_project_subpane(project_tab_id)
 {
     var project_container_template = "<section class=\"{section_color}\"><div class=\"project section-with-small-buffer\">{project_data}</div></section>"
-    var project_element_template = "<div class=\"project_title\"><h3>{project_title}</h3></div>" +
-                                "<div class=\"project_dates\">" +
-                                "{project_dates}</div><div class=\"project_description\">" +
-                                "{project_description}</div><div class=\"project_tools\">Tools: {project_tools}</div></div>"
 
     var project_subpane_elements_string = "";
     var project_tab = project_tab_table[project_tab_id];
@@ -37,14 +57,9 @@ function populate_project_subpane(project_tab_id)
          project_index++)
     {
         var project = project_tab.projects[project_index];
-        var project_element_string = project_element_template
-            .replace("{project_title}", project.title)
-            .replace("{project_dates}", project.dates)
-            .replace("{project_description}", project.description)
-            .replace("{project_tools}", project.tools)
         project_subpane_elements_string += project_container_template
             .replace("{section_color}", project_index % 2 == 0 ? "bg-blue-lightest" : "bg-blue-lighter")
-            .replace("{project_data}", project_element_string);
+            .replace("{project_data}", format_project_element(project));
     }
     document.getElementById("projects-subpane").innerHTML = project_subpane_elements_string;
 }
