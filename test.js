@@ -10,8 +10,6 @@ function project_tab(id, projects)
 }
 
 
-var welcome_message = "Vivamus ut venenatis magna, eu pharetra enim. Sed consectetur finibus ex, at luctus velit tincidunt nec. Aenean sed diam ligula. Cras massa justo, porta at nulla ut, bibendum consequat sem. Donec elementum cursus efficitur. Phasellus at convallis sem, quis rutrum tellus. Quisque quis semper ligula. Sed eros neque, imperdiet et ante sit amet, tristique pulvinar eros. Mauris posuere quis nunc consectetur fringilla. Ut interdum dui sit amet ligula tincidunt sodales. Curabitur tincidunt nulla sit amet metus pretium, nec scelerisque ipsum efficitur. Phasellus nec enim non est fermentum venenatis sed sed turpis. Suspendisse non nisi nulla.";
-
 var button_id_to_project_tab_id_map = {"technical-btn": "technical", "creative-btn": "creative"};
 var project_tab_table = {
     "technical": project_tab("technical", technicalProjectData),
@@ -142,7 +140,7 @@ function update_pagination_controls()
 window.onload =
     function()
     {
-        document.getElementById("welcome-text").innerText = welcome_message;
+        document.getElementById("welcome-text").innerText = welcomeMessage;
         var project_tab_elements = document.getElementsByClassName("project-tab");
         for (var i = 0; i < project_tab_elements.length; i++)
         {
