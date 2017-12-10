@@ -40,6 +40,10 @@ function format_project_element(project)
         project_element += `<iframe class="video_embed" src=${project.video.replace("watch?v=", "embed/")} ` +
                            "gesture=\"media\" allow=\"encrypted-media\" allowfullscreen=\"\"></iframe>";
     }
+    else if (project.image)
+    {
+        project_element += `<img class="image_embed" src=${project.image} />`;
+    }
 
     return project_element;
 }
@@ -134,7 +138,7 @@ function update_pagination_controls()
 
     document.getElementById("project-element-range").innerText = " {start} ... {end} "
         .replace("{start}", start_index)
-        .replace("{end}", Math.min(end_index, start_index + project_display_count));
+        .replace("{end}", Math.min(end_index, start_index + project_display_count - 1));
 }
 
 window.onload =

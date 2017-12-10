@@ -188,3 +188,8 @@ h2 {
     border: 0;
     float: right;
 }
+
+.image_embed {
+    /*width: 150px;*/
+    height: 150px;
+}
