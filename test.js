@@ -89,10 +89,32 @@ function next_page()
 function update_pagination_controls()
 {
     var start_index = id_to_project_map[current_project_id].start_index;
-    var end_index = id_to_project_map[current_project_id].data.length - 1;
+    var prev_page_e = document.getElementById("prev-page");
+    if (start_index === 0)
+    {
+        prev_page_e.disabled = true;
+        prev_page_e.classList.add("hide");
+    }
+    else
+    {
+        prev_page_e.disabled = false;
+        prev_page_e.classList.remove("hide");
+    }
 
-    document.getElementById("prev-page").disabled = start_index === 0;
-    document.getElementById("next-page").disabled = start_index + project_display_count >= end_index;
+    var end_index = id_to_project_map[current_project_id].data.length - 1;
+    var next_page_e = document.getElementById("next-page");
+    if (start_index + project_display_count >= end_index)
+    {
+        next_page_e.disabled = true;
+        next_page_e.classList.add("hide");
+    }
+    else
+    {
+        next_page_e.disabled = false;
+        next_page_e.classList.remove("hide");
+    }
+
+
     document.getElementById("project-element-range").innerText = " {start} ... {end} "
         .replace("{start}", start_index)
         .replace("{end}", Math.min(end_index, start_index + project_display_count));

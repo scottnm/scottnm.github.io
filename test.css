@@ -23,6 +23,10 @@ section {
     width: 100%;
 }
 
+.hide {
+    visibility: hidden;
+}
+
 .section-with-buffer {
     margin: 0% 15%;
     padding-top: 1%;
