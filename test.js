@@ -39,7 +39,7 @@ function reload_project_data(project_id)
     {
         project_subpane_elements += project_template
             .replace("{section_color}", i % 2 == 0 ? "bg-blue-lightest" : "bg-blue-lighter")
-            .replace("{project_data}", project.msg);//JSON.stringify(project_data));
+            .replace("{project_data}", JSON.stringify(project_data[i]));
     }
     document.getElementById("projects-subpane").innerHTML = project_subpane_elements;
 }
@@ -74,6 +74,7 @@ function prev_page()
     console.log("prev");
     var start_index = id_to_project_map[current_project_id].start_index;
     id_to_project_map[current_project_id].start_index = Math.max(start_index - project_display_count, 0);
+    reload_project_data(current_project_id);
     update_pagination_controls();
 }
 
@@ -81,6 +82,7 @@ function next_page()
 {
     console.log("next");
     id_to_project_map[current_project_id].start_index += project_display_count;
+    reload_project_data(current_project_id);
     update_pagination_controls();
 }
 
