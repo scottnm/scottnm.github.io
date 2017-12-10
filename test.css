@@ -145,10 +145,14 @@ h2 {
 #next-page {
     margin-left: 10px;
 }
+.project_src:hover, .project_src:active,
+.project_liveapp:hover, .project_liveapp:active,
 .pagination-btn:hover, .pagination-btn:active {
     color: #0e83cd;
     background: #fff;
 }
+.project_src,
+.project_liveapp,
 .pagination-btn {
     border: 2px solid #fff;
     color: #fff;
@@ -159,6 +163,12 @@ h2 {
     outline: none;
     transition: all 0.3s;
     box-sizing: border-box;
+}
+
+.project_src, .project_liveapp {
+    margin: 1%;
+    padding: 1%;
+    text-decoration: none;
 }
 
 .project_dates {
