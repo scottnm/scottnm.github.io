@@ -1,0 +1,18 @@
+body {
+    background-color: #303E82;
+    margin: 0;
+}
+
+#header-bar {
+    margin: 0;
+    background-color: #0A164D;
+    width: 100%;
+}
+
+#title-pane {
+    font-family: 'Bungee', cursive;
+    font-size: 1.5em;
+/*    color: #AAAAAA; */
+    color: #717CB2;
+    margin: 0% 15%;
+}
