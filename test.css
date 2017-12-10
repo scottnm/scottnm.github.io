@@ -146,12 +146,14 @@ h2 {
     margin-left: 10px;
 }
 .project_src:hover, .project_src:active,
+.project_doc:hover, .project_doc:active,
 .project_liveapp:hover, .project_liveapp:active,
 .pagination-btn:hover, .pagination-btn:active {
     color: #0e83cd;
     background: #fff;
 }
 .project_src,
+.project_doc,
 .project_liveapp,
 .pagination-btn {
     border: 2px solid #fff;
@@ -165,7 +167,7 @@ h2 {
     box-sizing: border-box;
 }
 
-.project_src, .project_liveapp {
+.project_src, .project_doc, .project_liveapp {
     margin: 1%;
     padding: 1%;
     text-decoration: none;
