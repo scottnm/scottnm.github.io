@@ -1,141 +1,54 @@
-<!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
-  <link rel="stylesheet" href="stylesheets/github-dark.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" /> 
-  <link rel="stylesheet" href="stylesheets/custom.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="scripts/script.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
-  <script type="text/javascript" src="scripts/data.js"></script>
-  <script type="text/javascript" src="scripts/content.js"></script>
-  <title>Scott Munro</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="stylesheet" href="styles.css" />
+        <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet" /> 
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" />
+        <script type="text/javascript" src="data.js"></script>
+        <script type="text/javascript" src="script.js"></script>
 
-</head>
-
-<body ng-app="ngHomepageApp">
-
-  <div class="wrapper">
-    <header>
-      <h1 class="title">Scott Munro</h1>
-    </header>
-    <div id="container">
-      <p class="tagline">contact me @ <a href="mailto:scottnmunro@gmail.com">scottnmunro@gmail.com</a></p>
-      <div id="main" role="main">
-        <div class="download-bar">
-            <div class="inner">
-              <!--<a href="https://github.com/scottnm/Homepage/tarball/master" class="download-button tar"><span>Download</span></a>
-              <a href="https://github.com/scottnm/Homepage/zipball/master" class="download-button zip"><span>Download</span></a>-->
-              <a href="files/resume_scott_munro.pdf" download>Resume</a>,  
-              <a href="https://www.github.com/scottnm/">GitHub</a>, 
-              <a href="https://www.linkedin.com/in/scott-munro">LinkedIn</a>
-            </div>
-            <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
-          <h3>
-            <a id="welcome" class="anchor" href="#welcome" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome
-          </h3>
-          <p>
-          I am an enthusiastic Senior Computer Science student and (future) software engineer at Microsoft who loves video game development and graphics programming. Outside of the classroom, I explore my CS passions through various student organizations: the Electronic Game Developers Society, the Association of Black Computer Scientists, and Women in Computer Science. Most of the projects' source listed on this site can be found on my Github.
-          </p>
-          <div id="current-work-container" ng-controller="CurrentWorkController">
-            <h3><a id="current-work" class="anchor" href="#current-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>Current Work</h3>
-            <div class="project-container" ng-repeat="project in current_works">
-              <div class="project-title">{{project.title}}</div>
-              <div class="project-description">{{project.description}}</div>
-              <div class="project-button-bar">
-                <div ng-if="project.src" class="src-code"><a target="_blank" href="{{project.src}}"><button class="btn btn-success btn-darkgithub">Source</button></a></div>
-                <div ng-if="project.videodemo" class="video-demo"><a target="_blank" href="{{project.videodemo}}"><button class="btn btn-success btn-darkgithub">Video Demo</button></a></div>
-                <div ng-if="project.liveapp" class="live-demo"><a target="_blank" href="{{project.liveapp}}"><button class="btn btn-success btn-darkgithub">Live App</button></a></div>
-                <div ng-if="project.doc" class="documentation"><a target="_blank" href="{{project.doc}}"><button class="btn btn-success btn-darkgithub">Documentation</button></a></div>
-                <div ng-if="project.link" class="project-link"><a target="_blank" href="{{project.link}}"><button class="btn btn-success btn-darkgithub">Link</button></a></div>
-              </div>
-            </div>
-          </div>
-          <div id="interests-and-skills-container">
-	          <div>
-		          <h3>
-		          <a id="skills--interests" class="anchor" href="#skills--interests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interests</h3>
-		          
-		          <ul>
-		          <li>Graphics Programming</li>
-		          <li>Video Game Development</li>
-		          <li>Video Game Engine Development</li>
-		          <li>Teaching</li>
-		          </ul>
-	          </div>
-	          <div>
-		          <h3>
-		          <a id="skills" class="anchor" href="#skills" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills</h3>
-		          
-		          <ul id="skills-list">
-		          <li><strong>Proficient</strong> C++ (2+ years), C# (1+ years), Python (3+ years), Java (4+ years), Javascript (2+ years), HTML &amp; CSS (3+ years)</li>
-		          <li><strong>Comfortable</strong> Unity(1+ years), Pygame (1+ years), C (2+ years)</li>
-		          <li><strong>Exposure</strong> AngularJS, KnockoutJS, Closure, Handlebars (1 year)</li>
-		          </ul>
-	          </div>
-          </div>
-          <div id="all-projects-container">
-              <div id="tech-projects-container" ng-controller="TechnicalProjectController">
-                <h3><a id="tech-projects" class="anchor" href="#projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Technical Projects</h3>
-                <div class="project-container" ng-repeat="project in tech_projects">
-                  <div class="project-title">{{project.title}}</div>
-                  <div class="project-date">{{project.dates}}</div>
-                  <div class="project-description">{{project.description}}</div>
-                  <div class="project-tools">Tools: {{project.tools}}</div>
-                  <div class="project-button-bar">
-                    <div ng-if="project.src" class="src-code"><a target="_blank" href="{{project.src}}"><button class="btn btn-success btn-darkgithub">Source</button></a></div>
-                    <div ng-if="project.videodemo" class="video-demo"><a target="_blank" href="{{project.videodemo}}"><button class="btn btn-success btn-darkgithub">Video Demo</button></a></div>
-                    <div ng-if="project.liveapp" class="live-demo"><a target="_blank" href="{{project.liveapp}}"><button class="btn btn-success btn-darkgithub">Live App</button></a></div>
-                    <div ng-if="project.doc" class="documentation"><a target="_blank" href="{{project.doc}}"><button class="btn btn-success btn-darkgithub">Documentation</button></a></div>
-                  </div>
+        <title>Scott Munro</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    </head>
+    <body class="bg-blue">
+        <header class="bg-blue-darkest">
+            <div id="header-pane" class="section-with-buffer">
+                <div id="header-with-links-container">
+                    <h1 id="title-text">Scott Munro</h1>
+                    <a class="social-btn" href="https://github.com/scottnm" target="_blank">github</a>
+                    <a class="social-btn" href="https://twitter.com/scottnmunro" target="_blank">twitter</a>
+                    <a class="social-btn" href="mailto:scottnmunro@gmail.com">email</a>
+                    <a class="social-btn" href="https://linkedin.com/in/scott-munro" target="_blank">linkedin</a>
                 </div>
-              </div>
-              <div id="creative-projects-container" ng-controller="CreativeProjectController">
-                <h3><a id="creative-projects" class="anchor" href="#projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creative Projects</h3>
-                <div class="project-container" ng-repeat="project in creative_projects">
-                  <div class="project-title">{{project.title}}</div>
-                  <div class="project-date">{{project.dates}}</div>
-                  <div class="project-description">{{project.description}}</div>
-                  <div class="project-tools">Tools: {{project.tools}}</div>
-                  <div class="project-button-bar">
-                    <div ng-if="project.src" class="src-code"><a target="_blank" href="{{project.src}}"><button class="btn btn-success btn-darkgithub">Source</button></a></div>
-                    <div ng-if="project.videodemo" class="video-demo"><a target="_blank" href="{{project.videodemo}}"><button class="btn btn-success btn-darkgithub">Video Demo</button></a></div>
-                    <div ng-if="project.liveapp" class="live-demo"><a target="_blank" href="{{project.liveapp}}"><button class="btn btn-success btn-darkgithub">Live App</button></a></div>
-                    <div ng-if="project.doc" class="documentation"><a target="_blank" href="{{project.doc}}"><button class="btn btn-success btn-darkgithub">Documentation</button></a></div>
-                  </div>
+                <img id="header-overlay" src="images/overlay_translucent.png" />
+            </div>
+        </header>
+        <section>
+            <div id="welcome-pane" class="section-with-buffer">
+                <h2 class="section-title">Welcome</h2>
+                <!-- this span is filled with js -->
+                <span id="welcome-text"></span>
+            </div>
+        </section>
+        <section>
+            <div id="projects-pane" class="section-with-buffer">
+                <h2 class="section-title">Projects</h2>
+                <nav id="projects-tab-nav" class="bg-blue-darker">
+                    <button id="technical-btn" class="project-tab tab-active">Technical</button>
+                    <button id="creative-btn" class="project-tab tab-inactive">Creative</button>
+                    <div id="project-paginator">
+                        <button id="prev-page" class="hide pagination-btn">&lt;</button>
+                        <span id="project-element-range">0 ... 3</span>
+                        <button id="next-page" class="hide pagination-btn">&gt;</button>
+                    </div>
+                </nav>
+                <div id="projects-subpane" class="bg-blue-darker">
                 </div>
-              </div>
-          </div>
-        </article>
-      </div>
-    </div>
-    <footer>
-      <div class="owner">
-      <p><a href="https://github.com/scottnm" class="avatar"><img src="https://avatars0.githubusercontent.com/u/5483270?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/scottnm">scottnm</a> maintains <a href="https://github.com/scottnm/Homepage">Scott Munro</a></p>
-
-
-      </div>
-      <div class="creds">
-        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
-    </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <!--<a href="https://github.com/scottnm/Homepage/tarball/master" class="tar">tar</a><a href="https://github.com/scottnm/Homepage/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>-->
-    <p class="name"></p>
-  </div>
-
-  
-</body>
+            </div>
+        </section>
+    </body>
 </html>
