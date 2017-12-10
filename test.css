@@ -52,15 +52,22 @@ section {
 }
 
 #title-pane {
-    font-family: 'Bungee', cursive;
     font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.25em;
+}
+
+.section-title,
+#title-pane {
+    font-family: 'Bungee', cursive;
     color: #717CB2;
 }
 
-h2.section-title {
-    font-family: 'Bungee', cursive;
-    font-size: 1.25em;
-    color: #717CB2;
+#welcome-text,
+.project {
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 #welcome-text {
