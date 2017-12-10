@@ -23,6 +23,7 @@ var id_to_project_map = {
     "creative": project_info("creative", creativeProjectData, creative_message)
     };
 
+var current_project_id = null;
 var project_display_count = 3;
 
 function reload_project_data(project_id)
@@ -33,7 +34,7 @@ function reload_project_data(project_id)
     var project_data = project.data;
 
     for (var i = project.start_index;
-         i < Math.min(project_data.length, 3 + project.start_index);
+         i < Math.min(project_data.length, project_display_count + project.start_index);
          i++)
     {
         project_subpane_elements += project_template
@@ -62,9 +63,37 @@ function project_tab_clicked_callback(clicked_tab_id)
             }
         }
 
-        var project_id = button_id_to_project_id_map[clicked_tab_id];
-        reload_project_data(project_id);
+        current_project_id = button_id_to_project_id_map[clicked_tab_id];
+        reload_project_data(current_project_id);
+        update_pagination_controls();
     };
+}
+
+function prev_page()
+{
+    console.log("prev");
+    var start_index = id_to_project_map[current_project_id].start_index;
+    id_to_project_map[current_project_id].start_index = Math.max(start_index - project_display_count, 0);
+    update_pagination_controls();
+}
+
+function next_page()
+{
+    console.log("next");
+    id_to_project_map[current_project_id].start_index += project_display_count;
+    update_pagination_controls();
+}
+
+function update_pagination_controls()
+{
+    var start_index = id_to_project_map[current_project_id].start_index;
+    var end_index = id_to_project_map[current_project_id].data.length - 1;
+
+    document.getElementById("prev-page").disabled = start_index === 0;
+    document.getElementById("next-page").disabled = start_index + project_display_count >= end_index;
+    document.getElementById("project-element-range").innerText = " {start} ... {end} "
+        .replace("{start}", start_index)
+        .replace("{end}", Math.min(end_index, start_index + project_display_count));
 }
 
 window.onload =
@@ -78,4 +107,8 @@ window.onload =
             project_tab.addEventListener("click", project_tab_clicked_callback(project_tab.id));
         }
         project_tab_clicked_callback(project_tabs[0].id)();
+        update_pagination_controls();
+
+        document.getElementById("prev-page").addEventListener("click", prev_page);
+        document.getElementById("next-page").addEventListener("click", next_page);
     };
