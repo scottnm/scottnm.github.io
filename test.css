@@ -122,17 +122,15 @@ h2 {
     background: #717cb2;
     box-shadow: 0 -6px #303E82;
 }
-.tab-active:hover {
-    transform-origin: 50% 100%;
-    transform: scaleY(1.2);
-}
 .tab-inactive {
     background: #303E82;
     box-shadow: 0 -6px #0a164d;
 }
+.tab-active:hover,
 .tab-inactive:hover {
     transform-origin: 50% 100%;
     transform: scaleY(1.2);
+    transition: 0.3s;
 }
 
 #prev-page {
@@ -155,4 +153,14 @@ h2 {
     outline: none;
     transition: all 0.3s;
     box-sizing: border-box;
+}
+
+.project_dates {
+    font-style: italic;
+    font-size: .8em;
+    margin-bottom: 1%;
+}
+
+.project_description {
+    margin-bottom: 1%;
 }
