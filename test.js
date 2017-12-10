@@ -33,6 +33,7 @@ function format_project_element(project)
             `<div class="project_tools">Tools: ${project.tools}</div>` +
             "<div class=\"project_links\">" +
                 (project.src ? `<a class="project_src" href=${project.src} target="_blank">src</a>` : "") +
+                (project.doc ? `<a class="project_doc" href=${project.doc} download>doc</a>` : "") +
                 (project.liveapp ? `<a class="project_liveapp" href=${project.liveapp} target="_blank">try me</a>` : "") +
             "</div>" +
         "</div>";
@@ -121,7 +122,7 @@ function update_pagination_controls()
 
     var end_index = project_tab_table[current_project_tab_id].projects.length - 1;
     var next_page_e = document.getElementById("next-page");
-    if (start_index + project_display_count >= end_index)
+    if (start_index + project_display_count - 1 >= end_index)
     {
         next_page_e.disabled = true;
         next_page_e.classList.add("hide");
