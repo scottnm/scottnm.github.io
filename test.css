@@ -29,6 +29,12 @@ section {
     padding-bottom: 1%;
 }
 
+.section-with-small-buffer {
+    margin: 0% 7%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
 .bg-blue-lightest {
     background-color: #717cb2;
 }
@@ -63,6 +69,11 @@ h2.section-title {
 }
 
 #projects-test-text {
+    color: #FFFFFF;
+    font-size: 1em;
+}
+
+.project {
     color: #FFFFFF;
     font-size: 1em;
 }
