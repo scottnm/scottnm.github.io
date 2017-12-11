@@ -10,7 +10,10 @@ function project_tab(id, projects)
 }
 
 
-var button_id_to_project_tab_id_map = {"technical-btn": "technical", "creative-btn": "creative"};
+var button_id_to_project_tab_id_map = {
+    "technical-btn": "technical",
+    "creative-btn": "creative"
+    };
 var project_tab_table = {
     "technical": project_tab("technical", technicalProjectData),
     "creative": project_tab("creative", creativeProjectData)
@@ -48,23 +51,76 @@ function format_project_element(project)
     return project_element;
 }
 
-function populate_project_subpane(project_tab_id)
+function generate_project_elements()
 {
-    var project_container_template = "<section class=\"{section_color}\"><div class=\"project section-with-small-buffer\">{project_data}</div></section>"
-
     var project_subpane_elements_string = "";
-    var project_tab = project_tab_table[project_tab_id];
-
-    for (var project_index = project_tab.start_index;
-         project_index < Math.min(project_tab.projects.length, project_display_count + project_tab.start_index);
-         project_index++)
+    var project_container_template = "<section class=\"{project_tab_id} {section_color} hide-project\">" +
+                                     "<div class=\"project section-with-small-buffer\">{project_data}</div></section>";
+    for (var project_tab_id in project_tab_table)
     {
-        var project = project_tab.projects[project_index];
-        project_subpane_elements_string += project_container_template
-            .replace("{section_color}", project_index % 2 == 0 ? "bg-blue-lightest" : "bg-blue-lighter")
-            .replace("{project_data}", format_project_element(project));
+        var project_tab = project_tab_table[project_tab_id];
+        for (var project_index = project_tab.start_index; project_index < project_tab.projects.length; project_index++)
+        {
+            var project = project_tab.projects[project_index];
+            project_subpane_elements_string += project_container_template
+                .replace("{project_tab_id}", project_tab_id)
+                .replace("{section_color}", project_index % 2 == 0 ? "bg-blue-lightest" : "bg-blue-lighter")
+                .replace("{project_data}", format_project_element(project));
+        }
     }
+
     document.getElementById("projects-subpane").innerHTML = project_subpane_elements_string;
+}
+
+
+function get_project_id_from_element(element)
+{
+    for (var i = 0; i < element.classList.length; i++)
+    {
+        var e_class = element.classList[i];
+        if (e_class in project_tab_table)
+        {
+            return e_class;
+        }
+    }
+    return null;
+}
+
+function update_visible_projects(visible_project_tab_id)
+{
+    var project_list = document.getElementById("projects-subpane").children;
+    var current_project_id = null;
+    var current_project_offset = 0;
+    for (var project_index = 0; project_index < project_list.length; project_index++)
+    {
+        var project_element = project_list[project_index];
+        var project_id = get_project_id_from_element(project_element);
+        if (project_id === visible_project_tab_id)
+        {
+            if (project_id !== current_project_id)
+            {
+                current_project_offset = project_index;
+                current_project_id = project_id;
+            }
+
+            var project_start_index = project_tab_table[project_id].start_index;
+            var project_offset = project_index - current_project_offset;
+
+            if (project_offset >= project_start_index &&
+                project_offset < project_start_index + project_display_count)
+            {
+                project_element.classList.remove("hide-project");
+            }
+            else
+            {
+                project_element.classList.add("hide-project");
+            }
+        }
+        else
+        {
+            project_element.classList.add("hide-project");
+        }
+    }
 }
 
 function project_tab_clicked_callback(clicked_tab_id)
@@ -87,7 +143,7 @@ function project_tab_clicked_callback(clicked_tab_id)
         }
 
         current_project_tab_id = button_id_to_project_tab_id_map[clicked_tab_id];
-        populate_project_subpane(current_project_tab_id);
+        update_visible_projects(current_project_tab_id);
         update_pagination_controls();
     };
 }
@@ -96,14 +152,14 @@ function prev_page()
 {
     var start_index = project_tab_table[current_project_tab_id].start_index;
     project_tab_table[current_project_tab_id].start_index = Math.max(start_index - project_display_count, 0);
-    populate_project_subpane(current_project_tab_id);
+    update_visible_projects(current_project_tab_id);
     update_pagination_controls();
 }
 
 function next_page()
 {
     project_tab_table[current_project_tab_id].start_index += project_display_count;
-    populate_project_subpane(current_project_tab_id);
+    update_visible_projects(current_project_tab_id);
     update_pagination_controls();
 }
 
@@ -151,9 +207,9 @@ window.onload =
             var project_tab_element = project_tab_elements[i];
             project_tab_element.addEventListener("click", project_tab_clicked_callback(project_tab_element.id));
         }
+        generate_project_elements();
         project_tab_clicked_callback(project_tab_elements[0].id)();
         update_pagination_controls();
-
         document.getElementById("prev-page").addEventListener("click", prev_page);
         document.getElementById("next-page").addEventListener("click", next_page);
     };
