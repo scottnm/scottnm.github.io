@@ -9,13 +9,24 @@ var welcomeMessage = "I am a software engineer who loves video game development,
 var technicalProjectData = [
         {
             'title': 'Tinyrenderer',
-            'dates': 'Spring 2017',
+            'dates': 'Summer 2017',
             'description': 'A cpu-based, didactic renderer project from ' +
                            '<a href="https://github.com/ssloy/tinyrenderer/wiki" target="_blank">Dmitry V. Sokolov\'s Tiny Renderer</a> ' +
                            'project.',
             'src': 'https://github.com/scottnm/tinyrenderer',
             'image': 'https://instagram.fsnc1-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/20225592_128806921055908_7636245869951451136_n.jpg',
             'tools': 'C++'
+        },
+        {
+            'title': 'Vennfridge',
+            'dates': 'Spring 2017',
+            'description': 'A website for looking up recipes, food items, and ingredients with sorting and filtering ' +
+                           ' by various attributes. Relationships are also set up between the different recipes, ' +
+                           'food items, and ingredients so that you can more easily find related items while browsing.',
+            'src': 'https://github.com/jmsanchez86/idb/',
+            'tools': 'Python, Javascript, Html, Google Cloud Platform, TravisCI',
+            'video': 'https://www.youtube.com/watch?v=C05VDVHtQHI',
+            'doc': 'https://github.com/jmsanchez86/idb/blob/dev/app/static/data/vennfridge-technical-report.md'
         },
         {
             'title': 'IK2D',
@@ -25,15 +36,6 @@ var technicalProjectData = [
             'video': 'https://www.youtube.com/watch?v=kuFz9OplPNk',
             'tools': 'Unity, C#',
             'video': 'https://www.youtube.com/watch?v=kuFz9OplPNk'
-        },
-        {
-            'title': 'Filibusters',
-            'dates': 'Fall 2016',
-            'description': 'A 2D, side-scrolling, arena, shooter, collect-athon game featuring a light-hearted political theme',
-            'src': 'https://github.com/nanomachines/filibusters-game',
-            'tools': 'Unity, C#, Photon Unity Networking',
-            'video': 'https://www.youtube.com/watch?v=MjQtU9LpsCc',
-            'liveapp': 'https://nanomachines.itch.io/filibusters'
         },
         {
             'title': 'Pixitor',
@@ -158,6 +160,15 @@ var creativeProjectData = [
             'video': 'https://www.youtube.com/watch?v=jA9G3lyVIXA&',
             'src': 'https://github.com/scottnm/squid-mantazord',
             'tools': 'Unity, C#'
+        },
+        {
+            'title': 'Filibusters',
+            'dates': 'Fall 2016',
+            'description': 'A 2D, side-scrolling, arena, shooter, collect-athon game featuring a light-hearted political theme',
+            'src': 'https://github.com/nanomachines/filibusters-game',
+            'tools': 'Unity, C#, Photon Unity Networking',
+            'video': 'https://www.youtube.com/watch?v=MjQtU9LpsCc',
+            'liveapp': 'https://nanomachines.itch.io/filibusters'
         },
         {
             'title': 'Monkey Muck',
