@@ -14,7 +14,8 @@ var technicalProjectData = [
                            '<a href="https://github.com/ssloy/tinyrenderer/wiki" target="_blank">Dmitry V. Sokolov\'s Tiny Renderer</a> ' +
                            'project.',
             'src': 'https://github.com/scottnm/tinyrenderer',
-            'image': 'https://instagram.fsnc1-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/20225592_128806921055908_7636245869951451136_n.jpg',
+            'image': 'files/tiny_renderer.png',
+            // 'image': 'https://instagram.fsnc1-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/20225592_128806921055908_7636245869951451136_n.jpg',
             'tools': 'C++'
         },
         {
@@ -152,6 +153,20 @@ var technicalProjectData = [
     ];
 
 var creativeProjectData = [
+        {
+            'title': 'The Treachery of Self-image',
+            'dates': 'Spring 2018',
+            'description': 'A semi-serious parody of "the Treachery of Images" by Rene Magritte. ' + 
+                           'This piece started out as joke and an excuse to practice digital painting, but I like how it turned out. ' +
+                           'I used One Note when I was doing rough sketches of the shoe forms, and then used Paint Tool ' +
+                           'Sai with an "airbrush" brush to do the softer coloring. ' +
+                           'Much in the same way that I\'ve always interpretted Magritte\'s work to be a reflection on drawing a line ' +
+                           'between abstract representations of ideas (images) and the more tangible concepts we associate ' +
+                           'them with, I think this work tries to draw a line between the efforts of game designers and ' +
+                           'the reality of what a computer program is.',
+            'image': 'files/the_treachery_of_self_image.png',
+            'tools': 'Paint Tool Sai'
+        },
         {
             'title': 'Squid Mantazord',
             'dates': 'Spring 2017',
