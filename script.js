@@ -126,7 +126,7 @@ function update_visible_projects(visible_project_tab_id)
 function project_tab_clicked_callback(clicked_tab_id)
 {
     return function () {
-		var project_tab_elements = document.getElementsByClassName("project-tab");
+        var project_tab_elements = document.getElementsByClassName("project-tab");
         for (var i = 0; i < project_tab_elements.length; i++)
         {
             var project_tab_element = project_tab_elements[i];
