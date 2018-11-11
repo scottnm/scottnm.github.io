@@ -44,8 +44,9 @@ var musicData2018 = [
             'artist': 'Monobody',
             'date': '01 Nov 2018',
             'link': 'https://open.spotify.com/album/291cUbF4RbZOUqViqmJ9K6?si=gFT7zDuVTyujMUyhfre-4g',
-            'description': 'test description 2',
+            'description': 'I don\'t have too much to say about this album. I really like it, but a lot of the influences it draws from a still pretty foreign to me. It\'s a blend of jazz, progrock, mathrock, and ambient electronic music (ala C418) that either has me bobbing my head or scratching it. It\'s a very indulgent record with long track-times and wandering arrangements that can make you feel lost if you don\'t know what to expect. But this indulgence affords them the opportunity to write an album that always has something new to discover. I first found this band through their stellar Audiotree Live performance awhile ago and was pleasantly surprised to find their drummer was Nnamdi Ogbannaya who took a spot in my "favorite albums of 2017" last year with his release "Drool."',
             'image': 'monobody.jpg',
+            'favtrack': 'Ilha Verde, Former Islands'
         },
         {
             'album': 'Literary Math',
