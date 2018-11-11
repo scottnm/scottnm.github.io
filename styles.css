@@ -122,7 +122,7 @@ h2 {
 }
 
 .entry_info_frame_border {
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .65);
 }
 
 .entry_info_frame {
@@ -222,6 +222,12 @@ h2 {
     font-size: 0.5em;
     padding: 0 5% 0 5%;
     font-family: 'Bungee', cursive;
+}
+
+.entry_favtrack {
+    font-style: italic;
+    font-size: .9em;
+    margin-bottom: 1%;
 }
 
 .project_dates,
