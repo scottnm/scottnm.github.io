@@ -35,8 +35,9 @@ var musicData2018 = [
             'artist': 'Delta Sleep',
             'date': '10 Aug 2018',
             'link': 'https://open.spotify.com/album/63PgGSb6ZkwPVfMZVOhObO?si=d8YJPFT0TpSqH-E5Pu8rGw',
-            'description': '',
+            'description': 'Delta Sleep\'s "Ghost City" is an album that knows where to draw the line between being "Mathy" and being palatable. Rhythmically, the album adopts a lot of the jerky,rapid-start-stop patterns that I love without sacrificing memorable hooks or catchy motifs in their melodies. There are a lot of familiar math-rock-y timbres and tones on this album: bright guitars, indie-rock vocals, and sharp drums. Narratively the album touches upon themes of "nature vs machine" that I find a bit goofy and cliche, but the themes are sonically well-supported and delivered. I don\'t think this is an album that will convince anyone to like math rock if they don\'t already, but it might convince them it\'s not a hopeless contest to write the least presentable music in the holy name of "odd time signatures."',
             'image': 'deltasleep.jpg',
+            'favtrack': 'El Pastor, Dotwork, Single File',
         },
         {
             'album': 'Raytracing',
