@@ -1,6 +1,6 @@
 'use strict';
 
-var logHeaderText = "Here's a (non-exhaustive) list of albums from Nov 2017 to Nov 2018 that I grew really attached to. While not every album on this list is a 10/10, I think they each have something really interesting that kept me coming back for repeat listens.";
+var logHeaderText = "Here's a (non-exhaustive) list of albums from Nov 2017 to Nov 2018 that I grew really attached to. While not every album on this list is a 10/10, I think they each have something really interesting that kept me coming back for repeat listens. This year my list was heavily inspired by Spotify recommendations as that's been my primary means of discovering new music since I stopped browsing \"core\" subreddits regularly. I found a lot of great stuff, but I think it led to a polarized year of music. In 2019, I'd like to find another avenue to discover music to balance it out a bit.";
 
 /*
 Runners up
@@ -44,7 +44,7 @@ var musicData2018 = [
             'artist': 'Monobody',
             'date': '01 Nov 2018',
             'link': 'https://open.spotify.com/album/291cUbF4RbZOUqViqmJ9K6?si=gFT7zDuVTyujMUyhfre-4g',
-            'description': 'I don\'t have too much to say about this album. I really like it, but a lot of the influences it draws from a still pretty foreign to me. It\'s a blend of jazz, progrock, mathrock, and ambient electronic music (ala C418) that either has me bobbing my head or scratching it. It\'s a very indulgent record with long track-times and wandering arrangements that can make you feel lost if you don\'t know what to expect. But this indulgence affords them the opportunity to write an album that always has something new to discover. I first found this band through their stellar Audiotree Live performance awhile ago and was pleasantly surprised to find their drummer was Nnamdi Ogbannaya who took a spot in my "favorite albums of 2017" last year with his release "Drool."',
+            'description': 'I don\'t have too much to say about this album. I really like it, but a lot of it feels foreign to me. It\'s a blend of jazz, progrock, mathrock, and ambient electronic music (ala C418) that either has me bobbing my head or scratching it. It\'s a very indulgent record with long track-times and wandering arrangements that can make you feel lost if you don\'t know what to expect. But this indulgence affords them the opportunity to write an album that always has something new to discover. I first found this band through their stellar Audiotree Live performance awhile ago and was pleasantly surprised to find their drummer was Nnamdi Ogbannaya who took a spot in my "favorite albums of 2017" last year with his release "Drool."',
             'image': 'monobody.jpg',
             'favtrack': 'Ilha Verde, Former Islands'
         },
@@ -53,16 +53,18 @@ var musicData2018 = [
             'artist': 'Paranoid Void',
             'date': '01 Nov 2017',
             'link': 'https://open.spotify.com/album/7cHvJpTVGuum5Y69ZbKUmg?si=fbJ2U3SDRA62rT7iG4xHVQ',
-            'description': 'test description 2',
+            'description': 'Paranoid Void is a japanese rock outfit and their debut(?) album "Literary Math" sees the band toying around in a pretty progressive/experimental place. The guitars flip between enormous ethereal, yet distorted echo tones and a twangy jam-band sound. The bass is incredibly present in the mix and is often found riffing right alongside the guitars. I\'m no drummer so I have difficulty describing the drums (maybe bombastic?), but they feel like a lot of fun. I\'ve come back to this album A LOT this year and it\'s the reason I made an exception to allow for albums from the end of 2017 to make this list. Sadly, I don\'t speak japanese so a lot of the vocal themes are lost on me. But despite the language barrier, I still love this album.',
             'image': 'paranoidvoid.jpg',
+            'favtrack': 'Track 1, Track 3, Track 8'
         },
         {
             'album': 'Sloth & Turtle',
             'artist': 'Sloth & Turtle',
             'date': '03 Apr 2018',
             'link': 'https://open.spotify.com/album/5rzJOlcNZdjp2JTgvGfdze?si=OTs2pygIQUCloFmh-9nSqg',
-            'description': 'test description 2',
+            'description': 'Sloth & Turtle\'s eponymous 2018 record scratched is probably my favorite album in the "instrumental" space that I stumbled across this year. Lots of tippy-tapping, noodly riffs paired with wild effect-chains and acoustic guitars. The closing track is one of my favorites and takes on more of a post-rock slant with a super beachy reverb and marching-band-esque drums.',
             'image': 'slothandturtle.jpg',
+            'favtrack': 'The Toys Are Back In Town, Toys, A Song For Ants'
         },
         {
             'album': 'Our Place',
