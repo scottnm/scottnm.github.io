@@ -62,7 +62,7 @@ var musicData2018 = [
             'artist': 'Sloth & Turtle',
             'date': '03 Apr 2018',
             'link': 'https://open.spotify.com/album/5rzJOlcNZdjp2JTgvGfdze?si=OTs2pygIQUCloFmh-9nSqg',
-            'description': 'Sloth & Turtle\'s eponymous 2018 record scratched is probably my favorite album in the "instrumental" space that I stumbled across this year. Lots of tippy-tapping, noodly riffs paired with wild effect-chains and acoustic guitars. The closing track is one of my favorites and takes on more of a post-rock slant with a super beachy reverb and marching-band-esque drums.',
+            'description': 'Sloth & Turtle\'s eponymous 2018 record is probably my favorite album in the "instrumental" space that I stumbled across this year. Lots of tippy-tapping, noodly riffs paired with wild effect-chains and acoustic guitars. The closing track is one of my favorites and takes on more of a post-rock slant with a super beachy reverb and marching-band-esque drums.',
             'image': 'slothandturtle.jpg',
             'favtrack': 'The Toys Are Back In Town, Toys, A Song For Ants'
         },
@@ -71,24 +71,27 @@ var musicData2018 = [
             'artist': 'Ben Levin Group',
             'date': '18 May 2018',
             'link': 'https://open.spotify.com/album/5rzJOlcNZdjp2JTgvGfdze?si=OTs2pygIQUCloFmh-9nSqg',
-            'description': 'test description 2',
+            'description': '"Our Place" is absolutely the album I most respect from 2018. I wish I had a better word than "experimental" to describe it. It\'s beautiful. It fuses art rock, folk, and spacey psychedelic (psy-fi?) music into a narrative of existential fear and acceptance framed by the death of of a loved one. The heart and soul of this album is the dynamism that drives all 34 minutes of it. The intensity and composition of the music drastically shifts and changes from moment to moment. Pounding drums give way to whirring strings. Whirring strings give way to squealing synths. Vocal delivery softens and explodes, not at random, but exactly when it should. Some tracks like "Waiting Room" have more straightforward composition. Others like "Bless the Decomposers" could practically rub elbows with `musique concrete` tunes. Best of all, despite all of this shifting and changing and transforming, the album feels cohesive; it makes sense from start to end.',
             'image': 'benlevingroup.jpg',
+            'favtrack': 'The User, In, Out, Bless the Decomposers',
         },
         {
             'album': 'Gay Story',
             'artist': 'In Love With A Ghost',
             'date': '01 Apr 2018',
             'link': 'https://open.spotify.com/album/6wNgoamY7ZcZA1mEVXAuZV?si=FWU0uNxJS_aDi_9mtovI0g',
-            'description': 'test description 2',
+            'description': 'This album is a warm blanket and a hot cup of tea on a bad day. This album is melting snow at the end of winter break. This album is 20% melancholy and 80% cute incarnate. Tranquil synths meet buzzy melodica(?) meet acoustic strings in a short, 11-minute, instrumental package that just makes me feel good inside. Multiple tracks seem to revisit and transform the same musical motiffs over and over again. To some this might sound repetitive but I find it really creative and fun. I think its probably the only way an album that\'s only 11 minutes long can work.',
             'image': 'inlovewithaghost.jpg',
+            'favtrack': 'The whole thing is 11 minutes long. It\'s basically one track and it\'s all good.'
         },
         {
             'album': 'Clear Tamei/Steel Mogu',
             'artist': 'Iglooghost',
             'date': '08 Aug 2018',
             'link': 'https://open.spotify.com/artist/7LCDnUQYE07fnKbo46SVLB?si=WEwGXqWdRBicTkRmMc_flw',
-            'description': 'test description 2',
+            'description': 'Frankly, I don\'t know what Iglooghost is. It\'s chaotic and quick with instrumentation that sounds like every sound ever sampled is being thrown at you all at once. Everything about it feels intentionally difficult to parse including its visual presentation which features mysterious gumball-machine-figures with dunce caps and glossy marble exteriors. Frankly, I think the presentation may be one of my favorite aspects of the music. I love the character art, the black and white design of the split EPs, and the world building that goes into the Maybe at some very very very far removed level it reminds me of my first, notably confused-yet-intrigued experience with The Chariot and their album "One Wing." Everyday is certainly not an "Iglooghost day", but there certainly are some and when they happen there is nothing more satisfying than this special combination of crystalline synths, robotronic drums, distorted woodwinds, conlang babel, and lore Googling.',
             'image': 'iglooghost.jpg',
+            'favtrack': 'Shrine Hacker, Black Light Ultra'
         },
         {
             'album': 'Ballads 1',
