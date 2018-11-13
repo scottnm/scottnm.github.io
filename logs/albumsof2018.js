@@ -46,7 +46,7 @@ var musicData2018 = [
             'artist': 'Touche Amore',
             'date': '19 Aug 2018',
             'link': 'https://open.spotify.com/track/5FR0YMb1HFGI2gHHPiW9qk?si=2o7ERLbPSo28nUX_Aw4UzQ',
-            'description': 'Is it cheating to put a single here? Oh well. I cannot get enough of this track. It kicks off sounding like an emo "Monster Mash" remix and before you know it the guitars swell to this beautiful ringing chorus. Bolm\'s vocal delivery is fairly tempered throughout most of the song and to good effect as it juxtaposes really well against the aggressive closing lines of the chorus.',
+            'description': 'This may not be a full album, but I cannot get enough of this track. It kicks off like some kind goth "Monster Mash" remix and before you know it the guitars swell to this beautiful ringing chorus. Bolm\'s vocal delivery is fairly tempered throughout most of the song which juxtaposes really well against the aggressive closing lines of the chorus.',
             'image': 'toucheamore.jpg',
         },
         {
