@@ -54,7 +54,7 @@ var musicData2018 = [
             'artist': 'Sen Morimoto',
             'date': '18 May 2018',
             'link': 'https://open.spotify.com/album/0Gy6pQqmY6QATlaYxqflek?si=G-3v98EQSqOFBxmxKUzlqA',
-            'description': 'Cannonball!\`s biggest strength is by far its wild jazz instrumentation. Morimoto\'s background is as a saxaphonist and he makes great use of his horn to set dreamy atmospheres (see: Sections) and toot out cacophonous brass tones (see: Picture of a Painting). You\'ll also find lots of fun drum bits, bright piano, and strange synth tones such as the bloopy foundation of the title track, "Cannonball!." Vocally, Morimoto has a soft, monotonous vibe that meshes well with his vocal delivery and occassionally touches on something that sounds mildly annoyed (see: This is Not). I had the pleasure of seeing Sen Morimoto perform live this year and it was a blast. The drumming was insane, the saxaphone was powerful, and the tone was inviting.',
+            'description': 'Cannonball!\`s biggest strength is by far its wild jazz instrumentation. Morimoto\'s background is as a saxophonist and he makes great use of his horn to set dreamy atmospheres (see: Sections) and toot out cacophonous brass tones (see: Picture of a Painting). You\'ll also find lots of fun drum bits, bright piano, and strange synth tones such as the bloopy foundation of the title track, "Cannonball!." Vocally, Morimoto has a soft, monotonous vibe that meshes well with his vocal delivery and occasionally touches on something that sounds mildly annoyed (see: This is Not). I had the pleasure of seeing Sen Morimoto perform live this year and it was a blast. The drumming was insane, the saxophone was powerful, and the tone was inviting.',
             'image': 'senmorimoto.jpg',
             'favtrack': 'Sections, This Is Not, People Watching',
         },
@@ -108,7 +108,7 @@ var musicData2018 = [
             'artist': 'In Love With A Ghost',
             'date': '01 Apr 2018',
             'link': 'https://open.spotify.com/album/6wNgoamY7ZcZA1mEVXAuZV?si=FWU0uNxJS_aDi_9mtovI0g',
-            'description': 'This album is a warm blanket and a hot cup of tea on a bad day. This album is melting snow at the end of winter break. This album is 20% melancholy and 80% cute incarnate. Tranquil synths meet buzzy melodica(?) meet acoustic strings in a short, 11-minute, instrumental package that just makes me feel good inside. Multiple tracks seem to revisit and transform the same musical motiffs over and over again. To some this might sound repetitive but I find it really creative and fun. I think its probably the only way an album that\'s only 11 minutes long can work.',
+            'description': 'This album is a warm blanket and a hot cup of tea on a bad day. This album is melting snow at the end of winter break. This album is 20% melancholy and 80% cute incarnate. Tranquil synths meet buzzy melodica(?) meet acoustic strings in a short, 11-minute, instrumental package that just makes me feel good inside. Multiple tracks seem to revisit and transform the same musical motifs over and over again. To some this might sound repetitive but I find it really creative and fun. It may be the only way an 11-minute album can work.',
             'image': 'inlovewithaghost.jpg',
             'favtrack': 'The whole thing is 11 minutes long. It\'s basically one track and it\'s all good.'
         },
