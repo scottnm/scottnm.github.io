@@ -16,7 +16,7 @@ var honorableMentions = [
     {
         'album': 'Tres',
         'artist': 'Mouse on the Keys',
-        'oneline': 'Three keyboardists make for neat music',
+        'oneline': 'Instrumental keyboard trio make neat music',
     },
     {
         'album': 'Excursions',
