@@ -253,3 +253,39 @@ h2 {
     /*width: 150px;*/
     height: 150px;
 }
+
+.honorable-mention {
+    margin-bottom: 1%;
+}
+
+.honorable-mention-album {
+    font-style: bold;
+}
+
+.honorable-mention-artist {
+    font-style: italic;
+    font-size: .8em;
+}
+
+.honorable-mention-oneline {
+    font-size: .9em;
+}
+/*
+ *
+.bg-blue-lightest {
+    background-color: #717cb2;
+}
+.bg-blue-lighter {
+    background-color: #495796;
+}
+.bg-blue {
+    background-color: #303E82;
+}
+.bg-blue-darker {
+    background-color: #1c2a6a;
+}
+.bg-blue-darkest {
+    background-color: #0a164d;
+}
+
+ */
