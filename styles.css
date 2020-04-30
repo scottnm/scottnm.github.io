@@ -206,6 +206,7 @@ h2 {
 .social-btn:hover, .social-btn:active,
 .project_src:hover, .project_src:active,
 .project_video:hover, .project_video:active,
+.project_read:hover, .project_read:active,
 .project_doc:hover, .project_doc:active,
 .project_liveapp:hover, .project_liveapp:active,
 .pagination-btn:hover, .pagination-btn:active {
@@ -215,6 +216,7 @@ h2 {
 .social-btn,
 .project_src,
 .project_video,
+.project_read,
 .project_doc,
 .project_liveapp,
 .pagination-btn {
@@ -232,6 +234,7 @@ h2 {
 .social-btn,
 .project_src,
 .project_video,
+.project_read,
 .project_doc,
 .project_liveapp {
     margin: 1%;
