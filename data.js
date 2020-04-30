@@ -2,22 +2,25 @@
 
 var githubPrefix = 'https://github.com/scottnm/';
 
-var welcomeMessage = "I am a software engineer who loves video game development, punk music, and poorly quoting old " + 
-                     "episodes of the Simpsons. Most of the projects' source listed on this site can be found on my " +
-                     "Github. This page is more or less just a dumping ground of things I've created.";
+var welcomeMessage =
+    "Sometimes I'm a software engineer working for Xbox, but my primary station in life is to re-watch " +
+    "the same 3 seasons of <i>the Simpsons</i> on loop in between excursions to Metalcore concerts. " +
+    "This page is more or less a dumping ground for things I do in my free time."
 
 var technicalProjectData = [
         {
             'title': 'Tinyrenderer',
             'dates': 'Summer 2017',
-            'description': 'A cpu-based, didactic renderer project from ' +
-                           '<a href="https://github.com/ssloy/tinyrenderer/wiki" target="_blank">Dmitry V. Sokolov\'s Tiny Renderer</a> ' +
-                           'project.',
+            'description':
+                'A cpu-based, didactic renderer project from ' +
+                '<a href="https://github.com/ssloy/tinyrenderer/wiki" target="_blank">Dmitry V. Sokolov\'s Tiny Renderer</a> ' +
+                'project.',
             'src': 'https://github.com/scottnm/tinyrenderer',
             'image': 'files/tiny_renderer.png',
             // 'image': 'https://instagram.fsnc1-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/20225592_128806921055908_7636245869951451136_n.jpg',
             'tools': 'C++'
         },
+        /*
         {
             'title': 'Vennfridge',
             'dates': 'Spring 2017',
@@ -29,6 +32,7 @@ var technicalProjectData = [
             'video': 'https://www.youtube.com/watch?v=C05VDVHtQHI',
             'doc': 'https://github.com/jmsanchez86/idb/blob/dev/app/static/data/vennfridge-technical-report.md'
         },
+        */
         {
             'title': 'IK2D',
             'dates': 'Winter 2016',
@@ -54,6 +58,7 @@ var technicalProjectData = [
             'tools': 'C++, Ogre3D, SDL',
             'video': 'https://www.youtube.com/watch?v=PkhYBI-yMf4'
         },
+        /*
         {
             'title': '3D Pong-like',
             'dates': 'Spring 2016',
@@ -63,6 +68,7 @@ var technicalProjectData = [
             'tools': 'C++, Ogre3D, SDL, Bullet',
             'video': 'https://www.youtube.com/watch?v=6lbZnm3dlUU'
         },
+        */
         {
             'title': 'Scene Graph',
             'dates': 'Fall 2015',
@@ -110,7 +116,7 @@ var technicalProjectData = [
             'tools': 'Java'
         },
         {
-            'title': 'Space Raiders (Game)',
+            'title': 'TUI Space Raiders',
             'dates': 'Spring 2015',
             'description': 'A simple text-based form of the game Space Invaders, ' +
                            'called Space Raiders. Implemented simple ' +
@@ -156,21 +162,16 @@ var creativeProjectData = [
         {
             'title': 'The Treachery of Self-image',
             'dates': 'Spring 2018',
-            'description': 'A semi-serious parody of "the Treachery of Images" by Rene Magritte. ' + 
-                           'This piece started out as joke and an excuse to practice digital painting, but I like how it turned out. ' +
-                           'I used One Note when I was doing rough sketches of the shoe forms, and then used Paint Tool ' +
-                           'Sai with an "airbrush" brush to do the softer coloring. ' +
-                           'Much in the same way that I\'ve always interpretted Magritte\'s work to be a reflection on drawing a line ' +
-                           'between abstract representations of ideas (images) and the more tangible concepts we associate ' +
-                           'them with, I think this work tries to draw a line between the efforts of game designers and ' +
-                           'the reality of what a computer program is.',
+            'description': 'A silly joke that I took too far and spent too much time on. The result? a ' +
+                           'parody of "the Treachery of Images" by Rene Magritte. ' +
+                           'In a funny turn of events, I like how it turned out. ',
             'image': 'files/the_treachery_of_self_image.png',
             'tools': 'Paint Tool Sai'
         },
         {
             'title': 'Squid Mantazord',
             'dates': 'Spring 2017',
-            'description': 'A top-down 2D gauntlet of sea-creatures to take the throne and become the next Squid ' + 
+            'description': 'A top-down 2D gauntlet of sea-creatures to take the throne and become the next Squid ' +
                            'Mantazord. Made for Global Game Jam 2017.',
             'video': 'https://www.youtube.com/watch?v=jA9G3lyVIXA&',
             'src': 'https://github.com/scottnm/squid-mantazord',
