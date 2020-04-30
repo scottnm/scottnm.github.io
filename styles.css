@@ -1,3 +1,12 @@
+:root {
+    --color-lighter: #b27c71;
+    --color-light:   #965749;
+    --color-medium:  #823E30;
+    --color-dark:    #6a2a1c;
+    --color-darker:  #4d160a;
+    --color-text-link: yellow;
+}
+
 h1 {
     margin: 0;
     padding: 0;
@@ -5,6 +14,14 @@ h1 {
 h2 {
     margin: 0;
     padding: 0;
+}
+
+a {
+    color: var(--color-text-link);
+}
+
+.project_title {
+    font-family: 'Bungee', cursive;
 }
 
 #header-pane {
@@ -59,20 +76,20 @@ section {
     padding-bottom: 1%;
 }
 
-.bg-blue-lightest {
-    background-color: #717cb2;
+.bg-lighter {
+    background-color: var(--color-lighter);
 }
-.bg-blue-lighter {
-    background-color: #495796;
+.bg-light {
+    background-color: var(--color-light);
 }
-.bg-blue {
-    background-color: #303E82;
+.bg-medium {
+    background-color: var(--color-medium);
 }
-.bg-blue-darker {
-    background-color: #1c2a6a;
+.bg-dark {
+    background-color: var(--color-dark);
 }
-.bg-blue-darkest {
-    background-color: #0a164d;
+.bg-darker {
+    background-color: var(--color-darker);
 }
 
 h2 {
@@ -82,7 +99,7 @@ h2 {
 .section-title,
 #header-pane {
     font-family: 'Bungee', cursive;
-    color: #717CB2;
+    color: var(--color-lighter);
 }
 
 #welcome-text,
@@ -166,12 +183,12 @@ h2 {
     letter-spacing: 1px;
 }
 .tab-active {
-    background: #717cb2;
-    box-shadow: 0 -6px #303E82;
+    background: var(--color-lighter);
+    box-shadow: 0 -6px var(--color-medium);
 }
 .tab-inactive {
-    background: #303E82;
-    box-shadow: 0 -6px #0a164d;
+    background: var(--color-medium);
+    box-shadow: 0 -6px var(--color-darker);
 }
 .tab-active:hover,
 .tab-inactive:hover {
@@ -188,6 +205,7 @@ h2 {
 }
 .social-btn:hover, .social-btn:active,
 .project_src:hover, .project_src:active,
+.project_video:hover, .project_video:active,
 .project_doc:hover, .project_doc:active,
 .project_liveapp:hover, .project_liveapp:active,
 .pagination-btn:hover, .pagination-btn:active {
@@ -196,6 +214,7 @@ h2 {
 }
 .social-btn,
 .project_src,
+.project_video,
 .project_doc,
 .project_liveapp,
 .pagination-btn {
@@ -212,6 +231,7 @@ h2 {
 
 .social-btn,
 .project_src,
+.project_video,
 .project_doc,
 .project_liveapp {
     margin: 1%;
@@ -270,22 +290,3 @@ h2 {
 .honorable-mention-oneline {
     font-size: .9em;
 }
-/*
- *
-.bg-blue-lightest {
-    background-color: #717cb2;
-}
-.bg-blue-lighter {
-    background-color: #495796;
-}
-.bg-blue {
-    background-color: #303E82;
-}
-.bg-blue-darker {
-    background-color: #1c2a6a;
-}
-.bg-blue-darkest {
-    background-color: #0a164d;
-}
-
- */
