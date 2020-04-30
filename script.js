@@ -11,11 +11,13 @@ function project_tab(id, projects)
 
 var button_id_to_project_tab_id_map = {
     "technical-btn": "technical",
-    "creative-btn": "creative"
+    "creative-btn": "creative",
+    "text-post-btn": "textposts"
     };
 var project_tab_table = {
     "technical": project_tab("technical", technicalProjectData),
-    "creative": project_tab("creative", creativeProjectData)
+    "creative": project_tab("creative", creativeProjectData),
+    "textposts": project_tab("textposts", textPostData)
     };
 
 var current_project_tab_id = null;
@@ -30,12 +32,13 @@ function format_project_element(project)
             "</div>" +
             `<div class="project_dates">${project.dates}</div>` +
             `<div class="project_description">${project.description}</div>` +
-            `<div class="project_tools">Tools: ${project.tools}</div>` +
+            (project.tools ? `<div class="project_tools">Tools: ${project.tools}</div>` : "" ) +
             "<div class=\"project_links\">" +
                 (project.src ? `<a class="project_src" href=${project.src} target="_blank">src</a>` : "") +
                 (project.doc ? `<a class="project_doc" href=${project.doc} download>doc</a>` : "") +
                 (project.liveapp ? `<a class="project_liveapp" href=${project.liveapp} target="_blank">try me</a>` : "") +
                 (project.video ? `<a class="project_video" href=${project.video} target="_blank">vid</a>` : "") +
+                (project.read ? `<a class="project_read" href=${project.read} target="_blank">read</a>` : "") +
             "</div>" +
         "</div>";
     if (project.image)

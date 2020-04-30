@@ -221,3 +221,13 @@ var creativeProjectData = [
             'video': 'https://www.youtube.com/watch?v=RpATc4tDGIs'
         }
     ];
+
+var textPostData = [
+        {
+            'title': 'Favorite Albums of 2018',
+            'dates': 'Nov 2018',
+            'description':
+                'A non-exhaustive list of my favorite albums released in 2018.',
+            'read': 'logs/albumsof2018.html',
+        },
+    ];
