@@ -103,8 +103,8 @@ var technicalProjectData = [
                            'radio-like playlist from multiple artist seeds, and launches ' +
                            'the playlist in the spotify webapp',
             'src': githubPrefix + 'Quick-Radio.git',
-            'tools': 'Javascript, Knockoutjs',
-            'liveapp': 'http://scottnm.github.io/Quick-Radio/liveapp/index.html'
+            'tools': 'Javascript, Knockoutjs'
+            //'liveapp': 'http://scottnm.github.io/Quick-Radio/liveapp/index.html'
         },
         {
             'title': 'Go-Fish Probability Simulation',
