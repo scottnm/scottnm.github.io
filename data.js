@@ -9,6 +9,29 @@ var welcomeMessage =
 
 var technicalProjectData = [
         {
+            'title': 'Tetrust',
+            'dates': 'Winter 2021',
+            'description': 'A TUI tetris clone written in rust',
+            'src': 'https://github.com/scottnm/tetrust',
+            'image': 'https://raw.githubusercontent.com/scottnm/tetrust/master/demo/main-demo.gif',
+            'tools': 'rust, pancurses/ncurses'
+        },
+        {
+            'title': 'WSR Image Extractor',
+            'dates': 'Fall 2020',
+            'description': 'A tool to extract the images captured in a Windows Steps Recorder file',
+            'src': 'https://github.com/scottnm/WSR-Image-Extractor',
+            'tools': 'rust'
+        },
+        {
+            'title': 'NoteVis',
+            'dates': 'Summer 2020',
+            'description': 'A tool to help visualize notes on a fretboard',
+            'image': 'https://raw.githubusercontent.com/scottnm/notevis/master/demo/demo3.PNG',
+            'src': 'https://github.com/scottnm/notevis',
+            'tools': 'rust'
+        },
+        {
             'title': 'Tinyrenderer',
             'dates': 'Summer 2017',
             'description':
