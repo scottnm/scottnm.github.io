@@ -9,14 +9,6 @@ var welcomeMessage =
 
 var technicalProjectData = [
         {
-            'title': 'Tetrust',
-            'dates': 'Winter 2021',
-            'description': 'A TUI tetris clone written in rust',
-            'src': 'https://github.com/scottnm/tetrust',
-            'image': 'https://raw.githubusercontent.com/scottnm/tetrust/master/demo/main-demo.gif',
-            'tools': 'rust, pancurses/ncurses'
-        },
-        {
             'title': 'WSR Image Extractor',
             'dates': 'Fall 2020',
             'description': 'A tool to extract the images captured in a Windows Steps Recorder file',
@@ -182,6 +174,14 @@ var technicalProjectData = [
     ];
 
 var creativeProjectData = [
+        {
+            'title': 'Tetrust',
+            'dates': 'Winter 2021',
+            'description': 'A TUI tetris clone written in rust',
+            'src': 'https://github.com/scottnm/tetrust',
+            'image': 'https://raw.githubusercontent.com/scottnm/tetrust/master/demo/main-demo.gif',
+            'tools': 'rust, pancurses/ncurses'
+        },
         {
             'title': 'The Treachery of Self-image',
             'dates': 'Spring 2018',
