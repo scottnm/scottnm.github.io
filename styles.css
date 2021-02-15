@@ -25,9 +25,14 @@ a {
 }
 
 #header-pane {
-    display: flex;
     justify-content: space-between;
     font-size: 1.5em;
+}
+
+@media screen and (min-width: 1368px) {
+    #header-pane {
+        display: flex;
+    }
 }
 
 #header-with-links-container {
@@ -120,8 +125,10 @@ h2 {
     font-size: 1em;
 }
 
-.project {
-    display: flex;
+@media screen and (min-width: 1368px) {
+    .project {
+        display: flex;
+    }
 }
 
 .project,
