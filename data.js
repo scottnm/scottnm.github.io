@@ -175,6 +175,14 @@ var technicalProjectData = [
 
 var creativeProjectData = [
         {
+            'title': 'Wasteland Cracker',
+            'dates': 'Winter 2021',
+            'description': 'A clone of the Fallout hacking mini-game with an included tool for solving real puzzles',
+            'src': 'https://github.com/scottnm/wasteland-cracker',
+            'image': 'https://raw.githubusercontent.com/scottnm/wasteland-cracker/main/demo/07-improved-word-generation.gif',
+            'tools': 'rust, pancurses/ncurses'
+        },
+        {
             'title': 'Tetrust',
             'dates': 'Winter 2021',
             'description': 'A TUI tetris clone written in rust',
