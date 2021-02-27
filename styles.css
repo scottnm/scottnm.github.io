@@ -41,10 +41,11 @@ a {
 
 #header-overlay {
     height: 150px;
-    padding-top: 2%;
+    padding-left: 10%;
 }
-
-
+#title-div {
+    display: flex;
+}
 body {
     margin: 0;
     vertical-align: middle;
