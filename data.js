@@ -3,9 +3,8 @@
 var githubPrefix = 'https://github.com/scottnm/';
 
 var welcomeMessage =
-    "Sometimes I'm a software engineer working for Xbox, but my primary station in life is to re-watch " +
-    "the same 3 seasons of <i>the Simpsons</i> on loop in between excursions to Metalcore concerts. " +
-    "This page is more or less a dumping ground for things I do in my free time."
+    "Sometimes, I'm a software engineer working for Xbox. When I'm not I make things that are useful to no one but myself. " +
+    "They live here for as long as I'm not embarassed by them.";
 
 var technicalProjectData = [
         {
@@ -174,6 +173,15 @@ var technicalProjectData = [
     ];
 
 var creativeProjectData = [
+        {
+            'title': 'Lost-n-found',
+            'dates': 'Winter 2021',
+            'description': 'A quick puzzle game for GGJ21 that I never properly named. The theme was "lost and found". '+
+                           'The core idea I tried to execute on was a "hot or cold" style guessing game where you use reveal clues which guide you toward finding something.',
+            'src': 'https://github.com/scottnm/lost-n-found-game',
+            'image': 'https://raw.githubusercontent.com/scottnm/lost-n-found-game/main/demo/05_traps-empty-cells-and-more.gif',
+            'tools': 'rust, pancurses/ncurses'
+        },
         {
             'title': 'Wasteland Cracker',
             'dates': 'Winter 2021',
