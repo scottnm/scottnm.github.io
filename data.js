@@ -268,7 +268,7 @@ var creativeProjectData = [
                            'radius of the map away from the character is lit (a torch effect). ' +
                            'Built for the 2015 Fall GameJam',
             'src': '',
-            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/labryinth.gif',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/labyrinth.gif',
             'tools': 'C#, Unity, Gimp',
             'video': 'https://www.youtube.com/watch?v=sFsm_7buEzA'
         },
