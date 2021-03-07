@@ -237,13 +237,15 @@ var creativeProjectData = [
                            'Mantazord. Made for Global Game Jam 2017.',
             'video': 'https://www.youtube.com/watch?v=jA9G3lyVIXA&',
             'src': 'https://github.com/scottnm/squid-mantazord',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/squid-mantazord.gif',
             'tools': 'Unity, C#'
         },
         {
             'title': 'Filibusters',
             'dates': 'Fall 2016',
-            'description': 'A 2D, side-scrolling, arena, shooter, collect-athon game featuring a light-hearted political theme',
+            'description': 'A multiplayer objective-based, arena-shooter game',
             'src': 'https://github.com/nanomachines/filibusters-game',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/filibusters.gif',
             'tools': 'Unity, C#, Photon Unity Networking',
             'video': 'https://www.youtube.com/watch?v=MjQtU9LpsCc',
             'liveapp': 'https://nanomachines.itch.io/filibusters'
@@ -266,6 +268,7 @@ var creativeProjectData = [
                            'radius of the map away from the character is lit (a torch effect). ' +
                            'Built for the 2015 Fall GameJam',
             'src': '',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/labryinth.gif',
             'tools': 'C#, Unity, Gimp',
             'video': 'https://www.youtube.com/watch?v=sFsm_7buEzA'
         },
@@ -279,6 +282,7 @@ var creativeProjectData = [
                            'collision, and enemy generation have already ' +
                            'been implemented',
             'src': githubPrefix + 'itchnscratch.git',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/tdsg.gif',
             'tools': 'Python, Pygame',
             'video': 'https://www.youtube.com/watch?v=RpATc4tDGIs'
         }
@@ -290,6 +294,7 @@ var textPostData = [
             'dates': 'Nov 2018',
             'description':
                 'A non-exhaustive list of my favorite albums released in 2018.',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/aoty-2018.jpg',
             'read': 'logs/albumsof2018.html',
         },
     ];
