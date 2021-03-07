@@ -3,8 +3,9 @@
 var githubPrefix = 'https://github.com/scottnm/';
 
 var welcomeMessage =
-    "Sometimes, I'm a software engineer working for Xbox. When I'm not I make things that are useful to no one but myself. " +
-    "They live here for as long as I'm not embarassed by them.";
+    "Sometimes, I'm a software engineer working for Xbox. When I'm not, I like to make things. " +
+    "Here you'll find a (lightly pruned) archive of such things. Most of it's code, some of it's not, " +
+    "and all of it's useful to no one but myself! Take a look around."
 
 var technicalProjectData = [
         {
@@ -12,6 +13,7 @@ var technicalProjectData = [
             'dates': 'Fall 2020',
             'description': 'A tool to extract the images captured in a Windows Steps Recorder file',
             'src': 'https://github.com/scottnm/WSR-Image-Extractor',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/wsr.png',
             'tools': 'rust'
         },
         {
@@ -20,6 +22,7 @@ var technicalProjectData = [
             'description': 'A tool to help visualize notes on a fretboard',
             'image': 'https://raw.githubusercontent.com/scottnm/notevis/master/demo/demo3.PNG',
             'src': 'https://github.com/scottnm/notevis',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/notevis.png',
             'tools': 'rust'
         },
         {
@@ -30,7 +33,7 @@ var technicalProjectData = [
                 '<a href="https://github.com/ssloy/tinyrenderer/wiki" target="_blank">Dmitry V. Sokolov\'s Tiny Renderer</a> ' +
                 'project.',
             'src': 'https://github.com/scottnm/tinyrenderer',
-            'image': 'files/tiny_renderer.png',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/tiny_renderer.png',
             // 'image': 'https://instagram.fsnc1-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/20225592_128806921055908_7636245869951451136_n.jpg',
             'tools': 'C++'
         },
@@ -52,6 +55,7 @@ var technicalProjectData = [
             'dates': 'Winter 2016',
             'description': 'A simple IK solver for a 2D, 3-point arm',
             'src': 'https://github.com/scottnm/IK2D',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/ik2d.gif',
             'video': 'https://www.youtube.com/watch?v=kuFz9OplPNk',
             'tools': 'Unity, C#',
             'video': 'https://www.youtube.com/watch?v=kuFz9OplPNk'
@@ -61,6 +65,7 @@ var technicalProjectData = [
             'dates': 'Summer 2016',
             'description': 'A layer-based pixel art editor built using MIT\'s Processing',
             'src': 'https://github.com/scottnm/Pixitor',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/pixitor.png',
             'tools': 'Processing, Java',
             'video': 'https://www.youtube.com/watch?v=mx1m7fG-8IM'
         },
@@ -69,6 +74,7 @@ var technicalProjectData = [
             'dates': 'Spring 2016',
             'description': 'A JRPG battle system demo using Ogre3D',
             'src': 'https://github.com/scottnm/ogre-jrpg',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/sudden_death.gif',
             'tools': 'C++, Ogre3D, SDL',
             'video': 'https://www.youtube.com/watch?v=PkhYBI-yMf4'
         },
@@ -83,6 +89,7 @@ var technicalProjectData = [
             'video': 'https://www.youtube.com/watch?v=6lbZnm3dlUU'
         },
         */
+        /*
         {
             'title': 'Scene Graph',
             'dates': 'Fall 2015',
@@ -91,6 +98,8 @@ var technicalProjectData = [
             'tools': 'C++, OpenGL, GLUI',
             'video': 'https://www.youtube.com/watch?v=4P6eWLGV2sc'
         },
+        */
+    /*
         {
             'title': 'Torus Shader',
             'dates': 'Fall 2015',
@@ -101,15 +110,18 @@ var technicalProjectData = [
             'tools': 'Glsl, C++',
             'video': 'https://www.youtube.com/watch?v=Z1-I8NzdXhw'
         },
+        */
         {
             'title': 'Menger Sponge',
             'dates': 'Fall 2015',
             'description': 'An OpenGL menger sponge that can be fully rotated and have ' +
                            'the level of recursion updated on the fly via popup menus',
             'src': '',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/menger_sponge.gif',
             'tools': 'C++, OpenGL, GLUT',
             'video': 'https://www.youtube.com/watch?v=vYaWWKJ4s1M'
         },
+    /*
         {
             'title': 'Quick-Radio',
             'dates': 'Fall 2015',
@@ -120,6 +132,8 @@ var technicalProjectData = [
             'tools': 'Javascript, Knockoutjs'
             //'liveapp': 'http://scottnm.github.io/Quick-Radio/liveapp/index.html'
         },
+        */
+    /*
         {
             'title': 'Go-Fish Probability Simulation',
             'dates': 'Spring 2015',
@@ -129,6 +143,8 @@ var technicalProjectData = [
             'src': 'http://github.com/gordineerandrew/Go-Fish',
             'tools': 'Java'
         },
+        */
+    /*
         {
             'title': 'TUI Space Raiders',
             'dates': 'Spring 2015',
@@ -140,6 +156,8 @@ var technicalProjectData = [
             'tools': 'C++, Ncurses',
             'video': 'https://www.youtube.com/watch?v=gu7laqzLF3Y'
         },
+        */
+    /*
         {
             'title': 'Binary Tree Builder',
             'dates': 'Fall 2014',
@@ -149,6 +167,8 @@ var technicalProjectData = [
             'src': githubPrefix + 'BinaryTreeBuilder.git',
             'tools': 'Java'
         },
+        */
+    /*
         {
             'title': 'Neural Network Pong',
             'dates': 'Spring 2014',
@@ -157,6 +177,8 @@ var technicalProjectData = [
             'tools': 'Python, Pygame',
             'video': 'https://www.youtube.com/watch?v=amNObCushrU'
         },
+        */
+    /*
         {
             'title': 'Evolving Boss Battles',
             'dates': 'Spring 2014',
@@ -170,6 +192,7 @@ var technicalProjectData = [
             'video': 'https://www.youtube.com/playlist?list=PL32gaNsQmlxtmjOjnfAN15zOAn-oJbRHV',
             'doc': 'files/evolving-boss-behavior-report.pdf'
         }
+        */
     ];
 
 var creativeProjectData = [
@@ -204,7 +227,7 @@ var creativeProjectData = [
             'description': 'A silly joke that I took too far and spent too much time on. The result? a ' +
                            'parody of "the Treachery of Images" by Rene Magritte. ' +
                            'In a funny turn of events, I like how it turned out. ',
-            'image': 'files/the_treachery_of_self_image.png',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/the_treachery_of_self_image.png',
             'tools': 'Paint Tool Sai'
         },
         {
