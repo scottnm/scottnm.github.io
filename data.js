@@ -7,7 +7,32 @@ var welcomeMessage =
     "Here you'll find a (lightly pruned) archive of such things. Most of it's code, some of it's not, " +
     "and all of it's useful to no one but myself! Take a look around."
 
-var technicalProjectData = [
+var projectData = [
+        {
+            'title': 'Lost-n-found',
+            'dates': 'Winter 2021',
+            'description': 'A quick puzzle game for GGJ21 that I never properly named. The theme was "lost and found". '+
+                           'The core idea I tried to execute on was a "hot or cold" style guessing game where you use reveal clues which guide you toward finding something.',
+            'src': 'https://github.com/scottnm/lost-n-found-game',
+            'image': 'https://raw.githubusercontent.com/scottnm/lost-n-found-game/main/demo/05_traps-empty-cells-and-more.gif',
+            'tools': 'rust, pancurses/ncurses'
+        },
+        {
+            'title': 'Wasteland Cracker',
+            'dates': 'Winter 2021',
+            'description': 'A clone of the Fallout hacking mini-game with an included tool for solving real puzzles',
+            'src': 'https://github.com/scottnm/wasteland-cracker',
+            'image': 'https://raw.githubusercontent.com/scottnm/wasteland-cracker/main/demo/07-improved-word-generation.gif',
+            'tools': 'rust, pancurses/ncurses'
+        },
+        {
+            'title': 'Tetrust',
+            'dates': 'Winter 2021',
+            'description': 'A TUI tetris clone written in rust',
+            'src': 'https://github.com/scottnm/tetrust',
+            'image': 'https://raw.githubusercontent.com/scottnm/tetrust/master/demo/main-demo.gif',
+            'tools': 'rust, pancurses/ncurses'
+        },
         {
             'title': 'WSR Image Extractor',
             'dates': 'Fall 2020',
@@ -26,6 +51,15 @@ var technicalProjectData = [
             'tools': 'rust'
         },
         {
+            'title': 'The Treachery of Self-image',
+            'dates': 'Spring 2018',
+            'description': 'A silly joke that I took too far and spent too much time on. The result? a ' +
+                           'parody of "the Treachery of Images" by Rene Magritte. ' +
+                           'In a funny turn of events, I like how it turned out. ',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/the_treachery_of_self_image.png',
+            'tools': 'Paint Tool Sai'
+        },
+        {
             'title': 'Tinyrenderer',
             'dates': 'Summer 2017',
             'description':
@@ -36,6 +70,16 @@ var technicalProjectData = [
             'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/tiny_renderer.png',
             // 'image': 'https://instagram.fsnc1-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/20225592_128806921055908_7636245869951451136_n.jpg',
             'tools': 'C++'
+        },
+        {
+            'title': 'Squid Mantazord',
+            'dates': 'Spring 2017',
+            'description': 'A top-down 2D gauntlet of sea-creatures to take the throne and become the next Squid ' +
+                           'Mantazord. Made for Global Game Jam 2017.',
+            'video': 'https://www.youtube.com/watch?v=jA9G3lyVIXA&',
+            'src': 'https://github.com/scottnm/squid-mantazord',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/squid-mantazord.gif',
+            'tools': 'Unity, C#'
         },
         /*
         {
@@ -59,6 +103,26 @@ var technicalProjectData = [
             'video': 'https://www.youtube.com/watch?v=kuFz9OplPNk',
             'tools': 'Unity, C#',
             'video': 'https://www.youtube.com/watch?v=kuFz9OplPNk'
+        },
+        {
+            'title': 'Filibusters',
+            'dates': 'Fall 2016',
+            'description': 'A multiplayer objective-based, arena-shooter game',
+            'src': 'https://github.com/nanomachines/filibusters-game',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/filibusters.gif',
+            'tools': 'Unity, C#, Photon Unity Networking',
+            'video': 'https://www.youtube.com/watch?v=MjQtU9LpsCc',
+            'liveapp': 'https://nanomachines.itch.io/filibusters'
+        },
+        {
+            'title': 'Monkey Muck',
+            'dates': 'Fall 2016',
+            'description': 'Designed, modeled, and textured an original 3D character. ' +
+                           'This character was inspired by horriffic figures from franchises like Silent Hill, ' +
+                           'the Legend of Zelda, and the Thing.',
+            'liveapp': 'https://skfb.ly/UuUG',
+            'tools': 'Maya, Photoshop',
+            'image': 'https://78.media.tumblr.com/c5907892d76dd8b506bea4874a0746e1/tumblr_ogs131Ygqq1veryvyo1_r1_500.gif'
         },
         {
             'title': 'Pixitor',
@@ -111,6 +175,18 @@ var technicalProjectData = [
             'video': 'https://www.youtube.com/watch?v=Z1-I8NzdXhw'
         },
         */
+        {
+            'title': 'Labyrinth',
+            'dates': 'Fall 2015',
+            'description': 'A game with procedurally ' +
+                           'generated maps, and a lighting effect where only a certain ' +
+                           'radius of the map away from the character is lit (a torch effect). ' +
+                           'Built for the 2015 Fall GameJam',
+            'src': '',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/labyrinth.gif',
+            'tools': 'C#, Unity, Gimp',
+            'video': 'https://www.youtube.com/watch?v=sFsm_7buEzA'
+        },
         {
             'title': 'Menger Sponge',
             'dates': 'Fall 2015',
@@ -193,85 +269,6 @@ var technicalProjectData = [
             'doc': 'files/evolving-boss-behavior-report.pdf'
         }
         */
-    ];
-
-var creativeProjectData = [
-        {
-            'title': 'Lost-n-found',
-            'dates': 'Winter 2021',
-            'description': 'A quick puzzle game for GGJ21 that I never properly named. The theme was "lost and found". '+
-                           'The core idea I tried to execute on was a "hot or cold" style guessing game where you use reveal clues which guide you toward finding something.',
-            'src': 'https://github.com/scottnm/lost-n-found-game',
-            'image': 'https://raw.githubusercontent.com/scottnm/lost-n-found-game/main/demo/05_traps-empty-cells-and-more.gif',
-            'tools': 'rust, pancurses/ncurses'
-        },
-        {
-            'title': 'Wasteland Cracker',
-            'dates': 'Winter 2021',
-            'description': 'A clone of the Fallout hacking mini-game with an included tool for solving real puzzles',
-            'src': 'https://github.com/scottnm/wasteland-cracker',
-            'image': 'https://raw.githubusercontent.com/scottnm/wasteland-cracker/main/demo/07-improved-word-generation.gif',
-            'tools': 'rust, pancurses/ncurses'
-        },
-        {
-            'title': 'Tetrust',
-            'dates': 'Winter 2021',
-            'description': 'A TUI tetris clone written in rust',
-            'src': 'https://github.com/scottnm/tetrust',
-            'image': 'https://raw.githubusercontent.com/scottnm/tetrust/master/demo/main-demo.gif',
-            'tools': 'rust, pancurses/ncurses'
-        },
-        {
-            'title': 'The Treachery of Self-image',
-            'dates': 'Spring 2018',
-            'description': 'A silly joke that I took too far and spent too much time on. The result? a ' +
-                           'parody of "the Treachery of Images" by Rene Magritte. ' +
-                           'In a funny turn of events, I like how it turned out. ',
-            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/the_treachery_of_self_image.png',
-            'tools': 'Paint Tool Sai'
-        },
-        {
-            'title': 'Squid Mantazord',
-            'dates': 'Spring 2017',
-            'description': 'A top-down 2D gauntlet of sea-creatures to take the throne and become the next Squid ' +
-                           'Mantazord. Made for Global Game Jam 2017.',
-            'video': 'https://www.youtube.com/watch?v=jA9G3lyVIXA&',
-            'src': 'https://github.com/scottnm/squid-mantazord',
-            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/squid-mantazord.gif',
-            'tools': 'Unity, C#'
-        },
-        {
-            'title': 'Filibusters',
-            'dates': 'Fall 2016',
-            'description': 'A multiplayer objective-based, arena-shooter game',
-            'src': 'https://github.com/nanomachines/filibusters-game',
-            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/filibusters.gif',
-            'tools': 'Unity, C#, Photon Unity Networking',
-            'video': 'https://www.youtube.com/watch?v=MjQtU9LpsCc',
-            'liveapp': 'https://nanomachines.itch.io/filibusters'
-        },
-        {
-            'title': 'Monkey Muck',
-            'dates': 'Fall 2016',
-            'description': 'Designed, modeled, and textured an original 3D character. ' +
-                           'This character was inspired by horriffic figures from franchises like Silent Hill, ' +
-                           'the Legend of Zelda, and the Thing.',
-            'liveapp': 'https://skfb.ly/UuUG',
-            'tools': 'Maya, Photoshop',
-            'image': 'https://78.media.tumblr.com/c5907892d76dd8b506bea4874a0746e1/tumblr_ogs131Ygqq1veryvyo1_r1_500.gif'
-        },
-        {
-            'title': 'Labyrinth',
-            'dates': 'Fall 2015',
-            'description': 'A game with procedurally ' +
-                           'generated maps, and a lighting effect where only a certain ' +
-                           'radius of the map away from the character is lit (a torch effect). ' +
-                           'Built for the 2015 Fall GameJam',
-            'src': '',
-            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/labyrinth.gif',
-            'tools': 'C#, Unity, Gimp',
-            'video': 'https://www.youtube.com/watch?v=sFsm_7buEzA'
-        },
         {
             'title': 'Top Down Shooter (Game)',
             'dates': 'Winter 2014',

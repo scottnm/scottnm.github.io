@@ -10,13 +10,11 @@ function project_tab(id, projects)
 
 
 var button_id_to_project_tab_id_map = {
-    "technical-btn": "technical",
-    "creative-btn": "creative",
+    "project-btn": "projects",
     "text-post-btn": "textposts"
     };
 var project_tab_table = {
-    "technical": project_tab("technical", technicalProjectData),
-    "creative": project_tab("creative", creativeProjectData),
+    "projects": project_tab("projects", projectData),
     "textposts": project_tab("textposts", textPostData)
     };
 
