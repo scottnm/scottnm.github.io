@@ -9,6 +9,14 @@ var welcomeMessage =
 
 var projectData = [
         {
+            'title': 'Scrapewood',
+            'dates': 'Spring 2021',
+            'description': 'Wrote a web-scraper to grab all of the main Achewood comics from the website. I then merged them into a unified PDF so that I could read them on my e-reader. Source not available because web scrappers always feel like they\'re in dubiously legal territory and I don\'t intend to distribute the resulting PDF or web scraper source.',
+            'image': 'https://raw.githubusercontent.com/scottnm/lost-n-found-game/main/demo/05_traps-empty-cells-and-more.gif',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/scrapewood_on_reader.jpg',
+            'tools': 'rust'
+        },
+        {
             'title': 'Lost-n-found',
             'dates': 'Winter 2021',
             'description': 'A quick puzzle game for GGJ21 that I never properly named. The theme was "lost and found". '+
