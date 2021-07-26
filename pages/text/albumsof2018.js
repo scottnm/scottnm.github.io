@@ -178,7 +178,7 @@ function format_entry(entry)
     entry_element += "</div>";
     entry_element += "</div>";
 
-    return `<section class="center-cropped" style="background-image: url('../site_images/${entry.image}');">` +
+    return `<section class="center-cropped" style="background-image: url('../../site_images/${entry.image}');">` +
            `<div class="entry entry_info_frame_border section-with-small-buffer">${entry_element}</div>` +
            "</section>";
 }

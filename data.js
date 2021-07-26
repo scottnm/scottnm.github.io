@@ -300,6 +300,6 @@ var textPostData = [
             'description':
                 'A non-exhaustive list of my favorite albums released in 2018.',
             'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/aoty-2018.jpg',
-            'read': 'logs/albumsof2018.html',
+            'read': 'pages/text/albumsof2018.html',
         },
     ];
