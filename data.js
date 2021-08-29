@@ -86,7 +86,7 @@ var projectData = [
                            'Mantazord. Made for Global Game Jam 2017.',
             'video': 'https://www.youtube.com/watch?v=jA9G3lyVIXA&',
             'src': 'https://github.com/scottnm/squid-mantazord',
-            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/squid-mantazord.gif',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/webps/squid-mantazord.webp',
             'tools': 'Unity, C#'
         },
         /*
@@ -107,7 +107,7 @@ var projectData = [
             'dates': 'Winter 2016',
             'description': 'A simple IK solver for a 2D, 3-point arm',
             'src': 'https://github.com/scottnm/IK2D',
-            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/ik2d.gif',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/webps/ik2d.webp',
             'video': 'https://www.youtube.com/watch?v=kuFz9OplPNk',
             'tools': 'Unity, C#',
             'video': 'https://www.youtube.com/watch?v=kuFz9OplPNk'
@@ -117,7 +117,7 @@ var projectData = [
             'dates': 'Fall 2016',
             'description': 'A multiplayer objective-based, arena-shooter game',
             'src': 'https://github.com/nanomachines/filibusters-game',
-            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/filibusters.gif',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/webps/filibusters.webp',
             'tools': 'Unity, C#, Photon Unity Networking',
             'video': 'https://www.youtube.com/watch?v=MjQtU9LpsCc',
             'liveapp': 'https://nanomachines.itch.io/filibusters'
@@ -130,7 +130,7 @@ var projectData = [
                            'the Legend of Zelda, and the Thing.',
             'liveapp': 'https://skfb.ly/UuUG',
             'tools': 'Maya, Photoshop',
-            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/monkeymuck.gif'
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/webps/monkeymuck.webp'
         },
         {
             'title': 'Pixitor',
@@ -146,7 +146,7 @@ var projectData = [
             'dates': 'Spring 2016',
             'description': 'A JRPG battle system demo using Ogre3D',
             'src': 'https://github.com/scottnm/ogre-jrpg',
-            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/sudden_death.gif',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/webps/sudden_death.webp',
             'tools': 'C++, Ogre3D, SDL',
             'video': 'https://www.youtube.com/watch?v=PkhYBI-yMf4'
         },
@@ -191,7 +191,7 @@ var projectData = [
                            'radius of the map away from the character is lit (a torch effect). ' +
                            'Built for the 2015 Fall GameJam',
             'src': '',
-            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/labyrinth.gif',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/webps/labyrinth.webp',
             'tools': 'C#, Unity, Gimp',
             'video': 'https://www.youtube.com/watch?v=sFsm_7buEzA'
         },
@@ -201,7 +201,7 @@ var projectData = [
             'description': 'An OpenGL menger sponge that can be fully rotated and have ' +
                            'the level of recursion updated on the fly via popup menus',
             'src': '',
-            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/menger_sponge.gif',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/webps/menger_sponge.webp',
             'tools': 'C++, OpenGL, GLUT',
             'video': 'https://www.youtube.com/watch?v=vYaWWKJ4s1M'
         },
@@ -287,7 +287,7 @@ var projectData = [
                            'collision, and enemy generation have already ' +
                            'been implemented',
             'src': githubPrefix + 'itchnscratch.git',
-            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/tdsg.gif',
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/webps/tdsg.webp',
             'tools': 'Python, Pygame',
             'video': 'https://www.youtube.com/watch?v=RpATc4tDGIs'
         }
