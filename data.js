@@ -130,7 +130,7 @@ var projectData = [
                            'the Legend of Zelda, and the Thing.',
             'liveapp': 'https://skfb.ly/UuUG',
             'tools': 'Maya, Photoshop',
-            'image': 'https://78.media.tumblr.com/c5907892d76dd8b506bea4874a0746e1/tumblr_ogs131Ygqq1veryvyo1_r1_500.gif'
+            'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/monkeymuck.gif'
         },
         {
             'title': 'Pixitor',
