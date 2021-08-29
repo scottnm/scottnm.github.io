@@ -41,7 +41,7 @@ function format_project_element(project)
         "</div>";
     if (project.image)
     {
-        project_element += `<img class="image_embed" src=${project.image} />`;
+        project_element += `<img class="image_embed" src=${project.image} loading="lazy"/>`;
     }
 
     return project_element;
