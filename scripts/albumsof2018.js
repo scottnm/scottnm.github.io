@@ -1,5 +1,3 @@
-'use strict';
-
 var logHeaderText = "Here's a (non-exhaustive) list of albums from Nov 2017 to Nov 2018 that I grew really attached to. While not every album on this list is a 10/10, I think they each have something really interesting that kept me coming back for repeat listens."/* This year my list was heavily inspired by Spotify recommendations as that's been my primary means of discovering new music since I stopped browsing \"core\" subreddits regularly. I found a lot of great stuff, but I think it led to a polarized year of music. In 2019, I'd like to find another avenue to discover music to balance it out a bit.*/;
 
 var honorableMentions = [

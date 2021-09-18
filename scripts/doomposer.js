@@ -1,5 +1,3 @@
-'use strict';
-
 var posers = {
     "b5481b4b-b8b3-4430-a69b-f1948730f079": "Scott Munro",
     "697edd0a-1469-4536-a33a-682223ebcd88": "Derrick Gil"
