@@ -17,6 +17,7 @@ var projectData = [
         'title': 'Bman3D',
         'dates': 'Spring 2021',
         'description': 'Modeled, textured, and rigged a 3D model of Bomberman from "Bomberman 64: the Second Attack!"',
+        'liveapp': 'https://skfb.ly/osJ6Y',
         'image': 'https://raw.githubusercontent.com/scottnm/b64-sa-model/main/progress_renders/tposing.gif',
         'tools': 'blender'
     },
