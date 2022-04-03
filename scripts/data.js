@@ -7,10 +7,20 @@ var welcomeMessage =
 
 var projectData = [
     {
+        'title': 'Dig Deep',
+        'dates': 'Spring 2022',
+        'description': 'An isometric pico-8 game about digging and family history for the <a href="https://itch.io/jam/culture-bytes-classic-collards-jam">Classic Collards Game Jam</a>.',
+        'image': 'https://raw.githubusercontent.com/scottnm/collards.p8/main/promo/quick-demo.gif',
+        'src': 'https://github.com/scottnm/collards.p8',
+        'liveapp': 'https://scottnm.itch.io/dig-deep',
+        'tools': 'pico8, lua'
+    },
+    {
         'title': 'Avipaper.p8',
         'dates': 'Winter 2021',
         'description': 'A Pico-8 demo. Fly a paper airplane through some targets.',
         'image': 'https://raw.githubusercontent.com/scottnm/avipaper.p8/main/demo.gif',
+        'src': 'https://github.com/scottnm/avipaper.p8',
         'tools': 'pico8, lua'
     },
     {
