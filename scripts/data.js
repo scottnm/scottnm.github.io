@@ -317,12 +317,19 @@ var projectData = [
 
 var textPostData = [
     {
+        'title': 'Dig Deep Retrospective',
+        'dates': 'May 2022',
+        'description': 'Reflecting on my experience making Dig Deep during the "Classic Collards" Game Jam',
+        'image': 'https://raw.githubusercontent.com/scottnm/collards.p8/main/promo/quick-demo.gif',
+        'read': 'pages/text/digdeepretro/digdeepretro.html',
+    },
+    {
         'title': 'Favorite Albums of 2018',
         'dates': 'Nov 2018',
         'description':
             'A non-exhaustive list of my favorite albums released in 2018.',
         'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/aoty-2018.jpg',
-        'read': 'pages/albumsof2018.html',
+        'read': 'pages/text/albumsof2018.html',
     },
 ];
 
