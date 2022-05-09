@@ -166,7 +166,7 @@ var projectData = [
     {
         'title': 'Ogre JRPG',
         'dates': 'Spring 2016',
-        'description': 'A JRPG battle system demo using Ogre3D',
+        'description': 'A turn-based battle system demo using Ogre3D for one of my university courses.',
         'src': 'https://github.com/scottnm/ogre-jrpg',
         'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/webps/sudden_death.webp',
         'tools': 'C++, Ogre3D, SDL',
@@ -208,10 +208,9 @@ var projectData = [
     {
         'title': 'Labyrinth',
         'dates': 'Fall 2015',
-        'description': 'A game with procedurally ' +
-            'generated maps, and a lighting effect where only a certain ' +
-            'radius of the map away from the character is lit (a torch effect). ' +
-            'Built for the 2015 Fall GameJam',
+        'description': 'A game with procedurally generated maps, and a lighting ' +
+            'effect where only a certain radius of the map away from the character ' +
+            'is lit (a torch effect). Built for the 2015 Fall GameJam at UT Austin.',
         'src': '',
         'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/webps/labyrinth.webp',
         'tools': 'C#, Unity, Gimp',
@@ -300,14 +299,10 @@ var projectData = [
         }
         */
     {
-        'title': 'Top Down Shooter (Game)',
+        'title': 'Itchnscratch',
         'dates': 'Winter 2014',
-        'description': 'The framework/basic mechanics for a ' +
-            'topdown zombie shooter game. Currently only in ' +
-            'the prototyping phase, but mechanics such as ' +
-            'walking, turning, shooting, reloading, ' +
-            'collision, and enemy generation have already ' +
-            'been implemented',
+        'description': 'A demo for a topdown twin stick wave shooter in Pygame. I do not remember for the life of me ' +
+            ' why I named this project "Itchnscratch. I think I just needed a name and I was watching Simpsons re-runs.',
         'src': githubPrefix + 'itchnscratch.git',
         'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/webps/tdsg.webp',
         'tools': 'Python, Pygame',

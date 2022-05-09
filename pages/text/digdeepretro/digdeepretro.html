@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="icon" type="image/png" href="../../site_images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" href="../../../site_images/icon/favicon-32x32.png">
     <link rel="stylesheet" href="../../../styles.css" />
     <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" />
@@ -17,14 +17,27 @@
         .progress-pic {
             width: 256px
         }
-        h1, p, ul, li {
+        h2, p, ul, li {
             color: #ffffff;
         }
         p, ul, li {
             font-size: 1em;
+            font-family: 'Josefin Sans', sans-serif;
         }
         ul, li {
             line-height: 1.75em;
+        }
+        #progress-pic-grid {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            grid-gap: 5px;
+        }
+        @media screen and (min-width: 1368px) {
+            #progress-pic-grid {
+               grid-template-columns: 25% 25% 25% 25%;
+               grid-template-rows: auto auto auto auto;
+            }
         }
     </style>
 </head>
@@ -45,7 +58,7 @@
 
     <section>
         <div id="body-pane" class="section-with-buffer">
-            <h1 class="section-title" id="dig-deep-dev-retrospective">Dig Deep Dev Retrospective</h1>
+            <h2 class="section-title" id="dig-deep-dev-retrospective">Dig Deep Dev Retrospective</h1>
             <p>This past March, I helped host and participated in a 2 week Game Jam: <a href="https://itch.io/jam/culture-bytes-classic-collards-jam">The Classic Collards Jam</a>.</p>
             <p>My team built an isometric digging game in Pico-8 called <a href="https://scottnm.itch.io/dig-deep">Dig Deep</a>.</p>
             <p>I had an absurd amount of fun and felt like I grew a lot as a hobbyist game dev from the experience.</p>
@@ -115,7 +128,7 @@
                 One cool consequence of working in Pico-8 was that I had to make frequent use of its gif capture tool to share progress with my team as I was working on new features. Almost by accident, I ended up capturing effectively the entire
                 development history of the project in gifs. Here they are! I think it looks pretty cool.
             </p>
-            <p>
+            <div id="progress-pic-grid">
                 <img class="progress-pic" src="progress_imgs/01.jpg" alt="isometric map prototype" />
                 <img class="progress-pic" src="progress_imgs/02.gif" alt="first timer prototype" />
                 <img class="progress-pic" src="progress_imgs/03.gif" alt="animating a sample character" />
@@ -134,7 +147,7 @@
                 <img class="progress-pic" src="progress_imgs/16.gif" alt="game over text crawl" />
                 <img class="progress-pic" src="progress_imgs/17.gif" alt="final demo" />
                 <img class="progress-pic" src="progress_imgs/18.gif" alt="post-game-jam adding an item sensor" />
-            </p>
+            </div>
         </div>
     </section>
 </body>
