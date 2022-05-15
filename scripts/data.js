@@ -124,6 +124,7 @@ var projectData = [
         'doc': 'https://github.com/jmsanchez86/idb/blob/dev/app/static/data/vennfridge-technical-report.md'
     },
     */
+    /*
     {
         'title': 'IK2D',
         'dates': 'Winter 2016',
@@ -134,6 +135,7 @@ var projectData = [
         'tools': 'Unity, C#',
         'video': 'https://www.youtube.com/watch?v=kuFz9OplPNk'
     },
+    */
     {
         'title': 'Filibusters',
         'dates': 'Fall 2016',
@@ -194,17 +196,17 @@ var projectData = [
     },
     */
     /*
-        {
-            'title': 'Torus Shader',
-            'dates': 'Fall 2015',
-            'description': 'Using glsl shaders, transformed a flat sheet into a torus' +
-                           ' and replicated phong shading, texture mapping, bump mapping, ' +
-                           'and reflective surfaces.',
-            'src': '',
-            'tools': 'Glsl, C++',
-            'video': 'https://www.youtube.com/watch?v=Z1-I8NzdXhw'
-        },
-        */
+    {
+        'title': 'Torus Shader',
+        'dates': 'Fall 2015',
+        'description': 'Using glsl shaders, transformed a flat sheet into a torus' +
+                       ' and replicated phong shading, texture mapping, bump mapping, ' +
+                       'and reflective surfaces.',
+        'src': '',
+        'tools': 'Glsl, C++',
+        'video': 'https://www.youtube.com/watch?v=Z1-I8NzdXhw'
+    },
+    */
     {
         'title': 'Labyrinth',
         'dates': 'Fall 2015',
@@ -225,79 +227,80 @@ var projectData = [
         'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/webps/menger_sponge.webp',
         'tools': 'C++, OpenGL, GLUT',
         'video': 'https://www.youtube.com/watch?v=vYaWWKJ4s1M'
+    }
+    /*
+    {
+        'title': 'Quick-Radio',
+        'dates': 'Fall 2015',
+        'description': 'A webapp generates that' +
+                       'radio-like playlist from multiple artist seeds, and launches ' +
+                       'the playlist in the spotify webapp',
+        'src': githubPrefix + 'Quick-Radio.git',
+        'tools': 'Javascript, Knockoutjs'
+        //'liveapp': 'http://scottnm.github.io/Quick-Radio/liveapp/index.html'
     },
+    */
     /*
-        {
-            'title': 'Quick-Radio',
-            'dates': 'Fall 2015',
-            'description': 'A webapp generates that' +
-                           'radio-like playlist from multiple artist seeds, and launches ' +
-                           'the playlist in the spotify webapp',
-            'src': githubPrefix + 'Quick-Radio.git',
-            'tools': 'Javascript, Knockoutjs'
-            //'liveapp': 'http://scottnm.github.io/Quick-Radio/liveapp/index.html'
-        },
-        */
+    {
+        'title': 'Go-Fish Probability Simulation',
+        'dates': 'Spring 2015',
+        'description': 'A simulation of GoFish that displays the ' +
+                       'probabilities of a player\'s guess being correct ' +
+                       'allowing for a player to make more educated guesses',
+        'src': 'http://github.com/gordineerandrew/Go-Fish',
+        'tools': 'Java'
+    },
+    */
     /*
-        {
-            'title': 'Go-Fish Probability Simulation',
-            'dates': 'Spring 2015',
-            'description': 'A simulation of GoFish that displays the ' +
-                           'probabilities of a player\'s guess being correct ' +
-                           'allowing for a player to make more educated guesses',
-            'src': 'http://github.com/gordineerandrew/Go-Fish',
-            'tools': 'Java'
-        },
-        */
+    {
+        'title': 'TUI Space Raiders',
+        'dates': 'Spring 2015',
+        'description': 'A simple text-based form of the game Space Invaders, ' +
+                       'called Space Raiders. Implemented simple ' +
+                       'mechanics such as collisions, win-lose ' +
+                       'conditions, and a simple enemy AI.',
+        'src': githubPrefix + 'Space-Raiders.git',
+        'tools': 'C++, Ncurses',
+        'video': 'https://www.youtube.com/watch?v=gu7laqzLF3Y'
+    },
+    */
     /*
-        {
-            'title': 'TUI Space Raiders',
-            'dates': 'Spring 2015',
-            'description': 'A simple text-based form of the game Space Invaders, ' +
-                           'called Space Raiders. Implemented simple ' +
-                           'mechanics such as collisions, win-lose ' +
-                           'conditions, and a simple enemy AI.',
-            'src': githubPrefix + 'Space-Raiders.git',
-            'tools': 'C++, Ncurses',
-            'video': 'https://www.youtube.com/watch?v=gu7laqzLF3Y'
-        },
-        */
+    {
+        'title': 'Binary Tree Builder',
+        'dates': 'Fall 2014',
+        'description': 'A program that builds a binary tree from a ' +
+                       'post-order traversal and outputs the breadth-' +
+                       'first traversal of that tree',
+        'src': githubPrefix + 'BinaryTreeBuilder.git',
+        'tools': 'Java'
+    },
+    */
     /*
-        {
-            'title': 'Binary Tree Builder',
-            'dates': 'Fall 2014',
-            'description': 'A program that builds a binary tree from a ' +
-                           'post-order traversal and outputs the breadth-' +
-                           'first traversal of that tree',
-            'src': githubPrefix + 'BinaryTreeBuilder.git',
-            'tools': 'Java'
-        },
-        */
+    {
+        'title': 'Neural Network Pong',
+        'dates': 'Spring 2014',
+        'description': 'Classic game Pong, with a trained neural network opponent',
+        'src': githubPrefix + 'Neuroevolution-Pong.git',
+        'tools': 'Python, Pygame',
+        'video': 'https://www.youtube.com/watch?v=amNObCushrU'
+    },
+    */
     /*
-        {
-            'title': 'Neural Network Pong',
-            'dates': 'Spring 2014',
-            'description': 'Classic game Pong, with a trained neural network opponent',
-            'src': githubPrefix + 'Neuroevolution-Pong.git',
-            'tools': 'Python, Pygame',
-            'video': 'https://www.youtube.com/watch?v=amNObCushrU'
-        },
-        */
+    {
+        'title': 'Evolving Boss Battles',
+        'dates': 'Spring 2014',
+        'description': 'A neural network and game environment ' +
+                       'to train a simple boss-character to compete ' +
+                       'against a player character, and researched the ' +
+                       'effects of different training methods and neural ' +
+                       'network structures',
+        'src': githubPrefix + 'Evolving-Boss-Battles.git',
+        'tools': 'Python, Pygame',
+        'video': 'https://www.youtube.com/playlist?list=PL32gaNsQmlxtmjOjnfAN15zOAn-oJbRHV',
+        'doc': 'files/evolving-boss-behavior-report.pdf'
+    }
+    */
     /*
-        {
-            'title': 'Evolving Boss Battles',
-            'dates': 'Spring 2014',
-            'description': 'A neural network and game environment ' +
-                           'to train a simple boss-character to compete ' +
-                           'against a player character, and researched the ' +
-                           'effects of different training methods and neural ' +
-                           'network structures',
-            'src': githubPrefix + 'Evolving-Boss-Battles.git',
-            'tools': 'Python, Pygame',
-            'video': 'https://www.youtube.com/playlist?list=PL32gaNsQmlxtmjOjnfAN15zOAn-oJbRHV',
-            'doc': 'files/evolving-boss-behavior-report.pdf'
-        }
-        */
     {
         'title': 'Itchnscratch',
         'dates': 'Winter 2014',
@@ -308,6 +311,7 @@ var projectData = [
         'tools': 'Python, Pygame',
         'video': 'https://www.youtube.com/watch?v=RpATc4tDGIs'
     }
+    */
 ];
 
 var textPostData = [
