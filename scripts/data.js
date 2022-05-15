@@ -96,7 +96,7 @@ var projectData = [
             'A cpu-based, didactic renderer project from ' +
             '<a href="https://github.com/ssloy/tinyrenderer/wiki" target="_blank">Dmitry V. Sokolov\'s Tiny Renderer</a> ' +
             'project.',
-        'src': 'https://github.com/scottnm/tinyrenderer',
+        'src': 'https://github.com/scottnm/Playground/tree/main/gfx/tinyrenderer',
         'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/tiny_renderer.png',
         // 'image': 'https://instagram.fsnc1-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/20225592_128806921055908_7636245869951451136_n.jpg',
         'tools': 'C++'
