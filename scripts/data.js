@@ -316,6 +316,13 @@ var projectData = [
 
 var textPostData = [
     {
+        'title': 'Hair Log',
+        'dates': 'June 2022',
+        'description': 'I kept track of my hair growing for about a year.',
+        'image': 'site_images/hueyfreeman.webp',
+        'read': 'pages/text/hair_log/hair_log.html',
+    },
+    {
         'title': 'Dig Deep Retrospective',
         'dates': 'May 2022',
         'description': 'Reflecting on my experience making Dig Deep during the "Classic Collards" Game Jam',
