@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  
+  <!-- FEED METADATA -->
+  <title>Scott Munro</title>
+  <subtitle>One stop shop for all of my nonsense</subtitle>
+  <link href="http://scottnm.com/atomfeed.xml" rel="self"/>
+  <link href="http://scottnm.com/"/>
+  <icon>/site_images/icon/atomfeedicon.png</icon>
+  <updated>2022-10-02T00:11:00Z</updated>
+  <id>urn:uuid:bfae4b33-aa4e-48a6-96b7-09e66d905159</id>
+  <author>
+    <name>Scott Munro</name>
+  </author>
+
+  <!-- FEED ENTRIES -->
+  <entry>
+    <title>Hair Log</title>
+    <link href="https://www.scottnm.com/pages/text/hair_log/hair_log.html" />
+    <id>urn:uuid:3ff30857-8734-44eb-bc0f-f711d8c61b64</id>
+    <updated>2022-10-02T00:11:00Z</updated>
+    <summary>I kept track of my hair growing for about a year.</summary>
+  </entry>
+
+</feed>
