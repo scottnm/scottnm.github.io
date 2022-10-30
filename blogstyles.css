@@ -1,0 +1,64 @@
+:root {
+    --color-lighter: #b27c71;
+    --color-light:   #965749;
+    --color-medium:  #823E30;
+    --color-dark:    #6a2a1c;
+    --color-darker:  #4d160a;
+    --color-text-link: yellow;
+    --color-text-main: white;
+}
+
+body {
+    background-color: var(--color-medium);
+}
+
+p, ul, li {
+    color: var(--color-text-main);
+}
+
+p, ul, li {
+    font-size: 1em;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+ul, li {
+    line-height: 1.75em;
+}
+
+/* 
+ * the main body pane 
+ * Basically just a section with some buffer around it
+ */
+section > div {
+    margin: 0% 15%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+/*
+ * the section title
+ */
+section > div > h1 {
+    font-size: 1.5em;
+    font-family: 'Bungee', cursive;
+    color: var(--color-lighter);
+}
+
+/*
+ * Support picture grids
+ */
+.pic-grid-cell {
+    width: 256px
+}
+#pic-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 5px;
+}
+@media screen and (min-width: 1368px) {
+    #pic-grid {
+       grid-template-columns: 25% 25% 25% 25%;
+       grid-template-rows: auto auto auto auto;
+    }
+}

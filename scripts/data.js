@@ -316,18 +316,25 @@ var projectData = [
 
 var textPostData = [
     {
+        'title': 'Surprising Monkey Muck Data',
+        'dates': 'October 2022',
+        'description': "Why are people playing this demo???",
+        'image': 'site_images/muckblog.png',
+        'read': 'blog_posts/2022_10_29_surprising_monkey_muck_data.html',
+    },
+    {
         'title': 'Hair Log',
         'dates': 'June 2022',
         'description': 'I kept track of my hair growing for about a year.',
         'image': 'site_images/hueyfreeman.webp',
-        'read': 'pages/text/hair_log/hair_log.html',
+        'read': 'pages/bespoke/hair_log/hair_log.html',
     },
     {
         'title': 'Dig Deep Retrospective',
         'dates': 'May 2022',
         'description': 'Reflecting on my experience making Dig Deep during the "Classic Collards" Game Jam',
         'image': 'https://raw.githubusercontent.com/scottnm/collards.p8/main/promo/quick-demo.gif',
-        'read': 'pages/text/digdeepretro/digdeepretro.html',
+        'read': 'pages/bespoke/digdeepretro/digdeepretro.html',
     },
     {
         'title': 'Favorite Albums of 2018',
@@ -335,7 +342,7 @@ var textPostData = [
         'description':
             'A non-exhaustive list of my favorite albums released in 2018.',
         'image': 'https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/aoty-2018.jpg',
-        'read': 'pages/text/albumsof2018.html',
+        'read': 'pages/bespoke/albumsof2018.html',
     },
 ];
 
