@@ -7,6 +7,14 @@ var welcomeMessage =
 
 var projectData = [
     {
+        'title': 'VTPP',
+        'dates': 'November 2023',
+        'description': 'Video-to-Private-Podcast: a home server project',
+        'image': 'site_images/vtpp_feed_coverart.png',
+        'read': 'pages/bespoke/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html',
+        'tools': 'python, sqlite3, raspberrypi'
+    },
+    {
         'title': 'Dig Deep',
         'dates': 'Spring 2022',
         'description': 'An isometric pico-8 game about digging and family history for the <a href="https://itch.io/jam/culture-bytes-classic-collards-jam">Classic Collards Game Jam</a>.',
@@ -315,6 +323,13 @@ var projectData = [
 ];
 
 var textPostData = [
+    {
+        'title': 'VTPP v0.1.0',
+        'dates': 'November 2023',
+        'description': "new project: Video-to-Private-Podcast",
+        'image': 'site_images/vtpp_feed_coverart.png',
+        'read': 'pages/bespoke/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html',
+    },
     {
         'title': 'Surprising Monkey Muck Data',
         'dates': 'October 2022',

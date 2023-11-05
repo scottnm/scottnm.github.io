@@ -6,6 +6,7 @@
     --color-darker:  #4d160a;
     --color-text-link: yellow;
     --color-text-main: white;
+    --color-text-footnote: #BBBBBB;
 }
 
 body {
@@ -21,12 +22,24 @@ p, ul, li {
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.footnote {
+    font-size: 0.8em;
+    color: var(--color-text-footnote);
+    font-variant: small-caps;
+}
+
+code {
+    background-color: var(--color-darker);
+    color: var(--color-text-main);
+    white-space: nowrap;
+}
+
 ul, li {
     line-height: 1.75em;
 }
 
-/* 
- * the main body pane 
+/*
+ * the main body pane
  * Basically just a section with some buffer around it
  */
 section > div {

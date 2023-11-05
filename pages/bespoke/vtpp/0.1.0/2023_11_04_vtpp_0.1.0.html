@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.9.14" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <link rel="icon" type="image/png" href="/site_images/icon/favicon-32x32.png" />
+        <link rel="stylesheet" href="/styles.css" />
+        <link rel="stylesheet" href="/blogstyles.css" />
+        <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" />
+        <title>
+            Scott Munro: VTPP 0.1.0
+        </title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <style>
+            /*
+            * Support picture grids
+            */
+            @media screen and (min-width: 800px) {
+                .vtpp-demo-pic {
+                    width: 384px
+                }
+
+                .vtpp-demo-pic > img {
+                    width: 384px
+                }
+            }
+
+            @media screen and (max-width: 800px) {
+                .vtpp-demo-pic {
+                    width: 256px
+                }
+
+                .vtpp-demo-pic > img {
+                    width: 256px
+                }
+            }
+
+            @media screen and (min-width: 1368px) {
+                #vtpp-demo-pics {
+                    display: grid;
+                    justify-content: center;
+                    align-content: center;
+                    grid-gap: 5px;
+                    grid-template-columns: 33% 33% 33%;
+                    grid-template-rows: auto auto auto auto;
+                }
+            }
+
+            @media screen and (max-width: 1368px) {
+                #vtpp-demo-pics {
+                    display: grid;
+                    justify-content: center;
+                    align-content: center;
+                    grid-gap: 5px;
+                    grid-template-columns: 100%;
+                    grid-template-rows: auto auto auto auto;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <header class="bg-darker">
+            <div id="header-pane" class="section-with-buffer">
+                <div id="header-with-links-container">
+                    <h1 id="title-text">
+                        Scott Munro
+                    </h1>
+                    <a class="social-btn" href="https://github.com/scottnm" title="check out my code on github" target=
+                    "_blank">github</a> <a class="social-btn" href="/atomfeed.xml" title="subscribe via atom/rss feeds"
+                    rel="subscribe-rss" target="_blank">feed</a> <a class="social-btn" href="mailto:me@scottnm.com"
+                    title="shoot me an email">email</a> <a class="social-btn" href="https://linkedin.com/in/scott-munro"
+                    title="connect with me on linkedin" target="_blank">linkedin</a>
+                </div>
+                <img alt="banner image of site logo" id="header-overlay" src=
+                "/site_images/overlay_translucent.png" />
+            </div>
+        </header>
+
+        <section>
+            <div>
+                <h1 id="vtpp-0.1.0">
+                    VTPP 0.1.0
+                </h1>
+
+                <p>
+                    I've been chipping away at a fun idea, and it's far enough along now that I feel like sharing it.
+                </p>
+
+                <p>
+                    For now, the name I've been using is "VTPP" (Video-to-Private-Podcast), and the concept is simple:
+                    it's a home server which periodically downloads videos from external source(s)<sup><a href="#footnote-1">[1]</a></sup>, strips the audio
+                    from those videos, and serves that audio in a podcast feed accessible from my home network<sup><a href="#footnote-2">[2]</a></sup>.
+                </p>
+
+                <p>
+                    The server also supports downloading specific videos without subscribing to an entire video feed.
+                </p>
+
+                <p>
+                    So far, all this has worked really well!
+                </p>
+
+                <ul>
+                    <li>The server itself does very little work, so I've been able to run it off a spare Raspberry Pi
+                    that was collecting dust.
+                    </li>
+
+                    <li>There are more than a few YouTube channels where I only want to listen to the videos (usually
+                    during repeat watches/listens). It's nice to save power and turn off my phone screen while
+                    listening, which YouTube's current UI/UX/business policies prohibit without paying them.
+                    </li>
+
+                    <li>The size of the downloaded audio is more than manageable for my server's storage. Enough that I
+                    haven't bothered to worry about figuring out how to manage running out space in a smart<sup><a href="#footnote-3">[3]</a></sup> way.
+                    </li>
+
+                    <li>I haven't been able to get most iOS podcast apps to connect to my home server, but I did find
+                    one that is really great so far: RSS Radio.
+                    </li>
+                </ul>
+
+                <p>
+                    I don't yet intend to package this for anyone else to use or even to make the source available, but
+                    the concept is pretty simple to implement. If you like the idea, feel free to implement your own
+                    version! I'm not the idea police. No way I was the first one to think of this idea (I never bothered
+                    checking...).
+                </p>
+
+                <p>
+                    Here are some screenshots of it working in action!
+                </p>
+
+                <div id="vtpp-demo-pics">
+                    <div class="vtpp-demo-pic" >
+                        <img alt="Screenshot of feed in podcast app and episode being played" src="/site_images/demo_podcast.webp" />
+                        <p>
+                            Here's a quick demo of my phone playing an episode from the podcast feed.
+                        </p>
+                    </div>
+
+                    <div class="vtpp-demo-pic" >
+                        <img alt="Screenshot of an on-demand video being downloaded to the server and uploaded to the feed" src="/site_images/demo_download.webp" />
+                        <p>
+                            Here's a quick demo of me requesting a video be downloaded on-demand to my feed server from my phone,
+                            followed by the audio becoming available within the podcast feed on my phone.
+                        </p>
+                    </div>
+
+                    <div class="vtpp-demo-pic" >
+                        <img alt="Screenshot of a server status report uploaded to a private discord server" src="/site_images/demo_discord.webp" />
+                        <p>
+                            To make it easier to monitor the health of the server, I added Discord webhook support. If the server runs into
+                            trouble, it'll send error reports with logs to a private discord server I setup. And when new videos are successfully
+                            downloaded, I get a quick summary of what's been downloaded.
+                        </p>
+                    </div>
+                </div>
+
+                <p>
+                    <span id="footnote-1" class="footnote">
+                        [1] currently, the only external source I've bothered to support is YouTube. The server is
+                        configured to look at the feeds of some explicitly listed YouTube channels and pull their latest
+                        videos.
+                    </span><br/>
+                    <span id="footnote-2" class="footnote">
+                        [2] accessible from my home network and <em>only</em> from my home network i.e., by design,
+                        it's not exposed to the public internet. If I'm out and about, I'm not taking updates.
+                    </span><br/>
+                    <span id="footnote-3" class="footnote">
+                        [3] currently, when I run out of space, the server stops attempting to fetch new videos and sends me a
+                        notification of the problem.
+                    </span><br/>
+                </p>
+
+                <h2 id="problems-with-podcast-apps" class="section-title">
+                    Problems with podcast apps
+                </h2>
+
+                <p>
+                    As mentioned earlier, I haven't yet been able to get my home feed working with my longtime-preferred
+                    podcast app, "Overcast", or the "Apple Podcasts" app. These apps allow you to subscribe to
+                    user-provided feed URLs, but when I try to use the address of my home server it fails with a
+                    non-specific error message saying it couldn't use the URL.
+                </p>
+
+                <p>
+                    I still haven't quite figured out what the problem is, but I did spend a little time trying to
+                    investigate. Or rather, I spent a few days trying to capture the app's HTTPS traffic with Fiddler,
+                    and, when I couldn't get that to work, I ran out of ideas on how to gather data necessary to
+                    investigate where/why fetching my feed was failing. Some suspicions I have include...
+                </p>
+
+                <ol>
+                    <li>I believe these apps probably do cert pinning. At the very least, I'm pretty sure this is why I
+                    wasn't able to Fiddler the HTTPS traffic, and it doesn't seem totally out of the realm of
+                    possibility that these apps require HTTPS authenticated feeds (which I haven't setup yet) and
+                    possibly pin certs for a handful of well-known feed services.
+                    </li>
+
+                    <li>It's possible that these apps do some validation/sanitization of the user-provided URLs intended
+                    to guard against having the apps fetch data from malicious sources.
+                    </li>
+
+                    <li>It's possible that these apps don't handle URLs well using the hostname format I'm specifying.
+                    I've tried using addresses of the form <code>http://{hostname}:{port}/</code> and <code>
+                        http://{hostname}.local:{port}/</code> and neither seemed to make a difference.
+                        <ul>
+                            <li>Though it just occurs to me that I was always using and specifying a development port
+                            rather than the standard port 80 (HTTP) or 443 (HTTPS). Maybe I'll try exposing the server
+                            on port 80, omitting the port in the URL, and seeing if that changes anything.
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h2 id="a-thought-on-security" class="section-title">
+                    A Thought on Security...
+                </h2>
+
+                <p>
+                    I am not a programmer with a lot of security expertise, but I'd be remiss to not reflect on a
+                    possible (probable?) security gap that I haven't yet addressed.
+                </p>
+
+                <p>
+                    That is...
+                    <ol>
+                        <li>the feed is currently served via HTTP and not HTTPS.
+                        </li>
+
+                        <li>the feed's address is my feed's hostname on the local network and not some reserved public
+                        internet name.
+                        </li>
+                    </ol>
+                </p>
+
+                <p>
+                    There's nothing preventing my phone from trying to reach this hostname on a network other than my
+                    home network, unexpectedly resolving the wrong host, and trying to talk to something/someone it
+                    shouldn't. Of course, the likelihood of this happening is minimal, and, in theory, the attack
+                    surface is isolated to my podcast app (which is why I haven't frontloaded addressing it), but I'd
+                    still feel more comfortable knowing the security gap wasn't there at all.
+                </p>
+
+                <p>
+                    I think the right way to fix it would probably be to expose the feed from an HTTPS endpoint with a
+                    cert that chains back to some trusted root. Or maybe I could get by using a self-signed cert that I
+                    keep secure and installing that self-signed cert on my phone. Maybe there's an even further future
+                    where I could somehow setup some cert pinning such that only my self-signed cert would be trusted
+                    when trying to reach my feed (though I think that implies writing my own bespoke podcast app which
+                    is... uh... a little more work than I'm excited about).
+                </p>
+
+                <p>
+                    Guess that's a problem for future-me.
+                </p>
+
+                <h2 id="future-improvements" class="section-title">
+                    Future Improvements
+                </h2>
+
+                <p>
+                    Speaking of the future, while I'm comfortable with where this project is right now and may let it
+                    rest for a while there are a handful of features on my wish list that I'd like to address
+                    eventually:
+                </p>
+
+                <ol>
+                    <li>Make more of the feed's runtime behavior configurable from the web portal (i.e., managing
+                    currently subscribed channels and shared metadata)
+                    </li>
+
+                    <li>Enable better management of the feeds from the web portal (i.e., deleting items from the feed
+                    that I no longer want/need)
+                    </li>
+
+                    <li>Make setting up the server more "plug-n-play" with docker containers
+                    </li>
+
+                    <li>Flagging some content to not be downloaded (e.g., YouTube shorts)
+                    </li>
+
+                    <li>Setting up an automatic eviction policy for older downloads
+                    </li>
+                </ol>
+
+                <p>
+                    Here's to hoping I get around to this stuff!
+                </p>
+            </div>
+        </section>
+    </body>
+</html>
