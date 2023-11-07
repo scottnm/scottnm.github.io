@@ -110,7 +110,7 @@ $filledTemplate = @"
     <header class="bg-darker">
         <div id="header-pane" class="section-with-buffer">
             <div id="header-with-links-container">
-                <h1 id="title-text">Scott Munro</h1>
+                <h1 id="title-text"><a class="home-btn" href="/">Scott Munro</a></h1>
                 <a class="social-btn" href="https://github.com/scottnm" title="check out my code on github" target="_blank">github</a>
                 <a class="social-btn" href="/atomfeed.xml" title="subscribe via atom/rss feeds" rel="subscribe-rss" target="_blank">feed</a>
                 <a class="social-btn" href="mailto:me@scottnm.com" title="shoot me an email">email</a>

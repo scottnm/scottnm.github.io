@@ -5,6 +5,8 @@
     --color-dark:    #6a2a1c;
     --color-darker:  #4d160a;
     --color-text-link: yellow;
+    --color-text-main: white;
+    --color-text-footnote: #BBBBBB;
 }
 
 h1 {
@@ -212,6 +214,24 @@ h2 {
 #next-page {
     margin-left: 10px;
 }
+
+.home-btn:hover, .home-btn:active {
+    color: white;
+}
+
+.home-btn {
+    color: var(--color-lighter);
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    outline: none;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Bungee', cursive;
+}
+
 .social-btn:hover, .social-btn:active,
 .project_src:hover, .project_src:active,
 .project_video:hover, .project_video:active,
@@ -222,6 +242,7 @@ h2 {
     color: #0e83cd;
     background: #fff;
 }
+
 .social-btn,
 .project_src,
 .project_video,
