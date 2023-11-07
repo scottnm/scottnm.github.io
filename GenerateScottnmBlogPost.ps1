@@ -100,7 +100,6 @@ $filledTemplate = @"
     <link rel="stylesheet" href="$baseStylesPath" />
     <link rel="stylesheet" href="$blogStylesPath" />
     <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" />
 
     <title>Scott Munro: $Title</title>
     <meta name="description" content="">
