@@ -10,7 +10,7 @@ var projectData = [
         'title': 'VTPP',
         'dates': 'November 2023',
         'description': 'Video-to-Private-Podcast: a home server project',
-        'image': 'site_images/vtpp_feed_coverart.png',
+        'image': 'site_images/vtpp_coverart_thumbnail_med.webp',
         'read': 'pages/bespoke/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html',
         'tools': 'python, sqlite3, raspberrypi'
     },
@@ -324,10 +324,17 @@ var projectData = [
 
 var textPostData = [
     {
+        'title': 'VTPP v0.2.0',
+        'dates': 'December 2023',
+        'description': "another VTPP milestone",
+        'image': 'site_images/vtpp_update_thumbnail_v020.webp',
+        'read': 'pages/bespoke/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html',
+    },
+    {
         'title': 'VTPP v0.1.0',
         'dates': 'November 2023',
         'description': "new project: Video-to-Private-Podcast",
-        'image': 'site_images/vtpp_feed_coverart.png',
+        'image': 'site_images/vtpp_update_thumbnail_v010.webp',
         'read': 'pages/bespoke/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html',
     },
     {

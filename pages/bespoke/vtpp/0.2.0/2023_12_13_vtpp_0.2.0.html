@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.9.14" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <link rel="icon" type="image/png" href="../../../.././site_images/icon/favicon-32x32.png" />
+        <link rel="stylesheet" href="../../../.././styles.css" />
+        <link rel="stylesheet" href="../../../.././blogstyles.css" />
+        <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet" />
+        <title>
+            Scott Munro: VTPP 0.2.0
+        </title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+    </head>
+    <body>
+        <header class="bg-darker">
+            <div id="header-pane" class="section-with-buffer">
+                <div id="header-with-links-container">
+                    <h1 id="title-text">
+                        <a class="home-btn" href="/">Scott Munro</a>
+                    </h1>
+                    <a class="social-btn" href="https://github.com/scottnm" title="check out my code on github" target=
+                    "_blank">github</a> <a class="social-btn" href="/atomfeed.xml" title="subscribe via atom/rss feeds"
+                    rel="subscribe-rss" target="_blank">feed</a> <a class="social-btn" href="mailto:me@scottnm.com"
+                    title="shoot me an email">email</a> <a class="social-btn" href="https://linkedin.com/in/scott-munro"
+                    title="connect with me on linkedin" target="_blank">linkedin</a>
+                </div>
+                <img alt="banner image of site logo" id="header-overlay" src=
+                "../../../.././site_images/overlay_translucent.png" />
+            </div>
+        </header>
+
+        <section>
+            <div>
+                <h1 id="vtpp-0.2.0">
+                    VTPP 0.2.0
+                </h1>
+
+                <p>
+                    "VTPP" is a home server project I've been working on which, in short, automatically downloads
+                    videos, extracts their audio, and makes the audio available for me to listen as a podcast feed.
+                </p>
+
+                <p>
+                    It's been about a month since I marked a <a href=
+                    "/pages/bespoke/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html"><code>v0.1.0</code></a> version of the
+                    project. Here's what's I've changed since then:
+                </p>
+
+                <ul>
+                    <li>Updated the web portal to enable editing the configured youtube channel list that I'm fetching
+                    videos from
+                    </li>
+
+                    <li>Updated the web portal so that I can delete videos from my feed as well as "block" videos from
+                    being re-downloaded in the future.
+                    </li>
+
+                    <li>Added a simple time heuristic to recognize (and ignore) Youtube Shorts when fetching videos
+                    </li>
+
+                    <li>Added logic to ignore offline Youtube Live streams which sometimes(?) show up in a channel's
+                    feed
+                    </li>
+
+                    <li>Made a handful of small improvements to make "on demand" download progress clearer
+                    </li>
+
+                    <li>Refactored a bunch of things to make code more reusable across the different components
+                    </li>
+                </ul>
+
+                <p>
+                    There are still a lot of things I could do and would like to do, but the project is at a point where
+                    things feel polished enough that I can "just" use it without feeling like anything is missing.
+                </p>
+
+                <p>
+                    So, I'm going to mark this point as a new version, <code>v0.2.0</code>, and let things be for a bit.
+                    It'll give me some clarity on what work from the backlog is actually worth spending my weekends on.
+                </p>
+            </div>
+        </section>
+    </body>
+</html>
