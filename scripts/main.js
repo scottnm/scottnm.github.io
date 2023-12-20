@@ -1,5 +1,3 @@
-import { projectData, textPostData, welcomeMessage } from './data.js'
-
 function project_tab(id, projects) {
     var info = {};
     info.id = id;
@@ -7,20 +5,20 @@ function project_tab(id, projects) {
     return info;
 }
 
-var button_id_to_project_tab_id_map = {
+const button_id_to_project_tab_id_map = {
     "project-btn": "projects",
     "text-post-btn": "textposts"
 };
-var project_tab_table = {
-    "projects": project_tab("projects", projectData),
-    "textposts": project_tab("textposts", textPostData)
+
+const project_tab_table = {
+    "projects": project_tab("projects", data.projectData),
+    "textposts": project_tab("textposts", data.textPostData)
 };
 
-var current_project_tab_id = null;
-var project_display_count = 3;
+let current_project_tab_id = null;
 
 function format_project_element(project) {
-    var project_element =
+    let project_element =
         "<div class=\"project_info_frame\">" +
         "<div class=\"project_title\">" +
         `<h3>${project.title}</h3>` +
@@ -44,13 +42,13 @@ function format_project_element(project) {
 }
 
 function generate_project_elements() {
-    var project_subpane_elements_string = "";
-    var project_container_template = "<section class=\"{project_tab_id} {section_color} hide-project\">" +
+    let project_subpane_elements_string = "";
+    const project_container_template = "<section class=\"{project_tab_id} {section_color} hide-project\">" +
         "<div class=\"project section-with-small-buffer\">{project_data}</div></section>";
-    for (var project_tab_id in project_tab_table) {
-        var project_tab = project_tab_table[project_tab_id];
-        for (var project_index = 0; project_index < project_tab.projects.length; project_index++) {
-            var project = project_tab.projects[project_index];
+    for (const project_tab_id in project_tab_table) {
+        const project_tab = project_tab_table[project_tab_id];
+        for (let project_index = 0; project_index < project_tab.projects.length; project_index++) {
+            const project = project_tab.projects[project_index];
             project_subpane_elements_string += project_container_template
                 .replace("{project_tab_id}", project_tab_id)
                 .replace("{section_color}", project_index % 2 == 0 ? "bg-lighter" : "bg-light")
@@ -63,8 +61,8 @@ function generate_project_elements() {
 
 
 function get_project_id_from_element(element) {
-    for (var i = 0; i < element.classList.length; i++) {
-        var e_class = element.classList[i];
+    for (let i = 0; i < element.classList.length; i++) {
+        const e_class = element.classList[i];
         if (e_class in project_tab_table) {
             return e_class;
         }
@@ -73,12 +71,12 @@ function get_project_id_from_element(element) {
 }
 
 function update_visible_projects(visible_project_tab_id) {
-    var project_list = document.getElementById("projects-subpane").children;
-    var current_project_id = null;
-    var current_project_offset = 0;
-    for (var project_index = 0; project_index < project_list.length; project_index++) {
-        var project_element = project_list[project_index];
-        var project_id = get_project_id_from_element(project_element);
+    const project_list = document.getElementById("projects-subpane").children;
+    let current_project_id = null;
+    let current_project_offset = 0;
+    for (let project_index = 0; project_index < project_list.length; project_index++) {
+        let project_element = project_list[project_index];
+        const project_id = get_project_id_from_element(project_element);
         if (project_id === visible_project_tab_id) {
             if (project_id !== current_project_id) {
                 current_project_offset = project_index;
@@ -94,9 +92,9 @@ function update_visible_projects(visible_project_tab_id) {
 
 function project_tab_clicked_callback(clicked_tab_id) {
     return function () {
-        var project_tab_elements = document.getElementsByClassName("project-tab");
-        for (var i = 0; i < project_tab_elements.length; i++) {
-            var project_tab_element = project_tab_elements[i];
+        let project_tab_elements = document.getElementsByClassName("project-tab");
+        for (let i = 0; i < project_tab_elements.length; i++) {
+            const project_tab_element = project_tab_elements[i];
             if (project_tab_element.id === clicked_tab_id) {
                 project_tab_element.classList.add("tab-active");
                 project_tab_element.classList.remove("tab-inactive");
@@ -114,10 +112,10 @@ function project_tab_clicked_callback(clicked_tab_id) {
 
 window.onload =
     function () {
-        document.getElementById("welcome-text").innerHTML = welcomeMessage;
-        var project_tab_elements = document.getElementsByClassName("project-tab");
-        for (var i = 0; i < project_tab_elements.length; i++) {
-            var project_tab_element = project_tab_elements[i];
+        document.getElementById("welcome-text").innerHTML = data.welcomeMessage;
+        let project_tab_elements = document.getElementsByClassName("project-tab");
+        for (let i = 0; i < project_tab_elements.length; i++) {
+            let project_tab_element = project_tab_elements[i];
             project_tab_element.addEventListener("click", project_tab_clicked_callback(project_tab_element.id));
         }
         generate_project_elements();
