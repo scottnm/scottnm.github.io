@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Bungee";
+    src: url("ext/Bungee/Bungee.woff2") format("woff2")
+}
+
 :root {
     --color-lighter: #b27c71;
     --color-light:   #965749;
@@ -23,7 +28,7 @@ a {
 }
 
 .project_title {
-    font-family: 'Bungee', cursive;
+    font-family: 'Bungee';
 }
 
 #header-pane {
@@ -113,7 +118,7 @@ h2 {
 
 .section-title,
 #header-pane {
-    font-family: 'Bungee', cursive;
+    font-family: 'Bungee';
     color: var(--color-lighter);
 }
 
@@ -237,7 +242,7 @@ h2 {
     transition: all 0.3s;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Bungee', cursive;
+    font-family: 'Bungee';
 }
 
 .social-btn:hover, .social-btn:active,
@@ -283,7 +288,7 @@ h2 {
 .social-btn {
     font-size: 0.5em;
     padding: 0 5% 0 5%;
-    font-family: 'Bungee', cursive;
+    font-family: 'Bungee';
 }
 
 .entry_favtrack {

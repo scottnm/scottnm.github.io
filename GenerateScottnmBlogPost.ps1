@@ -99,7 +99,6 @@ $filledTemplate = @"
     <link rel="icon" type="image/png" href="$iconPath">
     <link rel="stylesheet" href="$baseStylesPath" />
     <link rel="stylesheet" href="$blogStylesPath" />
-    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet" />
 
     <title>Scott Munro: $Title</title>
     <meta name="description" content="">

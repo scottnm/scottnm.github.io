@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Bungee";
+    src: url("ext/Bungee/Bungee.woff2") format("woff2")
+}
+
 body {
     background-color: var(--color-medium);
 }
@@ -51,7 +56,7 @@ section > div {
  */
 section > div > h1 {
     font-size: 1.5em;
-    font-family: 'Bungee', cursive;
+    font-family: 'Bungee';
     color: var(--color-lighter);
 }
 
