@@ -77,7 +77,7 @@ function Get-RelativeResourcePath
     return ($relativePath -replace "\\", "/")
 }
 
-function Fill-Template
+function Format-Blog
 {
     param(
         [Parameter(Mandatory=$true)][string]$Title,
@@ -116,7 +116,7 @@ $filledTemplate = @"
                 <a class="social-btn" href="mailto:me@scottnm.com" title="shoot me an email">email</a>
                 <a class="social-btn" href="https://linkedin.com/in/scott-munro" title="connect with me on linkedin" target="_blank">linkedin</a>
             </div>
-            <img alt="banner image of site logo" id="header-overlay" src="$bannerImagePath" />
+            <img alt="site logo" id="header-overlay" src="$bannerImagePath" />
         </div>
     </header>
 
@@ -159,14 +159,14 @@ Write-Host -foregroundcolor DarkGray "Generating $OutputHtmlFileName from $Markd
 $blogTitle = Get-TitleFromMarkdown $MarkdownFile
 $rawBlogBodyHtml = (ConvertFrom-Markdown $MarkdownFile).html
 
-$rawHtml = Fill-Template -Title $blogTitle -Body $rawBlogBodyHtml
+$rawHtml = Format-Blog -Title $blogTitle -Body $rawBlogBodyHtml
 
 $errorsFile = Join-Path $env:tmp "$($MarkdownFile.BaseName)_tidyerrors.txt"
 $formattedHtml = ($rawHtml | tidy -config $TidyConfig -f $errorsFile)
 if (!$?)
 {
     Write-Host "Formatting error(s):" -foregroundcolor red
-    cat $errorsFile | Write-Host -foregroundcolor red
+    Get-Content $errorsFile | Write-Host -foregroundcolor red
     throw "Failed to format html for $OutputHtmlFileName"
 }
 

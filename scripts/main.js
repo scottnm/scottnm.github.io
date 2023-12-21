@@ -35,7 +35,9 @@ function format_project_element(project) {
         "</div>" +
         "</div>";
     if (project.image) {
-        project_element += `<img class="image_embed" src=${project.image} loading="lazy"/>`;
+        // N.B. all project thumbnails use empty alt text since the thumbnails are mostly decorative
+        //      and all project blurbs come with a text description
+        project_element += `<img class="image_embed" src=${project.image} alt="" loading="lazy"/>`;
     }
 
     return project_element;
