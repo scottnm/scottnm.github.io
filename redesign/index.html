@@ -4,26 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="icon" type="image/png" href="site_images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" href="../site_images/icon/icon.svg">
     <link rel="stylesheet" href="styles.css" />
-    <!-- <script src="./scripts/main.js" defer></script> -->
 
-    <title>Scott Munro</title>
-    <meta name="description" content="">
+    <title>scottnm</title>
+    <meta name="description" 
+        content="Scott Munro's little corner of the internet: a lightly pruned archive of programming projects, journals, and other junk. It's a one-man flea market where nothing's for sale.">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
-<!-- FIXME: make sure to incorporate my little goblin logo somewhere -->
 <body>
     <header>
         <div id="header-pane" class="section-with-buffer">
             <div id="header-with-links-container">
-                <a class="home-btn" href="/"><h1 id="title-text">Scott Munro</h1></a>
+                <a class="home-btn" href="/">
+                    <h1 class="title-text">Scott Munro</h1>
+                    <img class="title-icon" src="../site_images/icon/icon.svg" alt="" loading="lazy" width="20" height="20"/>
+                </a>
+                <hr class="header-links-separator" />
                 <a class="social-btn" href="https://github.com/scottnm" title="check out my code on github"
                     target="_blank">github</a>
+                <span> | </span>
                 <a class="social-btn" href="/atomfeed.xml" title="subscribe via atom/rss feeds" rel="subscribe-rss"
                     target="_blank">rss</a>
+                <span> | </span>
                 <a class="social-btn" href="mailto:me@scottnm.com" title="shoot me an email">email</a>
+                <span> | </span>
                 <a class="social-btn" href="https://linkedin.com/in/scott-munro" title="connect with me on linkedin"
                     target="_blank">linkedin</a>
             </div>
@@ -33,113 +39,271 @@
         <section id="welcome-section">
             <h2 class="section-title">Welcome</h2>
             <p>
-                <span id="welcome-text">This is some sample welcome text</span>
+                <span id="welcome-text">Sometimes, I'm a software engineer working for Xbox. When I'm not, I like to make things. Here you'll find a (lightly pruned) archive of such things. Most of it's code, some of it's not, and all of it's useful to no one but myself! Take a look around.</span>
             </p>
         </section>
-        <section id="highlights-section">
+        <section id="jump-section" class="text-section">
+            <h3 class="section-title">Jump to...</h3>
+            <ul>
+                <li><a href="#highlights-section">highlights</a></li>
+                <li><a href="#projects-section">projects</a></li>
+                <li><a href="#textposts-section">text posts</a></li>
+            </ul>
+        </section><section id="highlights-section">
             <h2 class="section-title">Highlights</h2>
             <div class="pic-grid">
-                <div class="pic-grid-cell">
-                    <img class="pic-grid-cell-image" src="../site_images/avipaper-demo.webp" alt="avipaper demo" loading="lazy" />
-                    <div class="pic-grid-cell-text-overlay"><span class="project-title">Avipaper.p8</span></div>
-                </div>
-
-                <div class="pic-grid-cell">
-                    <img class="pic-grid-cell-image" src="../site_images/bman64-demo.webp" alt="bman64" loading="lazy" />
-                    <div class="pic-grid-cell-text-overlay"><span class="project-title">Bman64</span></div>
-                </div>
-
-                <div class="pic-grid-cell">
-                    <img class="pic-grid-cell-image" src="../site_images/hueyfreeman.webp"
-                        alt="huey freeman chia pet" loading="lazy" />
-                    <div class="pic-grid-cell-text-overlay"><span class="project-title">Hair Growth Log And Some Extra Text</span></div>
-                </div>
-
-                <div class="pic-grid-cell">
-                    <img class="pic-grid-cell-image" src="../site_images/scrapewood_on_reader.webp" alt="scrapewood" loading="lazy" />
-                    <div class="pic-grid-cell-text-overlay"><span class="project-title">Scrapewood</span></div>
-                </div>
-
-                <div class="pic-grid-cell">
-                    <img class="pic-grid-cell-image" src="../site_images/vtpp_coverart_thumbnail_med.webp" alt="vtpp" loading="lazy" />
-                    <div class="pic-grid-cell-text-overlay"><span class="project-title">VTPP</span></div>
-                </div>
-
-                <div class="pic-grid-cell">
-                    <img class="pic-grid-cell-image" src="../site_images/wsr.webp" alt="wsr" loading="lazy" />
-                    <div class="pic-grid-cell-text-overlay"><span class="project-title">WSR Extractor</span></div>
-                </div>
+                <a href="pages/bespoke/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html" class="pic-grid-link">
+                    <div class="pic-grid-cell">
+                        <img class="pic-grid-cell-image" src="../site_images/vtpp_coverart_thumbnail_med.webp" alt="VTPP" loading="lazy" />
+                        <div class="pic-grid-cell-text-overlay"><span class="project-title">VTPP</span></div>
+                    </div>
+                </a>
+                <a href="https://scottnm.itch.io/dig-deep" class="pic-grid-link">
+                    <div class="pic-grid-cell">
+                        <img class="pic-grid-cell-image" src="../site_images/digdeep-demo.webp" alt="Dig Deep" loading="lazy" />
+                        <div class="pic-grid-cell-text-overlay"><span class="project-title">Dig Deep</span></div>
+                    </div>
+                </a>
+                <a href="https://skfb.ly/osJ6Y" class="pic-grid-link">
+                    <div class="pic-grid-cell">
+                        <img class="pic-grid-cell-image" src="../site_images/bman64-demo.webp" alt="Bman3D" loading="lazy" />
+                        <div class="pic-grid-cell-text-overlay"><span class="project-title">Bman3D</span></div>
+                    </div>
+                </a>
+                <a href="" class="pic-grid-link">
+                    <div class="pic-grid-cell">
+                        <img class="pic-grid-cell-image" src="../site_images/scrapewood_on_reader.webp" alt="Scrapewood" loading="lazy" />
+                        <div class="pic-grid-cell-text-overlay"><span class="project-title">Scrapewood</span></div>
+                    </div>
+                </a>
+                <a href="https://skfb.ly/UuUG" class="pic-grid-link">
+                    <div class="pic-grid-cell">
+                        <img class="pic-grid-cell-image" src="../files/webps/monkeymuck.webp" alt="Monkey Muck" loading="lazy" />
+                        <div class="pic-grid-cell-text-overlay"><span class="project-title">Monkey Muck</span></div>
+                    </div>
+                </a>
             </div>
         </section>
-        <section id="everything-section" class="text-section">
-            <h2 class="section-title">Everything</h2>
+
+        <section id="projects-section" class="text-section">
+            <h2 class="section-title">Projects</h2>
             <ul>
                 <li>
-                    <a href="/" class="project-title">VTPP</a>
+                    <a class="project-title" href="pages/bespoke/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html" target="_blank">VTPP</a>
                     <br />
-                    <span>November 2023</span>
+                    <span><i>November 2023</i></span>
                     <br />
                     <span>Video-to-Private-Podcast: a home server project</span>
                     <br />
                     <span>Tools: python, sqlite3, raspberrypi</span>
                 </li>
                 <li>
-                    <a href="/" class="project-title">Dig Deep</a>
+                    <a class="project-title" href="https://scottnm.itch.io/dig-deep" target="_blank">Dig Deep</a>
                     <br />
-                    <span>Spring 2022</span>
+                    <span><i>Spring 2022</i></span>
                     <br />
-                    <span>An isometric pico-8 game about digging and family history for the <a
-                            href="https://itch.io/jam/culture-bytes-classic-collards-jam">Classic Collards Game
-                            Jam</a>.</span>
+                    <span>An isometric pico-8 game about digging and family history for the <a href='https://itch.io/jam/culture-bytes-classic-collards-jam'>Classic Collards Game Jam</a>.</span>
                     <br />
                     <span>Tools: pico8, lua</span>
                 </li>
                 <li>
-                    <a href="/" class="project-title">Avipaper.p8</a>
+                    <a class="project-title" href="https://github.com/scottnm/avipaper.p8" target="_blank">Avipaper.p8</a>
                     <br />
-                    <span>Winter 2021</span>
+                    <span><i>Winter 2021</i></span>
                     <br />
                     <span>A Pico-8 demo. Fly a paper airplane through some targets.</span>
                     <br />
                     <span>Tools: pico8, lua</span>
                 </li>
                 <li>
-                    <a href="/" class="project-title">Bman3D</a>
+                    <a class="project-title" href="https://skfb.ly/osJ6Y" target="_blank">Bman3D</a>
                     <br />
-                    <span>Spring 2021</span>
+                    <span><i>Spring 2021</i></span>
                     <br />
-                    <span>Modeled, textured, and rigged a 3D model of Bomberman from "Bomberman
-                        64: the Second Attack!"</span>
+                    <span>Modeled, textured, and rigged a 3D model of Bomberman from "Bomberman 64: the Second Attack!"</span>
                     <br />
                     <span>Tools: blender</span>
                 </li>
                 <li>
-                    <a href="/" class="project-title">Scrapewood</a>
+                    <a class="project-title" href="" target="_blank">Scrapewood</a>
                     <br />
-                    <span>Spring 2021</span>
+                    <span><i>Spring 2021</i></span>
                     <br />
-                    <span>Wrote a web-scraper to grab all of the main Achewood comics from the
-                        website. I then merged them into a unified PDF so that I could read them on my e-reader. Source
-                        not
-                        available because web scrappers always feel like they're in dubiously legal territory and I
-                        don't
-                        intend to distribute the resulting PDF or web scraper source.</span>
+                    <span>Wrote a web-scraper to grab all of the main Achewood comics from the website. I then merged them into a unified PDF so that I could read them on my e-reader. Source not available because web scrappers always feel like they"re in dubiously legal territory and I don"t intend to distribute the resulting PDF or web scraper source.</span>
                     <br />
                     <span>Tools: rust</span>
                 </li>
                 <li>
-                    <a href="/" class="project-title">Lost-n-found</a>
+                    <a class="project-title" href="https://github.com/scottnm/lost-n-found-game" target="_blank">Lost-n-found</a>
                     <br />
-                    <span>Winter 2021</span>
+                    <span><i>Winter 2021</i></span>
                     <br />
-                    <span>A quick puzzle game for GGJ21 that I never properly named. The theme
-                        was "lost and found". The core idea I tried to execute on was a "hot or cold" style guessing
-                        game
-                        where you use reveal clues which guide you toward finding something.</span>
+                    <span>A quick puzzle game for GGJ21 that I never properly named. The theme was "lost and found". The core idea I tried to execute on was a "hot or cold" style guessing game where you reveal clues which guide you toward finding some goal.</span>
                     <br />
                     <span>Tools: rust, pancurses/ncurses</span>
                 </li>
+                <li>
+                    <a class="project-title" href="https://github.com/scottnm/wasteland-cracker" target="_blank">Wasteland Cracker</a>
+                    <br />
+                    <span><i>Winter 2021</i></span>
+                    <br />
+                    <span>A clone of the Fallout hacking mini-game with an included tool for solving real puzzles</span>
+                    <br />
+                    <span>Tools: rust, pancurses/ncurses</span>
+                </li>
+                <li>
+                    <a class="project-title" href="https://github.com/scottnm/tetrust" target="_blank">Tetrust</a>
+                    <br />
+                    <span><i>Winter 2021</i></span>
+                    <br />
+                    <span>A TUI tetris clone written in rust</span>
+                    <br />
+                    <span>Tools: rust, pancurses/ncurses</span>
+                </li>
+                <li>
+                    <a class="project-title" href="https://github.com/scottnm/WSR-Image-Extractor" target="_blank">WSR Image Extractor</a>
+                    <br />
+                    <span><i>Fall 2020</i></span>
+                    <br />
+                    <span>A tool to extract the images captured in a Windows Steps Recorder file</span>
+                    <br />
+                    <span>Tools: rust</span>
+                </li>
+                <li>
+                    <a class="project-title" href="" target="_blank">The Treachery of Self-image</a>
+                    <br />
+                    <span><i>Spring 2018</i></span>
+                    <br />
+                    <span>A silly joke that I took too far and spent too much time on. The result? a parody of "the Treachery of Images" by Rene Magritte. In a funny turn of events, I like how it turned out.</span>
+                    <br />
+                    <span>Tools: Paint Tool Sai</span>
+                </li>
+                <li>
+                    <a class="project-title" href="https://github.com/scottnm/Playground/tree/main/gfx/tinyrenderer" target="_blank">Tinyrenderer</a>
+                    <br />
+                    <span><i>Summer 2017</i></span>
+                    <br />
+                    <span>A cpu-based, didactic renderer project from <a href='https://github.com/ssloy/tinyrenderer/wiki' target='_blank'>Dmitry V. Sokolov's Tiny Renderer</a> project.</span>
+                    <br />
+                    <span>Tools: C++</span>
+                </li>
+                <li>
+                    <a class="project-title" href="https://github.com/scottnm/squid-mantazord" target="_blank">Squid Mantazord</a>
+                    <br />
+                    <span><i>Spring 2017</i></span>
+                    <br />
+                    <span>A top-down 2D gauntlet of sea-creatures to take the throne and become the next Squid Mantazord. Made for Global Game Jam 2017.</span>
+                    <br />
+                    <span>Tools: Unity, C#</span>
+                </li>
+                <li>
+                    <a class="project-title" href="https://nanomachines.itch.io/filibusters" target="_blank">Filibusters</a>
+                    <br />
+                    <span><i>Fall 2016</i></span>
+                    <br />
+                    <span>A multiplayer objective-based, arena-shooter game</span>
+                    <br />
+                    <span>Tools: Unity, C#, Photon Unity Networking</span>
+                </li>
+                <li>
+                    <a class="project-title" href="https://skfb.ly/UuUG" target="_blank">Monkey Muck</a>
+                    <br />
+                    <span><i>Fall 2016</i></span>
+                    <br />
+                    <span>Designed, modeled, and textured an original 3D character. This character was inspired by horrific figures from franchises like Silent Hill, the Legend of Zelda, and the Thing.</span>
+                    <br />
+                    <span>Tools: Maya, Photoshop</span>
+                </li>
+                <li>
+                    <a class="project-title" href="https://github.com/scottnm/Pixitor" target="_blank">Pixitor</a>
+                    <br />
+                    <span><i>Summer 2016</i></span>
+                    <br />
+                    <span>A layer-based pixel art editor built using MIT"s Processing</span>
+                    <br />
+                    <span>Tools: Processing, Java</span>
+                </li>
+                <li>
+                    <a class="project-title" href="https://github.com/scottnm/ogre-jrpg" target="_blank">Ogre JRPG</a>
+                    <br />
+                    <span><i>Spring 2016</i></span>
+                    <br />
+                    <span>A turn-based battle system demo using Ogre3D for one of my university courses.</span>
+                    <br />
+                    <span>Tools: C++, Ogre3D, SDL</span>
+                </li>
+                <li>
+                    <a class="project-title" href="https://www.youtube.com/watch?v=sFsm_7buEzA" target="_blank">Labyrinth</a>
+                    <br />
+                    <span><i>Fall 2015</i></span>
+                    <br />
+                    <span>A game with procedurally generated maps, and a lighting effect where only a certain radius of the map away from the character is lit (a torch effect). Built for the 2015 Fall GameJam at UT Austin.</span>
+                    <br />
+                    <span>Tools: C#, Unity, Gimp</span>
+                </li>
+                <li>
+                    <a class="project-title" href="https://www.youtube.com/watch?v=vYaWWKJ4s1M" target="_blank">Menger Sponge</a>
+                    <br />
+                    <span><i>Fall 2015</i></span>
+                    <br />
+                    <span>An OpenGL menger sponge that can be fully rotated and have the level of recursion updated on the fly via popup menus</span>
+                    <br />
+                    <span>Tools: C++, OpenGL, GLUT</span>
+                </li>
             </ul>
+        </section>
+
+        <section id="textposts-section" class="text-section">
+            <h2 class="section-title">Text Posts</h2>
+            <ul>
+                <li>
+                    <a href="pages/bespoke/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html" class="project-title">VTPP v0.2.0</a>
+                    <br />
+                    <span><i>December 2023</i></span>
+                    <br />
+                    <span>another VTPP milestone</span>
+                </li>
+                <li>
+                    <a href="pages/bespoke/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html" class="project-title">VTPP v0.1.0</a>
+                    <br />
+                    <span><i>November 2023</i></span>
+                    <br />
+                    <span>new project: Video-to-Private-Podcast</span>
+                </li>
+                <li>
+                    <a href="blog_posts/2022_10_29_surprising_monkey_muck_data.html" class="project-title">Surprising Monkey Muck Data</a>
+                    <br />
+                    <span><i>October 2022</i></span>
+                    <br />
+                    <span>Why are people playing this demo???</span>
+                </li>
+                <li>
+                    <a href="pages/bespoke/hair_log/hair_log.html" class="project-title">Hair Log</a>
+                    <br />
+                    <span><i>June 2022</i></span>
+                    <br />
+                    <span>I kept track of my hair growing for about a year.</span>
+                </li>
+                <li>
+                    <a href="pages/bespoke/digdeepretro/digdeepretro.html" class="project-title">Dig Deep Retrospective</a>
+                    <br />
+                    <span><i>May 2022</i></span>
+                    <br />
+                    <span>Reflecting on my experience making Dig Deep during the "Classic Collards" Game Jam</span>
+                </li>
+                <li>
+                    <a href="pages/bespoke/albumsof2018.html" class="project-title">Favorite Albums of 2018</a>
+                    <br />
+                    <span><i>Nov 2018</i></span>
+                    <br />
+                    <span>A non-exhaustive list of my favorite albums released in 2018.</span>
+                </li>
+            </ul>
+        </section>
+
+        <hr />
+        <section class="footer">
+            <span aria-label="kay thanks bye">kthxbai</span>
         </section>
     </main>
 </body>

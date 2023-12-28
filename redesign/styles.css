@@ -26,10 +26,31 @@ header {
     text-align: center;
 }
 
-header #title-text {
+header .home-btn,
+.pic-grid-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+header .title-text {
     font-family: verdana;
     font-variant: small-caps;
-    font-size: medium;
+    font-size: large;
+    display: inline;
+}
+
+header .title-icon {
+    transform: translateY(3px);
+}
+
+header .header-links-separator {
+    border: 1px dashed;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .section-title {

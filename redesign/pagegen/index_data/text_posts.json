@@ -1,0 +1,45 @@
+[
+    {
+        "title": "VTPP v0.2.0",
+        "dates": "December 2023",
+        "description": "another VTPP milestone",
+        "image": "site_images/vtpp_coverart_thumbnail_med.webp",
+        "read": "pages/bespoke/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html"
+    },
+    {
+        "title": "VTPP v0.1.0",
+        "dates": "November 2023",
+        "description": "new project: Video-to-Private-Podcast",
+        "image": "site_images/vtpp_coverart_thumbnail_med.webp",
+        "read": "pages/bespoke/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html"
+    },
+    {
+        "title": "Surprising Monkey Muck Data",
+        "dates": "October 2022",
+        "description": "Why are people playing this demo???",
+        "image": "site_images/muckblog.webp",
+        "read": "blog_posts/2022_10_29_surprising_monkey_muck_data.html"
+    },
+    {
+        "title": "Hair Log",
+        "dates": "June 2022",
+        "description": "I kept track of my hair growing for about a year.",
+        "image": "site_images/hueyfreeman.webp",
+        "read": "pages/bespoke/hair_log/hair_log.html"
+    },
+    {
+        "title": "Dig Deep Retrospective",
+        "dates": "May 2022",
+        "description": "Reflecting on my experience making Dig Deep during the \"Classic Collards\" Game Jam",
+        "image": "site_images/digdeep-demo.webp",
+        "read": "pages/bespoke/digdeepretro/digdeepretro.html"
+    },
+    {
+        "title": "Favorite Albums of 2018",
+        "dates": "Nov 2018",
+        "description":
+            "A non-exhaustive list of my favorite albums released in 2018.",
+        "image": "site_images/aoty-2018.webp",
+        "read": "pages/bespoke/albumsof2018.html"
+    }
+]
