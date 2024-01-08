@@ -1,3 +1,5 @@
+/* FIXME: remove "redesign_" from filename after merging in the redesign stuff */
+
 @media screen and (max-width: 600px) {
     body {
         margin: auto;
@@ -26,7 +28,16 @@ header {
     text-align: center;
 }
 
-header .home-btn,
+header .home-btn {
+    color: inherit;
+    text-decoration: none;
+
+    :hover {
+        transition: all 0.3s;
+        color: darkgoldenrod;
+    }
+}
+
 .pic-grid-link {
     color: inherit;
     text-decoration: none;
@@ -131,4 +142,12 @@ span {
  */
 .text-section ul li {
     padding: 0 0 10px 0;
+}
+
+/*
+ * Blog styles
+ */
+.footnote {
+    font-size: 0.8em;
+    color: var(--color-text-footnote);
 }

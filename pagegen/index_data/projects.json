@@ -39,9 +39,10 @@
         "title": "Scrapewood",
         "highlight": true,
         "dates": "Spring 2021",
-        "description": "Wrote a web-scraper to grab all of the main Achewood comics from the website. I then merged them into a unified PDF so that I could read them on my e-reader. Source not available because web scrappers always feel like they\"re in dubiously legal territory and I don\"t intend to distribute the resulting PDF or web scraper source.",
+        "description": "Assembled the Achewood web comic into an e-reader compatible EPUB",
         "image": "site_images/scrapewood_on_reader.webp",
-        "tools": "rust"
+        "tools": "rust, epub, powershell",
+        "read": "pages/bespoke/scrapewood/2024_01_07_scrapewood.html"
     },
     {
         "title": "Lost-n-found",
@@ -80,6 +81,7 @@
         "dates": "Spring 2018",
         "description": "A silly joke that I took too far and spent too much time on. The result? a parody of \"the Treachery of Images\" by Rene Magritte. In a funny turn of events, I like how it turned out.",
         "image": "files/the_treachery_of_self_image.png",
+        "read": "pages/bespoke/treachery/2024_01_07_treachery.html",
         "tools": "Paint Tool Sai"
     },
     {
