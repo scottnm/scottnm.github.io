@@ -84,10 +84,8 @@ function Format-Blog
         [Parameter(Mandatory=$true)][string[]]$Body
         )
 
-$iconPath = Get-RelativeResourcePath -path ".\site_images\icon\favicon-32x32.png" -sourceRelativePathFull $OutputHtmlFileDirectory
+$iconPath = Get-RelativeResourcePath -path ".\site_images\icon\icon.svg" -sourceRelativePathFull $OutputHtmlFileDirectory
 $baseStylesPath = Get-RelativeResourcePath -path ".\styles.css" -sourceRelativePathFull $OutputHtmlFileDirectory
-$blogStylesPath = Get-RelativeResourcePath -path ".\blogstyles.css" -sourceRelativePathFull $OutputHtmlFileDirectory
-$bannerImagePath = Get-RelativeResourcePath -path ".\site_images\overlay_translucent.png" -sourceRelativePathFull $OutputHtmlFileDirectory
 
 $filledTemplate = @"
 <!DOCTYPE html>
@@ -96,26 +94,34 @@ $filledTemplate = @"
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="icon" type="image/png" href="$iconPath">
+    <link rel="icon" type="image/svg+xml" href="$iconPath">
     <link rel="stylesheet" href="$baseStylesPath" />
-    <link rel="stylesheet" href="$blogStylesPath" />
 
-    <title>Scott Munro: $Title</title>
+    <title>scottnm: $Title</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 <body>
-    <header class="bg-darker">
+    <header>
         <div id="header-pane" class="section-with-buffer">
             <div id="header-with-links-container">
-                <h1 id="title-text"><a class="home-btn" href="/">Scott Munro</a></h1>
-                <a class="social-btn" href="https://github.com/scottnm" title="check out my code on github" target="_blank">github</a>
-                <a class="social-btn" href="/atomfeed.xml" title="subscribe via atom/rss feeds" rel="subscribe-rss" target="_blank">feed</a>
+                <a class="home-btn" href="/">
+                    <h1 class="title-text">Scott Munro</h1>
+                    <img class="title-icon" src="../../../site_images/icon/icon.svg" alt="" loading="lazy" width="20" height="20"/>
+                </a>
+                <hr class="header-links-separator" />
+                <a class="social-btn" href="https://github.com/scottnm" title="check out my code on github"
+                    target="_blank">github</a>
+                <span> | </span>
+                <a class="social-btn" href="/atomfeed.xml" title="subscribe via atom/rss feeds" rel="subscribe-rss"
+                    target="_blank">rss</a>
+                <span> | </span>
                 <a class="social-btn" href="mailto:me@scottnm.com" title="shoot me an email">email</a>
-                <a class="social-btn" href="https://linkedin.com/in/scott-munro" title="connect with me on linkedin" target="_blank">linkedin</a>
+                <span> | </span>
+                <a class="social-btn" href="https://linkedin.com/in/scott-munro" title="connect with me on linkedin"
+                    target="_blank">linkedin</a>
             </div>
-            <img alt="site logo" id="header-overlay" src="$bannerImagePath" />
         </div>
     </header>
 

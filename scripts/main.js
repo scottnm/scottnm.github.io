@@ -356,7 +356,7 @@ const data = {
             'description':
                 'A non-exhaustive list of my favorite albums released in 2018.',
             'image': 'site_images/aoty-2018.webp',
-            'read': 'pages/bespoke/albumsof2018.html',
+            'read': 'pages/bespoke/albumsof2018/albumsof2018.html',
         },
     ]
 };

@@ -172,11 +172,11 @@ function format_entry(entry)
         entry_element += `<div class="entry_favtrack">favorite track(s): ${entry.favtrack}</div>`;
     }
     entry_element += "<div class=\"entry_link\">";
-    entry_element += (entry.link ? `<a class="social-btn" href=${entry.link} target="_blank">listen on spotify</a>` : "");
+    entry_element += (entry.link ? `<a class="spotify-btn" href=${entry.link} target="_blank">listen on spotify</a>` : "");
     entry_element += "</div>";
     entry_element += "</div>";
 
-    return `<section class="center-cropped" style="background-image: url('../../site_images/${entry.image}');">` +
+    return `<section class="center-cropped" style="background-image: url('../../../site_images/${entry.image}');">` +
            `<div class="entry entry_info_frame_border section-with-small-buffer">${entry_element}</div>` +
            "</section>";
 }

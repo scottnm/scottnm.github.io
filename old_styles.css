@@ -1,0 +1,338 @@
+@font-face {
+    font-family: "Bungee";
+    src: url("ext/Bungee/Bungee.woff2") format("woff2")
+}
+
+:root {
+    --color-lighter: #b27c71;
+    --color-light:   #965749;
+    --color-medium:  #823E30;
+    --color-dark:    #6a2a1c;
+    --color-darker:  #4d160a;
+    --color-text-link: yellow;
+    --color-text-main: white;
+    --color-text-footnote: #BBBBBB;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--color-text-link);
+}
+
+.project_title {
+    font-family: 'Bungee';
+}
+
+#header-pane {
+    justify-content: space-between;
+    font-size: 1.5em;
+}
+
+@media screen and (min-width: 1368px) {
+    #header-pane {
+        display: flex;
+    }
+}
+
+#header-with-links-container {
+    width: 75%;
+}
+
+#header-overlay {
+    height: 150px;
+    padding-top: 2%;
+}
+
+
+body {
+    margin: 0;
+    vertical-align: middle;
+}
+
+header {
+    margin: 0;
+    width: 100%;
+}
+
+section {
+    margin: 0;
+    width: 100%;
+}
+
+.hide-project,
+.defer {
+    display: none;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.section-with-buffer {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin: 0% 10%;
+
+    @media screen and (min-width: 600px) {
+        margin: 0% 15%;
+    }
+
+    @media screen and (min-width: 1300px) {
+        margin: 0% 25%;
+    }
+}
+
+.section-with-small-buffer {
+    margin: 0% 7%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.bg-lighter {
+    background-color: var(--color-lighter);
+}
+.bg-light {
+    background-color: var(--color-light);
+}
+.bg-medium {
+    background-color: var(--color-medium);
+}
+.bg-dark {
+    background-color: var(--color-dark);
+}
+.bg-darker {
+    background-color: var(--color-darker);
+}
+
+h2 {
+    font-size: 1.25em;
+}
+
+.section-title,
+#header-pane {
+    font-family: 'Bungee';
+    color: var(--color-lighter);
+}
+
+#welcome-text,
+.intro-text,
+.project,
+.entry {
+    font-family: 'Georgia';
+}
+
+#welcome-text,
+.intro-text {
+    color: #ffffff;
+    font-size: 1em;
+}
+
+#projects-test-text {
+    color: #ffffff;
+    font-size: 1em;
+}
+
+@media screen and (min-width: 1368px) {
+    .project {
+        display: flex;
+    }
+}
+
+.project,
+.entry {
+    color: #ffffff;
+    font-size: 1em;
+    justify-content: space-between;
+}
+
+.center-cropped {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: 1%;
+}
+
+.entry_info_frame_border {
+    background: rgba(0, 0, 0, .65);
+}
+
+.entry_info_frame {
+    width: 100%;
+    padding: 0 1% 1% 1%;
+}
+
+@media screen and (min-width: 1368px) {
+    .project_info_frame {
+        width: 50%;
+    }
+}
+
+#projects-subpane,
+.subpane {
+    padding: 0 1% 1% 1%;
+}
+
+#projects-tab-nav {
+    padding: 2% 0 0 1%;
+}
+
+#project-paginator {
+    transform: translateY(-5%);
+    display: inline;
+    float: right;
+    margin-right: 2%;
+    color: #ffffff;
+}
+
+.project-tab {
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 16px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.tab-active {
+    background: var(--color-lighter);
+    box-shadow: 0 -6px var(--color-medium);
+}
+.tab-inactive {
+    background: var(--color-medium);
+    box-shadow: 0 -6px var(--color-darker);
+}
+.tab-active:hover,
+.tab-inactive:hover {
+    transform-origin: 50% 100%;
+    transform: scaleY(1.2);
+    transition: 0.3s;
+}
+
+#prev-page {
+    margin-right: 10px;
+}
+#next-page {
+    margin-left: 10px;
+}
+
+.home-btn:hover, .home-btn:active {
+    color: white;
+}
+
+.home-btn {
+    color: var(--color-lighter);
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    outline: none;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Bungee';
+}
+
+.social-btn:hover, .social-btn:active,
+.project_src:hover, .project_src:active,
+.project_video:hover, .project_video:active,
+.project_read:hover, .project_read:active,
+.project_doc:hover, .project_doc:active,
+.project_liveapp:hover, .project_liveapp:active,
+.pagination-btn:hover, .pagination-btn:active {
+    color: #0e83cd;
+    background: #fff;
+}
+
+.social-btn,
+.project_src,
+.project_video,
+.project_read,
+.project_doc,
+.project_liveapp,
+.pagination-btn {
+    border: 2px solid #fff;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    outline: none;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.social-btn,
+.project_src,
+.project_video,
+.project_read,
+.project_doc,
+.project_liveapp {
+    margin: 1%;
+    padding: 1%;
+    text-decoration: none;
+}
+
+.social-btn {
+    font-size: 0.5em;
+    padding: 0 5% 0 5%;
+    font-family: 'Bungee';
+}
+
+.entry_favtrack {
+    font-style: italic;
+    font-size: .9em;
+    margin-bottom: 1%;
+}
+
+.project_dates,
+.entry_date {
+    font-style: italic;
+    font-size: .8em;
+    margin-bottom: 1%;
+}
+
+.project_description,
+.entry_description {
+    margin-bottom: 1%;
+}
+
+.video_embed {
+    padding: 0 0 0 5%;
+    border: 0;
+    float: right;
+}
+
+.image_embed {
+    /*width: 150px;*/
+    height: 150px;
+}
+
+.honorable-mention {
+    margin-bottom: 1%;
+}
+
+.honorable-mention-album {
+    font-style: bold;
+}
+
+.honorable-mention-artist {
+    font-style: italic;
+    font-size: .8em;
+}
+
+.honorable-mention-oneline {
+    font-size: .9em;
+}
