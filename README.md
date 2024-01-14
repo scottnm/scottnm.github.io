@@ -12,5 +12,4 @@ For simplicity's sake, the whole site is implemented with just HTML, CSS, and va
 * `scripts/`: JS scripts for the main page and all subpages
 * `site_images/`: assets for the main site layout
 * `files/`: assets for projects and pages
-* `blog_drafts/`: markdown drafts for blog posts
-* `blog_posts/`: HTML blog posts generated from markdown drafts in `blog_drafts/`
+* `blog_posts/`: HTML blog posts and their original drafts in markdown
