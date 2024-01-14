@@ -73,7 +73,7 @@
                     </li>
 
                     <li>Reading <em>Achewood</em> from a mobile device is not a pleasant experience (or at least it
-                    wasn't for me the last time I tried back in 2021).
+                    wasn't for me the last time I tried back in 2021<sup><a href="#footnote-1">[1]</a></sup>).
                     </li>
                 </ol>
 
@@ -83,7 +83,7 @@
                 </p>
 
                 <p>
-                    I wrote a web scraper in <a href="https://www.rust-lang.org/">Rust</a><sup><a href="#footnote-1">[1]</a></sup> to crawl the
+                    I wrote a web scraper in <a href="https://www.rust-lang.org/">Rust</a><sup><a href="#footnote-2">[2]</a></sup> to crawl the
                     <em>Achewood</em> site and download all of the comics from all of the major <em>Achewood</em> story
                     arcs. The comics were all downloaded in their original format: tiny GIFs (this webcomic started in
                     the early 2000s. It was a different time!)
@@ -94,7 +94,7 @@
                     was a different comic. There were probably smarter ways to do this, but how I ended up doing this
                     was by selecting all of the files on my PC and running them collectively through Window's "Print as
                     PDF" functionality. It worked... <em>ok</em>..., but a bunch of manual editing and oversight was
-                    needed<sup><a href="#footnote-2">[2]</a></sup> and since the original images were small, there were pretty bad rendering artifacts when
+                    needed<sup><a href="#footnote-3">[3]</a></sup> and since the original images were small, there were pretty bad rendering artifacts when
                     the e-reader would try to expand the image to fill the screen.
                 </p>
 
@@ -119,7 +119,7 @@
                     again) but this time in EPUB format which my e-reader works best with. Figuring out how to format
                     this as an EPUB was a really interesting process. EPUB is a well-enough documented format, but
                     rather than read a spec I took the lazy/fun path and sort of reverse engineered the whole thing.
-                    Once I discovered<sup><a href="#footnote-3">[3]</a></sup> that an EPUB is really just a zip archive of some XHTML files and other assets
+                    Once I discovered<sup><a href="#footnote-4">[4]</a></sup> that an EPUB is really just a zip archive of some XHTML files and other assets
                     (e.g. image files), it was almost faster to just extract the contents from a working EPUB file and
                     work my way backwards to creating my own. Sometimes, it's easier to iterate with something that's
                     already working than to read a long spec full of information that isn't relevant to the task at
@@ -159,15 +159,19 @@
 
                 <p>
                     <span id="footnote-1" class="footnote">
-                        [1] Why Rust? No reason other than I wanted an excuse to write some Rust.
+                        [1] Jan 14th 2024: I just checked and the mobile version has significantly improved! Buttons are appropriately sized, you can scroll to view more comics, the viewport is fit for mobile... it's beautiful! Almost makes me feel like some of this effort was wasted but whatever, I got multiple years of use out of it and it's still mine!
                     </span>
                     <br/>
                     <span id="footnote-2" class="footnote">
-                        [2] I do not understand why, but, sometimes, Windows would print some comics rotated and other times not and it took a look of fiddling around in the PDF options to coax Windows to generate the PDF semi-correctly.
+                        [2] Why Rust? No reason other than I wanted an excuse to write some Rust.
                     </span>
                     <br/>
                     <span id="footnote-3" class="footnote">
-                        [3] By "discovered", I mean that I tried to open an EPUB file in Vim hoping that it was somehow just a plaintext file and was surprised to see Vim trying to read it like a ZIP archive (which Vim has native functionality for browsing).
+                        [3] I do not understand why, but, sometimes, Windows would print some comics rotated and other times not and it took a look of fiddling around in the PDF options to coax Windows to generate the PDF semi-correctly.
+                    </span>
+                    <br/>
+                    <span id="footnote-4" class="footnote">
+                        [4] By "discovered", I mean that I tried to open an EPUB file in Vim hoping that it was somehow just a plaintext file and was surprised to see Vim trying to read it like a ZIP archive (which Vim has native functionality for browsing).
                     </span>
                     <br/>
                 </p>
