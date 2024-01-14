@@ -43,12 +43,11 @@
 
         .doom-font-left {
             font-family: 'AmazDoomLeft';
-            font-size: 100px;
         }
         .doom-font-right {
             font-family: 'AmazDoomRight';
-            font-size: 100px;
         }
+
         #doomposer-text {
             text-align: center;
         }
@@ -66,13 +65,34 @@
         .whisper-font {
             font-size: 10px;
         }
+
+        @media screen and (max-width: 600px) {
+            .doomposer-border-img {
+                width: 80px;
+            }
+            .doom-font-left,
+            .doom-font-right {
+                font-size: 80px;
+            }
+        }
+
+        @media screen and (min-width: 601px) {
+            .doomposer-border-img {
+                width: 100px;
+            }
+            .doom-font-left,
+            .doom-font-right {
+                font-size: 100px;
+            }
+        }
+
     </style>
 </head>
 
 <body>
     <div id="doomposer-container">
         <div>
-            <img class="doomposer-border-img" src="" width="100px" alt=""/>
+            <img class="doomposer-border-img" src="" alt="" defer/>
         </div>
 
         <div id="doomposer-text">
@@ -80,7 +100,7 @@
         </div>
 
         <div>
-            <img class="doomposer-border-img" src="" width="100px" alt=""/>
+            <img class="doomposer-border-img" src="" alt="" defer/>
         </div>
     </div>
 </body>
