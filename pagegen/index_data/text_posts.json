@@ -1,5 +1,13 @@
 [
     {
+        "title": "2024 Site Redesign",
+        "dates": "January 2024",
+        "description": "a fresh coat of paint",
+        "image": "site_images/icon/android-chrome-512x512.png",
+        "read": "blog_posts/2024_redesign/2024_01_13_2024_redesign.html",
+        "highlight": true
+    },
+    {
         "title": "VTPP v0.2.0",
         "dates": "December 2023",
         "description": "another VTPP milestone",

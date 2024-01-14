@@ -1,11 +1,16 @@
 param(
     [Parameter(Mandatory=$true)]
     [string]$MarkdownFilePath,
-    [string]$OutputHtmlFileDirectory = "$PSScriptRoot",
+    [string]$OutputHtmlFileDirectory,
     [string]$OutputHtmlFileName,
     [string]$TidyConfig = "$PSScriptRoot\tidy.config",
     [switch]$Preview
     )
+
+if (!$OutputHtmlFileDirectory)
+{
+    $OutputHtmlFileDirectory = (Get-Item $MarkdownFilePath).Directory
+}
 
 # ensure our output html file directory is an absolute path
 $OutputHtmlFileDirectory = (Get-Item $OutputHtmlFileDirectory).FullName

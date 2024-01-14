@@ -149,3 +149,7 @@ span {
     font-size: 0.8em;
     color: var(--color-text-footnote);
 }
+
+.blog-post-img {
+    width: 100%;
+}
