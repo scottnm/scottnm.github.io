@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" type="image/svg+xml" href="/site_images/icon/icon.svg">
+    <script type="module" src="../bespoke/doomposer/doomposer.js"></script>
+
+    <title>
+        DOOM POSERS ANONYMOUS
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        @font-face {
+            font-family: "AmazDoomLeft";
+            src: url("../bespoke/doomposer/amazdoom/AmazDooMLeft.ttf")
+        }
+        @font-face {
+            font-family: "AmazDoomRight";
+            src: url("../bespoke/doomposer/amazdoom/AmazDooMRight.ttf")
+        }
+        .error {
+            color: red
+        }
+        * {
+            color: white
+        }
+        body {
+            background-color: black;
+            justify-content: center;
+            align-content: center;
+            height: 100vh;
+            display: flex;
+        }
+
+        .fire-text {
+            background: -webkit-linear-gradient(white, yellow, red, brown, black, black);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .doom-font-left {
+            font-family: 'AmazDoomLeft';
+            font-size: 100px;
+        }
+        .doom-font-right {
+            font-family: 'AmazDoomRight';
+            font-size: 100px;
+        }
+        #doomposer-text {
+            text-align: center;
+        }
+        #doomposer-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #doomposer-container > div {
+            padding: 10px;
+        }
+        .whisper-position {
+            transform: translateY(-30px);
+        }
+        .whisper-font {
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="doomposer-container">
+        <div>
+            <img class="doomposer-border-img" src="" width="100px" alt=""/>
+        </div>
+
+        <div id="doomposer-text">
+            <!-- filled by js -->
+        </div>
+
+        <div>
+            <img class="doomposer-border-img" src="" width="100px" alt=""/>
+        </div>
+    </div>
+</body>
+
+</html>
