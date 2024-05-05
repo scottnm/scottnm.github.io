@@ -37,7 +37,7 @@ In an attempt to half-assedly salvage this, I'm instead going to jot down a simp
 
 One cool consequence of working in Pico-8 was that I had to make frequent use of its gif capture tool to share progress with my team as I was working on new features. Almost by accident, I ended up capturing effectively the entire development history of the project in gifs. Here they are! I think it looks pretty cool.
 
-![isometric map prototype](progress_imgs/01.jpg)
+![isometric map prototype](progress_imgs/01.avif)
 ![first timer prototype](progress_imgs/02.gif)
 ![animating a sample character](progress_imgs/03.gif)
 ![moving around on a grid](progress_imgs/04.gif)
@@ -48,7 +48,7 @@ One cool consequence of working in Pico-8 was that I had to make frequent use of
 ![our first real iso maps](progress_imgs/09.gif)
 ![tweaking iso maps](progress_imgs/10.gif)
 ![scrolling camera](progress_imgs/11.gif)
-![hint arrows](progress_imgs/12.png)
+![hint arrows](progress_imgs/12.avif)
 ![dig animation](progress_imgs/13.gif)
 ![death prompt](progress_imgs/14.gif)
 ![bombs](progress_imgs/15.gif)

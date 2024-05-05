@@ -3,7 +3,7 @@
         "title": "2024 Site Redesign",
         "dates": "January 2024",
         "description": "a fresh coat of paint",
-        "image": "site_images/icon/android-chrome-512x512.png",
+        "image": "site_images/icon/android-chrome-512x512.avif",
         "read": "blog_posts/2024_redesign/2024_01_13_2024_redesign.html",
         "highlight": true
     },
@@ -11,28 +11,28 @@
         "title": "VTPP v0.2.0",
         "dates": "December 2023",
         "description": "another VTPP milestone",
-        "image": "site_images/vtpp_coverart_thumbnail_med.webp",
+        "image": "site_images/vtpp_coverart_thumbnail_med.avif",
         "read": "pages/bespoke/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html"
     },
     {
         "title": "VTPP v0.1.0",
         "dates": "November 2023",
         "description": "new project: Video-to-Private-Podcast",
-        "image": "site_images/vtpp_coverart_thumbnail_med.webp",
+        "image": "site_images/vtpp_coverart_thumbnail_med.avif",
         "read": "pages/bespoke/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html"
     },
     {
         "title": "Surprising Monkey Muck Data",
         "dates": "October 2022",
         "description": "Why are people playing this demo???",
-        "image": "site_images/muckblog.webp",
+        "image": "site_images/muckblog.avif",
         "read": "blog_posts/surprising_monkey_muck_data/2022_10_29_surprising_monkey_muck_data.html"
     },
     {
         "title": "Hair Log",
         "dates": "June 2022",
         "description": "I kept track of my hair growing for about a year.",
-        "image": "site_images/hueyfreeman.webp",
+        "image": "site_images/hueyfreeman.avif",
         "read": "pages/bespoke/hair_log/hair_log.html"
     },
     {
@@ -47,7 +47,7 @@
         "dates": "Nov 2018",
         "description":
             "A non-exhaustive list of my favorite albums released in 2018.",
-        "image": "site_images/aoty-2018.webp",
+        "image": "site_images/aoty-2018.avif",
         "read": "pages/bespoke/albumsof2018/albumsof2018.html"
     }
 ]

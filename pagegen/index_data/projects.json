@@ -4,7 +4,7 @@
         "highlight": true,
         "dates": "November 2023",
         "description": "Video-to-Private-Podcast: a home server project",
-        "image": "site_images/vtpp_coverart_thumbnail_med.webp",
+        "image": "site_images/vtpp_coverart_thumbnail_med.avif",
         "read": "pages/bespoke/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html",
         "tools": "python, sqlite3, raspberrypi"
     },
@@ -40,7 +40,7 @@
         "highlight": true,
         "dates": "Spring 2021",
         "description": "Assembled the Achewood web comic into an e-reader compatible EPUB",
-        "image": "site_images/scrapewood_on_reader.webp",
+        "image": "site_images/scrapewood_on_reader.avif",
         "tools": "rust, epub, powershell",
         "read": "pages/bespoke/scrapewood/2024_01_07_scrapewood.html"
     },
@@ -73,7 +73,7 @@
         "dates": "Fall 2020",
         "description": "A tool to extract the images captured in a Windows Steps Recorder file",
         "src": "https://github.com/scottnm/WSR-Image-Extractor",
-        "image": "site_images/wsr.webp",
+        "image": "site_images/wsr.avif",
         "tools": "rust"
     },
     {
@@ -90,7 +90,7 @@
         "description":
             "A cpu-based, didactic renderer project from <a href='https://github.com/ssloy/tinyrenderer/wiki' target='_blank'>Dmitry V. Sokolov's Tiny Renderer</a> project.",
         "src": "https://github.com/scottnm/Playground/tree/main/gfx/tinyrenderer",
-        "image": "site_images/tiny_renderer.webp",
+        "image": "site_images/tiny_renderer.avif",
         "tools": "C++"
     },
     {
@@ -126,7 +126,7 @@
         "dates": "Summer 2016",
         "description": "A layer-based pixel art editor built using MIT\"s Processing",
         "src": "https://github.com/scottnm/Pixitor",
-        "image": "files/pixitor.png",
+        "image": "files/pixitor.avif",
         "tools": "Processing, Java",
         "video": "https://www.youtube.com/watch?v=mx1m7fG-8IM"
     },

@@ -12,6 +12,7 @@ def run_test_server():
             '.html': 'text/html',
             '.png': 'image/png',
             '.jpg': 'image/jpg',
+            '.avif': 'image/avif',
             '.svg': 'image/svg+xml',
             '.css': 'text/css',
             '.js': 'application/x-javascript',

@@ -4,7 +4,7 @@
         "dates": "Summer 2020",
         "description": "A tool to help visualize notes on a fretboard",
         "src": "https://github.com/scottnm/notevis",
-        "image": "site_images/notevis.webp",
+        "image": "site_images/notevis.avif",
         "tools": "rust"
     },
     {
