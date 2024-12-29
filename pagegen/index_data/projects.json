@@ -1,5 +1,14 @@
 [
     {
+        "title": "Custom Clone Hero Chart - Time and Death and God",
+        "highlight": true,
+        "dates": "December 2024",
+        "description": "A custom Clone Hero chart of the song 'Time and Death and God' by The Acacia Strain",
+        "image": "site_images/CloneHeroTimeAndDeathAndGodThumbnail.avif",
+        "video": "https://youtu.be/PwUrFlltP3c",
+        "tools": "moonscraper, audacity"
+    },
+    {
         "title": "VTPP",
         "highlight": true,
         "dates": "November 2023",

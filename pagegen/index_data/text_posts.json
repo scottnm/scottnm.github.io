@@ -4,8 +4,7 @@
         "dates": "January 2024",
         "description": "a fresh coat of paint",
         "image": "site_images/icon/android-chrome-512x512.avif",
-        "read": "blog_posts/2024_redesign/2024_01_13_2024_redesign.html",
-        "highlight": true
+        "read": "blog_posts/2024_redesign/2024_01_13_2024_redesign.html"
     },
     {
         "title": "VTPP v0.2.0",
