@@ -98,9 +98,9 @@ $filledTemplate = @"
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/svg+xml" href="$iconPath">
-    <link rel="stylesheet" href="$baseStylesPath" />
+    <link rel="stylesheet" href="$baseStylesPath" >
 
     <title>scottnm: $Title</title>
     <meta name="description" content="">
@@ -113,9 +113,9 @@ $filledTemplate = @"
             <div id="header-with-links-container">
                 <a class="home-btn" href="/">
                     <h1 class="title-text">Scott Munro</h1>
-                    <img class="title-icon" src="../../../site_images/icon/icon.svg" alt="" loading="lazy" width="20" height="20"/>
+                    <img class="title-icon" src="../../../site_images/icon/icon.svg" alt="" loading="lazy" width="20" height="20" >
                 </a>
-                <hr class="header-links-separator" />
+                <hr class="header-links-separator" >
                 <a class="social-btn" href="https://github.com/scottnm" title="check out my code on github"
                     target="_blank">github</a>
                 <span> | </span>

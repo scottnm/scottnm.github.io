@@ -211,9 +211,9 @@ function generate_honorable_mentions()
             "<li class=\"honorable-mention\">" + 
                 `<span class="honorable-mention-album">${mention.album}</span> -- ` + 
                 `<span class="honorable-mention-artist">${mention.artist}</span>` +
-                "<br/>" + 
+                "<br >" + 
                 `<span class="honorable-mention-oneline">${mention.oneline}</span>` +
-                "<br/>" + 
+                "<br >" + 
             "</li>";
     }
 
