@@ -68,7 +68,7 @@
             <div class="pic-grid">
                 {% for highlight in highlights %}
                 <a href="{{ select_link(highlight) }}" class="pic-grid-link u-url">
-                    <div class="pic-grid-cell">
+                    <div class="pic-grid-cell h-entry">
                         <img class="pic-grid-cell-image" src="/{{ highlight['image'] }}" alt="" loading="lazy" >
                         <div class="pic-grid-cell-text-overlay"><span class="project-title p-name">{{ highlight['title'] }}</span></div>
                     </div>
@@ -83,7 +83,7 @@
             <h2 class="section-title">Projects</h2>
             <ul>
                 {% for project in projects %}
-                <li>
+                <li class="h-entry">
                     <a class="project-title u-url p-name" href="{{ select_link(project) }}" target="_blank">{{ project['title'] }}</a>
                     <br >
                     <span><i>
@@ -102,7 +102,7 @@
             <h2 class="section-title">Text Posts</h2>
             <ul>
                 {% for text_post in text_posts %}
-                <li>
+                <li class="h-entry">
                     <a href="{{ text_post['read'] }}" class="project-title p-name">{{ text_post['title'] }}</a>
                     <br >
                     <span><i>
