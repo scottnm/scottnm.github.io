@@ -67,10 +67,10 @@
             <h2 class="section-title">Highlights</h2>
             <div class="pic-grid">
                 {% for highlight in highlights %}
-                <a href="{{ select_link(highlight) }}" class="pic-grid-link">
+                <a href="{{ select_link(highlight) }}" class="pic-grid-link u-url">
                     <div class="pic-grid-cell">
                         <img class="pic-grid-cell-image" src="/{{ highlight['image'] }}" alt="" loading="lazy" >
-                        <div class="pic-grid-cell-text-overlay"><span class="project-title">{{ highlight['title'] }}</span></div>
+                        <div class="pic-grid-cell-text-overlay"><span class="project-title p-name">{{ highlight['title'] }}</span></div>
                     </div>
                 </a>
                 {% endfor %}
@@ -84,11 +84,13 @@
             <ul>
                 {% for project in projects %}
                 <li>
-                    <a class="project-title" href="{{ select_link(project) }}" target="_blank">{{ project['title'] }}</a>
+                    <a class="project-title u-url p-name" href="{{ select_link(project) }}" target="_blank">{{ project['title'] }}</a>
                     <br >
-                    <span><i>{{ project['dates'] }}</i></span>
+                    <span><i>
+                        <time class="dt-published" datetime="{{ project['pub_date'] }}">{{ project['display_date'] }}</time>
+                    </i></span>
                     <br >
-                    <span>{{ project['description'] }}</span>
+                    <span class="p-summary">{{ project['description'] }}</span>
                     <br >
                     <span>Tools: {{ project['tools'] }}</span>
                 </li>
@@ -101,11 +103,13 @@
             <ul>
                 {% for text_post in text_posts %}
                 <li>
-                    <a href="{{ text_post['read'] }}" class="project-title">{{ text_post['title'] }}</a>
+                    <a href="{{ text_post['read'] }}" class="project-title p-name">{{ text_post['title'] }}</a>
                     <br >
-                    <span><i>{{ text_post['dates'] }}</i></span>
+                    <span><i>
+                        <time class="dt-published" datetime="{{ text_post['pub_date'] }}">{{ text_post['display_date'] }}</time>
+                    </i></span>
                     <br >
-                    <span>{{ text_post['description'] }}</span>
+                    <span class="p-summary">{{ text_post['description'] }}</span>
                 </li>
                 {% endfor %}
             </ul>

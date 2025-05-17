@@ -7,15 +7,11 @@ def main():
     dir_path = os.path.dirname(os.path.realpath(__file__))
     json_data_dir = pathlib.Path(dir_path) / "index_data"
     site_data_json_path = json_data_dir / "site_data.json"
-    project_data_json_path = json_data_dir / "projects.json"
-    text_posts_json_path = json_data_dir / "text_posts.json"
 
     with open(site_data_json_path, "r", encoding="utf8") as site_data_json_file:
         site_data = json.load(site_data_json_file)
-        with open(project_data_json_path, "r", encoding="utf8") as project_data_json_file:
-            projects = json.load(project_data_json_file)
-            with open(text_posts_json_path, "r", encoding="utf8") as text_posts_json_file:
-                text_posts = json.load(text_posts_json_file)
+        projects = site_data["projects"]
+        text_posts = site_data["text_posts"]
 
     env = jinja2.Environment(
         loader=jinja2.FileSystemLoader(f"{dir_path}/"),
