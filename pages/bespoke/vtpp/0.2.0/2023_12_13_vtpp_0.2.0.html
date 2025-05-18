@@ -36,54 +36,58 @@
         </header>
 
         <section>
-            <div>
-                <h1 id="vtpp-0.2.0" class="article-title">
+            <div class="h-entry">
+                <h1 id="vtpp-0.2.0" class="article-title p-name">
                     VTPP 0.2.0
+                    <!-- FIXME: make this non-hidden and probably a proper subtitle-->
+                    <time class="dt-published" datetime="2023-12-13" hidden>2023-12-13</time>
                 </h1>
 
-                <p>
-                    "VTPP" is a home server project I've been working on which, in short, automatically downloads
-                    videos, extracts their audio, and makes the audio available for me to listen as a podcast feed.
-                </p>
+                <div class="e-content">
+                    <p>
+                        "VTPP" is a home server project I've been working on which, in short, automatically downloads
+                        videos, extracts their audio, and makes the audio available for me to listen as a podcast feed.
+                    </p>
 
-                <p>
-                    It's been about a month since I marked a <a href=
-                    "/pages/bespoke/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html"><code>v0.1.0</code></a> version of the
-                    project. Here's what's I've changed since then:
-                </p>
+                    <p>
+                        It's been about a month since I marked a <a href=
+                        "/pages/bespoke/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html"><code>v0.1.0</code></a> version of the
+                        project. Here's what's I've changed since then:
+                    </p>
 
-                <ul>
-                    <li>Updated the web portal to enable editing the configured youtube channel list that I'm fetching
-                    videos from
-                    </li>
+                    <ul>
+                        <li>Updated the web portal to enable editing the configured youtube channel list that I'm fetching
+                        videos from
+                        </li>
 
-                    <li>Updated the web portal so that I can delete videos from my feed as well as "block" videos from
-                    being re-downloaded in the future.
-                    </li>
+                        <li>Updated the web portal so that I can delete videos from my feed as well as "block" videos from
+                        being re-downloaded in the future.
+                        </li>
 
-                    <li>Added a simple time heuristic to recognize (and ignore) Youtube Shorts when fetching videos
-                    </li>
+                        <li>Added a simple time heuristic to recognize (and ignore) Youtube Shorts when fetching videos
+                        </li>
 
-                    <li>Added logic to ignore offline Youtube Live streams which sometimes(?) show up in a channel's
-                    feed
-                    </li>
+                        <li>Added logic to ignore offline Youtube Live streams which sometimes(?) show up in a channel's
+                        feed
+                        </li>
 
-                    <li>Made a handful of small improvements to make "on demand" download progress clearer
-                    </li>
+                        <li>Made a handful of small improvements to make "on demand" download progress clearer
+                        </li>
 
-                    <li>Refactored a bunch of things to make code more reusable across the different components
-                    </li>
-                </ul>
+                        <li>Refactored a bunch of things to make code more reusable across the different components
+                        </li>
+                    </ul>
 
-                <p>
-                    There are still a lot of things I could do and would like to do, but the project is at a point where
-                    things feel polished enough that I can "just" use it without feeling like anything is missing.
-                </p>
+                    <p>
+                        There are still a lot of things I could do and would like to do, but the project is at a point where
+                        things feel polished enough that I can "just" use it without feeling like anything is missing.
+                    </p>
 
-                <p>
-                    So, I'm going to mark this point as a new version, <code>v0.2.0</code>, and let things be for a bit.
-                    It'll give me some clarity on what work from the backlog is actually worth spending my weekends on.
-                </p>
+                    <p>
+                        So, I'm going to mark this point as a new version, <code>v0.2.0</code>, and let things be for a bit.
+                        It'll give me some clarity on what work from the backlog is actually worth spending my weekends on.
+                    </p>
+                </div>
             </div>
         </section>
     </body>
