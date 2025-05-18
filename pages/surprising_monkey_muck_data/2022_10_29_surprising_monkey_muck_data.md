@@ -7,7 +7,7 @@ As of Oct. 29 2022 (i.e. in *just* 6 years), Monkey Muck...
 - has 204 downloads of its Win32 build
 - is a part of 14 itch.io collections
 
-![image of Monkey Muck analytics dashboard](../site_images/monkeymuckanalytics.avif)
+![image of Monkey Muck analytics dashboard](/site_images/monkeymuckanalytics.avif)
 
 In today's internet landscape, these numbers are incredibly small, but "incredibly small" is still about 100x the attention I expected this demo to receive. It makes me wonder what compounding coincidences led to any traffic at all. I never shared this demo with anyone (aside from linking it on my personal site which I also don't share with anyone), so I have to imagine it's mostly coincidence. Maybe having "horror" in the tags list gave it some attention for people browsing itch.io for horror games.
 

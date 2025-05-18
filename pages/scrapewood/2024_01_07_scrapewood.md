@@ -2,7 +2,7 @@
 
 *Scrapewood* is an e-book collection that I assembled of the [*Achewood*](https://achewood.com/) webcomic series by Chris Onstad. None of the content of the e-book is my own (all credit to Onstad), but I did a significant amount of work collecting and assembling that source material into something that I could read on an e-reader, and that resulting e-book is *Scrapewood*.
 
-![A page of the Scrapewood e-book rendered on a kobo e-reader](../../../site_images/scrapewood_on_reader.avif)
+![A page of the Scrapewood e-book rendered on a kobo e-reader](/site_images/scrapewood_on_reader.avif)
 
 If you're not familiar with *Achewood*, this post isn't the right venue for me to explain it to you. The only context you need to understand the rest of this post is that...
 
