@@ -18,7 +18,7 @@
             "pub_date": "2023-11-04",
             "description": "Video-to-Private-Podcast: a home server project",
             "image": "site_images/vtpp_coverart_thumbnail_med.avif",
-            "read": "pages/bespoke/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html",
+            "read": "pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html",
             "tools": "python, sqlite3, raspberrypi"
         },
         {
@@ -49,7 +49,7 @@
             "description": "Assembled the Achewood web comic into an e-reader compatible EPUB",
             "image": "site_images/scrapewood_on_reader.avif",
             "tools": "rust, epub, powershell",
-            "read": "pages/bespoke/scrapewood/2024_01_07_scrapewood.html"
+            "read": "pages/scrapewood/2024_01_07_scrapewood.html"
         },
         {
             "title": "Bman3D",
@@ -103,7 +103,7 @@
             "pub_date": "2018-06-10",
             "description": "A silly joke that I took too far and spent too much time on. The result? a parody of \"the Treachery of Images\" by Rene Magritte. In a funny turn of events, I like how it turned out.",
             "image": "files/the_treachery_of_self_image.png",
-            "read": "pages/bespoke/treachery/2024_01_07_treachery.html",
+            "read": "pages/treachery/2024_01_07_treachery.html",
             "tools": "Paint Tool Sai"
         },
         {
@@ -312,7 +312,7 @@
             "pub_date": "2024-01-13",
             "description": "a fresh coat of paint",
             "image": "site_images/icon/android-chrome-512x512.avif",
-            "read": "pages/blog_posts/2024_redesign/2024_01_13_2024_redesign.html"
+            "read": "pages/2024_redesign/2024_01_13_2024_redesign.html"
         },
         {
             "title": "VTPP v0.2.0",
@@ -320,7 +320,7 @@
             "pub_date": "2023-12-13",
             "description": "another VTPP milestone",
             "image": "site_images/vtpp_coverart_thumbnail_med.avif",
-            "read": "pages/bespoke/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html"
+            "read": "pages/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html"
         },
         {
             "title": "VTPP v0.1.0",
@@ -328,7 +328,7 @@
             "pub_date": "2023-11-04",
             "description": "new project: Video-to-Private-Podcast",
             "image": "site_images/vtpp_coverart_thumbnail_med.avif",
-            "read": "pages/bespoke/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html"
+            "read": "pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html"
         },
         {
             "title": "Surprising Monkey Muck Data",
@@ -336,7 +336,7 @@
             "pub_date": "2022-10-29",
             "description": "Why are people playing this demo???",
             "image": "site_images/muckblog.avif",
-            "read": "pages/blog_posts/surprising_monkey_muck_data/2022_10_29_surprising_monkey_muck_data.html"
+            "read": "pages/surprising_monkey_muck_data/2022_10_29_surprising_monkey_muck_data.html"
         },
         {
             "title": "Hair Log",
@@ -344,7 +344,7 @@
             "pub_date": "2022-06-30",
             "description": "I kept track of my hair growing for about a year.",
             "image": "site_images/hueyfreeman.avif",
-            "read": "pages/bespoke/hair_log/hair_log.html"
+            "read": "pages/hair_log/hair_log.html"
         },
         {
             "title": "Dig Deep Retrospective",
@@ -352,7 +352,7 @@
             "pub_date": "2022-05-30",
             "description": "Reflecting on my experience making Dig Deep during the \"Classic Collards\" Game Jam",
             "image": "site_images/digdeep-demo.webp",
-            "read": "pages/bespoke/digdeepretro/digdeepretro.html"
+            "read": "pages/digdeepretro/digdeepretro.html"
         },
         {
             "title": "Favorite Albums of 2018",
@@ -360,7 +360,7 @@
             "pub_date": "2018-11-30",
             "description": "A non-exhaustive list of my favorite albums released in 2018.",
             "image": "site_images/aoty-2018.avif",
-            "read": "pages/bespoke/albumsof2018/albumsof2018.html"
+            "read": "pages/albumsof2018/albumsof2018.html"
         }
     ]
 

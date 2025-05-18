@@ -37,11 +37,11 @@ function generate_doom_poser_text(poser_id)
 window.onload =
     function()
     {
-        //../bespoke/doomposer/doomwebps/caco.webp
+        //../doomposer/doomwebps/caco.webp
         let border_anim = border_anims[Math.floor(Math.random() * border_anims.length)];
         let border_imgs = document.getElementsByClassName("doomposer-border-img");
         for (let border_img of border_imgs) {
-            border_img.setAttribute("src", `../bespoke/doomposer/doomwebps/${border_anim}`)
+            border_img.setAttribute("src", `../doomposer/doomwebps/${border_anim}`)
         }
         var urlParams = new URLSearchParams(window.location.search);
         var poser_id = urlParams.get('pid');

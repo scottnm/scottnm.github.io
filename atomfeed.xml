@@ -16,7 +16,7 @@
   <!-- FEED ENTRIES -->
   <entry>
     <title>2024 Site Redesign</title>
-    <link href="https://www.scottnm.com/blog_posts/2024_redesign/2024_01_13_2024_redesign.html" />
+    <link href="https://www.scottnm.com/pages/2024_redesign/2024_01_13_2024_redesign.html" />
     <id>urn:uuid:e6bc4ca2-ae6c-4c31-8ff8-22c2202533cf</id>
     <updated>2024-01-13T00:11:00Z</updated>
     <summary>A fresh coat of paint</summary>
@@ -24,7 +24,7 @@
 
   <entry>
     <title>Scrapewood</title>
-    <link href="https://www.scottnm.com/pages/bespoke/scrapewood/2024_01_07_scrapewood.html" />
+    <link href="https://www.scottnm.com/pages/scrapewood/2024_01_07_scrapewood.html" />
     <id>urn:uuid:6f03bc17-c13a-4eec-9ab5-31acf7097292</id>
     <updated>2024-01-14T00:11:00Z</updated>
     <summary>Assembled the Achewood web comic into an e-reader compatible EPUB</summary>
@@ -32,7 +32,7 @@
 
   <entry>
     <title>VTPP 0.2.0</title>
-    <link href="https://www.scottnm.com/pages/bespoke/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html" />
+    <link href="https://www.scottnm.com/pages/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html" />
     <id>urn:uuid:b67dc9bf-9fd6-4e1c-8937-6190a88290c8</id>
     <updated>2023-12-01T00:11:00Z</updated>
     <summary>another VTPP milestone</summary>
@@ -40,7 +40,7 @@
 
   <entry>
     <title>VTPP 0.1.0</title>
-    <link href="https://www.scottnm.com/pages/bespoke/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html" />
+    <link href="https://www.scottnm.com/pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html" />
     <id>urn:uuid:108c4a16-26e6-48a1-942c-f19a5f200d22</id>
     <updated>2023-11-01T00:11:00Z</updated>
     <summary>new project: Video-to-Private-Podcast</summary>
@@ -48,7 +48,7 @@
 
   <entry>
     <title>Hair Log</title>
-    <link href="https://www.scottnm.com/pages/bespoke/hair_log/hair_log.html" />
+    <link href="https://www.scottnm.com/pages/hair_log/hair_log.html" />
     <id>urn:uuid:3ff30857-8734-44eb-bc0f-f711d8c61b64</id>
     <updated>2022-10-02T00:11:00Z</updated>
     <summary>I kept track of my hair growing for about a year.</summary>
