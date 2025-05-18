@@ -91,9 +91,6 @@ function Format-Blog
         [Parameter(Mandatory=$true)][string[]]$Body
         )
 
-$iconPath = "/site_images/icon/favicon.svg"
-$baseStylesPath = "/styles.css"
-
 $filledTemplate = @"
 <!DOCTYPE html>
 <html lang="en">
@@ -101,8 +98,9 @@ $filledTemplate = @"
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="$iconPath" sizes="any" type="image/svg+xml">
-    <link rel="stylesheet" href="$baseStylesPath" >
+    <link rel="icon" href="/site_images/icon/favicon.ico" sizes="48x48">
+    <link rel="icon" href="/site_images/icon/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css" >
 
     <title>scottnm: $Title</title>
     <meta name="description" content="">
