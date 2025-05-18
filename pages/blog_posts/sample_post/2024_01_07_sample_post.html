@@ -36,55 +36,60 @@
 
         <section>
             <div>
-                <h1 id="some-sample-post">
+                <h1 id="some-sample-post" class="article-title p-name">
                     Some Sample Post
                 </h1>
 
-                <p>
-                    Here's a bunch of text
-                </p>
+                <!-- FIXME: make this non-hidden and probably a proper subtitle-->
+                <time class="dt-published" datetime="2024-01-01" hidden>2024-01-01</time>
 
-                <ul>
-                    <li>an unordered list
-                    </li>
-
-                    <li>of some stuff
-                    </li>
-
-                    <li>aint it cool
-                    </li>
-                </ul>
-
-                <blockquote>
+                <div class="e-content">
                     <p>
-                        I wonder what a quote looks like?
+                        Here's a bunch of text
                     </p>
-                </blockquote>
 
-                <p>
-                    <a href="https://example.com">source</a>
-                </p>
+                    <ul>
+                        <li>an unordered list
+                        </li>
 
-                <p>
-                    and of course... <code>inline_code += 1;</code>
-                </p>
+                        <li>of some stuff
+                        </li>
 
-                <p>
-                    and yet more...
-                </p>
+                        <li>aint it cool
+                        </li>
+                    </ul>
 
-                <pre><code>void big_ole_code_block() { for (int i = 0; i &lt; 10; ++i) { printf("what?\n"); } } </code></pre>
-                <h2 id="footnotes">
-                    Footnotes
-                </h2>
+                    <blockquote>
+                        <p>
+                            I wonder what a quote looks like?
+                        </p>
+                    </blockquote>
 
-                <ol>
-                    <li>an ordered list
-                    </li>
+                    <p>
+                        <a href="https://example.com">source</a>
+                    </p>
 
-                    <li>I guess
-                    </li>
-                </ol>
+                    <p>
+                        and of course... <code>inline_code += 1;</code>
+                    </p>
+
+                    <p>
+                        and yet more...
+                    </p>
+
+                    <pre><code>void big_ole_code_block() { for (int i = 0; i &lt; 10; ++i) { printf("what?\n"); } } </code></pre>
+                    <h2 id="footnotes">
+                        Footnotes
+                    </h2>
+
+                    <ol>
+                        <li>an ordered list
+                        </li>
+
+                        <li>I guess
+                        </li>
+                    </ol>
+                </div>
             </div>
         </section>
     </body>

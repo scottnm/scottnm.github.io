@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.9.14" >
+        <meta charset="utf-8" >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+        <link rel="icon" type="image/svg+xml" href="/site_images/icon/icon.svg" >
+        <link rel="stylesheet" href="/styles.css" >
+        <title>
+            scottnm: 2024 Site Redesign
+        </title>
+        <meta name="description" content="" >
+        <meta name="viewport" content="width=device-width,initial-scale=1" >
+    </head>
+    <body>
+        <header>
+            <div id="header-pane" class="section-with-buffer">
+                <div id="header-with-links-container">
+                    <a class="home-btn" href="/">
+                    <h1 class="title-text">
+                        Scott Munro
+                    </h1>
+                    <img class="title-icon" src="/site_images/icon/icon.svg" alt="" loading="lazy" width="20"
+                    height="20" ></a>
+
+                    <hr class="header-links-separator" >
+                    <a class="social-btn" href="https://github.com/scottnm" title="check out my code on github" target=
+                    "_blank">github</a> <span>|</span> <a class="social-btn" href="/atomfeed.xml" title=
+                    "subscribe via atom/rss feeds" rel="subscribe-rss" target="_blank">rss</a> <span>|</span> <a class=
+                    "social-btn" href="mailto:me@scottnm.com" title="shoot me an email">email</a> <span>|</span>
+                    <a class="social-btn" href="https://linkedin.com/in/scott-munro" title="connect with me on linkedin"
+                    target="_blank">linkedin</a>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div class="h-entry">
+                <h1 id="site-redesign" class="article-title p-name">
+                    2024 Site Redesign
+                </h1>
+
+                <!-- FIXME: make this non-hidden and probably a proper subtitle-->
+                <time class="dt-published" datetime="2024-01-13" hidden>2024-01-13</time>
+
+                <div class="e-content">
+                    <p>
+                        I started redesigning my site at the end of 2023 and wrapped up right at the start of 2024.
+                    </p>
+
+                    <p>
+                        You can see an archive of <a href=
+                        "https://web.archive.org/web/20231221220921/https://www.scottnm.com/">the old homepage on the
+                        Wayback Machine</a>.
+                    </p>
+
+                    <p>
+                        <img src="scottnm_old_site_screenshot.avif" alt=
+                        "the old homepage in &quot;desktop&quot; view" class="blog-post-img" >
+                    </p>
+
+                    <h2 id="why" class="section-title">
+                        Why?
+                    </h2>
+
+                    <p>
+                        There were a lot of things which I liked about the old site:
+                    </p>
+
+                    <ul>
+                        <li>its visual uniqueness
+                        </li>
+
+                        <li>the monochromatic rust/red color scheme
+                        </li>
+
+                        <li>the front-and-center-ness of the images on the site.
+                        </li>
+
+                        <li>the page was static but all the content was populated with client-side vanilla JavaScript
+                        templating which made iterating and adding content very quick!
+                            <ul>
+                                <li>I did a bit of work that I'm proud of to make appropriate use of JavaScript without
+                                relying on a bunch of web dev tools that bog down day-to-day development (bundlers,
+                                transpilers, local HTTP servers, etc)
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>it was easily archived with the <a href="https://web.archive.org/">Wayback Machine</a>
+                            <ul>
+                                <li>I'm not sure why this was so important to me. Usually web archival tools are most
+                                appropriate for when you don't own the page in question. For some reason, it gives me
+                                comfort to know its a little more resilient to disappearing forever.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p>
+                        But it wasn't without its flaws:
+                    </p>
+
+                    <ul>
+                        <li>The large number of images impacted page load speed
+                            <ul>
+                                <li>Given its a static site, I've always felt like it has to be a goal that the page loads
+                                quickly
+                                </li>
+
+                                <li>I tried several "easy" tricks to improve this (deferred image loads, reduced image
+                                size/quality, etc) which worked to some but not total success.
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>The site relied on GoogleFonts for visual flair but these impacted page load speed
+                        </li>
+
+                        <li>I never quite achieved the page structure/layout I had in my head.
+                            <ul>
+                                <li>This is mostly an admission that I'm not a very good web developer and the CSS styling
+                                required to gridded structures still very much confuses me.
+                                </li>
+
+                                <li>I also struggled with placing images within those grids at the right place and size.
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>My page's structure/layout was designed for desktop and it didn't translate well to mobile
+                            <ul>
+                                <li>Images felt cramped.
+                                </li>
+
+                                <li>Margins and padding always felt off compared to the desktop variant.
+                                </li>
+
+                                <li>I tried to use responsive CSS media queries to change the styles based on the client's
+                                device, but it always felt like trying to force the desktop design to work on mobile with
+                                very poor compromise.
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>I got it working but enabling the page to be "Wayback Machine" compatible required some
+                        compromises in my client-side JavaScript (everything was crammed in one mega-file)
+                        </li>
+
+                        <li>For simplicity, I never removed old page content (which lived in the JavaScript). I mostly just
+                        commented it out so it was easy to bring back without trawling through git history. But it bothered
+                        me that I was wasting bandwidth on dead data.
+                            <ul>
+                                <li>Using a minifier would have helped here but I always appreciated that my site was
+                                legible in the browser inspector. There were other ways I could have addressed this (some of
+                                which I did as part of this site redesign!) so I'm mostly stating that it was a pet peeve I
+                                kept punting to the future.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p>
+                        I tried to address some of these pain points individually without doing a full redesign, but I
+                        always struggled to fix "just one thing." For every "one thing" I fixed, it felt like "one step
+                        forward, two steps back", and, that feeling is hard to ignore when you're focused on the one thing.
+                        On the contrary, starting from basically nothing, everything felt like progress and comparisons
+                        between what I was gaining and what I was losing felt less obvious. Feels weird to admit having to
+                        trick myself to get work done (and those "tricks" probably costing me more time in the long-term),
+                        but eh I'm human, at least it got done, and the wasted time isn't the end of the world.
+                    </p>
+
+                    <h2 id="whats-changed" class="section-title">
+                        What's changed?
+                    </h2>
+
+                    <p>
+                        The most noticeable change is in the layout and theme.
+                    </p>
+
+                    <ul>
+                        <li>The red-rust monochromatic colors have been replaced with simpler (and better contrasting)
+                        black-and-white
+                            <ul>
+                                <li>Honestly, this one's a bit bitter-sweet. I like the new colors, but I think it has less
+                                personality and I'm still interested in finding something more eye-catching than black and
+                                white.
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>The new layout adapts better between mobile and desktop. There's less distinct elements taking
+                        up the same horizontal space so all that really changes between mobile and desktop is the padding
+                        and margins around the core site content. Put another way, I restrained myself from overdoing it
+                        with grids.
+                        </li>
+
+                        <li>The new layout also improves performance by only using images for items in the "highlights"
+                        section (rather than for every project and text post).
+                        </li>
+
+                        <li>I'm now only relying on "web safe" fonts. I think this runs the risk of robbing my site of
+                        personality, but so far I like how things look. And while the fonts I'm using aren't 100% guaranteed
+                        to be available on all browsers forever in perpetuity, I think things feel abstractly safer than
+                        relying on fonts delivered remotely via CDN.
+                        </li>
+                    </ul>
+
+                    <p>
+                        On the "authoring and development" side, things have also changed such that I'm no longer relying on
+                        client-side JavaScript to populate the page content at runtime. I do the more obvious and only
+                        slightly less dev friendly strategy of just using templates to build the HTML up-front and avoid
+                        JavaScript all together.
+                    </p>
+
+                    <h2 id="results" class="section-title">
+                        Results
+                    </h2>
+
+                    <p>
+                        In general, I'm pretty happy with how things turned out. The mobile experience is significantly
+                        better. The homepage loads faster. There's fewer external dependencies. It still archives well
+                        <a href="http://web.archive.org/web/20240113192350/https://www.scottnm.com/">on the Wayback
+                        Machine</a>.
+                    </p>
+
+                    <p>
+                        There's still room for improvement in the future (notably the colors), but for now I'm calling it
+                        complete.
+                    </p>
+
+                    <h2 id="shout-outs" class="section-title">
+                        Shout-outs
+                    </h2>
+
+                    <p>
+                        I took meaningful inspiration from a few sites when re-designing my own. In no particular order:
+                    </p>
+
+                    <ul>
+                        <li>
+                            <a href="https://www.scattered-thoughts.net/">scattered-thoughts.net</a> (Jamie Brandon)
+                        </li>
+
+                        <li>
+                            <a href="https://fabiensanglard.net/">fabiensanglard.net</a> (Fabien Sanglard)
+                        </li>
+
+                        <li>
+                            <a href="https://jvns.ca/">jvns.ca</a> (Julia Evans)
+                        </li>
+                    </ul>
+
+                    <p>
+                        Thank you!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

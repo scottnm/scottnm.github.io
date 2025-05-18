@@ -8,10 +8,9 @@ Check out https://validator.w3.org/nu/?doc=https%3A%2F%2Fscottnm.com%2F for the 
 
 ## Layout
 
-* `index.html`: main page
+* `index.html`: home page
 * `styles.css`: stylesheet shared across all pages
-* `pages/`: HTML files for subpages 
+* `files/`: assets for projects and pages
+* `pages/`: sub pages
 * `scripts/`: JS scripts for the main page and all subpages
 * `site_images/`: assets for the main site layout
-* `files/`: assets for projects and pages
-* `blog_posts/`: HTML blog posts and their original drafts in markdown

@@ -311,7 +311,7 @@
             "pub_date": "2024-01-31",
             "description": "a fresh coat of paint",
             "image": "site_images/icon/android-chrome-512x512.avif",
-            "read": "blog_posts/2024_redesign/2024_01_13_2024_redesign.html"
+            "read": "pages/blog_posts/2024_redesign/2024_01_13_2024_redesign.html"
         },
         {
             "title": "VTPP v0.2.0",
@@ -335,7 +335,7 @@
             "pub_date": "2022-10-30",
             "description": "Why are people playing this demo???",
             "image": "site_images/muckblog.avif",
-            "read": "blog_posts/surprising_monkey_muck_data/2022_10_29_surprising_monkey_muck_data.html"
+            "read": "pages/blog_posts/surprising_monkey_muck_data/2022_10_29_surprising_monkey_muck_data.html"
         },
         {
             "title": "Hair Log",

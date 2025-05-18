@@ -120,32 +120,36 @@
             </div>
         </div>
     </header>
-    <section class="welcome-section">
-        <div id="log-header-pane" class="intro-text section-with-buffer">
-            <h2 class="section-title">Music Goodness in 2018</h2>
-            <span id="log-header-text">
-                <!-- filled by js -->
-            </span>
-            <br >
-            <a class="spotify-btn"
-                href="https://open.spotify.com/user/124516351/playlist/0TTq0EpSPoeym3rxPrIdwv?si=C-wEr6dWQTaDju4sxzV3ow"
-                target="_blank">listen on spotify</a>
-        </div>
-    </section>
-    <section class="albums-section">
-        <div class="section-with-buffer">
-            <div id="entry-subpane" class="subpane bg-dark">
-                <!-- filled by js -->
+    <div class="h-entry e-content">
+        <!-- FIXME: make this non-hidden and probably a proper subtitle-->
+        <time class="dt-published" datetime="2019-01-01" hidden>2019-01-01</time>
+        <section class="welcome-section">
+            <div id="log-header-pane" class="intro-text section-with-buffer">
+                <h1 class="article-title p-name">Music Goodness in 2018</h1>
+                <span id="log-header-text">
+                    <!-- filled by js -->
+                </span>
+                <br >
+                <a class="spotify-btn"
+                    href="https://open.spotify.com/user/124516351/playlist/0TTq0EpSPoeym3rxPrIdwv?si=C-wEr6dWQTaDju4sxzV3ow"
+                    target="_blank">listen on spotify</a>
             </div>
-        </div>
-    </section>
-    <section class="honorable-mentions-section">
-        <div id="honorable-mention-pane" class="intro-text section-with-buffer">
-            <h2 class="section-title">Honorable Mentions</h2>
-            <div id="honorablementions">
+        </section>
+        <section class="albums-section">
+            <div class="section-with-buffer">
+                <div id="entry-subpane" class="subpane bg-dark">
+                    <!-- filled by js -->
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <section class="honorable-mentions-section">
+            <div id="honorable-mention-pane" class="intro-text section-with-buffer">
+                <h2 class="section-title">Honorable Mentions</h2>
+                <div id="honorablementions">
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>

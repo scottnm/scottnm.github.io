@@ -7,6 +7,8 @@ param(
     [switch]$Preview
     )
 
+throw "New blog-posts will miss h-card metadata. please don't use this or fix it first."
+
 if (!$OutputHtmlFileDirectory)
 {
     $OutputHtmlFileDirectory = (Get-Item $MarkdownFilePath).Directory
