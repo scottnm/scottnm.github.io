@@ -8,9 +8,13 @@ For simplicity's sake, the whole site is implemented with just HTML, CSS, and va
 
 ## Layout
 
-* `index.html`: home page
-* `styles.css`: stylesheet shared across all pages
+source:
+* `sitegen/`: where the site and all of its subpages are authored
 * `files/`: assets for projects and pages
-* `pages/`: sub pages
 * `scripts/`: JS scripts for the main page and all subpages
 * `site_images/`: assets for the main site layout
+
+site:
+* `pages/`: the generated subpages built from `sitegen/`
+* `index.html`: the generated home page built from `sitegen/`
+* `styles.css`: stylesheet shared across all pages
