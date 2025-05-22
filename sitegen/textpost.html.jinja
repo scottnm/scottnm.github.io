@@ -1,14 +1,12 @@
-<div class="h-entry">
-    <section>
-        <h1 class="article-title p-name">
-            {{ title }}
-        </h1>
+<article class="h-entry">
+    <h1 class="article-title p-name">
+        {{ title }}
+    </h1>
 
-        <!-- FIXME: make this non-hidden and probably a proper subtitle-->
-        <time class="dt-published" datetime="{{ pub_date }}" hidden>{{ display_date }}</time>
+    <!-- FIXME: make this non-hidden and probably a proper subtitle-->
+    <time class="dt-published" datetime="{{ pub_date }}" hidden>{{ display_date }}</time>
 
-        <div class="e-content">
-            {{ post_content | safe | indent | indent | indent }}
-        </div>
-    </section>
+    <div class="e-content">
+        {{ post_content | safe | indent | indent | indent }}
+    </div>
 </div>
