@@ -2,7 +2,6 @@ import os
 import pathlib
 import jinja2
 import json
-import shutil
 
 def main():
     dir_path_name = os.path.dirname(os.path.realpath(__file__))
@@ -22,16 +21,25 @@ def main():
         loader=jinja2.FileSystemLoader(f"{dir_path_name}/"),
         trim_blocks=True,
         lstrip_blocks=True)
-    template = env.get_template("index.html.jinja")
 
-    html_render = template.render(
+    page_template = env.get_template("page.html.jinja")
+    index_template = env.get_template("index.html.jinja")
+    textpost_template = env.get_template("textpost.html.jinja")
+
+    index_body = index_template.render(
         welcome_text=site_data['welcome_msg'],
         highlights=filter_highlights(projects, text_posts),
         projects=projects,
         text_posts=text_posts)
 
+    index_render = page_template.render(
+        title="homepage",
+        content_description=site_data['site_description'],
+        page_html=index_body,
+        custom_style_css=None)
+
     with open(gen_index_path, "w", encoding="utf8") as gen_index_file:
-        gen_index_file.write(html_render + '\n')
+        gen_index_file.write(index_render + '\n')
 
     for html_page in pages_dir_path.rglob('*.html'):
         relative_html_path = html_page.absolute().relative_to(pages_dir_path.absolute())
@@ -39,10 +47,44 @@ def main():
         dest_parent_path = gen_pages_root_path / relative_html_subdirs
         dest_parent_path.mkdir(parents=True, exist_ok=True)
         dest_page_path = dest_parent_path / html_page.name
-        # print(f"relative path: {relative_html_path}")
-        # print(f"relative path parents: {relative_html_subdirs}")
-        print(f"copying... {html_page.absolute()} -> {dest_page_path.absolute()}")
-        shutil.copyfile(html_page.absolute(), dest_page_path.absolute())
+
+        print(f"template filling... {html_page.absolute()} -> {dest_page_path.absolute()}")
+        page_data = find_page_data(text_posts, projects, "pages" / relative_html_path)
+        if page_data is None:
+            raise RuntimeError(f"Failed to find {'pages' / relative_html_path} in site data @ {site_data_json_path}")
+
+        custom_css_data = None
+        custom_css_file = html_page.absolute().with_name("styles.css")
+        if custom_css_file.exists():
+            with open(custom_css_file, "r", encoding="utf8") as css_file:
+                custom_css_data = css_file.read()
+        
+        with open(html_page.absolute(), "r", encoding="utf8") as page_content_file:
+            page_content = page_content_file.read()
+
+        page_body = textpost_template.render(
+            title=page_data['title'],
+            pub_date=page_data['pub_date'],
+            display_date=page_data['display_date'],
+            post_content=page_content)
+
+        page_render = page_template.render(
+            title=page_data['title'],
+            content_description=page_data['description'],
+            page_html=page_body,
+            custom_style_css=custom_css_data)
+
+        with open(dest_page_path.absolute(), "w", encoding="utf8") as dest_page_file:
+            dest_page_file.write(page_render + '\n')
+
+
+def find_page_data(text_post_data: dict, projects: dict, relative_html_path: pathlib.Path) -> dict|None:
+    for section in [text_post_data, projects]:
+        for site_entry_data in section:
+            if "read" in site_entry_data and str(relative_html_path) == site_entry_data["read"]:
+                return site_entry_data
+
+    return None
 
 def filter_highlights(*project_lists):
     highlights = []

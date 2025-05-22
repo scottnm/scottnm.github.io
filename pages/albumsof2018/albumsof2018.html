@@ -1,21 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
-    <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.9.14" >
-    <meta charset="utf-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="/site_images/icon/favicon.ico" sizes="16x16">
     <link rel="icon" href="/site_images/icon/favicon.ico" sizes="48x48">
     <link rel="icon" href="/site_images/icon/favicon.svg" sizes="any" type="image/svg+xml">
     <link rel="stylesheet" href="/styles.css" >
-    <script type="module" src="albumsof2018.js"></script>
-    <title>
-        scottnm: Music Goodness in 2018
-    </title>
-    <meta name="description" content="Talking about my favorite music in 2018" >
-    <meta name="viewport" content="width=device-width,initial-scale=1" >
-    <style>
+
+    <title>scottnm: Favorite Albums of 2018</title>
+    <meta name="description" content="A non-exhaustive list of my favorite albums released in 2018.">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><style>
         /* styles lifted wholesale from oldstyles.css to make 
         migrating this page to the new stylesheet easier */
         .welcome-section, .albums-section, .honorable-mentions-section {
@@ -96,62 +92,74 @@
             margin-top: 10px;
             margin-bottom: 10px;
         }
-
     </style>
+
 </head>
 
 <body>
-    <header>
+    <header class="h-card vcard">
         <div id="header-pane" class="section-with-buffer">
             <div id="header-with-links-container">
-                <a class="home-btn" href="/">
-                    <h1 class="title-text">Scott Munro</h1>
+                <a class="home-btn u-url u-uid" href="https://scottnm.com">
+                    <h1 class="title-text p-name">Scott Munro</h1>
                     <img class="title-icon u-photo" src="/site_images/icon/favicon.svg" alt="" loading="lazy" width="20" height="20" >
                 </a>
                 <hr class="header-links-separator" >
-                <a class="social-btn" href="https://github.com/scottnm" title="check out my code on github"
+                <a class="social-btn u-url" href="https://github.com/scottnm" rel="me" title="check out my code on github"
                     target="_blank">github</a>
                 <span> | </span>
                 <a class="social-btn" href="/atomfeed.xml" title="subscribe via atom/rss feeds" rel="subscribe-rss"
                     target="_blank">rss</a>
                 <span> | </span>
-                <a class="social-btn" href="mailto:me@scottnm.com" title="shoot me an email">email</a>
+                <a class="social-btn u-email" href="mailto:me@scottnm.com" rel="me" title="email me">email</a>
                 <span> | </span>
-                <a class="social-btn" href="https://linkedin.com/in/scott-munro" title="connect with me on linkedin"
+                <a class="social-btn u-url" href="https://linkedin.com/in/scott-munro" rel="me" title="connect on linkedin"
                     target="_blank">linkedin</a>
             </div>
         </div>
     </header>
-    <div class="h-entry e-content">
-        <!-- FIXME: make this non-hidden and probably a proper subtitle-->
-        <time class="dt-published" datetime="2018-11-30" hidden>2018-11-30</time>
-        <section class="welcome-section">
-            <div id="log-header-pane" class="intro-text section-with-buffer">
-                <h1 class="article-title p-name">Music Goodness in 2018</h1>
-                <span id="log-header-text">
-                    <!-- filled by js -->
-                </span>
-                <br >
-                <a class="spotify-btn"
-                    href="https://open.spotify.com/user/124516351/playlist/0TTq0EpSPoeym3rxPrIdwv?si=C-wEr6dWQTaDju4sxzV3ow"
-                    target="_blank">listen on spotify</a>
-            </div>
-        </section>
-        <section class="albums-section">
-            <div class="section-with-buffer">
-                <div id="entry-subpane" class="subpane bg-dark">
-                    <!-- filled by js -->
+    <main>
+        <div class="h-entry">
+            <section>
+                <h1 class="article-title p-name">
+                    Favorite Albums of 2018
+                </h1>
+
+                <!-- FIXME: make this non-hidden and probably a proper subtitle-->
+                <time class="dt-published" datetime="2018-11-30" hidden>Nov 2018</time>
+
+                <div class="e-content">
+                    <script type="module" src="albumsof2018.js"></script>
+                    <section class="welcome-section">
+                        <div id="log-header-pane" class="intro-text section-with-buffer">
+                            <h1 class="article-title p-name">Music Goodness in 2018</h1>
+                            <span id="log-header-text">
+                                <!-- filled by js -->
+                            </span>
+                            <br >
+                            <a class="spotify-btn"
+                                href="https://open.spotify.com/user/124516351/playlist/0TTq0EpSPoeym3rxPrIdwv?si=C-wEr6dWQTaDju4sxzV3ow"
+                                target="_blank">listen on spotify</a>
+                        </div>
+                    </section>
+                    <section class="albums-section">
+                        <div class="section-with-buffer">
+                            <div id="entry-subpane" class="subpane bg-dark">
+                                <!-- filled by js -->
+                            </div>
+                        </div>
+                    </section>
+                    <section class="honorable-mentions-section">
+                        <div id="honorable-mention-pane" class="intro-text section-with-buffer">
+                            <h2 class="section-title">Honorable Mentions</h2>
+                            <div id="honorablementions">
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            </div>
-        </section>
-        <section class="honorable-mentions-section">
-            <div id="honorable-mention-pane" class="intro-text section-with-buffer">
-                <h2 class="section-title">Honorable Mentions</h2>
-                <div id="honorablementions">
-                </div>
-            </div>
-        </section>
-    </div>
+            </section>
+        </div>
+    </main>
 </body>
 
 </html>

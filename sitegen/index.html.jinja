@@ -1,128 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
+<section id="welcome-section">
+    <h2 class="section-title">Welcome</h2>
+    <p>
+        <span id="welcome-text" class="p-note">{{welcome_text}}</span>
+    </p>
+    <p>
+        Sign the <a href="https://scottnm.atabook.org/" style="text-decoration-style: dotted;">guestbook</a>!
+    </p>
+</section>
+<section id="jump-section" class="text-section">
+    <h3 class="section-title">Jump to...</h3>
+    <ul>
+        <li><a href="#highlights-section">highlights</a></li>
+        <li><a href="#projects-section">projects</a></li>
+        <li><a href="#textposts-section">text posts</a></li>
+    </ul>
+</section>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="/site_images/icon/favicon.ico" sizes="16x16">
-    <link rel="icon" href="/site_images/icon/favicon.ico" sizes="48x48">
-    <link rel="icon" href="/site_images/icon/favicon.svg" sizes="any" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css" >
+{%- macro select_link(project) -%}
+    {%- if 'liveapp' in project -%} {{ project['liveapp'] }}
+    {%- elif 'src' in project -%}   {{ project['src'] }}
+    {%- elif 'doc' in project -%}   {{ project['doc'] }}
+    {%- elif 'video' in project -%} {{ project['video'] }}
+    {%- else -%}                    {{ project['read'] }}
+    {%- endif -%}
+{%- endmacro -%}
 
-    <title>scottnm</title>
-    <meta name="description" 
-        content="Scott Munro's little corner of the internet: a lightly pruned archive of programming projects, journals, and other junk. It's a one-man flea market where nothing's for sale.">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-</head>
-
-<body>
-    <header class="h-card vcard">
-        <div id="header-pane" class="section-with-buffer">
-            <div id="header-with-links-container">
-                <a class="home-btn u-url u-uid" href="https://scottnm.com">
-                    <h1 class="title-text p-name">Scott Munro</h1>
-                    <img class="title-icon u-photo" src="/site_images/icon/favicon.svg" alt="" loading="lazy" width="20" height="20" >
-                </a>
-                <hr class="header-links-separator" >
-                <a class="social-btn u-url" href="https://github.com/scottnm" rel="me" title="check out my code on github"
-                    target="_blank">github</a>
-                <span> | </span>
-                <a class="social-btn" href="/atomfeed.xml" title="subscribe via atom/rss feeds" rel="subscribe-rss"
-                    target="_blank">rss</a>
-                <span> | </span>
-                <a class="social-btn u-email" href="mailto:me@scottnm.com" rel="me" title="email me">email</a>
-                <span> | </span>
-                <a class="social-btn u-url" href="https://linkedin.com/in/scott-munro" rel="me" title="connect on linkedin"
-                    target="_blank">linkedin</a>
+<section id="highlights-section">
+    <h2 class="section-title">Highlights</h2>
+    <div class="pic-grid">
+        {% for highlight in highlights %}
+        <a href="{{ select_link(highlight) }}" class="pic-grid-link u-url">
+            <div class="pic-grid-cell h-entry">
+                <img class="pic-grid-cell-image" src="/{{ highlight['image'] }}" alt="" loading="lazy" >
+                <div class="pic-grid-cell-text-overlay"><span class="project-title p-name">{{ highlight['title'] }}</span></div>
             </div>
-        </div>
-    </header>
-    <main>
-        <section id="welcome-section">
-            <h2 class="section-title">Welcome</h2>
-            <p>
-                <span id="welcome-text" class="p-note">{{welcome_text}}</span>
-            </p>
-            <p>
-                Sign the <a href="https://scottnm.atabook.org/" style="text-decoration-style: dotted;">guestbook</a>!
-            </p>
-        </section>
-        <section id="jump-section" class="text-section">
-            <h3 class="section-title">Jump to...</h3>
-            <ul>
-                <li><a href="#highlights-section">highlights</a></li>
-                <li><a href="#projects-section">projects</a></li>
-                <li><a href="#textposts-section">text posts</a></li>
-            </ul>
-        </section>
+        </a>
+        {% endfor %}
+    </div>
+</section>
 
-        {%- macro select_link(project) -%}
-            {%- if 'liveapp' in project -%} {{ project['liveapp'] }}
-            {%- elif 'src' in project -%}   {{ project['src'] }}
-            {%- elif 'doc' in project -%}   {{ project['doc'] }}
-            {%- elif 'video' in project -%} {{ project['video'] }}
-            {%- else -%}                    {{ project['read'] }}
-            {%- endif -%}
-        {%- endmacro -%}
+{# FIXME: consider coalescing projects and text posts #}
+{# FIXME: retro-write blog posts for image only projects #}
+<section id="projects-section" class="text-section">
+    <h2 class="section-title">Projects</h2>
+    <ul>
+        {% for project in projects %}
+        <li class="h-entry">
+            <a class="project-title u-url p-name" href="{{ select_link(project) }}" target="_blank">{{ project['title'] }}</a>
+            <br >
+            <span><i>
+                <time class="dt-published" datetime="{{ project['pub_date'] }}">{{ project['display_date'] }}</time>
+            </i></span>
+            <br >
+            <span class="p-summary">{{ project['description'] }}</span>
+            <br >
+            <span>Tools: {{ project['tools'] }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
 
-        <section id="highlights-section">
-            <h2 class="section-title">Highlights</h2>
-            <div class="pic-grid">
-                {% for highlight in highlights %}
-                <a href="{{ select_link(highlight) }}" class="pic-grid-link u-url">
-                    <div class="pic-grid-cell h-entry">
-                        <img class="pic-grid-cell-image" src="/{{ highlight['image'] }}" alt="" loading="lazy" >
-                        <div class="pic-grid-cell-text-overlay"><span class="project-title p-name">{{ highlight['title'] }}</span></div>
-                    </div>
-                </a>
-                {% endfor %}
-            </div>
-        </section>
+<section id="textposts-section" class="text-section">
+    <h2 class="section-title">Text Posts</h2>
+    <ul>
+        {% for text_post in text_posts %}
+        <li class="h-entry">
+            <a href="{{ text_post['read'] }}" class="project-title p-name">{{ text_post['title'] }}</a>
+            <br >
+            <span><i>
+                <time class="dt-published" datetime="{{ text_post['pub_date'] }}">{{ text_post['display_date'] }}</time>
+            </i></span>
+            <br >
+            <span class="p-summary">{{ text_post['description'] }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
 
-        {# FIXME: consider coalescing projects and text posts #}
-        {# FIXME: retro-write blog posts for image only projects #}
-        <section id="projects-section" class="text-section">
-            <h2 class="section-title">Projects</h2>
-            <ul>
-                {% for project in projects %}
-                <li class="h-entry">
-                    <a class="project-title u-url p-name" href="{{ select_link(project) }}" target="_blank">{{ project['title'] }}</a>
-                    <br >
-                    <span><i>
-                        <time class="dt-published" datetime="{{ project['pub_date'] }}">{{ project['display_date'] }}</time>
-                    </i></span>
-                    <br >
-                    <span class="p-summary">{{ project['description'] }}</span>
-                    <br >
-                    <span>Tools: {{ project['tools'] }}</span>
-                </li>
-                {% endfor %}
-            </ul>
-        </section>
-
-        <section id="textposts-section" class="text-section">
-            <h2 class="section-title">Text Posts</h2>
-            <ul>
-                {% for text_post in text_posts %}
-                <li class="h-entry">
-                    <a href="{{ text_post['read'] }}" class="project-title p-name">{{ text_post['title'] }}</a>
-                    <br >
-                    <span><i>
-                        <time class="dt-published" datetime="{{ text_post['pub_date'] }}">{{ text_post['display_date'] }}</time>
-                    </i></span>
-                    <br >
-                    <span class="p-summary">{{ text_post['description'] }}</span>
-                </li>
-                {% endfor %}
-            </ul>
-        </section>
-
-        <hr >
-        <div class="footer">
-            <span aria-labelledby="kthxbai-read">kthxbai</span>
-            <span id="kthxbai-read" hidden>k, thanks, bye.</span>
-        </div>
-    </main>
-</body>
-
-</html>
+<hr >
+<div class="footer">
+    <span aria-labelledby="kthxbai-read">kthxbai</span>
+    <span id="kthxbai-read" hidden>k, thanks, bye.</span>
+</div>

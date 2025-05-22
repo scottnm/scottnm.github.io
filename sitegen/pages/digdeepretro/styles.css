@@ -1,0 +1,15 @@
+.progress-pic {
+    width: 256px
+}
+#progress-pic-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 5px;
+}
+@media screen and (min-width: 1368px) {
+    #progress-pic-grid {
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto auto auto auto;
+    }
+}

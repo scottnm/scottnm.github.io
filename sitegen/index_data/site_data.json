@@ -1,5 +1,6 @@
 {
     "welcome_msg": "Sometimes, I'm a software engineer working for Xbox. When I'm not, I like to make things. Here you'll find a (lightly pruned) archive of such things. Most of it's code, some of it's not, and all of it's useful to no one but myself! Take a look around.",
+    "site_description": "Scott Munro's little corner of the internet: a lightly pruned archive of programming projects, journals, and other junk. It's a one-man flea market where nothing's for sale.",
     "projects": [
         {
             "title": "Custom Clone Hero Chart - Time and Death and God",
@@ -334,7 +335,7 @@
             "title": "Surprising Monkey Muck Data",
             "display_date": "October 2022",
             "pub_date": "2022-10-29",
-            "description": "Why are people playing this demo???",
+            "description": "Looking at itch.io analytics for an old project. Why are people playing this demo?",
             "image": "site_images/muckblog.avif",
             "read": "pages/surprising_monkey_muck_data/2022_10_29_surprising_monkey_muck_data.html"
         },
