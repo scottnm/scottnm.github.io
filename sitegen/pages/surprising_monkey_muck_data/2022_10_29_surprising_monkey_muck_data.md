@@ -1,5 +1,3 @@
-# Surprising Monkey Muck Data (2022)
-
 I learned recently that my ["Monkey Muck" demo](https://scottnm.itch.io/muck) on itch.io has a much larger reach that I ever expected.
 
 As of Oct. 29 2022 (i.e. in *just* 6 years), Monkey Muck...

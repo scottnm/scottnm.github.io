@@ -1,5 +1,3 @@
-# Dig Deep Dev Retrospective
-
 This past March, I helped host and participated in a 2 week Game Jam: [The Classic Collards Jam](https://itch.io/jam/culture-bytes-classic-collards-jam).
 
 My team built an isometric digging game in pico-8 called [Dig Deep](https://scottnm.itch.io/dig-deep).

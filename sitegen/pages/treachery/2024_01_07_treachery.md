@@ -1,5 +1,3 @@
-# The Treachery of Self-Image
-
 What the hell is this? 
 
 Well, back in 2018, I was bored and killing time. I decided to try to do some digital painting in Paint Tool Sai and wound up with this silly parody of Rene Magritte's "the Treachery of Images".
