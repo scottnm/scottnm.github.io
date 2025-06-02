@@ -92,6 +92,7 @@ def filter_highlights(*project_lists):
         for project in project_list:
             if "highlight" in project and project["highlight"]:
                 highlights.append(project)
+    highlights.sort(key=lambda e: e["pub_date"], reverse=True)
     return highlights
 
 if __name__ == "__main__":

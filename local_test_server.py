@@ -3,7 +3,7 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 import socketserver
 
 def run_test_server():
-    PORT = 8080
+    PORT = 8081
 
     Handler = http.server.SimpleHTTPRequestHandler
 
