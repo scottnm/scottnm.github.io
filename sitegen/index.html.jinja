@@ -25,6 +25,12 @@
     {%- endif -%}
 {%- endmacro -%}
 
+{%- macro select_display_date(project) -%}
+    {%- if 'display_date' in project -%} {{ project['display_date'] }}
+    {%- else -%} {{ project['pub_date'] }}
+    {%- endif -%}
+{%- endmacro -%}
+
 <section id="highlights-section">
     <h2 class="section-title">Highlights</h2>
     <div class="pic-grid">
@@ -49,7 +55,9 @@
             <a class="project-title u-url p-name" href="{{ select_link(project) }}" target="_blank">{{ project['title'] }}</a>
             <br >
             <span><i>
-                <time class="dt-published" datetime="{{ project['pub_date'] }}">{{ project['display_date'] }}</time>
+                <time class="dt-published" datetime="{{ project['pub_date'] }}">
+                {{ select_display_date(project) }}
+                </time>
             </i></span>
             <br >
             <span class="p-summary">{{ project['description'] }}</span>
@@ -68,7 +76,9 @@
             <a href="{{ text_post['read'] }}" class="project-title p-name">{{ text_post['title'] }}</a>
             <br >
             <span><i>
-                <time class="dt-published" datetime="{{ text_post['pub_date'] }}">{{ text_post['display_date'] }}</time>
+                <time class="dt-published" datetime="{{ text_post['pub_date'] }}">
+                {{ select_display_date(text_post) }}
+                </time>
             </i></span>
             <br >
             <span class="p-summary">{{ text_post['description'] }}</span>

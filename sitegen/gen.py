@@ -65,7 +65,7 @@ def main():
         page_body = textpost_template.render(
             title=page_data['title'],
             pub_date=page_data['pub_date'],
-            display_date=page_data['display_date'],
+            display_date=page_data.get('display_date', None),
             post_content=page_content)
 
         page_render = page_template.render(

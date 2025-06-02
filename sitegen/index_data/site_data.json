@@ -5,7 +5,6 @@
         {
             "title": "Custom Clone Hero Chart - Time and Death and God",
             "highlight": true,
-            "display_date": "December 2024",
             "pub_date": "2024-12-29",
             "description": "A custom Clone Hero chart of the song 'Time and Death and God' by The Acacia Strain",
             "image": "site_images/CloneHeroTimeAndDeathAndGodThumbnail.avif",
@@ -15,7 +14,6 @@
         {
             "title": "VTPP",
             "highlight": true,
-            "display_date": "November 2023",
             "pub_date": "2023-11-04",
             "description": "Video-to-Private-Podcast: a home server project",
             "image": "site_images/vtpp_coverart_thumbnail_med.avif",
@@ -25,7 +23,6 @@
         {
             "title": "Dig Deep",
             "highlight": true,
-            "display_date": "Spring 2022",
             "pub_date": "2022-03-20",
             "description": "An isometric pico-8 game about digging and family history for the <a href='https://itch.io/jam/culture-bytes-classic-collards-jam'>Classic Collards Game Jam</a>.",
             "image": "site_images/digdeep-demo.webp",
@@ -35,7 +32,6 @@
         },
         {
             "title": "Avipaper.p8",
-            "display_date": "Winter 2021",
             "pub_date": "2021-12-15",
             "description": "A Pico-8 demo. Fly a paper airplane through some targets.",
             "image": "site_images/avipaper-demo.webp",
@@ -45,7 +41,6 @@
         {
             "title": "Scrapewood",
             "highlight": true,
-            "display_date": "Summer 2021",
             "pub_date": "2021-07-03",
             "description": "Assembled the Achewood web comic into an e-reader compatible EPUB",
             "image": "site_images/scrapewood_on_reader.avif",
@@ -55,7 +50,6 @@
         {
             "title": "Bman3D",
             "highlight": false,
-            "display_date": "Spring 2021",
             "pub_date": "2021-03-27",
             "description": "Modeled, textured, and rigged a 3D model of Bomberman from \"Bomberman 64: the Second Attack!\"",
             "liveapp": "https://skfb.ly/osJ6Y",
@@ -64,7 +58,6 @@
         },
         {
             "title": "Lost-n-found",
-            "display_date": "Winter 2021",
             "pub_date": "2021-02-21",
             "description": "A quick puzzle game for GGJ21 that I never properly named. The theme was \"lost and found\". The core idea I tried to execute on was a \"hot or cold\" style guessing game where you reveal clues which guide you toward finding some goal.",
             "src": "https://github.com/scottnm/lost-n-found-game",
@@ -73,7 +66,6 @@
         },
         {
             "title": "Wasteland Cracker",
-            "display_date": "Winter 2021",
             "pub_date": "2021-02-13",
             "description": "A clone of the Fallout hacking mini-game with an included tool for solving real puzzles",
             "src": "https://github.com/scottnm/wasteland-cracker",
@@ -82,7 +74,6 @@
         },
         {
             "title": "Tetrust",
-            "display_date": "Winter 2021",
             "pub_date": "2021-01-18",
             "description": "A TUI Tetris clone written in rust",
             "src": "https://github.com/scottnm/tetrust",
@@ -91,7 +82,6 @@
         },
         {
             "title": "WSR Image Extractor",
-            "display_date": "Summer 2020",
             "pub_date": "2020-08-15",
             "description": "A tool to extract the images captured in a Windows Steps Recorder file",
             "src": "https://github.com/scottnm/WSR-Image-Extractor",
@@ -100,7 +90,6 @@
         },
         {
             "title": "The Treachery of Self-image",
-            "display_date": "Summer 2018",
             "pub_date": "2018-06-10",
             "description": "A silly joke that I took too far and spent too much time on. The result? a parody of \"the Treachery of Images\" by Rene Magritte. In a funny turn of events, I like how it turned out.",
             "image": "files/the_treachery_of_self_image.png",
@@ -109,7 +98,6 @@
         },
         {
             "title": "Tinyrenderer",
-            "display_date": "Summer 2017",
             "pub_date": "2017-07-20",
             "description":
                 "A cpu-based, didactic renderer project from <a href='https://github.com/ssloy/tinyrenderer/wiki' target='_blank'>Dmitry V. Sokolov's Tiny Renderer</a> project.",
@@ -119,7 +107,6 @@
         },
         {
             "title": "Squid Mantazord",
-            "display_date": "Winter 2017",
             "pub_date": "2017-02-07",
             "description": "A top-down 2D gauntlet of sea-creatures to take the throne and become the next Squid Mantazord. Made for Global Game Jam 2017.",
             "video": "https://www.youtube.com/watch?v=jA9G3lyVIXA&",
@@ -129,7 +116,6 @@
         },
         {
             "title": "Filibusters",
-            "display_date": "Winter 2016",
             "pub_date": "2016-12-09",
             "description": "A multiplayer objective-based, arena-shooter game",
             "src": "https://github.com/nanomachines/filibusters-game",
@@ -141,7 +127,6 @@
         {
             "title": "Monkey Muck",
             "highlight": true,
-            "display_date": "Winter 2016",
             "pub_date": "2016-12-02",
             "description": "Designed, modeled, and textured an original 3D character. This character was inspired by horrific figures from franchises like Silent Hill, the Legend of Zelda, and the Thing.",
             "liveapp": "https://skfb.ly/UuUG",
@@ -150,7 +135,6 @@
         },
         {
             "title": "Pixitor",
-            "display_date": "Spring 2016",
             "pub_date": "2016-05-24",
             "description": "A layer-based pixel art editor built using MIT\"s Processing",
             "src": "https://github.com/scottnm/Pixitor",
@@ -160,7 +144,6 @@
         },
         {
             "title": "Ogre JRPG",
-            "display_date": "Spring 2016",
             "pub_date": "2016-05-06",
             "description": "A turn-based battle system demo using Ogre3D for one of my university courses.",
             "src": "https://github.com/scottnm/ogre-jrpg",
@@ -170,7 +153,6 @@
         },
         {
             "title": "Labyrinth",
-            "display_date": "Fall 2015",
             "pub_date": "2015-09-21",
             "description": "A game with procedurally generated maps, and a lighting effect where only a certain radius of the map away from the character is lit (a torch effect). Built for the 2015 Fall GameJam at UT Austin.",
             "image": "files/webps/labyrinth.webp",
@@ -180,7 +162,6 @@
         },
         {
             "title": "Menger Sponge",
-            "display_date": "Fall 2015",
             "pub_date": "2015-09-13",
             "description": "An OpenGL menger sponge that can be fully rotated and have the level of recursion updated on the fly via popup menus",
             "image": "files/webps/menger_sponge.webp",
@@ -191,7 +172,6 @@
     "hidden_projects": [
         {
             "title": "NoteVis",
-            "display_date": "Summer 2020",
             "pub_date": "2020-07-12",
             "description": "A tool to help visualize notes on a fretboard",
             "src": "https://github.com/scottnm/notevis",
@@ -200,7 +180,6 @@
         },
         {
             "title": "Vennfridge",
-            "display_date": "Spring 2017",
             "pub_date": "2017-04-21",
             "description": "A website for looking up recipes, food items, and ingredients with sorting and filtering by various attributes. Relationships are also set up between the different recipes, food items, and ingredients so that you can more easily find related items while browsing.",
             "src": "https://github.com/jmsanchez86/idb/",
@@ -210,7 +189,6 @@
         },
         {
             "title": "IK2D",
-            "display_date": "Winter 2016",
             "pub_date": "2016-11-26",
             "description": "A simple IK solver for a 2D, 3-point arm",
             "src": "https://github.com/scottnm/IK2D",
@@ -220,7 +198,6 @@
         },
         {
             "title": "3D Pong-like",
-            "display_date": "Spring 2016",
             "pub_date": "2016-04-09",
             "description": "A 3D ball game with physics simulation, audio playback, keyboard/mouse controls, a GUI system, and both singleplayer and networked multiplayer game modes.",
             "tools": "C++, Ogre3D, SDL, Bullet",
@@ -228,7 +205,6 @@
         },
         {
             "title": "Scene Graph",
-            "display_date": "Winter 2015",
             "pub_date": "2015-12-10",
             "description": "A scene graph and model viewer that supports animations",
             "tools": "C++, OpenGL, GLUI",
@@ -236,7 +212,6 @@
         },
         {
             "title": "Torus Shader",
-            "display_date": "Fall 2015",
             "pub_date": "2015-11-24",
             "description": "Using glsl shaders, transformed a flat sheet into a torus and replicated phong shading, texture mapping, bump mapping, and reflective surfaces.",
             "tools": "Glsl, C++",
@@ -244,7 +219,6 @@
         },
         {
             "title": "Quick-Radio",
-            "display_date": "Fall 2015",
             "pub_date": "2015-10-31",
             "description": "A webapp generates that radio-like playlist from multiple artist seeds, and launches the playlist in the spotify webapp",
             "src": "https://github.com/scottnm/Quick-Radio.git",
@@ -253,7 +227,6 @@
         },
         {
             "title": "Go-Fish Probability Simulation",
-            "display_date": "Spring 2015",
             "pub_date": "2015-05-06",
             "description": "A simulation of GoFish that displays the probabilities of a player\"s guess being correct allowing for a player to make more educated guesses",
             "src": "http://github.com/gordineerandrew/Go-Fish",
@@ -261,7 +234,6 @@
         },
         {
             "title": "TUI Space Raiders",
-            "display_date": "Spring 2015",
             "pub_date": "2015-03-12",
             "description": "A simple text-based form of the game Space Invaders, called Space Raiders. Implemented simple mechanics such as collisions, win-lose conditions, and a simple enemy AI.",
             "src": "https://github.com/scottnm/Space-Raiders.git",
@@ -270,7 +242,6 @@
         },
         {
             "title": "Binary Tree Builder",
-            "display_date": "Fall 2014",
             "pub_date": "2014-10-31",
             "description": "A program that builds a binary tree from a post-order traversal and outputs the breadth-first traversal of that tree",
             "src": "https://github.com/scottnm/BinaryTreeBuilder.git",
@@ -278,7 +249,6 @@
         },
         {
             "title": "Neural Network Pong",
-            "display_date": "Spring 2014",
             "pub_date": "2014-05-31",
             "description": "Classic game Pong, with a trained neural network opponent",
             "src": "https://github.com/scottnm/Neuroevolution-Pong.git",
@@ -287,7 +257,6 @@
         },
         {
             "title": "Evolving Boss Battles",
-            "display_date": "Spring 2014",
             "pub_date": "2014-05-31",
             "description": "A neural network and game environment to train a simple boss-character to compete against a player character, and researched the effects of different training methods and neural network structures",
             "src": "https://github.com/scottnm/Evolving-Boss-Battles.git",
@@ -297,7 +266,6 @@
         },
         {
             "title": "Itchnscratch",
-            "display_date": "Winter 2014",
             "pub_date": "2014-01-31",
             "description": "A demo for a topdown twin stick wave shooter in Pygame. I do not remember for the life of me why I named this project Itchnscratch. I think I just needed a name and I was watching Simpsons re-runs.",
             "src": "https://github.com/scottnm/itchnscratch.git",
@@ -310,7 +278,6 @@
         {
             "title": "Japan Fair Haiku Contest Submission",
             "highlight": true,
-            "display_date": "May 2025",
             "pub_date": "2025-06-01",
             "description": "My submissions for the Japan Fair Haiku Contest",
             "image": "site_images/haikucontest.avif",
@@ -318,7 +285,6 @@
         },
         {
             "title": "2024 Site Redesign",
-            "display_date": "January 2024",
             "pub_date": "2024-01-13",
             "description": "a fresh coat of paint",
             "image": "site_images/icon/android-chrome-512x512.avif",
@@ -326,7 +292,6 @@
         },
         {
             "title": "VTPP v0.2.0",
-            "display_date": "December 2023",
             "pub_date": "2023-12-13",
             "description": "another VTPP milestone",
             "image": "site_images/vtpp_coverart_thumbnail_med.avif",
@@ -334,7 +299,6 @@
         },
         {
             "title": "VTPP v0.1.0",
-            "display_date": "November 2023",
             "pub_date": "2023-11-04",
             "description": "new project: Video-to-Private-Podcast",
             "image": "site_images/vtpp_coverart_thumbnail_med.avif",
@@ -342,7 +306,6 @@
         },
         {
             "title": "Surprising Monkey Muck Data",
-            "display_date": "October 2022",
             "pub_date": "2022-10-29",
             "description": "Looking at itch.io analytics for an old project. Why are people playing this demo?",
             "image": "site_images/muckblog.avif",
@@ -350,7 +313,6 @@
         },
         {
             "title": "Hair Log",
-            "display_date": "June 2022",
             "pub_date": "2022-06-30",
             "description": "I kept track of my hair growing for about a year.",
             "image": "site_images/hueyfreeman.avif",
@@ -358,7 +320,6 @@
         },
         {
             "title": "Dig Deep Retrospective",
-            "display_date": "May 2022",
             "pub_date": "2022-05-30",
             "description": "Reflecting on my experience making Dig Deep during the \"Classic Collards\" Game Jam",
             "image": "site_images/digdeep-demo.webp",
@@ -366,7 +327,6 @@
         },
         {
             "title": "Favorite Albums of 2018",
-            "display_date": "Nov 2018",
             "pub_date": "2018-11-30",
             "description": "A non-exhaustive list of my favorite albums released in 2018.",
             "image": "site_images/aoty-2018.avif",

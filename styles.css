@@ -156,3 +156,12 @@ span {
 .blog-post-img {
     width: 100%;
 }
+
+.post-time {
+    font-style: italic;
+}
+
+.post-time-container {
+    font-size: 0.85em;
+    font-family: monospace;
+}
