@@ -13,6 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: run sitegen
-      run: python ./sitegen/gen.py
+      run: pip install -r ./sitegen/requirements.txt && python ./sitegen/gen.py
     - name: check for diffs
       run: git diff --exit-code
