@@ -2,7 +2,9 @@
 
 The source for my personal site, [http://www.scottnm.com](http://www.scottnm.com).
 
-For simplicity's sake, the whole site is implemented with just HTML, CSS, and vanilla ES6 JS.
+* just statically generated HTML and CSS
+* prioritize web-safe fonts
+* try to make all site images AVIFs or SVGs for small sizes
 
 ![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fscottnm.com) [\[Validation Details\]](https://validator.w3.org/nu/?doc=https%3A%2F%2Fscottnm.com%2F)
 
