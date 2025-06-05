@@ -3,11 +3,14 @@ import pathlib
 import jinja2
 import json
 
-def main():
+import mdtohtml
+
+def main() -> None:
     dir_path_name = os.path.dirname(os.path.realpath(__file__))
     dir_path = pathlib.Path(dir_path_name)
     pages_dir_path = dir_path / "pages"
-    gen_index_path = dir_path.parent / "index.html"
+    root_dir = dir_path.parent
+    gen_index_path = root_dir / "index.html"
     gen_pages_root_path = dir_path.parent / "pages"
     json_data_dir = dir_path / "index_data"
     site_data_json_path = json_data_dir / "site_data.json"
@@ -16,6 +19,24 @@ def main():
         site_data = json.load(site_data_json_file)
         projects = site_data["projects"]
         text_posts = site_data["text_posts"]
+
+    with open(dir_path / ".prettierrc", "r", encoding="utf8") as f:
+        prettier_fmt_config = json.load(f)
+
+    for section in [ projects, text_posts ]:
+        for entry in section:
+            if "md_src" not in entry:
+                continue
+
+            md_filepath = (root_dir / str(entry["md_src"])).resolve()
+            with open(md_filepath, "r", encoding="utf8") as f:
+                md_file_contents = f.read()
+
+            html = mdtohtml.mdtohtml(md_file_contents, prettier_fmt_config)
+            html_output_path = md_filepath.with_suffix(".html")
+            with open(html_output_path, "w", encoding="utf8") as f:
+                f.write(html)
+            print(f"Generated {html_output_path} <- {md_filepath}")
 
     env = jinja2.Environment(
         loader=jinja2.FileSystemLoader(f"{dir_path_name}/"),
@@ -58,7 +79,7 @@ def main():
         if custom_css_file.exists():
             with open(custom_css_file, "r", encoding="utf8") as css_file:
                 custom_css_data = css_file.read()
-        
+
         with open(html_page.absolute(), "r", encoding="utf8") as page_content_file:
             page_content = page_content_file.read()
 

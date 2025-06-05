@@ -281,7 +281,8 @@
             "pub_date": "2025-06-01",
             "description": "My submissions for the Japan Fair Haiku Contest",
             "image": "site_images/haikucontest.avif",
-            "read": "pages/haiku2025/2025_06_01_japan_fair_haiku_contest_submission.html"
+            "read": "pages/haiku2025/2025_06_01_japan_fair_haiku_contest_submission.html",
+            "md_src": "sitegen/pages/haiku2025/2025_06_01_japan_fair_haiku_contest_submission.md"
         },
         {
             "title": "2024 Site Redesign",

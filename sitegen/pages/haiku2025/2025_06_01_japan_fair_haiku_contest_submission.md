@@ -8,7 +8,7 @@ We were allowed to submit two haiku. Here's what I submitted:
 
 **Submission 1**
 
-<div class="poem">
+<div class="poem" markdown="1">
 
 > phase through hands<br>
 > in time with the budding chorus<br>
@@ -18,7 +18,7 @@ We were allowed to submit two haiku. Here's what I submitted:
 
 **Submission 2**
 
-<div class="poem">
+<div class="poem" markdown="1">
 
 > dawn flips the "open" sign<br>
 > first in line for the first tomatoes;<br>
@@ -34,7 +34,7 @@ After drafting and re-drafting, I was basically down to two candidates: what I s
 
 **Submission 1: original**
 
-<div class="poem">
+<div class="poem" markdown="1">
 
 > phase through swarming flesh<br>
 > strike earth! ring drowns out chorus<br>
@@ -54,9 +54,9 @@ I think I made the right choice. I get the sense that, for haiku, there's value 
 
 I'm excited to see which submissions get selected!
 
-#### Footnotes
+#### Footnotes {#footnotes}
 
-<div class="footnote">
+<div class="footnote" markdown="1">
 
 \[1\] Most of my "wordplay itch" is scratched by music. For some of my favorite lyricists, check out the bands *mewithoutYou*, *La Dispute*, and *Secret Band*<br>
 \[2\] The contest I was submitting to explicitly allowed/encouraged poems to deviate beyond the 5-7-5 form. It seems broadly felt that the [5-7-5 restriction is a misunderstanding](https://www.graceguts.com/essays/urban-myth-of-5-7-5) of the original Japanese form and that there are other elements which play a much stronger role in making something a haiku: seasonal references, juxtaposition, and [kireji](https://en.wikipedia.org/wiki/Kireji).<br>
