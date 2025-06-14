@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 import pathlib
 import jinja2
@@ -11,6 +13,7 @@ def main() -> None:
     pages_dir_path = dir_path / "pages"
     root_dir = dir_path.parent
     gen_index_path = root_dir / "index.html"
+    gen_links_page_path = root_dir / "links.html"
     gen_pages_root_path = dir_path.parent / "pages"
     json_data_dir = dir_path / "index_data"
     site_data_json_path = json_data_dir / "site_data.json"
@@ -45,6 +48,7 @@ def main() -> None:
 
     page_template = env.get_template("page.html.jinja")
     index_template = env.get_template("index.html.jinja")
+    links_page_template = env.get_template("links.html.jinja")
     textpost_template = env.get_template("textpost.html.jinja")
 
     index_body = index_template.render(
@@ -59,8 +63,10 @@ def main() -> None:
         page_html=index_body,
         custom_style_css=None)
 
-    with open(gen_index_path, "w", encoding="utf8") as gen_index_file:
-        gen_index_file.write(index_render + '\n')
+    write_page_render(gen_index_path, index_render)
+
+    links_page_render = links_page_template.render(links=site_data['links_page'])
+    write_page_render(gen_links_page_path, links_page_render)
 
     for html_page in pages_dir_path.rglob('*.html'):
         relative_html_path = html_page.absolute().relative_to(pages_dir_path.absolute())
@@ -95,8 +101,7 @@ def main() -> None:
             page_html=page_body,
             custom_style_css=custom_css_data)
 
-        with open(dest_page_path.absolute(), "w", encoding="utf8") as dest_page_file:
-            dest_page_file.write(page_render + '\n')
+        write_page_render(dest_page_path.absolute(), page_render)
 
 
 def find_page_data(text_post_data: dict, projects: dict, relative_html_path: pathlib.Path) -> dict|None:
@@ -115,6 +120,10 @@ def filter_highlights(*project_lists):
                 highlights.append(project)
     highlights.sort(key=lambda e: e["pub_date"], reverse=True)
     return highlights
+
+def write_page_render(path: os.PathLike|str, content: str) -> None:
+    with open(path, "w", encoding="utf8") as file:
+        file.write(content + '\n')
 
 if __name__ == "__main__":
     main()

@@ -1,6 +1,32 @@
 {
     "welcome_msg": "Sometimes, I'm a software engineer working for Xbox. When I'm not, I like to make things. Here you'll find a (lightly pruned) archive of such things. Most of it's code, some of it's not, and all of it's useful to no one but myself! Take a look around.",
     "site_description": "Scott Munro's little corner of the internet: a lightly pruned archive of programming projects, journals, and other junk. It's a one-man flea market where nothing's for sale.",
+    "links_page": [
+        {
+            "type": "E-mail",
+            "href": "mailto:me@scottnm.com",
+            "href_display": "me@scottnm.com",
+            "icon": "/site_images/links/email-svgrepo-com.svg"
+        },
+        {
+            "type": "Discord",
+            "href": "https://discord.com/users/scottnm",
+            "href_display": "scottnm",
+            "icon": "/site_images/links/logo-discord-svgrepo-com.svg"
+        },
+        {
+            "type": "Xbox",
+            "href": "https://account.xbox.com/en-us/profile?gamertag=mantizord",
+            "href_display": "mantizord",
+            "icon": "/site_images/links/xbox-svgrepo-com.svg"
+        },
+        {
+            "type": "Github",
+            "href": "https://github.com/scottnm",
+            "href_display": "scottnm",
+            "icon": "/site_images/links/github-142-svgrepo-com.svg"
+        }
+    ],
     "projects": [
         {
             "title": "Custom Clone Hero Chart - Time and Death and God",
