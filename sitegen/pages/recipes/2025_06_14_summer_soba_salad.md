@@ -4,7 +4,7 @@ I've made this tasty cold noodle bowl quite a few times recently. It's too simpl
 
 ## the recipe
 
-<div class="grid-Nx2" markdown="1">
+<div class="grid-max-2col" markdown="1">
 
 <div markdown="1">
 
