@@ -15,6 +15,14 @@
 
   <!-- FEED ENTRIES -->
   <entry>
+    <title>Recipe: Summer Soba Salad</title>
+    <link href="https://www.scottnm.com/pages/recipes/2025_06_14_summer_soba_salad.md" />
+    <id>urn:uuid:a7f9da4f-46ac-4bf5-aaaf-6d9a1080c5ad</id>
+    <updated>2025-06-14T23:55:00Z</updated>
+    <summary>a refreshing cold noodle dish</summary>
+  </entry>
+
+  <entry>
     <title>Japan Fair Haiku Contest Submission</title>
     <link href="https://www.scottnm.com/pages/haiku2025/2025_06_01_japan_fair_haiku_contest_submission.html" />
     <id>urn:uuid:a48c5acb-f582-4bb8-8087-fca68df0d771</id>

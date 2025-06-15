@@ -302,6 +302,15 @@
     ],
     "text_posts": [
         {
+            "title": "Recipe: Summer Soba Salad",
+            "highlight": false,
+            "pub_date": "2025-06-14",
+            "description": "a refreshing cold noodle dish",
+            "image": "site_images/summersoba.avif",
+            "read": "pages/recipes/2025_06_14_summer_soba_salad.html",
+            "md_src": "sitegen/pages/recipes/2025_06_14_summer_soba_salad.md"
+        },
+        {
             "title": "Japan Fair Haiku Contest Submission",
             "highlight": true,
             "pub_date": "2025-06-01",

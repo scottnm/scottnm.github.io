@@ -1,10 +1,8 @@
-import http.server, signal
-from http.server import HTTPServer, BaseHTTPRequestHandler
+import argparse
+import http.server
 import socketserver
 
-def run_test_server():
-    PORT = 8081
-
+def run_test_server(port) -> None:
     Handler = http.server.SimpleHTTPRequestHandler
 
     Handler.extensions_map={
@@ -20,14 +18,20 @@ def run_test_server():
         }
 
     global server
-    server = socketserver.TCPServer(("", PORT), Handler)
+    server = socketserver.TCPServer(("", port), Handler)
 
-    print("serving at port", PORT)
+    print("serving at port", port)
     try:
         server.serve_forever()
     except KeyboardInterrupt:
         pass
     server.server_close()
 
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-p", "--port", default=8081, type=int)
+    args = parser.parse_args()
+    run_test_server(args.port)
+
 if __name__ == '__main__':
-    run_test_server()
+    main()
