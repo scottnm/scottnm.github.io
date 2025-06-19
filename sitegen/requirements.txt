@@ -11,5 +11,5 @@ six==1.17.0
 soupsieve==2.7
 types-Markdown==3.8.0.20250415
 typing_extensions==4.13.2
-urllib3==2.4.0
+urllib3==2.5.0
 webencodings==0.5.1
