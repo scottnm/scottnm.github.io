@@ -1,5 +1,8 @@
 :root {
-    --main-bg-color: white;
+    --main-bg-color-r: 255;
+    --main-bg-color-g: 255;
+    --main-bg-color-b: 255;
+    --main-bg-color: rgb(var(--main-bg-color-r), var(--main-bg-color-g), var(--main-bg-color-b));
 }
 
 body {
@@ -26,7 +29,16 @@ body {
 .sticky-header {
     position: sticky;
     top: 0;
-    background-color: var(--main-bg-color);
+    background-color: rgba(var(--main-bg-color-r), var(--main-bg-color-g), var(--main-bg-color-b), 0.9);
+}
+
+#filter-header {
+    text-align: right;
+    padding: 10px;
+}
+
+#filter-header > select {
+    font-size: 1.5em;
 }
 
 header {
