@@ -1,3 +1,11 @@
+:root {
+    --main-bg-color: white;
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+
 @media screen and (max-width: 600px) {
     body {
         margin: auto;
@@ -13,6 +21,12 @@
         margin: auto;
         margin-top: 50px;
     }
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: var(--main-bg-color);
 }
 
 header {

@@ -56,7 +56,8 @@
                 <li><a href="#projects-section">projects</a></li>
                 <li><a href="#textposts-section">text posts</a></li>
             </ul>
-        </section><section id="highlights-section">
+        </section>
+        <section id="highlights-section">
             <h2 class="section-title">Highlights</h2>
             <div class="pic-grid">
                 <a href="pages/haiku2025/2025_06_01_japan_fair_haiku_contest_submission.html" class="pic-grid-link u-url">
@@ -98,21 +99,30 @@
             </div>
         </section>
 
-        <section>
-            <h2>
-                <label for="post-filter">Showing</label>
+        <section id="projects-section" class="text-section">
+            <!--<h2 class="section-title sticky-header">Projects</h2>-->
+            <h2 class="sticky-header">
+                <label for="post-filter" hidden>Showing</label>
                 <select name="post-filter" id="post-filter">
-                    <option value="all" selected>All Posts</option>
-                    <option value="projects">Projects</option>
-                    <option value="text posts">Text Posts</option>
+                    <option value="" selected>All Posts</option>
+                    <option value="project-entry">Projects</option>
+                    <option value="textpost-entry">Text Posts</option>
                 </select>
             </h2>
-        </section>
-
-        <section id="projects-section" class="text-section">
-            <h2 class="section-title">Projects</h2>
+            <script>
+                document.getElementById("post-filter").addEventListener("change", (event)=>{
+                    console.log(JSON.stringify(event));
+                    const filterToValue = event.target.value;
+                    const entries = document.getElementById("projects-section").getElementsByClassName("h-entry");
+                    const filterInAll = filterToValue === "";
+                    for (let e of entries) {
+                        let filterIn = filterInAll || e.classList.contains(filterToValue);
+                        e.hidden = !filterIn;
+                    }
+                });
+            </script>
             <ul>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="https://youtu.be/PwUrFlltP3c" target="_blank">Custom Clone Hero Chart - Time and Death and God</a>
                     <br >
                     <span><i>
@@ -125,7 +135,7 @@
                     <br >
                     <span>Tools: moonscraper, audacity</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html" target="_blank">VTPP</a>
                     <br >
                     <span><i>
@@ -138,7 +148,7 @@
                     <br >
                     <span>Tools: python, sqlite3, raspberrypi</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="https://scottnm.itch.io/dig-deep" target="_blank">Dig Deep</a>
                     <br >
                     <span><i>
@@ -151,7 +161,7 @@
                     <br >
                     <span>Tools: pico8, lua</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="https://github.com/scottnm/avipaper.p8" target="_blank">Avipaper.p8</a>
                     <br >
                     <span><i>
@@ -164,7 +174,7 @@
                     <br >
                     <span>Tools: pico8, lua</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="pages/scrapewood/2024_01_07_scrapewood.html" target="_blank">Scrapewood</a>
                     <br >
                     <span><i>
@@ -177,7 +187,7 @@
                     <br >
                     <span>Tools: rust, epub, powershell</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="https://skfb.ly/osJ6Y" target="_blank">Bman3D</a>
                     <br >
                     <span><i>
@@ -190,7 +200,7 @@
                     <br >
                     <span>Tools: blender</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="https://github.com/scottnm/lost-n-found-game" target="_blank">Lost-n-found</a>
                     <br >
                     <span><i>
@@ -203,7 +213,7 @@
                     <br >
                     <span>Tools: rust, pancurses/ncurses</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="https://github.com/scottnm/wasteland-cracker" target="_blank">Wasteland Cracker</a>
                     <br >
                     <span><i>
@@ -216,7 +226,7 @@
                     <br >
                     <span>Tools: rust, pancurses/ncurses</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="https://github.com/scottnm/tetrust" target="_blank">Tetrust</a>
                     <br >
                     <span><i>
@@ -229,7 +239,7 @@
                     <br >
                     <span>Tools: rust, pancurses/ncurses</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="https://github.com/scottnm/WSR-Image-Extractor" target="_blank">WSR Image Extractor</a>
                     <br >
                     <span><i>
@@ -242,7 +252,7 @@
                     <br >
                     <span>Tools: rust</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="pages/treachery/2024_01_07_treachery.html" target="_blank">The Treachery of Self-image</a>
                     <br >
                     <span><i>
@@ -255,7 +265,7 @@
                     <br >
                     <span>Tools: Paint Tool Sai</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="https://github.com/scottnm/Playground/tree/main/gfx/tinyrenderer" target="_blank">Tinyrenderer</a>
                     <br >
                     <span><i>
@@ -268,7 +278,7 @@
                     <br >
                     <span>Tools: C++</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="https://github.com/scottnm/squid-mantazord" target="_blank">Squid Mantazord</a>
                     <br >
                     <span><i>
@@ -281,7 +291,7 @@
                     <br >
                     <span>Tools: Unity, C#</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="https://nanomachines.itch.io/filibusters" target="_blank">Filibusters</a>
                     <br >
                     <span><i>
@@ -294,7 +304,7 @@
                     <br >
                     <span>Tools: Unity, C#, Photon Unity Networking</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="https://skfb.ly/UuUG" target="_blank">Monkey Muck</a>
                     <br >
                     <span><i>
@@ -307,7 +317,7 @@
                     <br >
                     <span>Tools: Maya, Photoshop</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="https://github.com/scottnm/Pixitor" target="_blank">Pixitor</a>
                     <br >
                     <span><i>
@@ -320,7 +330,7 @@
                     <br >
                     <span>Tools: Processing, Java</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="https://github.com/scottnm/ogre-jrpg" target="_blank">Ogre JRPG</a>
                     <br >
                     <span><i>
@@ -333,7 +343,7 @@
                     <br >
                     <span>Tools: C++, Ogre3D, SDL</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="https://github.com/danipurdes/Minotaur" target="_blank">Labyrinth</a>
                     <br >
                     <span><i>
@@ -346,7 +356,7 @@
                     <br >
                     <span>Tools: C#, Unity, Gimp</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry project-entry">
                     <a class="project-title u-url p-name" href="https://www.youtube.com/watch?v=vYaWWKJ4s1M" target="_blank">Menger Sponge</a>
                     <br >
                     <span><i>
@@ -359,13 +369,7 @@
                     <br >
                     <span>Tools: C++, OpenGL, GLUT</span>
                 </li>
-            </ul>
-        </section>
-
-        <section id="textposts-section" class="text-section">
-            <h2 class="section-title">Text Posts</h2>
-            <ul>
-                <li class="h-entry">
+                <li class="h-entry textpost-entry">
                     <a href="pages/recipes/2025_06_14_summer_soba_salad.html" class="project-title p-name">Recipe: Summer Soba Salad</a>
                     <br >
                     <span><i>
@@ -376,7 +380,7 @@
                     <br >
                     <span class="p-summary">a refreshing cold noodle dish</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry textpost-entry">
                     <a href="pages/haiku2025/2025_06_01_japan_fair_haiku_contest_submission.html" class="project-title p-name">Japan Fair Haiku Contest Submission</a>
                     <br >
                     <span><i>
@@ -387,7 +391,7 @@
                     <br >
                     <span class="p-summary">My submissions for the Japan Fair Haiku Contest</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry textpost-entry">
                     <a href="pages/2024_redesign/2024_01_13_2024_redesign.html" class="project-title p-name">2024 Site Redesign</a>
                     <br >
                     <span><i>
@@ -398,7 +402,7 @@
                     <br >
                     <span class="p-summary">a fresh coat of paint</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry textpost-entry">
                     <a href="pages/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html" class="project-title p-name">VTPP v0.2.0</a>
                     <br >
                     <span><i>
@@ -409,7 +413,7 @@
                     <br >
                     <span class="p-summary">another VTPP milestone</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry textpost-entry">
                     <a href="pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html" class="project-title p-name">VTPP v0.1.0</a>
                     <br >
                     <span><i>
@@ -420,7 +424,7 @@
                     <br >
                     <span class="p-summary">new project: Video-to-Private-Podcast</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry textpost-entry">
                     <a href="pages/surprising_monkey_muck_data/2022_10_29_surprising_monkey_muck_data.html" class="project-title p-name">Surprising Monkey Muck Data</a>
                     <br >
                     <span><i>
@@ -431,7 +435,7 @@
                     <br >
                     <span class="p-summary">Looking at itch.io analytics for an old project. Why are people playing this demo?</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry textpost-entry">
                     <a href="pages/hair_log/hair_log.html" class="project-title p-name">Hair Log</a>
                     <br >
                     <span><i>
@@ -442,7 +446,7 @@
                     <br >
                     <span class="p-summary">I kept track of my hair growing for about a year.</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry textpost-entry">
                     <a href="pages/digdeepretro/digdeepretro.html" class="project-title p-name">Dig Deep Retrospective</a>
                     <br >
                     <span><i>
@@ -453,7 +457,7 @@
                     <br >
                     <span class="p-summary">Reflecting on my experience making Dig Deep during the "Classic Collards" Game Jam</span>
                 </li>
-                <li class="h-entry">
+                <li class="h-entry textpost-entry">
                     <a href="pages/albumsof2018/albumsof2018.html" class="project-title p-name">Favorite Albums of 2018</a>
                     <br >
                     <span><i>
