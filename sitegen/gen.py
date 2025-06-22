@@ -68,6 +68,19 @@ def main() -> None:
     links_page_render = links_page_template.render(links=site_data['links_page'])
     write_page_render(gen_links_page_path, links_page_render)
 
+    playlists_md = (dir_path / "playlists.md").resolve()
+    playlists_html_output = (root_dir / "playlists.html").resolve()
+    with open(playlists_md, "r", encoding="utf8") as f:
+        md_file_contents = f.read()
+        playlists_page_html = mdtohtml.mdtohtml(md_file_contents, prettier_fmt_config)
+        page_render = page_template.render(
+            title="Playlists",
+            content_description="My list of playlists",
+            page_html=playlists_page_html)
+
+        write_page_render(playlists_html_output, page_render)
+        print(f"writing playlists page: {playlists_md} -> {playlists_html_output}")
+
     for html_page in pages_dir_path.rglob('*.html'):
         relative_html_path = html_page.absolute().relative_to(pages_dir_path.absolute())
         relative_html_subdirs = relative_html_path.parent
