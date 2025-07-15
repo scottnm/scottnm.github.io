@@ -54,6 +54,29 @@ I think I made the right choice. I get the sense that, for haiku, there's value 
 
 I'm excited to see which submissions get selected!
 
+## \[Jul 13 2025\] Contest Results Update
+
+I did not win ( ˶°ㅁ°) !!
+
+Okay, maybe I'm not suprised, but I'd be lying if I said I wasn't daydreaming about how cool it'd be to win.
+
+Nevertheless, I still had a lot of fun and I hope to submit an entry next year as well.
+
+The winners and honorable mentions for the english category are available on [the graceguts site](https://www.graceguts.com/contests/2025-japan-fair-haiku-contest).
+
+My favorite winner 
+
+<div class="poem" markdown="1">
+
+> melting frost<br>
+> a letter crumpled up<br>
+> and flattened again<br>
+> - Christine L. Villa, California, USA
+
+</div>
+
+Congrats to all the winners!
+
 #### Footnotes {#footnotes}
 
 <div class="footnote" markdown="1">
