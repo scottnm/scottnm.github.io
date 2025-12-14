@@ -302,6 +302,15 @@
     ],
     "text_posts": [
         {
+            "title": "2025 Public Domain Art Gallery",
+            "highlight": false,
+            "pub_date": "2025-12-14",
+            "description": "A collection of public domain art I looked at and liked in 2025.",
+            "image": "site_images/SAAM-2004.30.3_1_screen50p.webp",
+            "read": "pages/pd_paintings_2025/2025_12_14_pd_paintings_2025.html",
+            "md_src": "sitegen/pages/pd_paintings_2025/2025_12_14_pd_paintings_2025.md"
+        },
+        {
             "title": "Recipe: Summer Soba Salad",
             "highlight": false,
             "pub_date": "2025-06-14",
