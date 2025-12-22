@@ -63,6 +63,22 @@ Write-Host "curl $curlArgs" -foregroundcolor darkgray
 curl @curlArgs
 $curlRes = $?
 if (! $curlRes) {
-    write-host "Failed curl upload" -foregroundcolor red
+    write-host "Failed curl upload (sourcehut subdomain)" -foregroundcolor red
+    exit 1
+}
+
+$curlArgs = @(
+    "--oauth2-bearer"
+    $UploadToken 
+    "-Fcontent=@$OutTarPath" 
+    "-Fprotocol=GEMINI" 
+    "https://pages.sr.ht/publish/gemini.scottnm.com"
+)
+
+Write-Host "curl $curlArgs" -foregroundcolor darkgray
+curl @curlArgs
+$curlRes = $?
+if (! $curlRes) {
+    write-host "Failed curl upload (custom domain)" -foregroundcolor red
     exit 1
 }
