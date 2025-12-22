@@ -37,6 +37,7 @@ Still working to re-format my posts for geminispace. Until then, most things wil
 => https://github.com/danipurdes/Minotaur [2015-09-21] Labyrinth
 => https://www.youtube.com/watch?v=vYaWWKJ4s1M [2015-09-13] Menger Sponge
 ## All Text Posts
+=> pages/gemini/2025_12_22_gemini.html [2025-12-22] Geminispace ho!
 => pages/pd_paintings_2025/2025_12_14_pd_paintings_2025.html [2025-12-14] 2025 Public Domain Art Gallery
 => pages/recipes/2025_06_14_summer_soba_salad.html [2025-06-14] Recipe: Summer Soba Salad
 => pages/haiku2025/2025_06_01_japan_fair_haiku_contest_submission.html [2025-06-01] Japan Fair Haiku Contest Submission

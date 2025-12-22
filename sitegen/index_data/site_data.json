@@ -302,6 +302,15 @@
     ],
     "text_posts": [
         {
+            "title": "Geminispace ho!",
+            "highlight": false,
+            "pub_date": "2025-12-22",
+            "description": "I'm in geminispace now!",
+            "image": "",
+            "read": "pages/gemini/2025_12_22_gemini.html",
+            "md_src": "sitegen/pages/gemini/2025_12_22_gemini.md"
+        },
+        {
             "title": "2025 Public Domain Art Gallery",
             "highlight": false,
             "pub_date": "2025-12-14",
