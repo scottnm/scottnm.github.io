@@ -8,6 +8,10 @@ import json
 import mdtohtml
 
 def main() -> None:
+    gen_html_site()
+    gen_gemini_site()
+
+def gen_html_site() -> None:
     dir_path_name = os.path.dirname(os.path.realpath(__file__))
     dir_path = pathlib.Path(dir_path_name)
     pages_dir_path = dir_path / "pages"
@@ -15,17 +19,16 @@ def main() -> None:
     gen_index_path = root_dir / "index.html"
     gen_links_page_path = root_dir / "links.html"
     gen_pages_root_path = dir_path.parent / "pages"
-    json_data_dir = dir_path / "index_data"
-    site_data_json_path = json_data_dir / "site_data.json"
+    site_data_json_path = dir_path / "index_data" / "site_data.json"
 
     with open(site_data_json_path, "r", encoding="utf8") as site_data_json_file:
         site_data = json.load(site_data_json_file)
-        projects = site_data["projects"]
-        text_posts = site_data["text_posts"]
 
     with open(dir_path / ".prettierrc", "r", encoding="utf8") as f:
         prettier_fmt_config = json.load(f)
 
+    projects = site_data["projects"]
+    text_posts = site_data["text_posts"]
     for section in [ projects, text_posts ]:
         for entry in section:
             if "md_src" not in entry:
@@ -116,7 +119,6 @@ def main() -> None:
 
         write_page_render(dest_page_path.absolute(), page_render)
 
-
 def find_page_data(text_post_data: dict, projects: dict, relative_html_path: pathlib.Path) -> dict|None:
     for section in [text_post_data, projects]:
         for site_entry_data in section:
@@ -137,6 +139,73 @@ def filter_highlights(*project_lists):
 def write_page_render(path: os.PathLike|str, content: str) -> None:
     with open(path, "w", encoding="utf8") as file:
         file.write(content + '\n')
+
+def gen_gemini_site():
+    dir_path = pathlib.Path(os.path.dirname(os.path.realpath(__file__)))
+    root_dir = dir_path.parent
+    site_data_json_path = dir_path / "index_data" / "site_data.json"
+
+    gem_index_path = root_dir / "gemini" / "site" / "index.gmi"
+
+    with open(site_data_json_path, "r", encoding="utf8") as site_data_json_file:
+        site_data = json.load(site_data_json_file)
+
+    index_lines = []
+
+    # Add Title
+    index_lines.append("# Scott Munro")
+
+    # Add Welcome section
+    index_lines.append("## Hello")
+    index_lines.append(site_data["welcome_msg"])
+    index_lines.append("")
+    index_lines.append("Still working to re-format my posts for geminispace. Until then, most things will just link back to my main site.")
+
+    # Add Links
+    index_lines.append("")
+    index_lines.append(gemtext_link("homepage", "https://scottnm.com"))
+    for link in site_data["links_page"]:
+        index_lines.append(gemtext_link(link["type"], link["href"]))
+
+    projects = site_data["projects"]
+    text_posts = site_data["text_posts"]
+    highlights = filter_highlights(projects, text_posts)
+    if highlights:
+        index_lines.append("## Highlights")
+        for highlight in highlights:
+            highlight_link = select_project_link(highlight) or "/"
+            highlight_line = gemtext_link(highlight["title"], highlight_link)
+            index_lines.append(highlight_line)
+
+    if projects:
+        index_lines.append("## All Projects")
+        for project in projects:
+            project_link = select_project_link(project) or "/"
+            project_desc = "[%s] %s" % (project["pub_date"], project["title"])
+            project_line = gemtext_link(project_desc, project_link)
+            index_lines.append(project_line)
+
+    if text_posts:
+        index_lines.append("## All Text Posts")
+        for text_post in text_posts:
+            text_post_link = select_project_link(text_post) or "/"
+            text_post_desc = "[%s] %s" % (text_post["pub_date"], text_post["title"])
+            text_post_line = gemtext_link(text_post_desc, text_post_link)
+            index_lines.append(text_post_line)
+
+    write_page_render(gem_index_path, "\n".join(index_lines) + "\n")
+
+def select_project_link(project: dict) -> str|None:
+    link = \
+        project.get("liveapp", None) or \
+        project.get("src", None) or \
+        project.get("doc", None) or \
+        project.get("video", None) or \
+        project.get("read", None)
+    return link
+
+def gemtext_link(desc: str, url: str) -> str:
+    return "=> %s %s" % (url, desc)
 
 if __name__ == "__main__":
     main()

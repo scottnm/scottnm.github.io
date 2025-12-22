@@ -1,7 +1,50 @@
-# scottnm gemini site
+# Scott Munro
+## Hello
+Sometimes, I'm a software engineer working for Xbox. When I'm not, I like to make things. Here you'll find a (lightly pruned) archive of such things. Most of it's code, some of it's not, and all of it's useful to no one but myself! Take a look around.
 
-Gemini capsule coming soon!
+Still working to re-format my posts for geminispace. Until then, most things will just link back to my main site.
 
-In the meantime...
+=> https://scottnm.com homepage
+=> mailto:me@scottnm.com E-mail
+=> https://discord.com/users/scottnm Discord
+=> https://account.xbox.com/en-us/profile?gamertag=mantizord Xbox
+=> https://github.com/scottnm Github
+## Highlights
+=> pages/haiku2025/2025_06_01_japan_fair_haiku_contest_submission.html Japan Fair Haiku Contest Submission
+=> https://youtu.be/PwUrFlltP3c Custom Clone Hero Chart - Time and Death and God
+=> pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html VTPP
+=> https://scottnm.itch.io/dig-deep Dig Deep
+=> pages/scrapewood/2024_01_07_scrapewood.html Scrapewood
+=> https://skfb.ly/UuUG Monkey Muck
+## All Projects
+=> https://youtu.be/PwUrFlltP3c [2024-12-29] Custom Clone Hero Chart - Time and Death and God
+=> pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html [2023-11-04] VTPP
+=> https://scottnm.itch.io/dig-deep [2022-03-20] Dig Deep
+=> https://github.com/scottnm/avipaper.p8 [2021-12-15] Avipaper.p8
+=> pages/scrapewood/2024_01_07_scrapewood.html [2021-07-03] Scrapewood
+=> https://skfb.ly/osJ6Y [2021-03-27] Bman3D
+=> https://github.com/scottnm/lost-n-found-game [2021-02-21] Lost-n-found
+=> https://github.com/scottnm/wasteland-cracker [2021-02-13] Wasteland Cracker
+=> https://github.com/scottnm/tetrust [2021-01-18] Tetrust
+=> https://github.com/scottnm/WSR-Image-Extractor [2020-08-15] WSR Image Extractor
+=> pages/treachery/2024_01_07_treachery.html [2018-06-10] The Treachery of Self-image
+=> https://github.com/scottnm/Playground/tree/main/gfx/tinyrenderer [2017-07-20] Tinyrenderer
+=> https://github.com/scottnm/squid-mantazord [2017-02-07] Squid Mantazord
+=> https://nanomachines.itch.io/filibusters [2016-12-09] Filibusters
+=> https://skfb.ly/UuUG [2016-12-02] Monkey Muck
+=> https://github.com/scottnm/Pixitor [2016-05-24] Pixitor
+=> https://github.com/scottnm/ogre-jrpg [2016-05-06] Ogre JRPG
+=> https://github.com/danipurdes/Minotaur [2015-09-21] Labyrinth
+=> https://www.youtube.com/watch?v=vYaWWKJ4s1M [2015-09-13] Menger Sponge
+## All Text Posts
+=> pages/pd_paintings_2025/2025_12_14_pd_paintings_2025.html [2025-12-14] 2025 Public Domain Art Gallery
+=> pages/recipes/2025_06_14_summer_soba_salad.html [2025-06-14] Recipe: Summer Soba Salad
+=> pages/haiku2025/2025_06_01_japan_fair_haiku_contest_submission.html [2025-06-01] Japan Fair Haiku Contest Submission
+=> pages/2024_redesign/2024_01_13_2024_redesign.html [2024-01-13] 2024 Site Redesign
+=> pages/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html [2023-12-13] VTPP v0.2.0
+=> pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html [2023-11-04] VTPP v0.1.0
+=> pages/surprising_monkey_muck_data/2022_10_29_surprising_monkey_muck_data.html [2022-10-29] Surprising Monkey Muck Data
+=> pages/hair_log/hair_log.html [2022-06-30] Hair Log
+=> pages/digdeepretro/digdeepretro.html [2022-05-30] Dig Deep Retrospective
+=> pages/albumsof2018/albumsof2018.html [2018-11-30] Favorite Albums of 2018
 
-=> https://scottnm.com visit my main WWW site
