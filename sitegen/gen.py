@@ -205,6 +205,8 @@ def select_project_link(project: dict) -> str|None:
     return link
 
 def gemtext_link(desc: str, url: str) -> str:
+    if url.startswith("pages/"):
+        url = "https://scottnm.com/" + url
     return "=> %s %s" % (url, desc)
 
 if __name__ == "__main__":

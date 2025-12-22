@@ -10,24 +10,24 @@ Still working to re-format my posts for geminispace. Until then, most things wil
 => https://account.xbox.com/en-us/profile?gamertag=mantizord Xbox
 => https://github.com/scottnm Github
 ## Highlights
-=> pages/haiku2025/2025_06_01_japan_fair_haiku_contest_submission.html Japan Fair Haiku Contest Submission
+=> https://scottnm.com/pages/haiku2025/2025_06_01_japan_fair_haiku_contest_submission.html Japan Fair Haiku Contest Submission
 => https://youtu.be/PwUrFlltP3c Custom Clone Hero Chart - Time and Death and God
-=> pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html VTPP
+=> https://scottnm.com/pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html VTPP
 => https://scottnm.itch.io/dig-deep Dig Deep
-=> pages/scrapewood/2024_01_07_scrapewood.html Scrapewood
+=> https://scottnm.com/pages/scrapewood/2024_01_07_scrapewood.html Scrapewood
 => https://skfb.ly/UuUG Monkey Muck
 ## All Projects
 => https://youtu.be/PwUrFlltP3c [2024-12-29] Custom Clone Hero Chart - Time and Death and God
-=> pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html [2023-11-04] VTPP
+=> https://scottnm.com/pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html [2023-11-04] VTPP
 => https://scottnm.itch.io/dig-deep [2022-03-20] Dig Deep
 => https://github.com/scottnm/avipaper.p8 [2021-12-15] Avipaper.p8
-=> pages/scrapewood/2024_01_07_scrapewood.html [2021-07-03] Scrapewood
+=> https://scottnm.com/pages/scrapewood/2024_01_07_scrapewood.html [2021-07-03] Scrapewood
 => https://skfb.ly/osJ6Y [2021-03-27] Bman3D
 => https://github.com/scottnm/lost-n-found-game [2021-02-21] Lost-n-found
 => https://github.com/scottnm/wasteland-cracker [2021-02-13] Wasteland Cracker
 => https://github.com/scottnm/tetrust [2021-01-18] Tetrust
 => https://github.com/scottnm/WSR-Image-Extractor [2020-08-15] WSR Image Extractor
-=> pages/treachery/2024_01_07_treachery.html [2018-06-10] The Treachery of Self-image
+=> https://scottnm.com/pages/treachery/2024_01_07_treachery.html [2018-06-10] The Treachery of Self-image
 => https://github.com/scottnm/Playground/tree/main/gfx/tinyrenderer [2017-07-20] Tinyrenderer
 => https://github.com/scottnm/squid-mantazord [2017-02-07] Squid Mantazord
 => https://nanomachines.itch.io/filibusters [2016-12-09] Filibusters
@@ -37,15 +37,15 @@ Still working to re-format my posts for geminispace. Until then, most things wil
 => https://github.com/danipurdes/Minotaur [2015-09-21] Labyrinth
 => https://www.youtube.com/watch?v=vYaWWKJ4s1M [2015-09-13] Menger Sponge
 ## All Text Posts
-=> pages/gemini/2025_12_22_gemini.html [2025-12-22] Geminispace ho!
-=> pages/pd_paintings_2025/2025_12_14_pd_paintings_2025.html [2025-12-14] 2025 Public Domain Art Gallery
-=> pages/recipes/2025_06_14_summer_soba_salad.html [2025-06-14] Recipe: Summer Soba Salad
-=> pages/haiku2025/2025_06_01_japan_fair_haiku_contest_submission.html [2025-06-01] Japan Fair Haiku Contest Submission
-=> pages/2024_redesign/2024_01_13_2024_redesign.html [2024-01-13] 2024 Site Redesign
-=> pages/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html [2023-12-13] VTPP v0.2.0
-=> pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html [2023-11-04] VTPP v0.1.0
-=> pages/surprising_monkey_muck_data/2022_10_29_surprising_monkey_muck_data.html [2022-10-29] Surprising Monkey Muck Data
-=> pages/hair_log/hair_log.html [2022-06-30] Hair Log
-=> pages/digdeepretro/digdeepretro.html [2022-05-30] Dig Deep Retrospective
-=> pages/albumsof2018/albumsof2018.html [2018-11-30] Favorite Albums of 2018
+=> https://scottnm.com/pages/gemini/2025_12_22_gemini.html [2025-12-22] Geminispace ho!
+=> https://scottnm.com/pages/pd_paintings_2025/2025_12_14_pd_paintings_2025.html [2025-12-14] 2025 Public Domain Art Gallery
+=> https://scottnm.com/pages/recipes/2025_06_14_summer_soba_salad.html [2025-06-14] Recipe: Summer Soba Salad
+=> https://scottnm.com/pages/haiku2025/2025_06_01_japan_fair_haiku_contest_submission.html [2025-06-01] Japan Fair Haiku Contest Submission
+=> https://scottnm.com/pages/2024_redesign/2024_01_13_2024_redesign.html [2024-01-13] 2024 Site Redesign
+=> https://scottnm.com/pages/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html [2023-12-13] VTPP v0.2.0
+=> https://scottnm.com/pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html [2023-11-04] VTPP v0.1.0
+=> https://scottnm.com/pages/surprising_monkey_muck_data/2022_10_29_surprising_monkey_muck_data.html [2022-10-29] Surprising Monkey Muck Data
+=> https://scottnm.com/pages/hair_log/hair_log.html [2022-06-30] Hair Log
+=> https://scottnm.com/pages/digdeepretro/digdeepretro.html [2022-05-30] Dig Deep Retrospective
+=> https://scottnm.com/pages/albumsof2018/albumsof2018.html [2018-11-30] Favorite Albums of 2018
 
