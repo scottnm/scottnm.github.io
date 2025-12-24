@@ -1,3 +1,40 @@
+/* Light Theme (Default) */
+:root {
+    --main-bg-color: #fff;
+    --main-text-color: #333;
+    --unvisited-link-color: #1566ca;
+    --visited-link-color: #78424f;
+    --hover-link-color: #b8860b;
+    --active-link-color: #ed4e76;
+    --icon-color-filter: invert(0%)
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg-color: #202020;
+        --main-text-color: #eee;
+        --unvisited-link-color: #34baeb;
+        --visited-link-color: #7d4c58;
+        --hover-link-color: #b8860b;
+        --active-link-color: #ed4e76;
+        --icon-color-filter: invert(100%)
+    }
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+a { color: var(--unvisited-link-color) }
+a:visited { color: var(--visited-link-color) }
+a:active { color: var(--active-link-color) }
+a:hover { 
+    transition: all 0.3s;
+    color: var(--hover-link-color) 
+}
+
 @media screen and (max-width: 600px) {
     body {
         margin: auto;
@@ -28,12 +65,16 @@ header {
 
 header .home-btn,
 .footer-btn {
-    color: inherit;
+    color: var(--main-text-color);
     text-decoration: none;
 
     :hover {
         transition: all 0.3s;
-        color: darkgoldenrod;
+        color: var(--hover-link-color);
+    }
+
+    &:visited {
+        color: var(--main-text-color);
     }
 }
 
@@ -53,6 +94,7 @@ footer .title-text {
 header .title-icon,
 footer .title-icon {
     transform: translateY(3px);
+    filter: var(--icon-color-filter);
 }
 
 header .header-links-separator {
