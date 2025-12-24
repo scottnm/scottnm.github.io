@@ -386,6 +386,26 @@
             "image": "site_images/aoty-2018.avif",
             "read": "pages/albumsof2018/albumsof2018.html"
         }
+    ],
+    "hidden_text_posts": [
+        {
+            "title": "Kat Xmas Haiku Gift 2025",
+            "highlight": false,
+            "pub_date": "2025-12-23",
+            "description": "",
+            "image": "",
+            "read": "pages/xmas-2025/2025_12_23_kat_xmas_haiku_gift_2025.html",
+            "md_src": "sitegen/pages/xmas-2025/2025_12_23_kat_xmas_haiku_gift_2025.md"
+        },
+        {
+            "title": "Eli Xmas Haiku Gift 2025",
+            "highlight": false,
+            "pub_date": "2025-12-23",
+            "description": "",
+            "image": "",
+            "read": "pages/xmas-2025/2025_12_23_eli_xmas_haiku_gift_2025.html",
+            "md_src": "sitegen/pages/xmas-2025/2025_12_23_eli_xmas_haiku_gift_2025.md"
+        }
     ]
 
 }

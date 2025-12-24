@@ -29,7 +29,8 @@ def gen_html_site() -> None:
 
     projects = site_data["projects"]
     text_posts = site_data["text_posts"]
-    for section in [ projects, text_posts ]:
+    hidden_text_posts = site_data["hidden_text_posts"]
+    for section in [ projects, text_posts, hidden_text_posts]:
         for entry in section:
             if "md_src" not in entry:
                 continue
@@ -92,7 +93,7 @@ def gen_html_site() -> None:
         dest_page_path = dest_parent_path / html_page.name
 
         print(f"template filling... {html_page.absolute()} -> {dest_page_path.absolute()}")
-        page_data = find_page_data(text_posts, projects, "pages" / relative_html_path)
+        page_data = find_page_data([hidden_text_posts, text_posts, projects], "pages" / relative_html_path)
         if page_data is None:
             raise RuntimeError(f"Failed to find {'pages' / relative_html_path} in site data @ {site_data_json_path}")
 
@@ -119,8 +120,8 @@ def gen_html_site() -> None:
 
         write_page_render(dest_page_path.absolute(), page_render)
 
-def find_page_data(text_post_data: dict, projects: dict, relative_html_path: pathlib.Path) -> dict|None:
-    for section in [text_post_data, projects]:
+def find_page_data(sections: list[dict], relative_html_path: pathlib.Path) -> dict|None:
+    for section in sections:
         for site_entry_data in section:
             if "read" in site_entry_data and str(relative_html_path) == site_entry_data["read"]:
                 return site_entry_data
