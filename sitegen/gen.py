@@ -1,11 +1,30 @@
 #!/usr/bin/env python3
 
-import os
-import pathlib
+import base64
+import dataclasses
 import jinja2
 import json
+import os
+import pathlib
+import secrets
+import hashlib
+
+from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+from cryptography.hazmat.primitives import serialization
 
 import mdtohtml
+
+@dataclasses.dataclass
+class PasswordEncodedData:
+    ciphertext: bytes
+    salt: bytes
+    iv: bytes
+
+@dataclasses.dataclass
+class PasswordCryptParams:
+    password: str
+    salt: bytes
+    iv: bytes
 
 def main() -> None:
     gen_html_site()
@@ -28,6 +47,18 @@ def gen_html_site() -> None:
     with open(dir_path / ".prettierrc", "r", encoding="utf8") as f:
         prettier_fmt_config = json.load(f)
 
+    env = jinja2.Environment(
+        loader=jinja2.FileSystemLoader(f"{dir_path_name}/"),
+        trim_blocks=True,
+        lstrip_blocks=True)
+
+    page_template = env.get_template("page.html.jinja")
+    index_template = env.get_template("index.html.jinja")
+    unlisted_index_template = env.get_template("unlisted.html.jinja")
+    links_page_template = env.get_template("links.html.jinja")
+    textpost_template = env.get_template("textpost.html.jinja")
+    pswd_locked_page_template = env.get_template("pswd_locked_page.html.jinja")
+
     projects = site_data["projects"]
     text_posts = site_data["text_posts"]
     hidden_text_posts = site_data["hidden_text_posts"]
@@ -41,21 +72,22 @@ def gen_html_site() -> None:
                 md_file_contents = f.read()
 
             html = mdtohtml.mdtohtml(md_file_contents, prettier_fmt_config)
+            is_password_protected = "pswd" in entry
+            if is_password_protected:
+                encoded_html_data = password_encode_entry_html(html, get_entry_password_params(entry))
+                html = pswd_locked_page_template.render(
+                    base64_ciphertext=bin2b64string(encoded_html_data.ciphertext),
+                    base64_salt=bin2b64string(encoded_html_data.salt),
+                    base64_iv=bin2b64string(encoded_html_data.iv))
             html_output_path = md_filepath.with_suffix(".html")
             with open(html_output_path, "w", encoding="utf8") as f:
                 f.write(html)
-            print(f"Generated {html_output_path} <- {md_filepath}")
 
-    env = jinja2.Environment(
-        loader=jinja2.FileSystemLoader(f"{dir_path_name}/"),
-        trim_blocks=True,
-        lstrip_blocks=True)
+            print("Generated %s <- %s%s" % (
+                html_output_path,
+                "🔒 <- " if is_password_protected else "",
+                md_filepath))
 
-    page_template = env.get_template("page.html.jinja")
-    index_template = env.get_template("index.html.jinja")
-    unlisted_index_template = env.get_template("unlisted.html.jinja")
-    links_page_template = env.get_template("links.html.jinja")
-    textpost_template = env.get_template("textpost.html.jinja")
 
     index_body = index_template.render(
         welcome_text=site_data['welcome_msg'],
@@ -129,6 +161,63 @@ def gen_html_site() -> None:
             custom_style_css=custom_css_data)
 
         write_page_render(dest_page_path.absolute(), page_render)
+
+def bin2b64string(data: bytes) -> str:
+    return base64.b64encode(data).decode("utf8")
+
+def password_encode_entry_html(
+    sdata: str, 
+    password_params: PasswordCryptParams) -> PasswordEncodedData:
+
+    # https://en.wikipedia.org/wiki/PBKDF2
+    # must match iterations value in /site_scripts/pswd_locked_page.js
+    MIN_HMAC_SHA256_ITER = 210_000 
+
+    enc_key = hashlib.pbkdf2_hmac(
+        'sha256', 
+        password_params.password.encode("utf8"), 
+        password_params.salt, 
+        iterations=MIN_HMAC_SHA256_ITER)
+
+    aesgcm = AESGCM(enc_key)
+    ciphertext = aesgcm.encrypt(password_params.iv, sdata.encode("utf8"), None)
+
+    return PasswordEncodedData(
+        ciphertext=ciphertext,
+        salt=password_params.salt,
+        iv=password_params.iv)
+
+def get_entry_password_params(entry: dict) -> PasswordCryptParams:
+    pswd_value = entry.get("pswd")
+    if pswd_value is None:
+        raise RuntimeError("entry '%s' missing required 'pswd' object", entry["title"])
+
+    if not isinstance(pswd_value, dict):
+        raise RuntimeError("entry '%s' 'pswd' value is not an object. was %s", entry["title"], type(pswd_value))
+
+    pswd_env_key = pswd_value.get("env_key", None)
+    if pswd_env_key is None:
+        raise RuntimeError("entry '%s' missing required 'pswd.env_key' value", entry["title"])
+
+    pswd = os.environ.get(pswd_env_key, None)
+    if pswd is None:
+        raise RuntimeError("Password for entry '%s' must be stored in environment at key '%s'" % (
+            entry["title"],
+            pswd_env_key))
+
+    salt_b64 = pswd_value.get("crypt_salt_b64", None)
+    if salt_b64 is None:
+        raise RuntimeError("entry '%s' missing required 'pswd.crypt_salt_b64' value", entry["title"])
+
+    iv_b64 = pswd_value.get("crypt_iv_b64", None)
+    if iv_b64 is None:
+        raise RuntimeError("entry '%s' missing required 'pswd.crypt_iv_b64' value", entry["title"])
+
+    return PasswordCryptParams(
+        password=pswd, 
+        salt=base64.b64decode(salt_b64),
+        iv=base64.b64decode(iv_b64))
+
 
 def find_page_data(sections: list[dict], relative_html_path: pathlib.Path) -> dict|None:
     for section in sections:

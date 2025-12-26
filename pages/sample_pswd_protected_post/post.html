@@ -9,8 +9,8 @@
     <link rel="icon" href="/site_images/icon/favicon.svg" sizes="any" type="image/svg+xml">
     <link rel="stylesheet" href="/styles.css" >
 
-    <title>scottnm: VTPP v0.2.0</title>
-    <meta name="description" content="another VTPP milestone">
+    <title>scottnm: Sample pswd protected post</title>
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script data-goatcounter="https://scottnm.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
@@ -44,57 +44,26 @@
     <main>
         <article class="h-entry">
             <h1 class="article-title p-name">
-                VTPP v0.2.0
+                Sample pswd protected post
             </h1>
 
             <span class="post-time-container">
-                [ <time class="dt-published post-time" datetime="2023-12-13">2023-12-13</time> ]
+                [ <time class="dt-published post-time" datetime="2025-12-25">2025-12-25</time> ]
             </span>
 
             <div class="e-content" id="post-content">
-                <p>
-                        "VTPP" is a home server project I've been working on which, in short, automatically downloads
-                        videos, extracts their audio, and makes the audio available for me to listen as a podcast feed.
-                    </p>
+                <script src="/site_scripts/pswd_locked_page.js" async></script>
+                    <p>Post is locked.</p>
+                    <p>Enter password to unlock.</p>
+                    <form onsubmit="event.preventDefault(); pswd_locked_page.unlock_page();">
+                      <input type="text" id="password-field" placeholder="<password>">
+                      <button type="submit">unlock</button>
+                    </form>
+                    <span id="password-fail-text" style="color: red" hidden>Password FAILED</span>
 
-                    <p>
-                        It's been about a month since I marked a <a href=
-                        "/pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html"><code>v0.1.0</code></a> version of the
-                        project. Here's what's I've changed since then:
-                    </p>
-
-                    <ul>
-                        <li>Updated the web portal to enable editing the configured youtube channel list that I'm fetching
-                        videos from
-                        </li>
-
-                        <li>Updated the web portal so that I can delete videos from my feed as well as "block" videos from
-                        being re-downloaded in the future.
-                        </li>
-
-                        <li>Added a simple time heuristic to recognize (and ignore) Youtube Shorts when fetching videos
-                        </li>
-
-                        <li>Added logic to ignore offline Youtube Live streams which sometimes(?) show up in a channel's
-                        feed
-                        </li>
-
-                        <li>Made a handful of small improvements to make "on demand" download progress clearer
-                        </li>
-
-                        <li>Refactored a bunch of things to make code more reusable across the different components
-                        </li>
-                    </ul>
-
-                    <p>
-                        There are still a lot of things I could do and would like to do, but the project is at a point where
-                        things feel polished enough that I can "just" use it without feeling like anything is missing.
-                    </p>
-
-                    <p>
-                        So, I'm going to mark this point as a new version, <code>v0.2.0</code>, and let things be for a bit.
-                        It'll give me some clarity on what work from the backlog is actually worth spending my weekends on.
-                    </p>
+                    <span id="ciphertext-b64" hidden>cTfjb68Cv7P6pFh96nKMDsd47Fekby+qDv7mpzvPpqnqjCRrQ+dNhLGU/aly3zaB4gLmfVnZQTJMnyFYTjyTdJw+0syKWGC001RIOm4MNP/8gtbK6VbTzZMo03c6H58NDAX7nPE1Pn3/9EKynDSx8h8fcFYiHl0OX0la+kp8PHMFufzaGKqCVpsvZmBS7/sg9qMkf1nQ/Fhh5LQFmqyMMVWj7QiQSGMdDEN6UHxWfBJTWRdh5g2CC7/ES4kwv4hVMkL3Jpx2eEjjppKj7edbTd5zouxj8B/v674rcE9DP4W4vrV/75IIClx5PofXpSWGYdH0KljAWbKMRwPJ/gslMbHkwkhGOmX+TYw2KRS8+vz8HHPa6g0DvGZr6++d1Pm8mBl1mRqIud/aPQ==</span>
+                    <span id="cipher-salt-b64" hidden>Y6do4Yu9NRZFFcpQGwTtKQ==</span>
+                    <span id="cipher-iv-b64" hidden>mupEHDZrMXYI7o8g</span>
             </div>
         </article>
 

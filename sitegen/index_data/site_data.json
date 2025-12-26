@@ -390,7 +390,6 @@
     "hidden_text_posts": [
         {
             "title": "Kat Xmas Haiku Gift 2025",
-            "highlight": false,
             "pub_date": "2025-12-23",
             "description": "",
             "image": "",
@@ -399,12 +398,24 @@
         },
         {
             "title": "Eli Xmas Haiku Gift 2025",
-            "highlight": false,
             "pub_date": "2025-12-23",
             "description": "",
             "image": "",
             "read": "pages/xmas-2025/2025_12_23_eli_xmas_haiku_gift_2025.html",
             "md_src": "sitegen/pages/xmas-2025/2025_12_23_eli_xmas_haiku_gift_2025.md"
+        },
+        {
+            "title": "Sample pswd protected post",
+            "pub_date": "2025-12-25",
+            "description": "",
+            "image": "",
+            "read": "pages/sample_pswd_protected_post/post.html",
+            "md_src": "sitegen/pages/sample_pswd_protected_post/post.md",
+            "pswd": {
+                "env_key": "SAMPLE_POST_PSWD_ENV_KEY",
+                "crypt_salt_b64": "Y6do4Yu9NRZFFcpQGwTtKQ==",
+                "crypt_iv_b64": "mupEHDZrMXYI7o8g"
+            }
         }
     ]
 

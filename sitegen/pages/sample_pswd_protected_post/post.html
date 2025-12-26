@@ -1,0 +1,12 @@
+<script src="/site_scripts/pswd_locked_page.js" async></script>
+<p>Post is locked.</p>
+<p>Enter password to unlock.</p>
+<form onsubmit="event.preventDefault(); pswd_locked_page.unlock_page();">
+  <input type="text" id="password-field" placeholder="<password>">
+  <button type="submit">unlock</button>
+</form>
+<span id="password-fail-text" style="color: red" hidden>Password FAILED</span>
+
+<span id="ciphertext-b64" hidden>cTfjb68Cv7P6pFh96nKMDsd47Fekby+qDv7mpzvPpqnqjCRrQ+dNhLGU/aly3zaB4gLmfVnZQTJMnyFYTjyTdJw+0syKWGC001RIOm4MNP/8gtbK6VbTzZMo03c6H58NDAX7nPE1Pn3/9EKynDSx8h8fcFYiHl0OX0la+kp8PHMFufzaGKqCVpsvZmBS7/sg9qMkf1nQ/Fhh5LQFmqyMMVWj7QiQSGMdDEN6UHxWfBJTWRdh5g2CC7/ES4kwv4hVMkL3Jpx2eEjjppKj7edbTd5zouxj8B/v674rcE9DP4W4vrV/75IIClx5PofXpSWGYdH0KljAWbKMRwPJ/gslMbHkwkhGOmX+TYw2KRS8+vz8HHPa6g0DvGZr6++d1Pm8mBl1mRqIud/aPQ==</span>
+<span id="cipher-salt-b64" hidden>Y6do4Yu9NRZFFcpQGwTtKQ==</span>
+<span id="cipher-iv-b64" hidden>mupEHDZrMXYI7o8g</span>

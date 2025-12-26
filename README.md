@@ -2,7 +2,8 @@
 
 The source for my personal site, [http://www.scottnm.com](http://www.scottnm.com).
 
-* just statically generated HTML and CSS
+* just statically generated HTML and CSS (mostly)
+    * javascript usage is limited to only a handful of pages that need it.
 * prioritize web-safe fonts
 * try to make all site images AVIFs or SVGs for small sizes
 

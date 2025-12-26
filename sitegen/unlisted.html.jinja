@@ -12,6 +12,9 @@
         {% for page in pages %}
         <li class="h-entry">
             <a href="{{ page['read'] }}" class="project-title p-name">{{ page['title'] }}</a>
+            {%- if 'pswd' in page -%}
+            <span>🔒</span>
+            {%- endif -%}
             <br >
             <span><i>
                 <time class="dt-published" datetime="{{ page['pub_date'] }}">
