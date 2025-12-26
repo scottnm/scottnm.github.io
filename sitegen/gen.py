@@ -20,6 +20,7 @@ def gen_html_site() -> None:
     gen_links_page_path = root_dir / "links.html"
     gen_pages_root_path = dir_path.parent / "pages"
     site_data_json_path = dir_path / "index_data" / "site_data.json"
+    gen_unlisted_index_path = root_dir / "unlisted.html"
 
     with open(site_data_json_path, "r", encoding="utf8") as site_data_json_file:
         site_data = json.load(site_data_json_file)
@@ -52,6 +53,7 @@ def gen_html_site() -> None:
 
     page_template = env.get_template("page.html.jinja")
     index_template = env.get_template("index.html.jinja")
+    unlisted_index_template = env.get_template("unlisted.html.jinja")
     links_page_template = env.get_template("links.html.jinja")
     textpost_template = env.get_template("textpost.html.jinja")
 
@@ -68,6 +70,14 @@ def gen_html_site() -> None:
         custom_style_css=None)
 
     write_page_render(gen_index_path, index_render)
+
+    unlisted_index_body = unlisted_index_template.render(pages=hidden_text_posts)
+    unlisted_index_render = page_template.render(
+        title="Unlisted",
+        content_description="unlisted posts",
+        page_html=unlisted_index_body,
+        custom_style_css=None)
+    write_page_render(gen_unlisted_index_path, unlisted_index_render)
 
     links_page_render = links_page_template.render(links=site_data['links_page'])
     write_page_render(gen_links_page_path, links_page_render)
