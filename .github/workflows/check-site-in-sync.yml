@@ -2,17 +2,18 @@ name: Verify site in-sync
 
 on:
   push:
-    branches: 
+    branches:
       - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    environment: github-pages
     steps:
     - uses: actions/checkout@v4
     - name: run sitegen
+      env:
+        SAMPLE_POST_PSWD_ENV_KEY: ${{ secrets.SAMPLE_POST_PSWD_ENV_KEY }}
       run: npm install -g prettier && pip install -r ./sitegen/requirements.txt && python ./sitegen/gen.py
     - name: check for diffs
       run: git diff --exit-code
