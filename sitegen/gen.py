@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
+import argparse
 import base64
 import dataclasses
 import jinja2
 import json
 import os
 import pathlib
-import secrets
 import hashlib
 
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
@@ -27,10 +27,15 @@ class PasswordCryptParams:
     iv: bytes
 
 def main() -> None:
-    gen_html_site()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-g", "--out-generated", action="store_true", default=False, help="Write generated intermediate output to the filesystem")
+
+    args = parser.parse_args()
+
+    gen_html_site(args.out_generated)
     gen_gemini_site()
 
-def gen_html_site() -> None:
+def gen_html_site(write_interim_output: bool) -> None:
     dir_path_name = os.path.dirname(os.path.realpath(__file__))
     dir_path = pathlib.Path(dir_path_name)
     pages_dir_path = dir_path / "pages"
@@ -40,6 +45,11 @@ def gen_html_site() -> None:
     gen_pages_root_path = dir_path.parent / "pages"
     site_data_json_path = dir_path / "index_data" / "site_data.json"
     gen_unlisted_index_path = root_dir / "unlisted.html"
+    gen_recipes_index_path = root_dir / "recipes.html"
+    interim_output_dir = dir_path / "output_int"
+
+    if write_interim_output:
+        interim_output_dir.mkdir(parents=True, exist_ok=True)
 
     with open(site_data_json_path, "r", encoding="utf8") as site_data_json_file:
         site_data = json.load(site_data_json_file)
@@ -55,19 +65,22 @@ def gen_html_site() -> None:
     page_template = env.get_template("page.html.jinja")
     index_template = env.get_template("index.html.jinja")
     unlisted_index_template = env.get_template("unlisted.html.jinja")
+    subindex_template = env.get_template("subindex.html.jinja")
     links_page_template = env.get_template("links.html.jinja")
     textpost_template = env.get_template("textpost.html.jinja")
     pswd_locked_page_template = env.get_template("pswd_locked_page.html.jinja")
+    recipe_template = env.get_template("recipe.md.jinja")
 
     projects = site_data["projects"]
     text_posts = site_data["text_posts"]
     hidden_text_posts = site_data["hidden_text_posts"]
-    for section in [ projects, text_posts, hidden_text_posts]:
+    recipe_posts = site_data["recipe_posts"]
+    for section in [ projects, text_posts, hidden_text_posts ]:
         for entry in section:
             if "md_src" not in entry:
                 continue
 
-            md_filepath = (root_dir / str(entry["md_src"])).resolve()
+            md_filepath = (root_dir / entry["md_src"]).resolve()
             with open(md_filepath, "r", encoding="utf8") as f:
                 md_file_contents = f.read()
 
@@ -79,6 +92,7 @@ def gen_html_site() -> None:
                     base64_ciphertext=bin2b64string(encoded_html_data.ciphertext),
                     base64_salt=bin2b64string(encoded_html_data.salt),
                     base64_iv=bin2b64string(encoded_html_data.iv))
+
             html_output_path = md_filepath.with_suffix(".html")
             with open(html_output_path, "w", encoding="utf8") as f:
                 f.write(html)
@@ -88,6 +102,32 @@ def gen_html_site() -> None:
                 "🔒 <- " if is_password_protected else "",
                 md_filepath))
 
+    for entry in recipe_posts:
+        recipe_json_filepath = (root_dir / str(entry["recipe_json_src"])).resolve()
+        with open(recipe_json_filepath, "r", encoding="utf8") as f:
+            recipe_json = json.load(f)
+        
+        recipe_md = recipe_template.render(
+            intro=recipe_json.get("intro", None),
+            image=entry["image"],
+            image_alt=entry["image_alt"],
+            ingredient_sections=recipe_json["ingredient_sections"],
+            instruction_sections=recipe_json["instruction_sections"],
+            footnotes=recipe_json.get("footnotes", [])
+            )
+
+        if write_interim_output:
+            md_path = interim_output_dir / recipe_json_filepath.with_suffix(".md").name
+            write_page_render(md_path, recipe_md)
+
+        recipe_html = mdtohtml.mdtohtml(recipe_md, prettier_fmt_config)
+        html_output_path = recipe_json_filepath.with_suffix(".html")
+        with open(html_output_path, "w", encoding="utf8") as f:
+            f.write(recipe_html)
+
+        print("Generated %s <- %s" % (
+            html_output_path,
+            recipe_json_filepath))
 
     index_body = index_template.render(
         welcome_text=site_data['welcome_msg'],
@@ -110,6 +150,14 @@ def gen_html_site() -> None:
         page_html=unlisted_index_body,
         custom_style_css=None)
     write_page_render(gen_unlisted_index_path, unlisted_index_render)
+
+    recipes_index_body = subindex_template.render(index_title="Recipes", pages=recipe_posts)
+    recipes_index_render = page_template.render(
+        title="Recipes",
+        content_description="recipe posts",
+        page_html=recipes_index_body,
+        custom_style_css=None)
+    write_page_render(gen_recipes_index_path, recipes_index_render)
 
     links_page_render = links_page_template.render(links=site_data['links_page'])
     write_page_render(gen_links_page_path, links_page_render)
@@ -135,7 +183,7 @@ def gen_html_site() -> None:
         dest_page_path = dest_parent_path / html_page.name
 
         print(f"template filling... {html_page.absolute()} -> {dest_page_path.absolute()}")
-        page_data = find_page_data([hidden_text_posts, text_posts, projects], "pages" / relative_html_path)
+        page_data = find_page_data([hidden_text_posts, text_posts, projects, recipe_posts], "pages" / relative_html_path)
         if page_data is None:
             raise RuntimeError(f"Failed to find {'pages' / relative_html_path} in site data @ {site_data_json_path}")
 
@@ -217,7 +265,6 @@ def get_entry_password_params(entry: dict) -> PasswordCryptParams:
         password=pswd, 
         salt=base64.b64decode(salt_b64),
         iv=base64.b64decode(iv_b64))
-
 
 def find_page_data(sections: list[dict], relative_html_path: pathlib.Path) -> dict|None:
     for section in sections:

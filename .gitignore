@@ -11,3 +11,5 @@ package.json
 *.swp
 
 __pycache__
+
+sitegen/output_int/

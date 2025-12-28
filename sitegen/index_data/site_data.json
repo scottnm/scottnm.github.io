@@ -325,8 +325,7 @@
             "pub_date": "2025-06-14",
             "description": "a refreshing cold noodle dish",
             "image": "site_images/summersoba.avif",
-            "read": "pages/recipes/2025_06_14_summer_soba_salad.html",
-            "md_src": "sitegen/pages/recipes/2025_06_14_summer_soba_salad.md"
+            "read": "pages/recipes/2025_06_14_summer_soba_salad.html"
         },
         {
             "title": "Japan Fair Haiku Contest Submission",
@@ -416,6 +415,26 @@
                 "crypt_salt_b64": "Y6do4Yu9NRZFFcpQGwTtKQ==",
                 "crypt_iv_b64": "mupEHDZrMXYI7o8g"
             }
+        }
+    ],
+    "recipe_posts": [
+        {
+            "title": "Fantasy Fudge",
+            "pub_date": "2025-12-27",
+            "description": "the fudge recipe once hosted on myfoodandfamily.com",
+            "image": "/site_images/fantasyfudge.avif",
+            "image_alt": "soba noodles and salad in a bowl",
+            "read": "pages/recipes/2025_12_27_fantasy_fudge.html",
+            "recipe_json_src": "sitegen/pages/recipes/2025_12_27_fantasy_fudge.json"
+        },
+        {
+            "title": "Summer Soba Salad",
+            "pub_date": "2025-06-14",
+            "description": "a refreshing cold noodle dish",
+            "image": "/site_images/summersoba.avif",
+            "image_alt": "soba noodles and salad in a bowl",
+            "read": "pages/recipes/2025_06_14_summer_soba_salad.html",
+            "recipe_json_src": "sitegen/pages/recipes/2025_06_14_summer_soba_salad.json"
         }
     ]
 

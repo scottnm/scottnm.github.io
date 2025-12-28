@@ -1,0 +1,47 @@
+{% if intro %}
+{{intro}}
+
+{% endif %}
+<img src="{{image}}" width="400px" alt="{{image_alt}}" style="display: block; margin-left: auto; margin-right: auto">
+
+## the recipe
+
+<div class="grid-max-2col" markdown="1">
+
+<div markdown="1">
+
+**Ingredients**
+
+{% for ing_section in ingredient_sections %}
+{% if ingredient_sections|length > 1 %}
+{{ ing_section['section_title'] }}
+
+{% endif %}
+{% for ing in ing_section['ingredients'] %}
+- {{ ing | safe }}
+{% endfor %}
+
+{% endfor %}
+</div>
+
+<div markdown="1">
+
+**Instructions**
+
+{% for instr_section in instruction_sections %}
+{% if instruction_sections|length > 1 %}
+{{ instr_section['section_title'] }}
+
+{% endif %}
+{% for instr in instr_section['instructions'] %}
+- {{ instr }}
+{% endfor %}
+{% endfor %}
+
+</div>
+
+</div>
+{% for footnote in footnotes %}
+
+[^{{loop.index}}]: {{footnote | safe}}
+{% endfor %}
