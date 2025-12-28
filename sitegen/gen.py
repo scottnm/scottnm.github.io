@@ -1,18 +1,24 @@
 #!/usr/bin/env python3
 
+# std python modules
 import argparse
 import base64
 import dataclasses
-import jinja2
+import datetime
+import hashlib
 import json
 import os
 import pathlib
-import hashlib
+import logging
 
+# 3P modules
+import jinja2
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 from cryptography.hazmat.primitives import serialization
 
+# my modules
 import mdtohtml
+import genlogger
 
 @dataclasses.dataclass
 class PasswordEncodedData:
@@ -29,8 +35,11 @@ class PasswordCryptParams:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("-g", "--out-generated", action="store_true", default=False, help="Write generated intermediate output to the filesystem")
+    parser.add_argument("-v", "--verbose", action="store_true", default=False, help="Whether to log verbose")
 
     args = parser.parse_args()
+
+    genlogger.setup_logger(args.verbose)
 
     gen_html_site(args.out_generated)
     gen_gemini_site()
@@ -40,12 +49,8 @@ def gen_html_site(write_interim_output: bool) -> None:
     dir_path = pathlib.Path(dir_path_name)
     pages_dir_path = dir_path / "pages"
     root_dir = dir_path.parent
-    gen_index_path = root_dir / "index.html"
-    gen_links_page_path = root_dir / "links.html"
     gen_pages_root_path = dir_path.parent / "pages"
     site_data_json_path = dir_path / "index_data" / "site_data.json"
-    gen_unlisted_index_path = root_dir / "unlisted.html"
-    gen_recipes_index_path = root_dir / "recipes.html"
     interim_output_dir = dir_path / "output_int"
 
     if write_interim_output:
@@ -61,7 +66,9 @@ def gen_html_site(write_interim_output: bool) -> None:
         loader=jinja2.FileSystemLoader(f"{dir_path_name}/"),
         trim_blocks=True,
         lstrip_blocks=True)
+    env.filters['datetime_to_date'] = pub_datetime_to_date
 
+    feed_template = env.get_template("atomfeed.xml.jinja")
     page_template = env.get_template("page.html.jinja")
     index_template = env.get_template("index.html.jinja")
     unlisted_index_template = env.get_template("unlisted.html.jinja")
@@ -97,10 +104,10 @@ def gen_html_site(write_interim_output: bool) -> None:
             with open(html_output_path, "w", encoding="utf8") as f:
                 f.write(html)
 
-            print("Generated %s <- %s%s" % (
-                html_output_path,
+            logging.info("Generated %s <- %s%s", 
+                html_output_path.relative_to(root_dir),
                 "🔒 <- " if is_password_protected else "",
-                md_filepath))
+                md_filepath.relative_to(root_dir))
 
     for entry in recipe_posts:
         recipe_json_filepath = (root_dir / str(entry["recipe_json_src"])).resolve()
@@ -125,9 +132,9 @@ def gen_html_site(write_interim_output: bool) -> None:
         with open(html_output_path, "w", encoding="utf8") as f:
             f.write(recipe_html)
 
-        print("Generated %s <- %s" % (
-            html_output_path,
-            recipe_json_filepath))
+        logging.info("Generated %s <- %s",
+            html_output_path.relative_to(root_dir),
+            recipe_json_filepath.relative_to(root_dir))
 
     index_body = index_template.render(
         welcome_text=site_data['welcome_msg'],
@@ -141,7 +148,7 @@ def gen_html_site(write_interim_output: bool) -> None:
         page_html=index_body,
         custom_style_css=None)
 
-    write_page_render(gen_index_path, index_render)
+    write_page_render(root_dir / "index.html", index_render)
 
     unlisted_index_body = unlisted_index_template.render(pages=hidden_text_posts)
     unlisted_index_render = page_template.render(
@@ -149,7 +156,7 @@ def gen_html_site(write_interim_output: bool) -> None:
         content_description="unlisted posts",
         page_html=unlisted_index_body,
         custom_style_css=None)
-    write_page_render(gen_unlisted_index_path, unlisted_index_render)
+    write_page_render(root_dir / "unlisted.html", unlisted_index_render)
 
     recipes_index_body = subindex_template.render(index_title="Recipes", pages=recipe_posts)
     recipes_index_render = page_template.render(
@@ -157,10 +164,10 @@ def gen_html_site(write_interim_output: bool) -> None:
         content_description="recipe posts",
         page_html=recipes_index_body,
         custom_style_css=None)
-    write_page_render(gen_recipes_index_path, recipes_index_render)
+    write_page_render(root_dir / "recipes.html", recipes_index_render)
 
     links_page_render = links_page_template.render(links=site_data['links_page'])
-    write_page_render(gen_links_page_path, links_page_render)
+    write_page_render(root_dir / "links.html", links_page_render)
 
     playlists_md = (dir_path / "playlists.md").resolve()
     playlists_html_output = (root_dir / "playlists.html").resolve()
@@ -173,7 +180,10 @@ def gen_html_site(write_interim_output: bool) -> None:
             page_html=playlists_page_html)
 
         write_page_render(playlists_html_output, page_render)
-        print(f"writing playlists page: {playlists_md} -> {playlists_html_output}")
+        logging.info("writing playlists page: %s -> %s",
+            playlists_md.relative_to(root_dir),
+            playlists_html_output.relative_to(root_dir))
+
 
     for html_page in pages_dir_path.rglob('*.html'):
         relative_html_path = html_page.absolute().relative_to(pages_dir_path.absolute())
@@ -182,7 +192,10 @@ def gen_html_site(write_interim_output: bool) -> None:
         dest_parent_path.mkdir(parents=True, exist_ok=True)
         dest_page_path = dest_parent_path / html_page.name
 
-        print(f"template filling... {html_page.absolute()} -> {dest_page_path.absolute()}")
+        logging.info("template filling... %s -> %s",
+            html_page.relative_to(root_dir),
+            dest_page_path.relative_to(root_dir))
+
         page_data = find_page_data([hidden_text_posts, text_posts, projects, recipe_posts], "pages" / relative_html_path)
         if page_data is None:
             raise RuntimeError(f"Failed to find {'pages' / relative_html_path} in site data @ {site_data_json_path}")
@@ -198,7 +211,7 @@ def gen_html_site(write_interim_output: bool) -> None:
 
         page_body = textpost_template.render(
             title=page_data['title'],
-            pub_date=page_data['pub_date'],
+            pub_date=pub_datetime_to_date(page_data['pub_datetime']),
             display_date=page_data.get('display_date', None),
             post_content=page_content)
 
@@ -210,8 +223,24 @@ def gen_html_site(write_interim_output: bool) -> None:
 
         write_page_render(dest_page_path.absolute(), page_render)
 
+        feed_entries = [ 
+            {
+                "title": p["title"],
+                "link": select_project_link(p),
+                "uuid": p["feed_uuid"],
+                "pub_datetime": p["pub_datetime"],
+                "lastupdate_datetime": p.get("lastupdate_datetime", p["pub_datetime"]),
+                "description": p["description"] 
+            } for p in (text_posts + projects) if "feed_uuid" in p ]
+        feed_entries.sort(key=lambda p: p["pub_datetime"], reverse=True)
+        feed_content = feed_template.render(entries=feed_entries)
+        write_file(root_dir / "atomfeed.xml", feed_content)
+
 def bin2b64string(data: bytes) -> str:
     return base64.b64encode(data).decode("utf8")
+
+def pub_datetime_to_date(d: str) -> str:
+    return datetime.datetime.fromisoformat(d).date().isoformat()
 
 def password_encode_entry_html(
     sdata: str, 
@@ -280,12 +309,15 @@ def filter_highlights(*project_lists):
         for project in project_list:
             if "highlight" in project and project["highlight"]:
                 highlights.append(project)
-    highlights.sort(key=lambda e: e["pub_date"], reverse=True)
+    highlights.sort(key=lambda e: e["pub_datetime"], reverse=True)
     return highlights
 
-def write_page_render(path: os.PathLike|str, content: str) -> None:
+def write_file(path: os.PathLike|str, content: str) -> None:
     with open(path, "w", encoding="utf8") as file:
         file.write(content + '\n')
+
+def write_page_render(path: os.PathLike|str, content: str) -> None:
+    write_file(path, content)
 
 def gen_gemini_site():
     dir_path = pathlib.Path(os.path.dirname(os.path.realpath(__file__)))
@@ -328,7 +360,7 @@ def gen_gemini_site():
         index_lines.append("## All Projects")
         for project in projects:
             project_link = select_project_link(project) or "/"
-            project_desc = "[%s] %s" % (project["pub_date"], project["title"])
+            project_desc = "[%s] %s" % (pub_datetime_to_date(project["pub_datetime"]), project["title"])
             project_line = gemtext_link(project_desc, project_link)
             index_lines.append(project_line)
 
@@ -336,7 +368,7 @@ def gen_gemini_site():
         index_lines.append("## All Text Posts")
         for text_post in text_posts:
             text_post_link = select_project_link(text_post) or "/"
-            text_post_desc = "[%s] %s" % (text_post["pub_date"], text_post["title"])
+            text_post_desc = "[%s] %s" % (pub_datetime_to_date(text_post["pub_datetime"]), text_post["title"])
             text_post_line = gemtext_link(text_post_desc, text_post_link)
             index_lines.append(text_post_line)
 

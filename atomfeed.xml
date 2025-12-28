@@ -21,15 +21,13 @@
     <updated>2025-12-14T17:47:00Z</updated>
     <summary>A collection of public domain art I looked at and liked in 2025.</summary>
   </entry>
-
   <entry>
     <title>Recipe: Summer Soba Salad</title>
-    <link href="https://www.scottnm.com/pages/recipes/2025_06_14_summer_soba_salad.md" />
+    <link href="https://www.scottnm.com/pages/recipes/2025_06_14_summer_soba_salad.html" />
     <id>urn:uuid:a7f9da4f-46ac-4bf5-aaaf-6d9a1080c5ad</id>
     <updated>2025-06-14T23:55:00Z</updated>
     <summary>a refreshing cold noodle dish</summary>
   </entry>
-
   <entry>
     <title>Japan Fair Haiku Contest Submission</title>
     <link href="https://www.scottnm.com/pages/haiku2025/2025_06_01_japan_fair_haiku_contest_submission.html" />
@@ -37,15 +35,48 @@
     <updated>2025-07-14T22:00:00Z</updated>
     <summary>My submissions for the Japan Fair Haiku Contest</summary>
   </entry>
-
   <entry>
     <title>2024 Site Redesign</title>
     <link href="https://www.scottnm.com/pages/2024_redesign/2024_01_13_2024_redesign.html" />
     <id>urn:uuid:e6bc4ca2-ae6c-4c31-8ff8-22c2202533cf</id>
     <updated>2024-01-13T00:11:00Z</updated>
-    <summary>A fresh coat of paint</summary>
+    <summary>a fresh coat of paint</summary>
   </entry>
-
+  <entry>
+    <title>VTPP v0.2.0</title>
+    <link href="https://www.scottnm.com/pages/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html" />
+    <id>urn:uuid:b67dc9bf-9fd6-4e1c-8937-6190a88290c8</id>
+    <updated>2023-12-13T00:11:00Z</updated>
+    <summary>another VTPP milestone</summary>
+  </entry>
+  <entry>
+    <title>VTPP v0.1.0</title>
+    <link href="https://www.scottnm.com/pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html" />
+    <id>urn:uuid:108c4a16-26e6-48a1-942c-f19a5f200d22</id>
+    <updated>2023-11-04T00:11:00Z</updated>
+    <summary>new project: Video-to-Private-Podcast</summary>
+  </entry>
+  <entry>
+    <title>Surprising Monkey Muck Data</title>
+    <link href="https://www.scottnm.com/pages/surprising_monkey_muck_data/2022_10_29_surprising_monkey_muck_data.html" />
+    <id>urn:uuid:60056cef-a018-4db7-83e7-b9467b9b8e25</id>
+    <updated>2022-10-29T00:00:00Z</updated>
+    <summary>Looking at itch.io analytics for an old project. Why are people playing this demo?</summary>
+  </entry>
+  <entry>
+    <title>Hair Log</title>
+    <link href="https://www.scottnm.com/pages/hair_log/hair_log.html" />
+    <id>urn:uuid:3ff30857-8734-44eb-bc0f-f711d8c61b64</id>
+    <updated>2022-10-02T00:11:00Z</updated>
+    <summary>I kept track of my hair growing for about a year.</summary>
+  </entry>
+  <entry>
+    <title>Dig Deep Retrospective</title>
+    <link href="https://www.scottnm.com/pages/digdeepretro/digdeepretro.html" />
+    <id>urn:uuid:733d73ba-b45f-44c0-a8f2-150c9b7c96f5</id>
+    <updated>2022-05-30T00:00:00Z</updated>
+    <summary>Reflecting on my experience making Dig Deep during the "Classic Collards" Game Jam</summary>
+  </entry>
   <entry>
     <title>Scrapewood</title>
     <link href="https://www.scottnm.com/pages/scrapewood/2024_01_07_scrapewood.html" />
@@ -53,29 +84,12 @@
     <updated>2024-01-14T00:11:00Z</updated>
     <summary>Assembled the Achewood web comic into an e-reader compatible EPUB</summary>
   </entry>
-
   <entry>
-    <title>VTPP 0.2.0</title>
-    <link href="https://www.scottnm.com/pages/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html" />
-    <id>urn:uuid:b67dc9bf-9fd6-4e1c-8937-6190a88290c8</id>
-    <updated>2023-12-01T00:11:00Z</updated>
-    <summary>another VTPP milestone</summary>
-  </entry>
-
-  <entry>
-    <title>VTPP 0.1.0</title>
-    <link href="https://www.scottnm.com/pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html" />
-    <id>urn:uuid:108c4a16-26e6-48a1-942c-f19a5f200d22</id>
-    <updated>2023-11-01T00:11:00Z</updated>
-    <summary>new project: Video-to-Private-Podcast</summary>
-  </entry>
-
-  <entry>
-    <title>Hair Log</title>
-    <link href="https://www.scottnm.com/pages/hair_log/hair_log.html" />
-    <id>urn:uuid:3ff30857-8734-44eb-bc0f-f711d8c61b64</id>
-    <updated>2022-10-02T00:11:00Z</updated>
-    <summary>I kept track of my hair growing for about a year.</summary>
+    <title>Favorite Albums of 2018</title>
+    <link href="https://www.scottnm.com/pages/albumsof2018/albumsof2018.html" />
+    <id>urn:uuid:97cadbe1-9d59-4776-8b67-cf4ae49f1089</id>
+    <updated>2018-11-30T00:00:00Z</updated>
+    <summary>A non-exhaustive list of my favorite albums released in 2018.</summary>
   </entry>
 
 </feed>

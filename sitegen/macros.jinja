@@ -1,0 +1,14 @@
+{%- macro select_display_date(page) -%}
+    {%- if 'display_date' in page -%} {{ page['display_date'] }}
+    {%- else -%} {{ page['pub_datetime'] | datetime_to_date }}
+    {%- endif -%}
+{%- endmacro -%}
+
+{%- macro select_link(project) -%}
+    {%- if 'liveapp' in project -%} {{ project['liveapp'] }}
+    {%- elif 'src' in project -%}   {{ project['src'] }}
+    {%- elif 'doc' in project -%}   {{ project['doc'] }}
+    {%- elif 'video' in project -%} {{ project['video'] }}
+    {%- else -%}                    {{ project['read'] }}
+    {%- endif -%}
+{%- endmacro -%}

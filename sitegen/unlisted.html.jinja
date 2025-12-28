@@ -1,10 +1,5 @@
+{% import 'macros.jinja' as macros %}
 <h1>Unlisted Pages</h1>
-
-{%- macro select_display_date(page) -%}
-    {%- if 'display_date' in page -%} {{ page['display_date'] }}
-    {%- else -%} {{ page['pub_date'] }}
-    {%- endif -%}
-{%- endmacro -%}
 
 <section>
     {%- if pages|length > 0 -%}
@@ -17,8 +12,8 @@
             {%- endif -%}
             <br >
             <span><i>
-                <time class="dt-published" datetime="{{ page['pub_date'] }}">
-                {{ select_display_date(page) }}
+                <time class="dt-published" datetime="{{ page['pub_datetime'] }}">
+                {{ macros.select_display_date(page) }}
                 </time>
             </i></span>
         </li>

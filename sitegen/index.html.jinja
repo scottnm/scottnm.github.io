@@ -1,3 +1,4 @@
+{% import 'macros.jinja' as macros %}
 <section id="welcome-section">
     <h2 class="section-title">Hello</h2>
     <p>
@@ -16,26 +17,11 @@
     </ul>
 </section>
 
-{%- macro select_link(project) -%}
-    {%- if 'liveapp' in project -%} {{ project['liveapp'] }}
-    {%- elif 'src' in project -%}   {{ project['src'] }}
-    {%- elif 'doc' in project -%}   {{ project['doc'] }}
-    {%- elif 'video' in project -%} {{ project['video'] }}
-    {%- else -%}                    {{ project['read'] }}
-    {%- endif -%}
-{%- endmacro -%}
-
-{%- macro select_display_date(project) -%}
-    {%- if 'display_date' in project -%} {{ project['display_date'] }}
-    {%- else -%} {{ project['pub_date'] }}
-    {%- endif -%}
-{%- endmacro -%}
-
 <section id="highlights-section">
     <h2 class="section-title">Highlights</h2>
     <div class="pic-grid">
         {% for highlight in highlights %}
-        <a href="{{ select_link(highlight) }}" class="pic-grid-link u-url">
+        <a href="{{ macros.select_link(highlight) }}" class="pic-grid-link u-url">
             <div class="pic-grid-cell h-entry">
                 <img class="pic-grid-cell-image" src="/{{ highlight['image'] }}" alt="" loading="lazy" >
                 <div class="pic-grid-cell-text-overlay"><span class="project-title p-name">{{ highlight['title'] }}</span></div>
@@ -52,11 +38,11 @@
     <ul>
         {% for project in projects %}
         <li class="h-entry">
-            <a class="project-title u-url p-name" href="{{ select_link(project) }}" target="_blank">{{ project['title'] }}</a>
+            <a class="project-title u-url p-name" href="{{ macros.select_link(project) }}" target="_blank">{{ project['title'] }}</a>
             <br >
             <span><i>
-                <time class="dt-published" datetime="{{ project['pub_date'] }}">
-                {{ select_display_date(project) }}
+                <time class="dt-published" datetime="{{ project['pub_datetime'] }}">
+                {{ macros.select_display_date(project) }}
                 </time>
             </i></span>
             <br >
@@ -76,8 +62,8 @@
             <a href="{{ text_post['read'] }}" class="project-title p-name">{{ text_post['title'] }}</a>
             <br >
             <span><i>
-                <time class="dt-published" datetime="{{ text_post['pub_date'] }}">
-                {{ select_display_date(text_post) }}
+                <time class="dt-published" datetime="{{ text_post['pub_datetime'] }}">
+                {{ macros.select_display_date(text_post) }}
                 </time>
             </i></span>
             <br >
