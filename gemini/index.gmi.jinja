@@ -1,0 +1,34 @@
+# {{title}}
+## Hello
+{{welcome_text}}
+
+Still working to re-format my posts for geminispace. Until then, most things will just link back to my main site.
+
+=> gemini://gemini.circumlunar.space/docs/companion/subscription.gmi This page supports gemini subscriptions.
+
+---
+
+{% for profile_link in profile_links %}
+=> {{profile_link['link']}} {{profile_link['title']}}
+{% endfor %}
+
+{% if highlights|length > 0%}
+## Highlights
+{% for highlight in highlights %}
+=> {{highlight['link']}} {{highlight['title']}}
+{% endfor %}
+{% endif %}
+
+{% if projects|length > 0%}
+## All Projects
+{% for e in projects %}
+=> {{e['link']}} {{e['pub_datetime'] | datetime_to_date }} - {{e['title']}}
+{% endfor %}
+{% endif %}
+
+{% if text_posts|length > 0%}
+## All Text Posts
+{% for e in text_posts %}
+=> {{e['link']}} {{e['pub_datetime'] | datetime_to_date }} - {{e['title']}}
+{% endfor %}
+{% endif %}

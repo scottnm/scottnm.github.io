@@ -337,70 +337,63 @@ def gen_gemini_site():
     dir_path = pathlib.Path(os.path.dirname(os.path.realpath(__file__)))
     root_dir = dir_path.parent
     site_data_json_path = dir_path / "index_data" / "site_data.json"
-
     gem_index_path = root_dir / "gemini" / "site" / "index.gmi"
-
+    gem_index_path = root_dir / "gemini" / "site" / "index.gmi"
+    
     with open(site_data_json_path, "r", encoding="utf8") as site_data_json_file:
         site_data = json.load(site_data_json_file)
+        projects = site_data["projects"]
+        text_posts = site_data["text_posts"]
 
-    index_lines = []
+    env = jinja2.Environment(
+        loader=jinja2.FileSystemLoader(f"{root_dir / "gemini"}/"),
+        trim_blocks=True,
+        lstrip_blocks=True)
+    env.filters['datetime_to_date'] = pub_datetime_to_date
 
-    # Add Title
-    index_lines.append("# Scott Munro")
+    index_template = env.get_template("index.gmi.jinja")
 
-    # Add Welcome section
-    index_lines.append("## Hello")
-    index_lines.append(site_data["welcome_msg"])
-    index_lines.append("")
-    index_lines.append("Still working to re-format my posts for geminispace. Until then, most things will just link back to my main site.")
-
-    # Add Links
-    index_lines.append("")
-    index_lines.append(gemtext_link("homepage", "https://scottnm.com"))
+    profile_links = []
+    profile_links.append(gemtext_link_pair("web homepage", "https://scottnm.com"))
     for link in site_data["links_page"]:
-        index_lines.append(gemtext_link(link["type"], link["href"]))
+        profile_links.append(gemtext_link_pair(link["type"], link["href"]))
 
-    projects = site_data["projects"]
-    text_posts = site_data["text_posts"]
+    def set_link_field(entries: list[dict]) -> None:
+        for e in entries:
+            e_link = select_project_link(e)
+            if e_link.startswith("pages/"):
+                e_link = "https://scottnm.com/" + e_link
+            e["link"] = e_link
+
+    set_link_field(projects)
+    set_link_field(text_posts)
     highlights = filter_highlights(projects, text_posts)
-    if highlights:
-        index_lines.append("## Highlights")
-        for highlight in highlights:
-            highlight_link = select_project_link(highlight) or "/"
-            highlight_line = gemtext_link(highlight["title"], highlight_link)
-            index_lines.append(highlight_line)
 
-    if projects:
-        index_lines.append("## All Projects")
-        for project in projects:
-            project_link = select_project_link(project) or "/"
-            project_desc = "[%s] %s" % (pub_datetime_to_date(project["pub_datetime"]), project["title"])
-            project_line = gemtext_link(project_desc, project_link)
-            index_lines.append(project_line)
+    gem_index_content = index_template.render(
+        title="Scott Munro",
+        welcome_text=site_data["welcome_msg"],
+        profile_links=profile_links,
+        highlights=highlights,
+        projects=projects,
+        text_posts=text_posts)
 
-    if text_posts:
-        index_lines.append("## All Text Posts")
-        for text_post in text_posts:
-            text_post_link = select_project_link(text_post) or "/"
-            text_post_desc = "[%s] %s" % (pub_datetime_to_date(text_post["pub_datetime"]), text_post["title"])
-            text_post_line = gemtext_link(text_post_desc, text_post_link)
-            index_lines.append(text_post_line)
+    write_page_render(gem_index_path, gem_index_content)
 
-    write_page_render(gem_index_path, "\n".join(index_lines) + "\n")
-
-def select_project_link(project: dict) -> str|None:
+def select_project_link(project: dict) -> str:
     link = \
         project.get("liveapp", None) or \
         project.get("src", None) or \
         project.get("doc", None) or \
         project.get("video", None) or \
         project.get("read", None)
+    if link is None:
+        raise RuntimeError("missing link for %s" % str(project))
     return link
 
-def gemtext_link(desc: str, url: str) -> str:
+def gemtext_link_pair(title: str, url: str) -> dict:
     if url.startswith("pages/"):
         url = "https://scottnm.com/" + url
-    return "=> %s %s" % (url, desc)
+    return {"title": title, "link": url}
 
 if __name__ == "__main__":
     main()
