@@ -13,8 +13,7 @@ import logging
 
 # 3P modules
 import jinja2
-from cryptography.hazmat.primitives.ciphers.aead import AESGCM
-from cryptography.hazmat.primitives import serialization
+import cryptography.hazmat.primitives.ciphers.aead
 
 # my modules
 import mdtohtml
@@ -258,7 +257,7 @@ def pub_datetime_to_date(d: str) -> str:
     return datetime.datetime.fromisoformat(d).date().isoformat()
 
 def password_encode_entry_html(
-    sdata: str,
+    plaintext: str,
     password_params: PasswordCryptParams) -> PasswordEncodedData:
 
     # https://en.wikipedia.org/wiki/PBKDF2
@@ -271,8 +270,8 @@ def password_encode_entry_html(
         password_params.salt,
         iterations=MIN_HMAC_SHA256_ITER)
 
-    aesgcm = AESGCM(enc_key)
-    ciphertext = aesgcm.encrypt(password_params.iv, sdata.encode("utf8"), None)
+    aesgcm = cryptography.hazmat.primitives.ciphers.aead.AESGCM(enc_key)
+    ciphertext = aesgcm.encrypt(password_params.iv, plaintext.encode("utf8"), None)
 
     return PasswordEncodedData(
         ciphertext=ciphertext,
