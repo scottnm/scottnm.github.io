@@ -32,8 +32,6 @@ Still working to re-format my posts for geminispace. Until then, most things wil
 => https://github.com/scottnm/squid-mantazord [2017-02-07] Squid Mantazord
 => https://nanomachines.itch.io/filibusters [2016-12-09] Filibusters
 => https://skfb.ly/UuUG [2016-12-02] Monkey Muck
-=> https://github.com/scottnm/Pixitor [2016-05-24] Pixitor
-=> https://github.com/scottnm/ogre-jrpg [2016-05-06] Ogre JRPG
 => https://github.com/danipurdes/Minotaur [2015-09-21] Labyrinth
 => https://www.youtube.com/watch?v=vYaWWKJ4s1M [2015-09-13] Menger Sponge
 ## All Text Posts

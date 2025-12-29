@@ -162,24 +162,6 @@
             "image": "files/webps/monkeymuck.webp"
         },
         {
-            "title": "Pixitor",
-            "pub_datetime": "2016-05-24T00:00:00Z",
-            "description": "A layer-based pixel art editor built using MIT\"s Processing",
-            "src": "https://github.com/scottnm/Pixitor",
-            "image": "files/pixitor.avif",
-            "tools": "Processing, Java",
-            "video": "https://www.youtube.com/watch?v=mx1m7fG-8IM"
-        },
-        {
-            "title": "Ogre JRPG",
-            "pub_datetime": "2016-05-06T00:00:00Z",
-            "description": "A turn-based battle system demo using Ogre3D for one of my university courses.",
-            "src": "https://github.com/scottnm/ogre-jrpg",
-            "image": "files/webps/sudden_death.webp",
-            "tools": "C++, Ogre3D, SDL",
-            "video": "https://www.youtube.com/watch?v=PkhYBI-yMf4"
-        },
-        {
             "title": "Labyrinth",
             "pub_datetime": "2015-09-21T00:00:00Z",
             "description": "A game with procedurally generated maps, and a lighting effect where only a certain radius of the map away from the character is lit (a torch effect). Built for the 2015 Fall GameJam at UT Austin.",
@@ -223,6 +205,24 @@
             "image": "https://raw.githubusercontent.com/scottnm/scottnm.github.io/master/files/webps/ik2d.webp",
             "tools": "Unity, C#",
             "video": "https://www.youtube.com/watch?v=kuFz9OplPNk"
+        },
+        {
+            "title": "Pixitor",
+            "pub_datetime": "2016-05-24T00:00:00Z",
+            "description": "A layer-based pixel art editor built using MIT\"s Processing",
+            "src": "https://github.com/scottnm/Pixitor",
+            "image": "files/pixitor.avif",
+            "tools": "Processing, Java",
+            "video": "https://www.youtube.com/watch?v=mx1m7fG-8IM"
+        },
+        {
+            "title": "Ogre JRPG",
+            "pub_datetime": "2016-05-06T00:00:00Z",
+            "description": "A turn-based battle system demo using Ogre3D for one of my university courses.",
+            "src": "https://github.com/scottnm/ogre-jrpg",
+            "image": "files/webps/sudden_death.webp",
+            "tools": "C++, Ogre3D, SDL",
+            "video": "https://www.youtube.com/watch?v=PkhYBI-yMf4"
         },
         {
             "title": "3D Pong-like",
