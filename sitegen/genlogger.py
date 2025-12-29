@@ -5,14 +5,15 @@ import logging
 import sys
 
 @contextlib.contextmanager
-def time_section(section_title: str):
+def time_section(section_title: str, log_level: int = logging.INFO):
     time_start = time.perf_counter()
     try:
+        logging.log(logging.DEBUG, "starting '%s'", section_title)
         yield  # Code before yield is __enter__, after yield is __exit__
     finally:
         time_end = time.perf_counter()
-        logging.info("%s time %.6f seconds", 
-            section_title, 
+        logging.log(log_level, "completed '%s' time %.6f seconds",
+            section_title,
             time_end - time_start)
 
 def fatal_error(fmt_string: str, *fmt_args) -> typing.NoReturn:

@@ -14,7 +14,7 @@ def mdtohtml(
     with tempfile.NamedTemporaryFile(mode="w", encoding="utf8") as prettierrc_tmp_file:
         json.dump(prettier_config, prettierrc_tmp_file)
         prettierrc_tmp_file.flush()
-        with tempfile.NamedTemporaryFile(mode="w", encoding="utf8") as html_tmp_file: 
+        with tempfile.NamedTemporaryFile(mode="w", encoding="utf8") as html_tmp_file:
             html_tmp_file.write(raw_html)
             html_tmp_file.flush()
 
@@ -45,7 +45,7 @@ def main() -> None:
         parser.error(f"-m must be markdown file: {markdown_filepath}")
     if not markdown_filepath.exists():
         parser.error(f"markdown file missing: {markdown_filepath}")
-    
+
     output_html_filename = \
         pathlib.Path(args.output_html).name if args.output_html \
         else pathlib.Path(markdown_filepath.name).with_suffix(".html").name
@@ -67,7 +67,7 @@ def main() -> None:
         dir_path_name = os.path.dirname(os.path.realpath(__file__))
         fmt_config_filepath = pathlib.Path(dir_path_name) / ".prettierrc"
 
-    preview_output: bool = args.preview 
+    preview_output: bool = args.preview
 
     print(f"markdown:    {markdown_filepath}")
     print(f"output html: {output_html_filepath}")
