@@ -1,0 +1,62 @@
+[
+    {
+        "project": "LizardByte/Sunshine",
+        "url": "https://github.com/LizardByte/Sunshine",
+        "contributions": [
+            {
+                "sha": "458a4a5",
+                "oneline": "fix: windows nsis installer powershell executions run in -noprofile mode (#4231)"
+            }
+        ]
+    },
+    {
+        "project": "inaimathi/gtypist-single-space",
+        "url": "https://github.com/inaimathi/gtypist-single-space",
+        "contributions": [
+            {
+                "sha": "4ce3fd2",
+                "oneline": "fix typo"
+            },
+            {
+                "sha": "ffa847b",
+                "oneline": "add missing space to lesson in \"R11\""
+            }
+        ]
+    },
+    {
+        "project": "lowbyteproductions/bare-metal-series",
+        "url": "https://github.com/lowbyteproductions/bare-metal-series",
+        "contributions": [
+            {
+                "sha": "8e3f195",
+                "oneline": "add debugger usage instructions to project readme"
+            },
+            {
+                "sha": "25dbdf1",
+                "oneline": "add st-link debug tasks to launch.json"
+            }
+        ]
+    },
+    {
+        "project": "codr7/hacktical-c",
+        "url": "https://github.com/codr7/hacktical-c",
+        "contributions": [
+            {
+                "sha": "f1dafa6",
+                "oneline": "Correct ePUB license to match new CC BY-NC-ND 4.0 License"
+            },
+            {
+                "sha": "5820e53",
+                "oneline": "Move ePUB metadata generation to pre-defined file"
+            },
+            {
+                "sha": "96a57e2",
+                "oneline": "Add and update READMEs to explain usage of epub generators"
+            },
+            {
+                "sha": "3e0fbb3",
+                "oneline": "Script to generate epub using pandoc from chapter markdown files"
+            }
+        ]
+    }
+]
