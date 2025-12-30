@@ -11,43 +11,7 @@
 
     <title>scottnm: VTPP v0.1.0</title>
     <meta name="description" content="new project: Video-to-Private-Podcast">
-    <meta name="viewport" content="width=device-width,initial-scale=1"><style>
-        /*
-        * Support picture grids
-        */
-        @media screen and (min-width: 800px) {
-            .vtpp-demo-pic { width: 300px }
-            .vtpp-demo-pic > img { width: 300px }
-        }
-
-        @media screen and (max-width: 800px) {
-            .vtpp-demo-pic { width: 256px }
-            .vtpp-demo-pic > img { width: 256px }
-        }
-
-        @media screen and (min-width: 1600px) {
-            #vtpp-demo-pics {
-                display: grid;
-                justify-content: center;
-                align-content: center;
-                grid-gap: 5px;
-                grid-template-columns: 33% 33% 33%;
-                grid-template-rows: auto auto auto auto;
-            }
-        }
-
-        @media screen and (max-width: 1600px) {
-            #vtpp-demo-pics {
-                display: grid;
-                justify-content: center;
-                align-content: center;
-                grid-gap: 5px;
-                grid-template-columns: 100%;
-                grid-template-rows: auto auto auto auto;
-            }
-        }
-    </style>
-
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <script data-goatcounter="https://scottnm.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -132,24 +96,37 @@
                         Here are some screenshots of it working in action!
                     </p>
 
-                    <div id="vtpp-demo-pics">
-                        <div class="vtpp-demo-pic" >
-                            <img alt="VTPP feed in podcast app and episode being played" src="/site_images/demo_podcast.avif" >
+                    <div class="grid-max-2col">
+                        <div>
+                            <img 
+                                alt="VTPP feed in podcast app and episode being played" 
+                                src="/site_images/demo_podcast.avif" 
+                                style="display: block; margin-left: auto; margin-right: auto; max-width: 100%" >
+                        </div>
+                        <div>
                             <p>
                                 Here's a quick demo of my phone playing an episode from the podcast feed.
                             </p>
                         </div>
-
-                        <div class="vtpp-demo-pic" >
-                            <img alt="an on-demand video being downloaded to the server and uploaded to the feed" src="/site_images/demo_download.avif" >
+                        <div>
+                            <img 
+                                alt="an on-demand video being downloaded to the server and uploaded to the feed" 
+                                src="/site_images/demo_download.avif" 
+                                style="display: block; margin-left: auto; margin-right: auto; max-width: 100%">
+                        </div>
+                        <div>
                             <p>
                                 Here's a quick demo of me requesting a video be downloaded on-demand to my feed server from my phone,
                                 followed by the audio becoming available within the podcast feed on my phone.
                             </p>
                         </div>
-
-                        <div class="vtpp-demo-pic" >
-                            <img alt="server status report uploaded to a private discord server" src="/site_images/demo_discord.avif" >
+                        <div>
+                            <img 
+                                alt="server status report uploaded to a private discord server" 
+                                src="/site_images/demo_discord.avif" 
+                                style="display: block; margin-left: auto; margin-right: auto; max-width: 100%">
+                        </div>
+                        <div>
                             <p>
                                 To make it easier to monitor the health of the server, I added Discord webhook support. If the server runs into
                                 trouble, it'll send error reports with logs to a private discord server I setup. And when new videos are successfully

@@ -17,14 +17,14 @@ Still working to re-format my posts for geminispace. Until then, most things wil
 ## Highlights
 => https://scottnm.com/pages/haiku2025/2025_06_01_japan_fair_haiku_contest_submission.html Japan Fair Haiku Contest Submission
 => https://youtu.be/PwUrFlltP3c Custom Clone Hero Chart - Time and Death and God
-=> https://scottnm.com/pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html VTPP
+=> https://scottnm.com/pages/vtpp/vtpp.html VTPP
 => https://scottnm.itch.io/dig-deep Dig Deep
 => https://scottnm.com/pages/scrapewood/2024_01_07_scrapewood.html Scrapewood
 => https://skfb.ly/UuUG Monkey Muck
 
 ## All Projects
 => https://youtu.be/PwUrFlltP3c 2024-12-29 - Custom Clone Hero Chart - Time and Death and God
-=> https://scottnm.com/pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html 2023-11-04 - VTPP
+=> https://scottnm.com/pages/vtpp/vtpp.html 2023-11-04 - VTPP
 => https://scottnm.itch.io/dig-deep 2022-03-20 - Dig Deep
 => https://github.com/scottnm/avipaper.p8 2021-12-15 - Avipaper.p8
 => https://scottnm.com/pages/scrapewood/2024_01_07_scrapewood.html 2021-07-03 - Scrapewood

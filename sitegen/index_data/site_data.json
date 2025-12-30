@@ -43,7 +43,8 @@
             "pub_datetime": "2023-11-04T00:00:00Z",
             "description": "Video-to-Private-Podcast: a home server project",
             "image": "site_images/vtpp_coverart_thumbnail_med.avif",
-            "read": "pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html",
+            "md_src": "sitegen/pages/vtpp/vtpp.md",
+            "read": "pages/vtpp/vtpp.html",
             "tools": "python, sqlite3, raspberrypi"
         },
         {

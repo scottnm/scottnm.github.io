@@ -346,7 +346,7 @@ def gen_gemini_site():
         text_posts = site_data["text_posts"]
 
     env = jinja2.Environment(
-        loader=jinja2.FileSystemLoader(f"{root_dir / "gemini"}/"),
+        loader=jinja2.FileSystemLoader(f"{root_dir / 'gemini'}/"),
         trim_blocks=True,
         lstrip_blocks=True)
     env.filters['datetime_to_date'] = pub_datetime_to_date
