@@ -403,6 +403,14 @@
     ],
     "hidden_text_posts": [
         {
+            "title": "A Million Napkins",
+            "pub_datetime": "2025-12-30T19:58:54Z",
+            "description": "",
+            "image": "",
+            "read": "pages/million-napkins/million-napkins.html",
+            "md_src": "sitegen/pages/million-napkins/million-napkins.md"
+        },
+        {
             "title": "Kat Xmas Haiku Gift 2025",
             "pub_datetime": "2025-12-23T00:00:00Z",
             "description": "",
