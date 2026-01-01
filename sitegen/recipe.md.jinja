@@ -8,7 +8,7 @@
 
 <div class="grid-max-2col" markdown="1">
 
-<div markdown="1">
+<div class="recipe-list" markdown="1">
 
 **Ingredients**
 
@@ -24,7 +24,7 @@
 {% endfor %}
 </div>
 
-<div markdown="1">
+<div class="recipe-list" markdown="1">
 
 **Instructions**
 
@@ -36,6 +36,7 @@
 {% for instr in instr_section['instructions'] %}
 - {{ instr }}
 {% endfor %}
+
 {% endfor %}
 
 </div>

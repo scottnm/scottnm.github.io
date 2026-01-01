@@ -1,0 +1,57 @@
+{
+    "intro": "Happy New Years! These collards were a hit this year, so I wanted to immortalize them in my internet junk drawer",
+    "ingredient_sections": [
+        {
+            "section_title": "Equipment",
+            "ingredients": [
+                "1 large stock pot",
+                "1 colander",
+                "1 large mixing bowl"
+            ]
+        },
+        {
+            "section_title": "Food",
+            "ingredients": [
+                "2 bunches of collards",
+                "4 strips of bacon",
+                "1 tbsp extra bacon fat (optional)",
+                "1 bouillon cube",
+                "1 white onion",
+                "6 cloves of garlic"
+            ]
+        }
+    ],
+    "instruction_sections": [
+        {
+            "section_title": "Prep work",
+            "instructions": [
+                "Separate greens from stems and wash dirt of a greens by soaking in a bowl of running water and then dumping through colander",
+                "layer all the collard leaves together, roll them like a cigar, and cut them into ½ inch strips",
+                "Dice the onion; set aside",
+                "Mince the garlic; set aside"
+            ]
+        },
+        {
+            "section_title": "Cooking",
+            "instructions": [
+                "Cook 4 strips of bacon like 75% of the way through in a large stock pot rendering out the fat (should only take a handful of minutes).",
+                "Remove bacon from stockpot leaving rendered out bacon fat behind",
+                "(Optional) if you really want to pack a punch, add the extra, optional tbsp of bacon fat",
+                "Add minced garlic cloves and let cook but not fry in bacon fat for a few minutes",
+                "Add two cups of water to stock pot to deglaze the pot",
+                "Stir and scrap to get any good bits off the bottom of the pot",
+                "Add bouillion cube and stir until dissolved",
+                "Cut up the removed bacon into ½ inch pieces",
+                "Add the collards and cut bacon to pot",
+                "Mix well to incorporate collards, bacon, and broth together",
+                "Press collards mixture down into pot a bit if they're sitting too high above the broth mixture",
+                "Top with just enough water so that if you press down on the collards, you can see the water just below",
+                "Cover pot and let simmer or 1.5 to 2 hours",
+                "Stir occassionally to ensure collards cook and wilt evenly",
+                "Check on broth throughout and adjust the heat so that the broth reduces to a good [potlikker](https://en.wikipedia.org/wiki/Pot_liquor)",
+                "Once time's up, season to taste with salt and pepper"
+            ]
+        }
+    ],
+    "footnotes": []
+}

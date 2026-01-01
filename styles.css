@@ -246,3 +246,12 @@ blockquote p {
     font-size: 0.85em;
     font-family: monospace;
 }
+
+.recipe-list ul li {
+    margin-bottom: 10px; /* Adjust the value as needed */
+}
+
+/* Optional: remove the margin from the very last item if necessary */
+.recipe-list ul li:last-child {
+    margin-bottom: 0;
+}

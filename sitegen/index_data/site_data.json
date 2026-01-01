@@ -442,6 +442,16 @@
     ],
     "recipe_posts": [
         {
+            "title": "Collard Greens",
+            "pub_datetime": "2026-01-01T13:27:30.852858",
+            "lastupdate_datetime": "2026-01-01T13:27:30.852858",
+            "description": "collard greens recipe loved by my family and friends",
+            "image": "/site_images/collards.avif",
+            "image_alt": "collard greens",
+            "read": "pages/recipes/2026_01_01_collards.html",
+            "recipe_json_src": "sitegen/pages/recipes/2026_01_01_collards.json"
+        },
+        {
             "title": "Fantasy Fudge",
             "pub_datetime": "2025-12-27T00:00:00Z",
             "description": "the fudge recipe once hosted on myfoodandfamily.com",
