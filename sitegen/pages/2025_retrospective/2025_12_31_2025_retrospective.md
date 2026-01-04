@@ -114,6 +114,7 @@ This year's categories are...
 - And Then There Were None - (local theatre production)
 - Georgetown Steamplant - Parasite
 - I fixed my oven!
+- constructed shelves in my garage to make a pantry
 
 ## Travel
 

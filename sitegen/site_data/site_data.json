@@ -412,8 +412,8 @@
             "md_src": "sitegen/pages/2025_retrospective/2025_12_31_2025_retrospective.md",
             "pswd": {
                 "env_key": "DRAFT_POST_PSWD",
-                "crypt_salt_b64": "LXWM+Pjzxw0F7ymA4H73Tw==",
-                "crypt_iv_b64": "++wHCCrz9sJ5ck5g"
+                "crypt_salt_b64": "TPjzeQxUiv8d+HSYl5QX0w==",
+                "crypt_iv_b64": "Z1fBW+0rbJpH/VYu"
             }
         },
         {
