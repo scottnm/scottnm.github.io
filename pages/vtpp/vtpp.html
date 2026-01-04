@@ -1,120 +1,94 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="/site_images/icon/favicon.ico" sizes="16x16">
-    <link rel="icon" href="/site_images/icon/favicon.ico" sizes="48x48">
-    <link rel="icon" href="/site_images/icon/favicon.svg" sizes="any" type="image/svg+xml">
+  <head>
+    <meta charset="utf-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <link rel="icon" href="/site_images/icon/favicon.ico" sizes="16x16" >
+    <link rel="icon" href="/site_images/icon/favicon.ico" sizes="48x48" >
+    <link rel="icon" href="/site_images/icon/favicon.svg" sizes="any" type="image/svg+xml" >
     <link rel="stylesheet" href="/styles.css" >
 
     <title>scottnm: VTPP</title>
-    <meta name="description" content="Video-to-Private-Podcast: a home server project">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <script data-goatcounter="https://scottnm.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-</head>
+    <meta name="description" content="Video-to-Private-Podcast: a home server project" >
+    <meta name="viewport" content="width=device-width,initial-scale=1" >
+    <script data-goatcounter="https://scottnm.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  </head>
 
-<body>
+  <body>
     <header class="h-card vcard">
-        <div id="header-pane" class="section-with-buffer">
-            <div id="header-with-links-container">
-                <a class="home-btn u-url u-uid" href="/">
-                    <h1 class="title-text p-name">Scott Munro</h1>
-                    <img class="title-icon u-photo" src="/site_images/icon/favicon.svg" alt="" loading="lazy" width="20" height="20" >
-                </a>
-                <hr class="header-links-separator" >
-                <a class="social-btn" href="/atomfeed.xml" title="subscribe via atom/rss feeds" rel="subscribe-rss" target="_blank">rss</a>
-                <span> | </span>
-                <a class="social-btn u-email" href="mailto:me@scottnm.com" rel="me" title="email me">email</a>
-                <span> | </span>
-                <a class="social-btn u-url" href="https://github.com/scottnm" rel="me" title="check out my code on github" target="_blank">github</a>
-                <span> | </span>
-                <a class="social-btn u-url" href="https://linkedin.com/in/scott-munro" rel="me" title="connect on linkedin" target="_blank">linkedin</a>
-                <span> | </span>
-                <a class="social-btn" href="/links.html" rel="me" title="see all my links" target="_blank">elsewhere</a>
-            </div>
+      <div id="header-pane" class="section-with-buffer">
+        <div id="header-with-links-container">
+          <a class="home-btn u-url u-uid" href="/">
+            <h1 class="title-text p-name">Scott Munro</h1>
+            <img class="title-icon u-photo" src="/site_images/icon/favicon.svg" alt="" loading="lazy" width="20" height="20" >
+          </a>
+          <hr class="header-links-separator" >
+          <a class="social-btn" href="/atomfeed.xml" title="subscribe via atom/rss feeds" rel="subscribe-rss" target="_blank">rss</a>
+          <span> | </span>
+          <a class="social-btn u-email" href="mailto:me@scottnm.com" rel="me" title="email me">email</a>
+          <span> | </span>
+          <a class="social-btn u-url" href="https://github.com/scottnm" rel="me" title="check out my code on github" target="_blank">github</a>
+          <span> | </span>
+          <a class="social-btn u-url" href="https://linkedin.com/in/scott-munro" rel="me" title="connect on linkedin" target="_blank">linkedin</a>
+          <span> | </span>
+          <a class="social-btn" href="/links.html" rel="me" title="see all my links" target="_blank">elsewhere</a>
         </div>
+      </div>
     </header>
     <main>
-        <article class="h-entry">
-            <h1 class="article-title p-name">
-                VTPP
-            </h1>
+      <article class="h-entry">
+        <h1 class="article-title p-name">VTPP</h1>
 
-            <span class="post-time-container">
-                [ <time class="dt-published post-time" datetime="2023-11-04">2023-11-04</time> ]
-            </span>
+        <span class="post-time-container">
+          [ <time class="dt-published post-time" datetime="2023-11-04">2023-11-04</time> ]
+        </span>
 
-            <div class="e-content" id="post-content">
-                <p>"VTPP" (for "Video-to-Private-Podcast) is a Raspberry Pi application with two main components:</p>
-                    <ol>
-                      <li>
-                        a "fetcher" which downloads videos from external sources(s)
-                        <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> and extracts their audio.
-                      </li>
-                      <li>a database of these downloads which is dynamically served as a podcast feed.</li>
-                    </ol>
-                    <p>
-                      Together, this enables me to automatically generate a podcast feed of audio from the latest videos of a select handful
-                      of youtube channels.
-                    </p>
-                    <p>
-                      <img
-                        alt="VTPP feed in podcast app and episode being played"
-                        src="/site_images/demo_podcast.avif"
-                        style="display: block; margin-left: auto; margin-right: auto; max-width: 100%" >
-                    </p>
-                    <p>For me it's been surprisingly useful!</p>
-                    <p>I'm not yet interested in publishing the source for anyone else to use because:</p>
-                    <ol>
-                      <li>
-                        I haven't built it for anyone else to use so it's still held up with metaphorical scotch date and paperclips in some
-                        places that I don't think would be pleasant for anyone to use
-                      </li>
-                      <li>The source isn't "good enough" to warrant reading even for educational purposes</li>
-                      <li>
-                        The source really isn't that interesting. It's mostly a wrapper around sqlite and youtube-dl, just packaged in a UX
-                        that works for me.
-                      </li>
-                    </ol>
-                    <p>Nevertheless I'm proud of it.</p>
-                    <p>
-                      I haven't made any updates in a few years, but just in case the sun ever shines on this codebase again, I'll keep a log
-                      of all past and future updates here:
-                    </p>
-                    <ul>
-                      <li><a href="/pages/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html">Update v0.2.0</a> </li>
-                      <li><a href="/pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html">Update v0.1.0</a> </li>
-                    </ul>
-                    <div class="footnote">
-                      <hr >
-                      <ol>
-                        <li id="fn:1">
-                          <p>
-                            Today, the only real supported source is YouTube, but supporing other feed sources would be desirable future
-                            improvements.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"
-                              >&#8617;</a
-                            >
-                          </p>
-                        </li>
-                      </ol>
-                    </div>
+        <div class="e-content" id="post-content">
+          <p>"VTPP" (for "Video-to-Private-Podcast) is a Raspberry Pi application with two main components:</p>
+          <ol>
+            <li>
+              a "fetcher" which downloads videos from external sources(s)<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> and extracts their audio.
+            </li>
+            <li>a database of these downloads which is dynamically served as a podcast feed.</li>
+          </ol>
+          <p>Together, this enables me to automatically generate a podcast feed of audio from the latest videos of a select handful of youtube channels.</p>
+          <p>
+            <img alt="VTPP feed in podcast app and episode being played" src="/site_images/demo_podcast.avif" style="display: block; margin-left: auto; margin-right: auto; max-width: 100%" >
+          </p>
+          <p>For me it's been surprisingly useful!</p>
+          <p>I'm not yet interested in publishing the source for anyone else to use because:</p>
+          <ol>
+            <li>I haven't built it for anyone else to use so it's still held up with metaphorical scotch date and paperclips in some places that I don't think would be pleasant for anyone to use</li>
+            <li>The source isn't "good enough" to warrant reading even for educational purposes</li>
+            <li>The source really isn't that interesting. It's mostly a wrapper around sqlite and youtube-dl, just packaged in a UX that works for me.</li>
+          </ol>
+          <p>Nevertheless I'm proud of it.</p>
+          <p>I haven't made any updates in a few years, but just in case the sun ever shines on this codebase again, I'll keep a log of all past and future updates here: </p>
+          <ul>
+            <li><a href="/pages/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html">Update v0.2.0</a> </li>
+            <li><a href="/pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html">Update v0.1.0</a> </li>
+          </ul>
+          <div class="footnote">
+            <hr >
+            <ol>
+              <li id="fn:1">
+                <p>Today, the only real supported source is YouTube, but supporing other feed sources would be desirable future improvements.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </article>
 
-            </div>
-        </article>
+      <hr >
 
-        <hr >
-
-        <footer>
-            <a class="footer-btn" href="/">
-                <span class="title-text" aria-labelledby="kthxbai-read">kthxbai</span>
-                <img class="title-icon" src="/site_images/icon/favicon.svg" alt="" loading="lazy" width="20" height="20" >
-            </a>
-            <span id="kthxbai-read" hidden>k, thanks, bye.</span>
-        </footer>
+      <footer>
+        <a class="footer-btn" href="/">
+          <span class="title-text" aria-labelledby="kthxbai-read">kthxbai</span>
+          <img class="title-icon" src="/site_images/icon/favicon.svg" alt="" loading="lazy" width="20" height="20" >
+        </a>
+        <span id="kthxbai-read" hidden>k, thanks, bye.</span>
+      </footer>
     </main>
-</body>
-
+  </body>
 </html>
+

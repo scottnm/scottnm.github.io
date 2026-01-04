@@ -9,9 +9,15 @@
     <link rel="icon" href="/site_images/icon/favicon.svg" sizes="any" type="image/svg+xml">
     <link rel="stylesheet" href="/styles.css" >
 
-    <title>scottnm: Playlists</title>
-    <meta name="description" content="My list of playlists">
+    <title>scottnm: {{ title }}</title>
+    <meta name="description" content="{{ content_description }}">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    {%- if custom_style_css -%}
+    <style>
+        {{ custom_style_css | safe | indent | indent }}
+    </style>
+    {% endif %}
+
     <script data-goatcounter="https://scottnm.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -38,10 +44,7 @@
         </div>
     </header>
     <main>
-        <p>Here are some playlists I've been putting together:</p>
-        <ul>
-        <li>「<a href="https://bandcamp.com/scottmunro/playlist/juneteenth-mix">Juneteenth 2025</a>」 My mix for rollerskating at Seattle's 2025 "Skate to Freedom" Juneteenth Party.</li>
-        </ul>
+        {{ page_html | safe | indent | indent }}
 
         <hr >
 

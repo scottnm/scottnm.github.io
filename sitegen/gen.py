@@ -90,7 +90,7 @@ def gen_html_site(write_interim_output: bool) -> None:
                 with open(md_filepath, "r", encoding="utf8") as f:
                     md_file_contents = f.read()
 
-                html = mdtohtml.mdtohtml(md_file_contents, biome_config_path)
+                html = mdtohtml.mdtohtml(md_file_contents)
                 is_password_protected = "pswd" in entry
                 if is_password_protected:
                     encoded_html_data = password_encode_entry_html(html, get_entry_password_params(entry))
@@ -130,7 +130,7 @@ def gen_html_site(write_interim_output: bool) -> None:
                 md_path = interim_output_dir / recipe_json_filepath.with_suffix(".md").name
                 write_page_render(md_path, recipe_md)
 
-            recipe_html = mdtohtml.mdtohtml(recipe_md, biome_config_path)
+            recipe_html = mdtohtml.mdtohtml(recipe_md)
             html_output_path = recipe_json_filepath.with_suffix(".html")
             with open(html_output_path, "w", encoding="utf8") as f:
                 f.write(recipe_html)
@@ -183,7 +183,7 @@ def gen_html_site(write_interim_output: bool) -> None:
         playlists_html_output = (root_dir / "playlists.html").resolve()
         with open(playlists_md, "r", encoding="utf8") as f:
             md_file_contents = f.read()
-            playlists_page_html = mdtohtml.mdtohtml(md_file_contents, biome_config_path)
+            playlists_page_html = mdtohtml.mdtohtml(md_file_contents)
             page_render = page_template.render(
                 title="Playlists",
                 content_description="My list of playlists",
@@ -194,8 +194,14 @@ def gen_html_site(write_interim_output: bool) -> None:
                 playlists_md.relative_to(root_dir),
                 playlists_html_output.relative_to(root_dir))
 
+    @dataclasses.dataclass
+    class FmtRequest:
+        raw_html: str
+        output_file_path: pathlib.Path
 
-    with genlogger.time_section("final text-post rendering"):
+    fmt_requests: list[FmtRequest] = []
+
+    with genlogger.time_section("fill text-post renders"):
         for html_page in pages_dir_path.rglob('*.html'):
             relative_html_path = html_page.absolute().relative_to(pages_dir_path.absolute())
             relative_html_subdirs = relative_html_path.parent
@@ -232,7 +238,14 @@ def gen_html_site(write_interim_output: bool) -> None:
                 page_html=page_body,
                 custom_style_css=custom_css_data)
 
-            write_page_render(dest_page_path.absolute(), page_render)
+            fmt_requests.append(FmtRequest(raw_html=page_render, output_file_path=dest_page_path.absolute()))
+
+    with genlogger.time_section("fmt text-post renders"):
+        formatted_html_blobs = mdtohtml.pretty_fmt_html_multi([ f.raw_html for f in fmt_requests ], biome_config_path)
+
+    with genlogger.time_section("write formatted text posts"):
+        for (fmted_html, fmt_request) in zip(formatted_html_blobs, fmt_requests):
+            write_page_render(fmt_request.output_file_path, fmted_html)
 
     feed_entries = [
         {

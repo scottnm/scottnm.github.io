@@ -5,13 +5,12 @@ import os
 import pathlib
 import tempfile
 import subprocess
+import asyncio
 
-def mdtohtml(
-    md_file_contents: str,
-    biome_config: dict|pathlib.Path
-    ) -> str:
+def mdtohtml(md_file_contents: str) -> str:
+    return markdown.markdown(md_file_contents, extensions=['extra'])
 
-    raw_html = markdown.markdown(md_file_contents, extensions=['extra'])
+def pretty_fmt_html(html_data: str, biome_config: dict|pathlib.Path) -> str:
     biome_config_file = None
     try:
         if isinstance(biome_config, dict):
@@ -28,15 +27,26 @@ def mdtohtml(
             'format',
             f'--config-path={biome_config_filename}',
             '--stdin-file-path', 'test.html' ]
-        fmt_result = subprocess.run(formatter_cmd_args, input=raw_html.encode("utf8"), stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        fmt_result = subprocess.run(formatter_cmd_args, input=html_data.encode("utf8"), stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         if fmt_result.returncode != 0:
             raise RuntimeError(f"Failed to format HTML: output={fmt_result.stdout!r}")
 
         formatted_html = fmt_result.stdout.decode("utf8")
         return formatted_html
+
     finally:
         if biome_config_file is not None:
             biome_config_file.close()
+
+def pretty_fmt_html_multi(html_blobs: list[str], biome_config: dict|pathlib.Path) -> list[str]:
+    async def pretty_fmt_html_async_multi_helper() -> list[str]:
+        fmt_tasks = [
+            asyncio.to_thread(pretty_fmt_html, html_blob, biome_config)
+            for html_blob in html_blobs
+        ]
+        return await asyncio.gather(*fmt_tasks)
+
+    return asyncio.run(pretty_fmt_html_async_multi_helper())
 
 def main() -> None:
     parser = argparse.ArgumentParser()
@@ -88,7 +98,8 @@ def main() -> None:
     with open(fmt_config_filepath, "r", encoding="utf8") as f:
         fmt_config = json.load(f)
 
-    html_output = mdtohtml(markdown_file_data, fmt_config)
+    raw_html = mdtohtml(markdown_file_data)
+    html_output = pretty_fmt_html(raw_html, fmt_config)
     if preview_output:
         print(html_output)
         print(f"Preview write to: {output_html_filepath}")

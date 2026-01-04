@@ -1,172 +1,153 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="/site_images/icon/favicon.ico" sizes="16x16">
-    <link rel="icon" href="/site_images/icon/favicon.ico" sizes="48x48">
-    <link rel="icon" href="/site_images/icon/favicon.svg" sizes="any" type="image/svg+xml">
+  <head>
+    <meta charset="utf-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <link rel="icon" href="/site_images/icon/favicon.ico" sizes="16x16" >
+    <link rel="icon" href="/site_images/icon/favicon.ico" sizes="48x48" >
+    <link rel="icon" href="/site_images/icon/favicon.svg" sizes="any" type="image/svg+xml" >
     <link rel="stylesheet" href="/styles.css" >
 
     <title>scottnm: Dig Deep Retrospective</title>
-    <meta name="description" content="Reflecting on my experience making Dig Deep during the &#34;Classic Collards&#34; Game Jam">
-    <meta name="viewport" content="width=device-width,initial-scale=1"><style>
-        .progress-pic {
-            width: 256px
-        }
-        #progress-pic-grid {
-            display: grid;
-            justify-content: center;
-            align-content: center;
-            grid-gap: 5px;
-        }
-        @media screen and (min-width: 1368px) {
-            #progress-pic-grid {
-                grid-template-columns: 25% 25% 25% 25%;
-                grid-template-rows: auto auto auto auto;
-            }
-        }
+    <meta name="description" content="Reflecting on my experience making Dig Deep during the &#34;Classic Collards&#34; Game Jam" >
+    <meta name="viewport" content="width=device-width,initial-scale=1" >
+    <style>
+    .progress-pic {
+      width: 256px;
+    }
+    #progress-pic-grid {
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      grid-gap: 5px;
+    }
+    @media screen and (min-width: 1368px) {
+      #progress-pic-grid {
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto auto auto auto;
+      }
+    }
     </style>
 
-    <script data-goatcounter="https://scottnm.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-</head>
+    <script data-goatcounter="https://scottnm.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  </head>
 
-<body>
+  <body>
     <header class="h-card vcard">
-        <div id="header-pane" class="section-with-buffer">
-            <div id="header-with-links-container">
-                <a class="home-btn u-url u-uid" href="/">
-                    <h1 class="title-text p-name">Scott Munro</h1>
-                    <img class="title-icon u-photo" src="/site_images/icon/favicon.svg" alt="" loading="lazy" width="20" height="20" >
-                </a>
-                <hr class="header-links-separator" >
-                <a class="social-btn" href="/atomfeed.xml" title="subscribe via atom/rss feeds" rel="subscribe-rss" target="_blank">rss</a>
-                <span> | </span>
-                <a class="social-btn u-email" href="mailto:me@scottnm.com" rel="me" title="email me">email</a>
-                <span> | </span>
-                <a class="social-btn u-url" href="https://github.com/scottnm" rel="me" title="check out my code on github" target="_blank">github</a>
-                <span> | </span>
-                <a class="social-btn u-url" href="https://linkedin.com/in/scott-munro" rel="me" title="connect on linkedin" target="_blank">linkedin</a>
-                <span> | </span>
-                <a class="social-btn" href="/links.html" rel="me" title="see all my links" target="_blank">elsewhere</a>
-            </div>
+      <div id="header-pane" class="section-with-buffer">
+        <div id="header-with-links-container">
+          <a class="home-btn u-url u-uid" href="/">
+            <h1 class="title-text p-name">Scott Munro</h1>
+            <img class="title-icon u-photo" src="/site_images/icon/favicon.svg" alt="" loading="lazy" width="20" height="20" >
+          </a>
+          <hr class="header-links-separator" >
+          <a class="social-btn" href="/atomfeed.xml" title="subscribe via atom/rss feeds" rel="subscribe-rss" target="_blank">rss</a>
+          <span> | </span>
+          <a class="social-btn u-email" href="mailto:me@scottnm.com" rel="me" title="email me">email</a>
+          <span> | </span>
+          <a class="social-btn u-url" href="https://github.com/scottnm" rel="me" title="check out my code on github" target="_blank">github</a>
+          <span> | </span>
+          <a class="social-btn u-url" href="https://linkedin.com/in/scott-munro" rel="me" title="connect on linkedin" target="_blank">linkedin</a>
+          <span> | </span>
+          <a class="social-btn" href="/links.html" rel="me" title="see all my links" target="_blank">elsewhere</a>
         </div>
+      </div>
     </header>
     <main>
-        <article class="h-entry">
-            <h1 class="article-title p-name">
-                Dig Deep Retrospective
-            </h1>
+      <article class="h-entry">
+        <h1 class="article-title p-name">Dig Deep Retrospective</h1>
 
-            <span class="post-time-container">
-                [ <time class="dt-published post-time" datetime="2022-05-30">2022-05-30</time> ]
-            </span>
+        <span class="post-time-container">
+          [ <time class="dt-published post-time" datetime="2022-05-30">2022-05-30</time> ]
+        </span>
 
-            <div class="e-content" id="post-content">
-                <p>This past March, I helped host and participated in a 2 week Game Jam: <a href="https://itch.io/jam/culture-bytes-classic-collards-jam">The Classic Collards Jam</a>.</p>
-                    <p>My team built an isometric digging game in Pico-8 called <a href="https://scottnm.itch.io/dig-deep">Dig Deep</a>.</p>
-                    <p>I had an absurd amount of fun and felt like I grew a lot as a hobbyist game dev from the experience.</p>
-                    <p>
-                        I really wanted to write some sort of cool, formal &quot;dev retrospective&quot; thing where I gave a well-structured breakdown of everything I learned and experienced during the jam. Ya know, really sit down and reflect on everything
-                        with an intention of taking all those lessons and using them to build something even cooler next time!
-                    </p>
-                    <p>
-                        ...But, I've been slow to write it so my memory is getting hazy and my motivation has plummeted.
-                    </p>
-                    <p>Shame shame shame on me.</p>
-                    <p>In an attempt to half-assedly salvage this, I'm instead going to jot down a simple, contextless bulleted list of takeaways that are still semi-fresh in my memory. Without further ado, here we goooooooo...</p>
-                    <ul>
-                        <li>
-                            I'm very proud of how &quot;complete&quot; our submission felt. The game was end-to-end playable, we had music, we had no placeholder art, and we even had a proper ending with story text. Something that feels this close to
-                            &quot;complete&quot; was a new jam experience for me.
-                        </li>
-                        <li>
-                            Knowing how long to spend on initial design is tough. We spent our first two (of fourteen) days coming up with an initial idea. I really wanted to start iterating as quickly as possible and find out what was fun by playtesting
-                            rather than just thinking about it and even two days felt like we might be spending too much time &quot;thinking about it&quot;. On the other hand, it takes just as long to build a bad game as a good game so its not like the design
-                            phase isn't time well spent. It's certainly a tricky balance, especially for a game jam.
-                        </li>
-                        <li>
-                            I think designing was easier once we established what our limitations and constraints were. Some constraints were self-imposed, but many of them were imposed by working in Pico-8. Once we had a much narrower design space, ideas
-                            flowed more naturally. Our constraints were:
-                            <ol>
-                                <li>Complex physics and collision are a no-go. Pico-8 basically makes you implement everything but the sprite and audio renderer yourself.</li>
-                                <li>Pico-8 forces you to make very real trade-offs between in-game text and code you can write. In-game text is a very scarce resource. Use it carefully, use it wisely.</li>
-                                <li>The game had to be playable with only 6 buttons. I am still shocked at how many interesting game ideas this constraint banished to scrap pile.</li>
-                                <li>
-                                    We have limited time to test our game and basically no ways to automate testing so games need to be easily testable. The best way to keep things testable was to keep design simple. Reduce &quot;if-this-then-that&quot; ideas
-                                    where possible.
-                                </li>
-                            </ol>
-                        </li>
-                        <li>Doing this Game Jam with a team was a such an amazing experience. I may never go back to solo jamming.</li>
-                        <li>
-                            I like to fool myself into thinking I can pickup slack from other areas of the project (art, sound effects, music) in addition to my programming duties. I cannot and I've gotta stop pretending. Leaning on others made all the difference in
-                            this jam.
-                        </li>
-                        <li>
-                            When working on a team, defining shared processes and strategies early on is very important. Our processes felt like they developed over time and so ended up feeling more isolated and confusing. I think we could have improved this
-                            coordination.
-                        </li>
-                        <li>Pico-8 feels ideal for solo work. Multiple people working on the same cart felt clunkier for all non-code assets.</li>
-                        <li>
-                            My rough, back-of-hand estimates suggest I worked 60-70 hours on this jam. Roughly 3-4 hours a night on weekdays and at least 8 hours a day on weekends. I think that number is a little high for my taste. It's not clear where/how I
-                            would reclaim time (smaller designs, better tools, demanding less of myself, etc)
-                        </li>
-                        <li>Pico-8's export tools are awesome and way more powerful than I first understood. Generating an HTML5 web version and standalone PC executables was trivial.</li>
-                        <li>Pico-8's screenshot and gif capture tools were super useful for our remote Game Jam. I shared so many gif screen captures to get feedback on in-progress features.</li>
-                        <li>
-                            Pico-8's cart size limitations don't hit you until late in the game and when they do they hit you <strong>hard</strong>. This is specifically troublesome for a game jam where the late-game is where you really start scrambling. It
-                            sucks to know what you need to do but to just be straight up out of cart space.
-                        </li>
-                        <li>I refuse to write unreadably terse, uncommented code and Pico-8 is more than happy to punish me for this.</li>
-                        <li>I wasn't comfortable using Pico-8's map editor for laying out levels and I think that showed and cost us in the long run.</li>
-                        <li>I'm really happy with the isometric look we achieved in the game.</li>
-                        <li>I'm proud of the janky way I implemented movement, collision, and hitboxes for the isometric view.</li>
-                        <li>
-                            <a href="https://www.youtube.com/watch?v=aXTOUnzNo64">&quot;Lessons Learned Making Gunpoint Quickly Without Going Mad&quot;</a> is an awesome GDC talk that I wish I had watched before the jam. The &quot;easy-to-implement vs
-                            fun-to-play&quot; matrix for determining whether to implement a feature is a great idea for game jams.
-                        </li>
-                    </ul>
-                    <p>...and I think that's about all I've got.</p>
-                    <p>
-                        One cool consequence of working in Pico-8 was that I had to make frequent use of its gif capture tool to share progress with my team as I was working on new features. Almost by accident, I ended up capturing effectively the entire
-                        development history of the project in gifs. Here they are! I think it looks pretty cool.
-                    </p>
-                    <div id="progress-pic-grid">
-                        <img class="progress-pic" src="progress_imgs/01.avif" alt="isometric map prototype" >
-                        <img class="progress-pic" src="progress_imgs/02.gif" alt="first timer prototype" >
-                        <img class="progress-pic" src="progress_imgs/03.gif" alt="animating a sample character" >
-                        <img class="progress-pic" src="progress_imgs/04.gif" alt="moving around on a grid" >
-                        <img class="progress-pic" src="progress_imgs/05.gif" alt="advancing across the grid to find goals" >
-                        <img class="progress-pic" src="progress_imgs/06.gif" alt="animating a player character on the grid" >
-                        <img class="progress-pic" src="progress_imgs/07.gif" alt="locking the player's movement to the grid" >
-                        <img class="progress-pic" src="progress_imgs/08.gif" alt="grid collision with free player movement" >
-                        <img class="progress-pic" src="progress_imgs/09.gif" alt="our first real iso maps" >
-                        <img class="progress-pic" src="progress_imgs/10.gif" alt="tweaking iso maps" >
-                        <img class="progress-pic" src="progress_imgs/11.gif" alt="scrolling camera" >
-                        <img class="progress-pic" src="progress_imgs/12.avif" alt="hint arrows" >
-                        <img class="progress-pic" src="progress_imgs/13.gif" alt="dig animation" >
-                        <img class="progress-pic" src="progress_imgs/14.gif" alt="death prompt" >
-                        <img class="progress-pic" src="progress_imgs/15.gif" alt="bombs" >
-                        <img class="progress-pic" src="progress_imgs/16.gif" alt="game over text crawl" >
-                        <img class="progress-pic" src="progress_imgs/17.gif" alt="final demo" >
-                        <img class="progress-pic" src="progress_imgs/18.gif" alt="post-game-jam adding an item sensor" >
-                    </div>
-            </div>
-        </article>
+        <div class="e-content" id="post-content">
+          <p>This past March, I helped host and participated in a 2 week Game Jam: <a href="https://itch.io/jam/culture-bytes-classic-collards-jam">The Classic Collards Jam</a>.</p>
+          <p>My team built an isometric digging game in Pico-8 called <a href="https://scottnm.itch.io/dig-deep">Dig Deep</a>.</p>
+          <p>I had an absurd amount of fun and felt like I grew a lot as a hobbyist game dev from the experience.</p>
+          <p>
+            I really wanted to write some sort of cool, formal &quot;dev retrospective&quot; thing where I gave a well-structured breakdown of everything I learned and experienced during the jam. Ya know, really sit down and reflect on everything with an intention of taking all those lessons and
+            using them to build something even cooler next time!
+          </p>
+          <p>...But, I've been slow to write it so my memory is getting hazy and my motivation has plummeted.</p>
+          <p>Shame shame shame on me.</p>
+          <p>In an attempt to half-assedly salvage this, I'm instead going to jot down a simple, contextless bulleted list of takeaways that are still semi-fresh in my memory. Without further ado, here we goooooooo...</p>
+          <ul>
+            <li>I'm very proud of how &quot;complete&quot; our submission felt. The game was end-to-end playable, we had music, we had no placeholder art, and we even had a proper ending with story text. Something that feels this close to &quot;complete&quot; was a new jam experience for me.</li>
+            <li>
+              Knowing how long to spend on initial design is tough. We spent our first two (of fourteen) days coming up with an initial idea. I really wanted to start iterating as quickly as possible and find out what was fun by playtesting rather than just thinking about it and even two days felt
+              like we might be spending too much time &quot;thinking about it&quot;. On the other hand, it takes just as long to build a bad game as a good game so its not like the design phase isn't time well spent. It's certainly a tricky balance, especially for a game jam.
+            </li>
+            <li>
+              I think designing was easier once we established what our limitations and constraints were. Some constraints were self-imposed, but many of them were imposed by working in Pico-8. Once we had a much narrower design space, ideas flowed more naturally. Our constraints were:
+              <ol>
+                <li>Complex physics and collision are a no-go. Pico-8 basically makes you implement everything but the sprite and audio renderer yourself.</li>
+                <li>Pico-8 forces you to make very real trade-offs between in-game text and code you can write. In-game text is a very scarce resource. Use it carefully, use it wisely.</li>
+                <li>The game had to be playable with only 6 buttons. I am still shocked at how many interesting game ideas this constraint banished to scrap pile.</li>
+                <li>We have limited time to test our game and basically no ways to automate testing so games need to be easily testable. The best way to keep things testable was to keep design simple. Reduce &quot;if-this-then-that&quot; ideas where possible.</li>
+              </ol>
+            </li>
+            <li>Doing this Game Jam with a team was a such an amazing experience. I may never go back to solo jamming.</li>
+            <li>I like to fool myself into thinking I can pickup slack from other areas of the project (art, sound effects, music) in addition to my programming duties. I cannot and I've gotta stop pretending. Leaning on others made all the difference in this jam.</li>
+            <li>When working on a team, defining shared processes and strategies early on is very important. Our processes felt like they developed over time and so ended up feeling more isolated and confusing. I think we could have improved this coordination.</li>
+            <li>Pico-8 feels ideal for solo work. Multiple people working on the same cart felt clunkier for all non-code assets.</li>
+            <li>
+              My rough, back-of-hand estimates suggest I worked 60-70 hours on this jam. Roughly 3-4 hours a night on weekdays and at least 8 hours a day on weekends. I think that number is a little high for my taste. It's not clear where/how I would reclaim time (smaller designs, better tools,
+              demanding less of myself, etc)
+            </li>
+            <li>Pico-8's export tools are awesome and way more powerful than I first understood. Generating an HTML5 web version and standalone PC executables was trivial.</li>
+            <li>Pico-8's screenshot and gif capture tools were super useful for our remote Game Jam. I shared so many gif screen captures to get feedback on in-progress features.</li>
+            <li>
+              Pico-8's cart size limitations don't hit you until late in the game and when they do they hit you <strong>hard</strong>. This is specifically troublesome for a game jam where the late-game is where you really start scrambling. It sucks to know what you need to do but to just be
+              straight up out of cart space.
+            </li>
+            <li>I refuse to write unreadably terse, uncommented code and Pico-8 is more than happy to punish me for this.</li>
+            <li>I wasn't comfortable using Pico-8's map editor for laying out levels and I think that showed and cost us in the long run.</li>
+            <li>I'm really happy with the isometric look we achieved in the game.</li>
+            <li>I'm proud of the janky way I implemented movement, collision, and hitboxes for the isometric view.</li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=aXTOUnzNo64">&quot;Lessons Learned Making Gunpoint Quickly Without Going Mad&quot;</a> is an awesome GDC talk that I wish I had watched before the jam. The &quot;easy-to-implement vs fun-to-play&quot; matrix for determining whether to implement
+              a feature is a great idea for game jams.
+            </li>
+          </ul>
+          <p>...and I think that's about all I've got.</p>
+          <p>
+            One cool consequence of working in Pico-8 was that I had to make frequent use of its gif capture tool to share progress with my team as I was working on new features. Almost by accident, I ended up capturing effectively the entire development history of the project in gifs. Here they
+            are! I think it looks pretty cool.
+          </p>
+          <div id="progress-pic-grid">
+            <img class="progress-pic" src="progress_imgs/01.avif" alt="isometric map prototype" >
+            <img class="progress-pic" src="progress_imgs/02.gif" alt="first timer prototype" >
+            <img class="progress-pic" src="progress_imgs/03.gif" alt="animating a sample character" >
+            <img class="progress-pic" src="progress_imgs/04.gif" alt="moving around on a grid" >
+            <img class="progress-pic" src="progress_imgs/05.gif" alt="advancing across the grid to find goals" >
+            <img class="progress-pic" src="progress_imgs/06.gif" alt="animating a player character on the grid" >
+            <img class="progress-pic" src="progress_imgs/07.gif" alt="locking the player's movement to the grid" >
+            <img class="progress-pic" src="progress_imgs/08.gif" alt="grid collision with free player movement" >
+            <img class="progress-pic" src="progress_imgs/09.gif" alt="our first real iso maps" >
+            <img class="progress-pic" src="progress_imgs/10.gif" alt="tweaking iso maps" >
+            <img class="progress-pic" src="progress_imgs/11.gif" alt="scrolling camera" >
+            <img class="progress-pic" src="progress_imgs/12.avif" alt="hint arrows" >
+            <img class="progress-pic" src="progress_imgs/13.gif" alt="dig animation" >
+            <img class="progress-pic" src="progress_imgs/14.gif" alt="death prompt" >
+            <img class="progress-pic" src="progress_imgs/15.gif" alt="bombs" >
+            <img class="progress-pic" src="progress_imgs/16.gif" alt="game over text crawl" >
+            <img class="progress-pic" src="progress_imgs/17.gif" alt="final demo" >
+            <img class="progress-pic" src="progress_imgs/18.gif" alt="post-game-jam adding an item sensor" >
+          </div>
+        </div>
+      </article>
 
-        <hr >
+      <hr >
 
-        <footer>
-            <a class="footer-btn" href="/">
-                <span class="title-text" aria-labelledby="kthxbai-read">kthxbai</span>
-                <img class="title-icon" src="/site_images/icon/favicon.svg" alt="" loading="lazy" width="20" height="20" >
-            </a>
-            <span id="kthxbai-read" hidden>k, thanks, bye.</span>
-        </footer>
+      <footer>
+        <a class="footer-btn" href="/">
+          <span class="title-text" aria-labelledby="kthxbai-read">kthxbai</span>
+          <img class="title-icon" src="/site_images/icon/favicon.svg" alt="" loading="lazy" width="20" height="20" >
+        </a>
+        <span id="kthxbai-read" hidden>k, thanks, bye.</span>
+      </footer>
     </main>
-</body>
-
+  </body>
 </html>
+
