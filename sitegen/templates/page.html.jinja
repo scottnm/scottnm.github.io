@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/styles.css" >
 
     <title>scottnm: {{ title }}</title>
-    <meta name="description" content="{{ content_description }}">
+    <meta name="description" content="{{ content_description | e }}">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     {%- if custom_style_css -%}
     <style>

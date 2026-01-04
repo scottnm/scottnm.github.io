@@ -44,12 +44,11 @@ def main() -> None:
     gen_gemini_site()
 
 def gen_html_site(write_interim_output: bool) -> None:
-    dir_path_name = os.path.dirname(os.path.realpath(__file__))
-    dir_path = pathlib.Path(dir_path_name)
+    dir_path = pathlib.Path(os.path.dirname(os.path.realpath(__file__)))
     pages_dir_path = dir_path / "pages"
     root_dir = dir_path.parent
     gen_pages_root_path = dir_path.parent / "pages"
-    site_data_json_path = dir_path / "index_data" / "site_data.json"
+    site_data_json_path = dir_path / "site_data" / "site_data.json"
     interim_output_dir = dir_path / "output_int"
 
     if write_interim_output:
@@ -63,7 +62,7 @@ def gen_html_site(write_interim_output: bool) -> None:
 
     with genlogger.time_section("loading templates"):
         env = jinja2.Environment(
-            loader=jinja2.FileSystemLoader(f"{dir_path_name}/"),
+            loader=jinja2.FileSystemLoader(dir_path / "templates"),
             trim_blocks=True,
             lstrip_blocks=True)
         env.filters['datetime_to_date'] = pub_datetime_to_date
@@ -182,7 +181,7 @@ def gen_html_site(write_interim_output: bool) -> None:
         write_page_render(root_dir / "links.html", links_page_render)
 
     with genlogger.time_section("rendering playlists page"):
-        playlists_md = (dir_path / "playlists.md").resolve()
+        playlists_md = (pages_dir_path / "playlists.md").resolve()
         playlists_html_output = (root_dir / "playlists.html").resolve()
         with open(playlists_md, "r", encoding="utf8") as f:
             md_file_contents = f.read()
@@ -336,7 +335,7 @@ def write_page_render(path: os.PathLike|str, content: str) -> None:
 def gen_gemini_site():
     dir_path = pathlib.Path(os.path.dirname(os.path.realpath(__file__)))
     root_dir = dir_path.parent
-    site_data_json_path = dir_path / "index_data" / "site_data.json"
+    site_data_json_path = dir_path / "site_data" / "site_data.json"
     gem_index_path = root_dir / "gemini" / "site" / "index.gmi"
     gem_index_path = root_dir / "gemini" / "site" / "index.gmi"
     
