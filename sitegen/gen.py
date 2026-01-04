@@ -50,15 +50,13 @@ def gen_html_site(write_interim_output: bool) -> None:
     gen_pages_root_path = dir_path.parent / "pages"
     site_data_json_path = dir_path / "site_data" / "site_data.json"
     interim_output_dir = dir_path / "output_int"
+    biome_config_path = dir_path / "biome.json"
 
     if write_interim_output:
         interim_output_dir.mkdir(parents=True, exist_ok=True)
 
     with open(site_data_json_path, "r", encoding="utf8") as site_data_json_file:
         site_data = json.load(site_data_json_file)
-
-    with open(dir_path / ".prettierrc", "r", encoding="utf8") as f:
-        prettier_fmt_config = json.load(f)
 
     with genlogger.time_section("loading templates"):
         env = jinja2.Environment(
@@ -92,7 +90,7 @@ def gen_html_site(write_interim_output: bool) -> None:
                 with open(md_filepath, "r", encoding="utf8") as f:
                     md_file_contents = f.read()
 
-                html = mdtohtml.mdtohtml(md_file_contents, prettier_fmt_config)
+                html = mdtohtml.mdtohtml(md_file_contents, biome_config_path)
                 is_password_protected = "pswd" in entry
                 if is_password_protected:
                     encoded_html_data = password_encode_entry_html(html, get_entry_password_params(entry))
@@ -132,7 +130,7 @@ def gen_html_site(write_interim_output: bool) -> None:
                 md_path = interim_output_dir / recipe_json_filepath.with_suffix(".md").name
                 write_page_render(md_path, recipe_md)
 
-            recipe_html = mdtohtml.mdtohtml(recipe_md, prettier_fmt_config)
+            recipe_html = mdtohtml.mdtohtml(recipe_md, biome_config_path)
             html_output_path = recipe_json_filepath.with_suffix(".html")
             with open(html_output_path, "w", encoding="utf8") as f:
                 f.write(recipe_html)
@@ -185,7 +183,7 @@ def gen_html_site(write_interim_output: bool) -> None:
         playlists_html_output = (root_dir / "playlists.html").resolve()
         with open(playlists_md, "r", encoding="utf8") as f:
             md_file_contents = f.read()
-            playlists_page_html = mdtohtml.mdtohtml(md_file_contents, prettier_fmt_config)
+            playlists_page_html = mdtohtml.mdtohtml(md_file_contents, biome_config_path)
             page_render = page_template.render(
                 title="Playlists",
                 content_description="My list of playlists",

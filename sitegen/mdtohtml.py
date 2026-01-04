@@ -8,26 +8,26 @@ import subprocess
 
 def mdtohtml(
     md_file_contents: str,
-    prettier_config: dict|pathlib.Path
+    biome_config: dict|pathlib.Path
     ) -> str:
 
     raw_html = markdown.markdown(md_file_contents, extensions=['extra'])
-    prettierrc_config_file = None
+    biome_config_file = None
     try:
-        if isinstance(prettier_config, dict):
-            prettierrc_config_file = tempfile.NamedTemporaryFile(mode="w", encoding="utf8")
-            json.dump(prettier_config, prettierrc_config_file)
-            prettierrc_config_file.flush()
-            prettierrc_file_name = prettierrc_config_file.name
+        if isinstance(biome_config, dict):
+            biome_config_file = tempfile.NamedTemporaryFile(mode="w", encoding="utf8")
+            json.dump(biome_config, biome_config_file)
+            biome_config_file.flush()
+            biome_config_filename = biome_config_file.name
         else:
-            assert(isinstance(prettier_config, pathlib.Path))
-            prettierrc_file_name = str(prettier_config.absolute())
+            assert(isinstance(biome_config, pathlib.Path))
+            biome_config_filename = str(biome_config.absolute())
 
-        formatter_cmd_args =[
-            'prettier',
-            '--config', prettierrc_file_name,
-            '--parser', 'html',
-            '--stdin-filepath', 'test.html' ]
+        formatter_cmd_args = [
+            'biome',
+            'format',
+            f'--config-path={biome_config_filename}',
+            '--stdin-file-path', 'test.html' ]
         fmt_result = subprocess.run(formatter_cmd_args, input=raw_html.encode("utf8"), stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         if fmt_result.returncode != 0:
             raise RuntimeError(f"Failed to format HTML: output={fmt_result.stdout!r}")
@@ -35,8 +35,8 @@ def mdtohtml(
         formatted_html = fmt_result.stdout.decode("utf8")
         return formatted_html
     finally:
-        if prettierrc_config_file is not None:
-            prettierrc_config_file.close()
+        if biome_config_file is not None:
+            biome_config_file.close()
 
 def main() -> None:
     parser = argparse.ArgumentParser()
@@ -73,7 +73,7 @@ def main() -> None:
         fmt_config_filepath = pathlib.Path(args.fmt_config).resolve()
     else:
         dir_path_name = os.path.dirname(os.path.realpath(__file__))
-        fmt_config_filepath = pathlib.Path(dir_path_name) / ".prettierrc"
+        fmt_config_filepath = pathlib.Path(dir_path_name) / "biome.json"
 
     preview_output: bool = args.preview
 
