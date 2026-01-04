@@ -8,27 +8,35 @@ import subprocess
 
 def mdtohtml(
     md_file_contents: str,
-    prettier_config: dict
+    prettier_config: dict|pathlib.Path
     ) -> str:
+
     raw_html = markdown.markdown(md_file_contents, extensions=['extra'])
-    with tempfile.NamedTemporaryFile(mode="w", encoding="utf8") as prettierrc_tmp_file:
-        json.dump(prettier_config, prettierrc_tmp_file)
-        prettierrc_tmp_file.flush()
-        with tempfile.NamedTemporaryFile(mode="w", encoding="utf8") as html_tmp_file:
-            html_tmp_file.write(raw_html)
-            html_tmp_file.flush()
+    prettierrc_config_file = None
+    try:
+        if isinstance(prettier_config, dict):
+            prettierrc_config_file = tempfile.NamedTemporaryFile(mode="w", encoding="utf8")
+            json.dump(prettier_config, prettierrc_config_file)
+            prettierrc_config_file.flush()
+            prettierrc_file_name = prettierrc_config_file.name
+        else:
+            assert(isinstance(prettier_config, pathlib.Path))
+            prettierrc_file_name = str(prettier_config.absolute())
 
-            formatter_cmd_args =[
-                'prettier',
-                '--config', prettierrc_tmp_file.name,
-                '--parser', 'html',
-                html_tmp_file.name ]
-            fmt_result = subprocess.run(formatter_cmd_args, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-            if fmt_result.returncode != 0:
-                raise RuntimeError(f"Failed to format HTML: output={fmt_result.stdout!r}")
+        formatter_cmd_args =[
+            'prettier',
+            '--config', prettierrc_file_name,
+            '--parser', 'html',
+            '--stdin-filepath', 'test.html' ]
+        fmt_result = subprocess.run(formatter_cmd_args, input=raw_html.encode("utf8"), stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        if fmt_result.returncode != 0:
+            raise RuntimeError(f"Failed to format HTML: output={fmt_result.stdout!r}")
 
-            formatted_html = fmt_result.stdout.decode("utf8")
-    return formatted_html
+        formatted_html = fmt_result.stdout.decode("utf8")
+        return formatted_html
+    finally:
+        if prettierrc_config_file is not None:
+            prettierrc_config_file.close()
 
 def main() -> None:
     parser = argparse.ArgumentParser()
