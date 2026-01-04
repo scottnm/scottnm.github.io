@@ -2,7 +2,7 @@
 <p>Post is locked.</p>
 <p>Enter password to unlock.</p>
 <form onsubmit="event.preventDefault(); pswd_locked_page.unlock_page();">
-  <input type="text" id="password-field" placeholder="<password>">
+  <input type="password" id="password-field" placeholder="<password>">
   <button type="submit">unlock</button>
 </form>
 <span id="password-fail-text" style="color: red" hidden>Password FAILED</span>

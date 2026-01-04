@@ -128,8 +128,7 @@
         {
             "title": "Tinyrenderer",
             "pub_datetime": "2017-07-20T00:00:00Z",
-            "description":
-                "A cpu-based, didactic renderer project from <a href='https://github.com/ssloy/tinyrenderer/wiki' target='_blank'>Dmitry V. Sokolov's Tiny Renderer</a> project.",
+            "description": "A cpu-based, didactic renderer project from <a href='https://github.com/ssloy/tinyrenderer/wiki' target='_blank'>Dmitry V. Sokolov's Tiny Renderer</a> project.",
             "src": "https://github.com/scottnm/Playground/tree/main/gfx/tinyrenderer",
             "image": "site_images/tiny_renderer.avif",
             "tools": "C++"
@@ -403,6 +402,21 @@
     ],
     "hidden_text_posts": [
         {
+            "title": "[Draft] 2025 Retrospective",
+            "highlight": false,
+            "pub_datetime": "2025-12-31T16:49:19.154615",
+            "lastupdate_datetime": "2025-12-31T16:49:19.154615",
+            "description": "Looking back at 2025",
+            "image": "",
+            "read": "pages/2025_retrospective/2025_12_31_2025_retrospective.html",
+            "md_src": "sitegen/pages/2025_retrospective/2025_12_31_2025_retrospective.md",
+            "pswd": {
+                "env_key": "DRAFT_POST_PSWD",
+                "crypt_salt_b64": "LXWM+Pjzxw0F7ymA4H73Tw==",
+                "crypt_iv_b64": "++wHCCrz9sJ5ck5g"
+            }
+        },
+        {
             "title": "A Million Napkins",
             "pub_datetime": "2025-12-30T19:58:54Z",
             "description": "",
@@ -470,5 +484,4 @@
             "recipe_json_src": "sitegen/pages/recipes/2025_06_14_summer_soba_salad.json"
         }
     ]
-
 }
