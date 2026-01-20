@@ -304,6 +304,16 @@
     ],
     "text_posts": [
         {
+            "title": "VTPP v0.3.0",
+            "feed_uuid": "e5be3847-417f-4ea0-a4d3-37eb8e5fddc9",
+            "pub_datetime": "2026-01-19T18:23:04.779487",
+            "lastupdate_datetime": "2026-01-19T18:23:04.779487",
+            "description": "another VTPP milestone",
+            "image": "site_images/vtpp_coverart_thumbnail_med.avif",
+            "read": "pages/vtpp/0.3.0/2026_01_19_vtpp_0.3.0.html",
+            "md_src": "sitegen/pages/vtpp/0.3.0/2026_01_19_vtpp_0.3.0.md"
+        },
+        {
             "title": "Geminispace ho!",
             "highlight": false,
             "pub_datetime": "2025-12-22T00:00:00Z",

@@ -17,9 +17,12 @@ I'm not yet interested in publishing the source for anyone else to use because:
 
 Nevertheless I'm proud of it.
 
+Here's a list of all the updates and milestones I've felt warranted writing about:
+
 I haven't made any updates in a few years, but just in case the sun ever shines on this codebase again, I'll keep a log of all past and future updates here: 
 
-* [Update v0.2.0](/pages/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html) 
-* [Update v0.1.0](/pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html) 
+* [v0.3.0 milestone](/pages/vtpp/0.3.0/2026_01_19_vtpp_0.3.0.html)
+* [v0.2.0 milestone](/pages/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html) 
+* [v0.1.0 milestone](/pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html) 
 
 [^1]: Today, the only real supported source is YouTube, but supporing other feed sources would be desirable future improvements.

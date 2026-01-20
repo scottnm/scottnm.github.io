@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta charset="utf-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <link rel="icon" href="/site_images/icon/favicon.ico" sizes="16x16" >
+    <link rel="icon" href="/site_images/icon/favicon.ico" sizes="48x48" >
+    <link rel="icon" href="/site_images/icon/favicon.svg" sizes="any" type="image/svg+xml" >
+    <link rel="stylesheet" href="/styles.css" >
+
+    <title>scottnm: VTPP v0.3.0</title>
+    <meta name="description" content="another VTPP milestone" >
+    <meta name="viewport" content="width=device-width,initial-scale=1" >
+    <script data-goatcounter="https://scottnm.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  </head>
+
+  <body>
+    <header class="h-card vcard">
+      <div id="header-pane" class="section-with-buffer">
+        <div id="header-with-links-container">
+          <a class="home-btn u-url u-uid" href="/">
+            <h1 class="title-text p-name">Scott Munro</h1>
+            <img class="title-icon u-photo" src="/site_images/icon/favicon.svg" alt="" loading="lazy" width="20" height="20" >
+          </a>
+          <hr class="header-links-separator" >
+          <a class="social-btn" href="/atomfeed.xml" title="subscribe via atom/rss feeds" rel="subscribe-rss" target="_blank">rss</a>
+          <span> | </span>
+          <a class="social-btn u-email" href="mailto:me@scottnm.com" rel="me" title="email me">email</a>
+          <span> | </span>
+          <a class="social-btn u-url" href="https://github.com/scottnm" rel="me" title="check out my code on github" target="_blank">github</a>
+          <span> | </span>
+          <a class="social-btn u-url" href="https://linkedin.com/in/scott-munro" rel="me" title="connect on linkedin" target="_blank">linkedin</a>
+          <span> | </span>
+          <a class="social-btn" href="/links.html" rel="me" title="see all my links" target="_blank">elsewhere</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <article class="h-entry">
+        <h1 class="article-title p-name">VTPP v0.3.0</h1>
+
+        <span class="post-time-container">
+          [ <time class="dt-published post-time" datetime="2026-01-19">2026-01-19</time> ]
+        </span>
+
+        <div class="e-content" id="post-content">
+          <p>"VTPP" is a home server project I've been working on which, in short, automatically downloads videos, extracts their audio, and makes the audio available for me to listen as a podcast feed.</p>
+          <p>It's been a few years since I marked the <a href="/pages/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html"
+            ><code>v0.2.0</code></a
+          > milestone.</p>
+          <p>
+            I've finally gotten around to fixing some of the project's basic security issues, so it felt right to mark this point as the <code>v0.3.0</code> release!
+          </p>
+          <h2>HTTPS and proper hostnames</h2>
+          <p>As noted all the way back in <a href="/pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html#a-thought-on-security">the v0.1.0 release</a>, I've connected to my VTPP feed and server over HTTP and using a static, private IP address.</p>
+          <p>
+            After more than two years, this has still yet to cause a real problem, but it's a pretty significant security gap: Using a static, private IP address from a mobile device exposed me to the possibility of using a public WiFi network with a similar private IP range and accidentally
+            connecting to someone or something I did not intend to.
+          </p>
+          <p>And using HTTP meant that if I did connect to something, my phone wouldn't make any attempt to authenticate that it was the VTPP feed my phone was expecting.</p>
+          <p>Both issues have now been addressed.</p>
+          <p>
+            Over the christmas break, I coincidentally set up a <a href="https://pi-hole.net">Pi-Hole</a> DNS server on my home network. Fixing the "connect-via-IP" problem was as simple as adding a new <code>vtpp.lemonpie.home.arpa</code> entry to the DNS server's records that mapped back to the
+            VTPP server's static IP address. For a long time, I thought fixing the hostname issue would require registering (and paying for) a real public hostname which isn't really what I wanted or needed. Discovering the
+            <a href="https://datatracker.ietf.org/doc/html/rfc8375"
+              ><code>home.arpa</code> domain</a
+            >
+            made the solution so easy!
+          </p>
+          <p>
+            And I chose to fix the HTTPS problem by setting up my own private certificate authority (CA), installing it as a trusted root on the devices which use VTPP, and then issuing a server leaf certificate for my VTPP server to use. The server certificate encodes both the hostname,
+            <code>vtpp.lemonpie.home.arpa</code>, and the static IP as SANs (subject alternative names).
+          </p>
+          <p>
+            For now this is a workable situation for me. I would prefer to get my leaf cert issued from a more widely available trust anchor like <a href="https://letsencrypt.org">LetsEncrypt</a>, but I haven't yet figured out how to get one issued for a service only reachable on my private network.
+            I think specialized tools like <a href="https://localcert.net/dashboard">localcert.net</a> exist to help bridge this gap, but I have not yet had the time to explore what the trade-offs are or how to use it.
+          </p>
+          <p>I'd bet dollars to donuts that I'll get tired of managing my private CA after the first time I have to deal with a certificate expiration.</p>
+          <p>Oh well, for now I'm satisfied.</p>
+          <h2>A quick reflection</h2>
+          <p>It's funny. Now that the work is done, it feels like it was easy enough that I really shouldn't have put off this bare-minimum security work for over two years. </p>
+          <p>
+            But I think this is a feeling that only makes sense with those two years of experience under my belt. Despite being an engineer on a team that primarily develops, troubleshoots, and maintains networking software/tooling, DNS and PKI have always been two significant gaps in my skillset.
+            I've fixed bugs rooted to problems in both areas in the past, but there's a real difference between having an abstract understanding of those systems and getting your hands up close and dirty with them. So, I suppose it's more of a happy accident that my job has put me face-to-face with
+            these systems more directly <em>and</em> more consistently over the last two years.
+          </p>
+          <p>I feel both embarassed and re-assured that I have no reason to be. Such is life.</p>
+          <p>
+            <code>¯\_(ツ)_/¯</code>
+          </p>
+          <h2>The full changelog</h2>
+          <p>
+            Here's a more complete summary of what's changed since <code>v0.2.0</code>:
+          </p>
+          <ul>
+            <li>The VTPP homepage now reports the last time the fetcher ran and, uniquely, the last time the fetcher ran with errors.</li>
+            <li>Discord reports are only generated when something changes or the fetcher encounters an error.</li>
+            <li>
+              I added support for enabling/disabling the fetcher schedule from the VTPP homepage.
+              <ul>
+                <li>YouTube breaks youtube-dl often enough that when something is broken for more than a day, it's more practical to just disable the fetcher until I can try to fix things over the next weekend.</li>
+              </ul>
+            </li>
+            <li>
+              I improved my "YouTube Shorts" recognition heuristic.
+              <ul>
+                <li>Instead of looking for a maximum time, I just look for a "shorts"-path in the video URL. This seems to be both simpler and doesn't require successfully downloading any part of the video.</li>
+              </ul>
+            </li>
+            <li>
+              VTPP now serves its feed and media from an HTTPS endpoint.
+              <ul>
+                <li>HTTPS support is provided by putting an Nginx reverse proxy in front of the VTPP feed.</li>
+              </ul>
+            </li>
+            <li>The VTPP feed is now reachable from a DNS name resolvable on my local network.</li>
+            <li>The VTPP feed is now behind an Nginx reverse proxy and exposed on the proper 443 HTTPS port.</li>
+          </ul>
+        </div>
+      </article>
+
+      <hr >
+
+      <footer>
+        <a class="footer-btn" href="/">
+          <span class="title-text" aria-labelledby="kthxbai-read">kthxbai</span>
+          <img class="title-icon" src="/site_images/icon/favicon.svg" alt="" loading="lazy" width="20" height="20" >
+        </a>
+        <span id="kthxbai-read" hidden>k, thanks, bye.</span>
+      </footer>
+    </main>
+  </body>
+</html>
+

@@ -42,6 +42,7 @@ Still working to re-format my posts for geminispace. Until then, most things wil
 => https://www.youtube.com/watch?v=vYaWWKJ4s1M 2015-09-13 - Menger Sponge
 
 ## All Text Posts
+=> https://scottnm.com/pages/vtpp/0.3.0/2026_01_19_vtpp_0.3.0.html 2026-01-19 - VTPP v0.3.0
 => https://scottnm.com/pages/gemini/2025_12_22_gemini.html 2025-12-22 - Geminispace ho!
 => https://scottnm.com/pages/pd_paintings_2025/2025_12_14_pd_paintings_2025.html 2025-12-14 - 2025 Public Domain Art Gallery
 => https://scottnm.com/pages/recipes/2025_06_14_summer_soba_salad.html 2025-06-14 - Recipe: Summer Soba Salad

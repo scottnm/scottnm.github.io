@@ -7,13 +7,20 @@
   <link href="https://scottnm.com/atomfeed.xml" rel="self"/>
   <link href="https://scottnm.com/"/>
   <icon>/site_images/icon/atomfeedicon.png</icon>
-  <updated>2025-12-14T17:47:00Z</updated>
+  <updated>2026-01-19T18:23:04.779487</updated>
   <id>urn:uuid:bfae4b33-aa4e-48a6-96b7-09e66d905159</id>
   <author>
     <name>Scott Munro</name>
   </author>
 
   <!-- FEED ENTRIES -->
+  <entry>
+    <title>VTPP v0.3.0</title>
+    <link href="https://www.scottnm.com/pages/vtpp/0.3.0/2026_01_19_vtpp_0.3.0.html" />
+    <id>urn:uuid:e5be3847-417f-4ea0-a4d3-37eb8e5fddc9</id>
+    <updated>2026-01-19T18:23:04.779487</updated>
+    <summary>another VTPP milestone</summary>
+  </entry>
   <entry>
     <title>2025 Public Domain Art Gallery</title>
     <link href="https://www.scottnm.com/pages/pd_paintings_2025/2025_12_14_pd_paintings_2025.html" />
