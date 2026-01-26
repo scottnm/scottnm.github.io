@@ -315,6 +315,7 @@
         },
         {
             "title": "Geminispace ho!",
+            "feed_uuid": "a44b30e4-63eb-4fd7-a02a-68860dfa2f58",
             "highlight": false,
             "pub_datetime": "2025-12-22T00:00:00Z",
             "description": "I'm in geminispace now!",
@@ -411,6 +412,16 @@
         }
     ],
     "hidden_text_posts": [
+        {
+            "title": "NoSleep Podcast Favorites",
+            "feed_uuid": "a76ad96b-c985-45f2-a3b4-0d21b8f56f16",
+            "pub_datetime": "2026-01-25T17:10:29.150336",
+            "lastupdate_datetime": "2026-01-25T17:10:29.150336",
+            "description": "",
+            "image": "",
+            "read": "pages/NoSleep_Podcast_Favorites/2026_01_25_NoSleep_Podcast_Favorites.html",
+            "md_src": "sitegen/pages/NoSleep_Podcast_Favorites/2026_01_25_NoSleep_Podcast_Favorites.md"
+        },
         {
             "title": "[Draft] 2025 Retrospective",
             "highlight": false,
