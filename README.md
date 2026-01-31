@@ -11,13 +11,9 @@ The source for my personal site, [http://www.scottnm.com](http://www.scottnm.com
 
 ## Layout
 
-source:
-* `sitegen/`: where the site and all of its subpages are authored
-* `files/`: assets for projects and pages
-* `scripts/`: JS scripts for the main page and all subpages
-* `site_images/`: assets for the main site layout
-
-site:
-* `pages/`: the generated subpages built from `sitegen/`
-* `index.html`: the generated home page built from `sitegen/`
+* `index.html`: the homepage
 * `styles.css`: stylesheet shared across all pages
+* `pages/`: all of the site's pages
+* `files/`: assets for projects and pages
+* `site_scripts/`: JS scripts used for the handful of pages that need them
+* `site_images/`: images referenced on site pages
