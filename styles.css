@@ -6,7 +6,9 @@
     --visited-link-color: #78424f;
     --hover-link-color: #b8860b;
     --active-link-color: #ed4e76;
-    --icon-color-filter: invert(0%)
+    --icon-color-filter: invert(0%);
+    --blockquote-bg-color: #f9f9f9;
+    --blockquote-bar-color: #ccc;
 }
 
 /* Dark Theme */
@@ -18,7 +20,9 @@
         --visited-link-color: #7d4c58;
         --hover-link-color: #b8860b;
         --active-link-color: #ed4e76;
-        --icon-color-filter: invert(100%)
+        --icon-color-filter: invert(100%);
+        --blockquote-bg-color: #303030;
+        --blockquote-bar-color: #404040;
     }
 }
 
@@ -120,8 +124,8 @@ span {
 }
 
 blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
+  background: var(--blockquote-bg-color);
+  border-left: 10px solid var(--blockquote-bar-color);
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
