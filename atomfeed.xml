@@ -7,7 +7,7 @@
   <link href="https://scottnm.com/atomfeed.xml" rel="self"/>
   <link href="https://scottnm.com/"/>
   <icon>/site_images/icon/atomfeedicon.png</icon>
-  <updated>2026-03-07T17:38:36.857946</updated>
+  <updated>2026-03-07T17:38:36.857946-08:00</updated>
   <id>urn:uuid:bfae4b33-aa4e-48a6-96b7-09e66d905159</id>
   <author>
     <name>Scott Munro</name>
@@ -18,99 +18,1475 @@
     <title>Recipe: 『Ase to Sekken』 Peperoncino Pasta</title>
     <link href="https://www.scottnm.com/pages/recipes/2026_03_07_peperoncino_pasta.html" />
     <id>urn:uuid:e2e20f82-f693-4993-a984-f20e8e1e06fd</id>
-    <updated>2026-03-07T17:38:36.857946</updated>
+    <updated>2026-03-07T17:38:36.857946-08:00</updated>
     <summary>Sharing a recipe from *Ase to Sekken Vol. 2*</summary>
+    <content type="html"><![CDATA[<p>This recipe comes from Kintetsu Yamada (山田金鉄) in the afterword of <em>Ase to Sekken Vol. 2</em> (a romance manga I've been reading recently.) Yamada's name for this recipe is "Normal Soup Peperoncino" (普通のスープペペロンチーノ), but I'm honestly not sure how much of a "soup" it's really supposed to be. To me, the recipe reads more like an emulsified peperoncino sauce, so that's how I choose to prepare it.</p>
+<p><img src="https://scottnm.com/site_images/PastaPeperoncino.avif" width="400px" alt="pasta with an oil-based peperoncino sauce" style="display: block; margin-left: auto; margin-right: auto; max-width: 100%"></p>
+<h2>the recipe</h2>
+<div class="grid-max-2col">
+<div class="recipe-list">
+<p><strong>Ingredients</strong></p>
+<p>Equipment</p>
+<ul>
+<li>1 wide pan</li>
+<li>1 medium pot</li>
+</ul>
+<p>Food</p>
+<ul>
+<li>100g pasta</li>
+<li>1 clove garlic</li>
+<li>1 strip of bacon</li>
+<li>2 tbsp of olive oil (or enough to form a thin layer in your pan)</li>
+<li>togarashi (to taste)</li>
+<li>soy sauce (to taste)</li>
+<li>green onion</li>
+</ul>
+</div>
+<div class="recipe-list">
+<p><strong>Instructions</strong></p>
+<p>Prep work</p>
+<ul>
+<li>Start boiling enough water to cook your pasta in a pot.</li>
+<li>Finely chop your garlic and green onion.</li>
+<li>Thinly chop your bacon. It doesn't need to be razor thin slivers, but you want it thin enough that it can fully cook in a few minutes in the pan.</li>
+</ul>
+<p>Cooking</p>
+<ul>
+<li>Add your pasta to the boiling pot. Cook for 2 minutes less than the al dente time.</li>
+<li>In your pan, warm the garlic in the olive on low heat until fragrant.</li>
+<li>When the garlic becomes fragrant, add your bacon to the pan.</li>
+<li>Once the bacon is cooked, add the togarashi to the oil, garlic, and bacon mixture.</li>
+<li>Add a ladle full (or two) of the starchy pasta water to your bacon pan and stir to emulsify with the oils.</li>
+<li>Mix in the boiled pasta and soy sauce to the pan and cook for another minute or so. Coat all of the noodles with the sauce mixture.</li>
+<li>Kill the heat and mix in the green onion.</li>
+<li>Garnish with additional green onion after plating if desired.</li>
+</ul>
+</div>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><em>Ase to Sekken</em>'s is also named <em>Sweat and Soap</em> in English. I decided to use the Japanese name above because I thought "Sweat and Soap" would clash with my intent to make this recipe sound tasty. This recipe does not taste like either sweat or soap, I promise.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>]]></content>
   </entry>
   <entry>
     <title>VTPP v0.3.0</title>
     <link href="https://www.scottnm.com/pages/vtpp/0.3.0/2026_01_19_vtpp_0.3.0.html" />
     <id>urn:uuid:e5be3847-417f-4ea0-a4d3-37eb8e5fddc9</id>
-    <updated>2026-01-19T18:23:04.779487</updated>
+    <updated>2026-01-19T18:23:04.779487-08:00</updated>
     <summary>another VTPP milestone</summary>
+    <content type="html"><![CDATA[<p>"VTPP" is a home server project I've been working on which, in short, automatically downloads videos, extracts their audio, and makes the audio available for me to listen as a podcast feed.</p>
+<p>It's been a few years since I marked the <a href="https://scottnm.com/pages/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html"><code>v0.2.0</code></a> milestone.</p>
+<p>I've finally gotten around to fixing some of the project's basic security issues, so it felt right to mark this point as the <code>v0.3.0</code> release!</p>
+<h2>HTTPS and proper hostnames</h2>
+<p>As noted all the way back in <a href="https://scottnm.com/pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html#a-thought-on-security">the v0.1.0 release</a>, I've connected to my VTPP feed and server over HTTP and using a static, private IP address.</p>
+<p>After more than two years, this has still yet to cause a real problem, but it's a pretty significant security gap: Using a static, private IP address from a mobile device exposed me to the possibility of using a public WiFi network with a similar private IP range and accidentally connecting to someone or something I did not intend to. </p>
+<p>And using HTTP meant that if I did connect to something, my phone wouldn't make any attempt to authenticate that it was the VTPP feed my phone was expecting.</p>
+<p>Both issues have now been addressed.</p>
+<p>Over the christmas break, I coincidentally set up a <a href="https://pi-hole.net">Pi-Hole</a> DNS server on my home network. Fixing the "connect-via-IP" problem was as simple as adding a new <code>vtpp.lemonpie.home.arpa</code> entry to the DNS server's records that mapped back to the VTPP server's static IP address. For a long time, I thought fixing the hostname issue would require registering (and paying for) a real public hostname which isn't really what I wanted or needed. Discovering the <a href="https://datatracker.ietf.org/doc/html/rfc8375"><code>home.arpa</code> domain</a> made the solution so easy!</p>
+<p>And I chose to fix the HTTPS problem by setting up my own private certificate authority (CA), installing it as a trusted root on the devices which use VTPP, and then issuing a server leaf certificate for my VTPP server to use. The server certificate encodes both the hostname, <code>vtpp.lemonpie.home.arpa</code>, and the static IP as SANs (subject alternative names).</p>
+<p>For now this is a workable situation for me. I would prefer to get my leaf cert issued from a more widely available trust anchor like <a href="https://letsencrypt.org">LetsEncrypt</a>, but I haven't yet figured out how to get one issued for a service only reachable on my private network. I think specialized tools like <a href="https://localcert.net/dashboard">localcert.net</a> exist to help bridge this gap, but I have not yet had the time to explore what the trade-offs are or how to use it. </p>
+<p>I'd bet dollars to donuts that I'll get tired of managing my private CA after the first time I have to deal with a certificate expiration.</p>
+<p>Oh well, for now I'm satisfied.</p>
+<h2>A quick reflection</h2>
+<p>It's funny. Now that the work is done, it feels like it was easy enough that I really shouldn't have put off this bare-minimum security work for over two years. </p>
+<p>But I think this is a feeling that only makes sense with those two years of experience under my belt. Despite being an engineer on a team that primarily develops, troubleshoots, and maintains networking software/tooling, DNS and PKI have always been two significant gaps in my skillset. I've fixed bugs rooted to problems in both areas in the past, but there's a real difference between having an abstract understanding of those systems and getting your hands up close and dirty with them. So, I suppose it's more of a happy accident that my job has put me face-to-face with these systems more directly <em>and</em> more consistently over the last two years. </p>
+<p>I feel both embarassed and re-assured that I have no reason to be. Such is life.</p>
+<p><code>¯\_(ツ)_/¯</code></p>
+<h2>The full changelog</h2>
+<p>Here's a more complete summary of what's changed since <code>v0.2.0</code>:</p>
+<ul>
+<li>The VTPP homepage now reports the last time the fetcher ran and, uniquely, the last time the fetcher ran with errors.</li>
+<li>Discord reports are only generated when something changes or the fetcher encounters an error.</li>
+<li>I added support for enabling/disabling the fetcher schedule from the VTPP homepage.<ul>
+<li>YouTube breaks youtube-dl often enough that when something is broken for more than a day, it's more practical to just disable the fetcher until I can try to fix things over the next weekend.</li>
+</ul>
+</li>
+<li>I improved my "YouTube Shorts" recognition heuristic.<ul>
+<li>Instead of looking for a maximum time, I just look for a "shorts"-path in the video URL. This seems to be both simpler and doesn't require successfully downloading any part of the video.</li>
+</ul>
+</li>
+<li>VTPP now serves its feed and media from an HTTPS endpoint.<ul>
+<li>HTTPS support is provided by putting an Nginx reverse proxy in front of the VTPP feed.</li>
+</ul>
+</li>
+<li>The VTPP feed is now reachable from a DNS name resolvable on my local network.</li>
+<li>The VTPP feed is now behind an Nginx reverse proxy and exposed on the proper 443 HTTPS port.</li>
+</ul>]]></content>
   </entry>
   <entry>
     <title>Geminispace ho!</title>
     <link href="https://www.scottnm.com/pages/gemini/2025_12_22_gemini.html" />
     <id>urn:uuid:a44b30e4-63eb-4fd7-a02a-68860dfa2f58</id>
-    <updated>2025-12-22T00:00:00Z</updated>
+    <updated>2025-12-21T16:00:00-08:00</updated>
     <summary>I'm in geminispace now!</summary>
+    <content type="html"><![CDATA[<p><strong>TL;DR</strong>: This site is now (sort of) reachable in Geminispace!</p>
+<p>From your gemini browser of choice<sup><a href="#footnotes">[1]</a></sup> you can find it at: <a href="gemini://gemini.scottnm.com">gemini://gemini.scottnm.com</a></p>
+<p>If you're not familiar with geminispace, you can find a primer here: <a href="https://geminiprotocol.net">https://geminiprotocol.net</a></p>
+<p>It's cool. I'm excited to explore geminispace more.</p>
+<p>I do find <a href="https://daniel.haxx.se/blog/2023/05/28/the-gemini-protocol-seen-by-this-http-client-person/">Daniel Stenberg's thoughts</a> on the protocol pretty interesting. It's a good splash of cold water on some of the ecosystem and protocol's issues. Nevertheless, I'm still excited and hopefully for geminispace's future.</p>
+<p>I haven't yet been able to migrate all of this site's posts to geminispace since they're built from Markdown, and Gemtext (Gemini's analogous markup language) is meaningfully (and intentionally) less powerful. My attempts at using naive Markdown-to-Gemtext converters have so far not been very successful and I don't see it being a good use of my time in the near future.</p>
+<p>Like a lot of people, I've run into trouble dealing with missing first-class support for inline links and footnotes.</p>
+<p>Oh well. I'll deal and adapt with time.</p>
+<p>For now, it's cool to have a space over there even if it's just my homepage linking back to the wider net.</p>
+<h4 id="footnotes">Footnotes</h4>
+<div class="footnote">
+<p>[1] My current preferred browser is Lagrange: <a href="https://gmi.skyjake.fi/lagrange/">https://gmi.skyjake.fi/lagrange/</a></p>
+</div>]]></content>
   </entry>
   <entry>
     <title>2025 Public Domain Art Gallery</title>
     <link href="https://www.scottnm.com/pages/pd_paintings_2025/2025_12_14_pd_paintings_2025.html" />
     <id>urn:uuid:af7c0433-6831-478f-9f58-8d9734e730f9</id>
-    <updated>2025-12-14T17:47:00Z</updated>
+    <updated>2025-12-14T09:47:00-08:00</updated>
     <summary>A collection of public domain art I looked at and liked in 2025.</summary>
+    <content type="html"><![CDATA[<p>I'm developing an appreciation for paintings<sup><a href="#footnotes">[1]</a></sup>.</p>
+<p>I'm not so keyed in that I really have an understanding or attachment to the core "meaning" of any given artwork, but I've found myself more drawn to interesting colors, textures, and artifacts of greater-than-average size. It's a very uncomplicated "child giggles at jingling keys" level of art appreciation. I have fun with it.</p>
+<p>So, I subscribed to a rotating feed of pretty famous public domain artwork early in the year, and now near the end of the year I'd like to share some of my favorites.</p>
+<p>I think having the space to write a tiny bit about what "caught" me for each of these pieces will be fun. I'm well aware none of this commentary is insightful or instructive. That is not its purpose. I just hope anyone reading this has their experience with these pieces enriched by getting to share them with someone (me!)</p>
+<hr />
+<p><a title="Félix Vallotton, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:F%C3%A9lix_Vallotton,_1917_-_Effet_de_brume,_Honfleur.jpg"><img loading="lazy" alt="Félix Vallotton, 1917 - Effet de brume, Honfleur" src="https://upload.wikimedia.org/wikipedia/commons/5/55/Félix_Vallotton%2C_1917_-_Effet_de_brume%2C_Honfleur.jpg"></a></p>
+<p><strong>Work:</strong> Effet de brume, Honfleur</p>
+<p><strong>Artist:</strong> Félix Vallotton</p>
+<p>I love the surreal, warping feeling of the composition and how much everything smudges and blends together. There's a cool sense of motion to the grass and trees and everything feels off kilter. The greens and yellows are vibrant and somehow amplify the dismal gray mist. It feels like one of those transient spaces that stories use to transport characters between "reality" and the "other world."</p>
+<hr />
+<p><a title="Mikalojus Konstantinas Čiurlionis, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Sonata_No._6_(Sonata_of_the_Stars)._Allegro.jpeg"><img loading="lazy" alt="Sonata No. 6 (Sonata of the Stars). Allegro" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Sonata_No._6_%28Sonata_of_the_Stars%29._Allegro.jpeg/960px-Sonata_No._6_%28Sonata_of_the_Stars%29._Allegro.jpeg"></a></p>
+<p><strong>Work:</strong> Sonata No. 6 (Sonata of the Stars). Allegro</p>
+<p><strong>Artist:</strong> Mikalojus Konstantinas Čiurlionis</p>
+<p>What an eye-catch! It's all yellows and browns but it feels so vibrant. Maybe it's the golden quality to the yellow tones, but something reminds me of retro-futuristic, art-deco things: think <em>Bioshock</em> or the covers of some of Asimov's books. It also reminds me of some of <a href="https://www.kafanov.com/mewithoutyou-kafanov/2015/7/29/its-all-crazy-its-all-false-its-all-a-dream-its-alright">Vasily Kafanov's work</a></p>
+<hr />
+<p><a title="Rachel Ruysch, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Rachel_Ruysch_-_Boomstam,_omgeven_door_bloemen_en_door_vlinders_en_andere_dieren_-_1751_(OK)_-_Museum_Boijmans_Van_Beuningen.jpg"><img loading="lazy" alt="Rachel Ruysch - Boomstam, omgeven door bloemen en door vlinders en andere dieren - 1751 (OK) - Museum Boijmans Van Beuningen" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Rachel_Ruysch_-_Boomstam%2C_omgeven_door_bloemen_en_door_vlinders_en_andere_dieren_-_1751_%28OK%29_-_Museum_Boijmans_Van_Beuningen.jpg/960px-Rachel_Ruysch_-_Boomstam%2C_omgeven_door_bloemen_en_door_vlinders_en_andere_dieren_-_1751_%28OK%29_-_Museum_Boijmans_Van_Beuningen.jpg"></a></p>
+<p><strong>Work</strong>: Boomstam, omgeven door bloemen en door vlinders en andere dieren</p>
+<p><strong>Artist</strong>: Rachel Ruysch</p>
+<p>I see it so clearly. In an alternate universe, this is the cover of a deathcore concept album. It'd be titled <em>We Come From Rot</em> and it would be bleak as hell until it concludes with this shoegazey drone track that just puts you in a trance. Sometimes my favorite thing about artwork is where it sends my imagination! For some reason, this painting makes me think of <em><a href="https://en.wikipedia.org/wiki/Saturn_Devouring_His_Son">Saturn Devouring His Son</a></em>.</p>
+<hr />
+<p><a title="Vincent van Gogh, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Houses_at_Auvers_-_Google_Art_Project.jpg"><img loading="lazy" alt="Vincent van Gogh - Houses at Auvers - Google Art Project" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Vincent_van_Gogh_-_Houses_at_Auvers_-_Google_Art_Project.jpg/1269px-Vincent_van_Gogh_-_Houses_at_Auvers_-_Google_Art_Project.jpg"></a></p>
+<p><strong>Work</strong>: House at Auvers</p>
+<p><strong>Artist</strong>: Vincent Van Gogh</p>
+<p>I feel like I see this house in so many Seattle neighborhoods. Just make the trees taller and wham! I'm right at home. It's so cool to see the contrast with the very coarse paint strokes and how they come together to make cohesive forms. This is one of those paintings I should not see in person because I will want to put my grubby little mitts all over it and commit a culture crime. It looks like it would have a very neat texture feel.</p>
+<hr />
+<p><a title="Adolphe Joseph Thomas Monticelli, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Adolphe_Monticelli_-_Flower_still_life_-_Google_Art_Project.jpg"><img loading="lazy" alt="Adolphe Monticelli - Flower still life - Google Art Project" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Adolphe_Monticelli_-_Flower_still_life_-_Google_Art_Project.jpg/960px-Adolphe_Monticelli_-_Flower_still_life_-_Google_Art_Project.jpg"></a></p>
+<p><strong>Work</strong>: Flower still life</p>
+<p><strong>Artist</strong>: Adolphe Monticelli</p>
+<p>This would be the artwork accompanying the lyric sheet insert of the aforementioned deathcore album. It's all the floral bleakness of Boomstam with all the abstract-paint-blobs-miraculously-look-like-something of House at Auvers. Beautiful.</p>
+<hr />
+<p><a title="Mikalojus Konstantinas Čiurlionis, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Mikalojus_Konstantinas_Ciurlionis_-_CREATION_OF_THE_WORLD_(II)_-_1905_-_6,_Varsuva.jpg"><img loading="lazy" alt="Mikalojus Konstantinas Ciurlionis - CREATION OF THE WORLD (II) - 1905 - 6, Varsuva" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Mikalojus_Konstantinas_Ciurlionis_-_CREATION_OF_THE_WORLD_%28II%29_-_1905_-_6%2C_Varsuva.jpg/960px-Mikalojus_Konstantinas_Ciurlionis_-_CREATION_OF_THE_WORLD_%28II%29_-_1905_-_6%2C_Varsuva.jpg"></a></p>
+<p><strong>Work</strong>: Creation of the World</p>
+<p><strong>Artist</strong>: Mikalojus Konstantinas Čiurlionis</p>
+<p>I'm going to ignore the obvious that this would make for <em>another</em> killer album cover. Instead... wow! that is such a rich palette of blues and a really effective use of a monochromatic colors to give a sense of light and depth. Like swimming through a deep underwater tunnel. The texture of the brush strokes makes me think of underwater eroded rock surfaces: unexpectedly smooth but still gritty. And I'll note this is the second Čiurlionis work on this list. And they're so different!</p>
+<hr />
+<p><a title="Marsden Hartley, Popocatepetl, Spirited Morning-- Mexico, 1932, oil on board, 25 x 29 in. (63.5 x 73.7 cm), Smithsonian American Art Museum, Gift of Sam Rose and Julie Walters, 2004.30.3" href="https://americanart.si.edu/artwork/popocatepetl-spirited-morning-mexico-73939"><img loading="lazy" alt="Marsden Hartley, Popocatepetl, Spirited Morning-- Mexico, 1932, oil on board" src="https://scottnm.com/site_images/SAAM-2004.30.3_1_screen.webp"></a></p>
+<p><strong>Work</strong>: Popocatepetl, Spirited Morning-- Mexico</p>
+<p><strong>Artist</strong>: Marsden Hartley</p>
+<p>Something about the shadows between each layer and the relatively similar sizes of the layers makes me think of set pieces in some kind of puppet theatre. Like <em>Punch and Judy</em> or shadow puppets or something. The colors are great too! A not-quite-monochromatic blue palette that makes the clouds look really soft. Check out the clouds in the bottom right corner. For some reason, this painting above others really brings me back to the style of <em>Braid</em>.</p>
+<hr />
+<p><img loading="lazy" alt="Henri Rousseau, Jungle with Setting Sun, 1910" src="https://scottnm.com/site_images/junglewithsettingsun.webp"></p>
+<p><strong>Work</strong>: Jungle With Setting Sun</p>
+<p><strong>Artist</strong>: Henri Rousseau</p>
+<p>I'm not huge on this one but I think the contrast works exceptionally well. Everything is in this soft green color, except the sun, center frame drawing all the attention. There's something about the sun being that size and that low to the horizon that makes this piece feel eerie to me, too. It's too... small? It certainly seems off to me. And I like that! On a side note, I really struggled to find a good source archive of this work online. A lot of the works I've shared here were easy enough to find on Wikimedia Commons, but after much googling I couldn't find any sites that weren't just selling prints of this work. Nothing was archived on the Internet Archive either. I found this surprising.</p>
+<hr />
+<p><a title="Paul Signac, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Paul_Signac_-_The_Bonaventure_Pine_-_74.142_-_Museum_of_Fine_Arts,_Houston.jpg"><img loading="lazy" alt="Paul Signac - The Bonaventure Pine - 74.142 - Museum of Fine Arts, Houston" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Paul_Signac_-_The_Bonaventure_Pine_-_74.142_-_Museum_of_Fine_Arts%2C_Houston.jpg/1267px-Paul_Signac_-_The_Bonaventure_Pine_-_74.142_-_Museum_of_Fine_Arts%2C_Houston.jpg"></a></p>
+<p><strong>Work</strong>: The Bonaventure Pine</p>
+<p><strong>Artist</strong>: Paul Signac</p>
+<p>Oh me, oh my, it's pointillism baby! And what-a-pointillism if I do so say so myself. I love the way the light works in this piece. The far background is full of soft, radiating light rays but the tree is still mostly in shadow. To me, it reads as a sunrise, but the tree is blocking the sun and becoming the focal point. There's apparently a lot of impressionist art about sunrises. I bet there's some significance in this impressionist piece plopping a tree right in the middle of that sunrise and upstaging it. How bold! How <a href="https://scottnm.com/site_images/Bold_and_Brash.webp">brash</a>!</p>
+<hr />
+<p>That's all! I hope you enjoyed my curated little slice of pretty-famous-public-domain-art.</p>
+<h4 id="footnotes">Footnotes</h4>
+<div class="footnote">
+<p>[1] Edit (Dec 19, 2025): While thinking about this post recently, it occurred to me that I think my appreciation for paintings sprung from <a href="https://breezewiki.com/adventuretime/wiki/Jermaine's_Paintings">Jermaine the Dog</a>. It's less the paintings themselves and more what they represent in Jermaine's character arc: changing from a daddy's boy ascetic to a wiser, self-driven person (dog?). His character flaws feel close to some of my own and it endeared me to the role painting plays in his story. It's funny the sorts of things that influence us!</p>
+</div>]]></content>
   </entry>
   <entry>
     <title>Recipe: Summer Soba Salad</title>
     <link href="https://www.scottnm.com/pages/recipes/2025_06_14_summer_soba_salad.html" />
     <id>urn:uuid:a7f9da4f-46ac-4bf5-aaaf-6d9a1080c5ad</id>
-    <updated>2025-06-14T23:55:00Z</updated>
+    <updated>2025-06-14T16:55:00-07:00</updated>
     <summary>a refreshing cold noodle dish</summary>
+    <content type="html"><![CDATA[<p>I've made this tasty cold noodle bowl quite a few times recently. It's too simple to warrant calling this a "recipe"<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, but I wanted to jot it down anyway for posterity and sharing.</p>
+<p><img src="https://scottnm.com/site_images/summersoba.avif" width="400px" alt="soba noodles and salad in a bowl" style="display: block; margin-left: auto; margin-right: auto; max-width: 100%"></p>
+<h2>the recipe</h2>
+<div class="grid-max-2col">
+<div class="recipe-list">
+<p><strong>Ingredients</strong></p>
+<p>Vegetable Mix</p>
+<ul>
+<li>tomato (in season)</li>
+<li>cucumber</li>
+<li>red onion</li>
+<li>jalapeno</li>
+</ul>
+<p>The Rest</p>
+<ul>
+<li>salad greens mix</li>
+<li>soba noodles</li>
+<li>soy sauce</li>
+<li>toasted sesame oil</li>
+<li>sesame seeds</li>
+<li>[optional] soft-boiled egg (or hard-boiled)</li>
+</ul>
+<p>Equipment</p>
+<ul>
+<li>wide noodle bowl<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+<li>strainer / colander</li>
+</ul>
+</div>
+<div class="recipe-list">
+<p><strong>Instructions</strong></p>
+<ul>
+<li>Dice up all of the vegetable mix into small pieces.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> No need to over worry about uniformity. Just try to get everything in the same ballpark of size.</li>
+<li>Rough chop your salad greens into smaller pieces, as well. Again, no hard rules but the closer in size to your diced vegetable mix the better.</li>
+<li>Set your salad greens in your bowl as a base. I like to push them to one side of the bowl to make room for the noodles later.</li>
+<li>Top the greens with the vegetable mix</li>
+<li>Prepare your soba according to package instructions. The kind I buy from Safeway are just "boil in water for 5 minutes."</li>
+<li>Once soba is done, rinse under cold water in strainer until cold to the touch. Shake off as much excess water as is convenient. They'll never not be wet, but you don't want to soba salad to get a secondary tap-water dressing.</li>
+<li>Add noodles to bowl. For me, I put them in the reserved half of the bowl besides the salad greens (not on top of them.)</li>
+<li>Dress the noodles and salad with soy sauce, toasted sesame oil, and sesame seeds</li>
+<li>Top with optional egg sliced to your preferences</li>
+<li>Enjoy ♡ ☼</li>
+</ul>
+</div>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>It's basically just pasta salad or mazemen. Use the rough shape and experiment with other variations of vegetable mixes, toppings, and pasta types! What about subbing the sesame oil + soba for linguine + olive oil + lemon + garlic? Sounds pretty tasty to me... Embrace your inner <a href="https://www.youtube.com/watch?v=Mt8uLveDY24">gourmand</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Of course, any bowl will work. But I'm becoming more opinionated that wide noodle bowls are <em>infinitely</em> better for most things which work best with a bowl. The big win for this recipe is the ease with which you can stir and mix the dish as you eat it. More narrow bowls that you (at least, <em>I</em>) would use for cereal are just too cramped and the second you try to dig in a bunch of pieces are going to end up outside of your bowl.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Anna Ladd's <a href="https://www.youtube.com/watch?v=69sY1wzBy44">"how to make a very good salad"</a> is a "must watch" and taught me two things:<br />
+  1. Prepping a big batch of salad mix (all the non-green salad toppings), makes salads so much less annoying to make.<br />
+  2. Salads built from small, roughly equal sized pieces are just better. They are easier to eat, they make less mess, they mix better with dressing&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>]]></content>
   </entry>
   <entry>
     <title>Japan Fair Haiku Contest Submission</title>
     <link href="https://www.scottnm.com/pages/haiku2025/2025_06_01_japan_fair_haiku_contest_submission.html" />
     <id>urn:uuid:a48c5acb-f582-4bb8-8087-fca68df0d771</id>
-    <updated>2025-07-14T22:00:00Z</updated>
+    <updated>2025-07-14T15:00:00-07:00</updated>
     <summary>My submissions for the Japan Fair Haiku Contest</summary>
+    <content type="html"><![CDATA[<p>I entered a <a href="https://www.japanfairus.org/2025-haiku-workshop-contest">haiku contest</a>.</p>
+<p>I don't have much experience writing haiku or poetry more broadly, but I do have a long-time love affair with clever wordplay<sup><a href="#footnotes">[1]</a></sup>. </p>
+<p>So, I gave it my best shot! I spent a week jotting down ideas and reading through haiku: both popular works and previous contest submissions.</p>
+<p>We were allowed to submit two haiku. Here's what I submitted:</p>
+<p><strong>Submission 1</strong></p>
+<div class="poem">
+<blockquote>
+<p>phase through hands<br>
+in time with the budding chorus<br>
+we both drop</p>
+</blockquote>
+</div>
+<p><strong>Submission 2</strong></p>
+<div class="poem">
+<blockquote>
+<p>dawn flips the "open" sign<br>
+first in line for the first tomatoes;<br>
+sunrise on the vine</p>
+</blockquote>
+</div>
+<p><small><i>Curious why these don't fit the 5-7-5 format? More below<sup><a href="#footnotes">[2]</a></sup></i></small></p>
+<p>It was a fulfilling and challenging exercise! The first submission in particular, I felt like I drafted so many different variations of each line: altering word choice, syllable count, meter, seasonal references, and poetic turns.</p>
+<p>After drafting and re-drafting, I was basically down to two candidates: what I submitted above and this alternate that I left on the cutting room floor.</p>
+<p><strong>Submission 1: original</strong></p>
+<div class="poem">
+<blockquote>
+<p>phase through swarming flesh<br>
+strike earth! ring drowns out chorus<br>
+stars bloom above me</p>
+</blockquote>
+</div>
+<p>There was a lot that I liked in this original form:</p>
+<ol>
+<li>It followed the (admittedly unnecessary) 5-7-5 pattern. </li>
+<li>The word choice had a bit more <em>grime</em> and <strong>violence</strong> which better fit the original spirit of the poem.</li>
+<li>I liked the double entendre of the final line.</li>
+</ol>
+<p>Ultimately, I went with the variation I submitted because I felt its terseness better fit the tone and style of haiku. And while I loved using words like "flesh", "swarming", and "strike", the more I read both variations out loud to myself, the more I felt the meter of the original was a bit clumsy: words felt absent out of necessity to fit the 5-7-5 pattern and the rhythm of the words I left behind didn't really flow.</p>
+<p>I think I made the right choice. I get the sense that, for haiku, there's value in celebrating shorter moments. The submitted poem narrowed the scope and left more to the imagination of its outcomes. The abandoned original described more of a narrative and got lost trying to fit in my pet favorite phrases.</p>
+<p>I'm excited to see which submissions get selected!</p>
+<h2>[Jul 13 2025] Contest Results Update</h2>
+<p>I did not win ( ˶°ㅁ°) !!</p>
+<p>Okay, maybe I'm not suprised, but I'd be lying if I said I wasn't daydreaming about how cool it'd be to win.</p>
+<p>Nevertheless, I still had a lot of fun and I hope to submit an entry next year as well.</p>
+<p>The winners and honorable mentions for the english category are available on <a href="https://www.graceguts.com/contests/2025-japan-fair-haiku-contest">the graceguts site</a>.</p>
+<p>My favorite winner </p>
+<div class="poem">
+<blockquote>
+<p>melting frost<br>
+a letter crumpled up<br>
+and flattened again<br>
+- Christine L. Villa, California, USA</p>
+</blockquote>
+</div>
+<p>Congrats to all the winners!</p>
+<h4 id="footnotes">Footnotes</h4>
+<div class="footnote">
+<p>[1] Most of my "wordplay itch" is scratched by music. For some of my favorite lyricists, check out the bands <em>mewithoutYou</em>, <em>La Dispute</em>, and <em>Secret Band</em><br>
+[2] The contest I was submitting to explicitly allowed/encouraged poems to deviate beyond the 5-7-5 form. It seems broadly felt that the <a href="https://www.graceguts.com/essays/urban-myth-of-5-7-5">5-7-5 restriction is a misunderstanding</a> of the original Japanese form and that there are other elements which play a much stronger role in making something a haiku: seasonal references, juxtaposition, and <a href="https://en.wikipedia.org/wiki/Kireji">kireji</a>.<br></p>
+</div>]]></content>
   </entry>
   <entry>
     <title>2024 Site Redesign</title>
     <link href="https://www.scottnm.com/pages/2024_redesign/2024_01_13_2024_redesign.html" />
     <id>urn:uuid:e6bc4ca2-ae6c-4c31-8ff8-22c2202533cf</id>
-    <updated>2024-01-13T00:11:00Z</updated>
+    <updated>2024-01-12T16:11:00-08:00</updated>
     <summary>a fresh coat of paint</summary>
+    <content type="html"><![CDATA[<p>
+    I started redesigning my site at the end of 2023 and wrapped up right at the start of 2024.
+</p>
+
+<p>
+    You can see an archive of <a href=
+    "https://web.archive.org/web/20231221220921/https://www.scottnm.com/">the old homepage on the
+    Wayback Machine</a>.
+</p>
+
+<p>
+    <img src="scottnm_old_site_screenshot.avif" alt=
+    "the old homepage in &quot;desktop&quot; view" class="blog-post-img" >
+</p>
+
+<h2 id="why" class="section-title">
+    Why?
+</h2>
+
+<p>
+    There were a lot of things which I liked about the old site:
+</p>
+
+<ul>
+    <li>its visual uniqueness
+    </li>
+
+    <li>the monochromatic rust/red color scheme
+    </li>
+
+    <li>the front-and-center-ness of the images on the site.
+    </li>
+
+    <li>the page was static but all the content was populated with client-side vanilla JavaScript
+    templating which made iterating and adding content very quick!
+        <ul>
+            <li>I did a bit of work that I'm proud of to make appropriate use of JavaScript without
+            relying on a bunch of web dev tools that bog down day-to-day development (bundlers,
+            transpilers, local HTTP servers, etc)
+            </li>
+        </ul>
+    </li>
+
+    <li>it was easily archived with the <a href="https://web.archive.org/">Wayback Machine</a>
+        <ul>
+            <li>I'm not sure why this was so important to me. Usually web archival tools are most
+            appropriate for when you don't own the page in question. For some reason, it gives me
+            comfort to know its a little more resilient to disappearing forever.
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<p>
+    But it wasn't without its flaws:
+</p>
+
+<ul>
+    <li>The large number of images impacted page load speed
+        <ul>
+            <li>Given its a static site, I've always felt like it has to be a goal that the page loads
+            quickly
+            </li>
+
+            <li>I tried several "easy" tricks to improve this (deferred image loads, reduced image
+            size/quality, etc) which worked to some but not total success.
+            </li>
+        </ul>
+    </li>
+
+    <li>The site relied on GoogleFonts for visual flair but these impacted page load speed
+    </li>
+
+    <li>I never quite achieved the page structure/layout I had in my head.
+        <ul>
+            <li>This is mostly an admission that I'm not a very good web developer and the CSS styling
+            required to gridded structures still very much confuses me.
+            </li>
+
+            <li>I also struggled with placing images within those grids at the right place and size.
+            </li>
+        </ul>
+    </li>
+
+    <li>My page's structure/layout was designed for desktop and it didn't translate well to mobile
+        <ul>
+            <li>Images felt cramped.
+            </li>
+
+            <li>Margins and padding always felt off compared to the desktop variant.
+            </li>
+
+            <li>I tried to use responsive CSS media queries to change the styles based on the client's
+            device, but it always felt like trying to force the desktop design to work on mobile with
+            very poor compromise.
+            </li>
+        </ul>
+    </li>
+
+    <li>I got it working but enabling the page to be "Wayback Machine" compatible required some
+    compromises in my client-side JavaScript (everything was crammed in one mega-file)
+    </li>
+
+    <li>For simplicity, I never removed old page content (which lived in the JavaScript). I mostly just
+    commented it out so it was easy to bring back without trawling through git history. But it bothered
+    me that I was wasting bandwidth on dead data.
+        <ul>
+            <li>Using a minifier would have helped here but I always appreciated that my site was
+            legible in the browser inspector. There were other ways I could have addressed this (some of
+            which I did as part of this site redesign!) so I'm mostly stating that it was a pet peeve I
+            kept punting to the future.
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<p>
+    I tried to address some of these pain points individually without doing a full redesign, but I
+    always struggled to fix "just one thing." For every "one thing" I fixed, it felt like "one step
+    forward, two steps back", and, that feeling is hard to ignore when you're focused on the one thing.
+    On the contrary, starting from basically nothing, everything felt like progress and comparisons
+    between what I was gaining and what I was losing felt less obvious. Feels weird to admit having to
+    trick myself to get work done (and those "tricks" probably costing me more time in the long-term),
+    but eh I'm human, at least it got done, and the wasted time isn't the end of the world.
+</p>
+
+<h2 id="whats-changed" class="section-title">
+    What's changed?
+</h2>
+
+<p>
+    The most noticeable change is in the layout and theme.
+</p>
+
+<ul>
+    <li>The red-rust monochromatic colors have been replaced with simpler (and better contrasting)
+    black-and-white
+        <ul>
+            <li>Honestly, this one's a bit bitter-sweet. I like the new colors, but I think it has less
+            personality and I'm still interested in finding something more eye-catching than black and
+            white.
+            </li>
+        </ul>
+    </li>
+
+    <li>The new layout adapts better between mobile and desktop. There's less distinct elements taking
+    up the same horizontal space so all that really changes between mobile and desktop is the padding
+    and margins around the core site content. Put another way, I restrained myself from overdoing it
+    with grids.
+    </li>
+
+    <li>The new layout also improves performance by only using images for items in the "highlights"
+    section (rather than for every project and text post).
+    </li>
+
+    <li>I'm now only relying on "web safe" fonts. I think this runs the risk of robbing my site of
+    personality, but so far I like how things look. And while the fonts I'm using aren't 100% guaranteed
+    to be available on all browsers forever in perpetuity, I think things feel abstractly safer than
+    relying on fonts delivered remotely via CDN.
+    </li>
+</ul>
+
+<p>
+    On the "authoring and development" side, things have also changed such that I'm no longer relying on
+    client-side JavaScript to populate the page content at runtime. I do the more obvious and only
+    slightly less dev friendly strategy of just using templates to build the HTML up-front and avoid
+    JavaScript all together.
+</p>
+
+<h2 id="results" class="section-title">
+    Results
+</h2>
+
+<p>
+    In general, I'm pretty happy with how things turned out. The mobile experience is significantly
+    better. The homepage loads faster. There's fewer external dependencies. It still archives well
+    <a href="http://web.archive.org/web/20240113192350/https://www.scottnm.com/">on the Wayback
+    Machine</a>.
+</p>
+
+<p>
+    There's still room for improvement in the future (notably the colors), but for now I'm calling it
+    complete.
+</p>
+
+<h2 id="shout-outs" class="section-title">
+    Shout-outs
+</h2>
+
+<p>
+    I took meaningful inspiration from a few sites when re-designing my own. In no particular order:
+</p>
+
+<ul>
+    <li>
+        <a href="https://www.scattered-thoughts.net/">scattered-thoughts.net</a> (Jamie Brandon)
+    </li>
+
+    <li>
+        <a href="https://fabiensanglard.net/">fabiensanglard.net</a> (Fabien Sanglard)
+    </li>
+
+    <li>
+        <a href="https://jvns.ca/">jvns.ca</a> (Julia Evans)
+    </li>
+</ul>
+
+<p>
+    Thank you!
+</p>]]></content>
   </entry>
   <entry>
     <title>VTPP v0.2.0</title>
     <link href="https://www.scottnm.com/pages/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html" />
     <id>urn:uuid:b67dc9bf-9fd6-4e1c-8937-6190a88290c8</id>
-    <updated>2023-12-13T00:11:00Z</updated>
+    <updated>2023-12-12T16:11:00-08:00</updated>
     <summary>another VTPP milestone</summary>
+    <content type="html"><![CDATA[<p>
+    "VTPP" is a home server project I've been working on which, in short, automatically downloads
+    videos, extracts their audio, and makes the audio available for me to listen as a podcast feed.
+</p>
+
+<p>
+    It's been about a month since I marked a <a href=
+    "/pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html"><code>v0.1.0</code></a> version of the
+    project. Here's what's I've changed since then:
+</p>
+
+<ul>
+    <li>Updated the web portal to enable editing the configured youtube channel list that I'm fetching
+    videos from
+    </li>
+
+    <li>Updated the web portal so that I can delete videos from my feed as well as "block" videos from
+    being re-downloaded in the future.
+    </li>
+
+    <li>Added a simple time heuristic to recognize (and ignore) Youtube Shorts when fetching videos
+    </li>
+
+    <li>Added logic to ignore offline Youtube Live streams which sometimes(?) show up in a channel's
+    feed
+    </li>
+
+    <li>Made a handful of small improvements to make "on demand" download progress clearer
+    </li>
+
+    <li>Refactored a bunch of things to make code more reusable across the different components
+    </li>
+</ul>
+
+<p>
+    There are still a lot of things I could do and would like to do, but the project is at a point where
+    things feel polished enough that I can "just" use it without feeling like anything is missing.
+</p>
+
+<p>
+    So, I'm going to mark this point as a new version, <code>v0.2.0</code>, and let things be for a bit.
+    It'll give me some clarity on what work from the backlog is actually worth spending my weekends on.
+</p>]]></content>
   </entry>
   <entry>
     <title>VTPP v0.1.0</title>
     <link href="https://www.scottnm.com/pages/vtpp/0.1.0/2023_11_04_vtpp_0.1.0.html" />
     <id>urn:uuid:108c4a16-26e6-48a1-942c-f19a5f200d22</id>
-    <updated>2023-11-04T00:11:00Z</updated>
+    <updated>2023-11-03T17:11:00-07:00</updated>
     <summary>new project: Video-to-Private-Podcast</summary>
+    <content type="html"><![CDATA[<p>
+    I've been chipping away at a fun idea, and it's far enough along now that I feel like sharing it.
+</p>
+
+<p>
+    For now, the name I've been using is "VTPP" (Video-to-Private-Podcast), and the concept is simple:
+    it's a home server which periodically downloads videos from external source(s)<sup><a href="#footnote-1">[1]</a></sup>, strips the audio
+    from those videos, and serves that audio in a podcast feed accessible from my home network<sup><a href="#footnote-2">[2]</a></sup>.
+</p>
+
+<p>
+    The server also supports downloading specific videos without subscribing to an entire video feed.
+</p>
+
+<p>
+    So far, all this has worked really well!
+</p>
+
+<ul>
+    <li>The server itself does very little work, so I've been able to run it off a spare Raspberry Pi
+    that was collecting dust.
+    </li>
+
+    <li>There are more than a few YouTube channels where I only want to listen to the videos (usually
+    during repeat watches/listens). It's nice to save power and turn off my phone screen while
+    listening, which YouTube's current UI/UX/business policies prohibit without paying them.
+    </li>
+
+    <li>The size of the downloaded audio is more than manageable for my server's storage. Enough that I
+    haven't bothered to worry about figuring out how to manage running out space in a smart<sup><a href="#footnote-3">[3]</a></sup> way.
+    </li>
+
+    <li>I haven't been able to get most iOS podcast apps to connect to my home server, but I did find
+    one that is really great so far: RSS Radio.
+    </li>
+</ul>
+
+<p>
+    I don't yet intend to package this for anyone else to use or even to make the source available, but
+    the concept is pretty simple to implement. If you like the idea, feel free to implement your own
+    version! I'm not the idea police. No way I was the first one to think of this idea (I never bothered
+    checking...).
+</p>
+
+<p>
+    Here are some screenshots of it working in action!
+</p>
+
+<div class="grid-max-2col">
+    <div>
+        <img 
+            alt="VTPP feed in podcast app and episode being played" 
+            src="https://scottnm.com/site_images/demo_podcast.avif" 
+            style="display: block; margin-left: auto; margin-right: auto; max-width: 100%" >
+    </div>
+    <div>
+        <p>
+            Here's a quick demo of my phone playing an episode from the podcast feed.
+        </p>
+    </div>
+    <div>
+        <img 
+            alt="an on-demand video being downloaded to the server and uploaded to the feed" 
+            src="https://scottnm.com/site_images/demo_download.avif" 
+            style="display: block; margin-left: auto; margin-right: auto; max-width: 100%">
+    </div>
+    <div>
+        <p>
+            Here's a quick demo of me requesting a video be downloaded on-demand to my feed server from my phone,
+            followed by the audio becoming available within the podcast feed on my phone.
+        </p>
+    </div>
+    <div>
+        <img 
+            alt="server status report uploaded to a private discord server" 
+            src="https://scottnm.com/site_images/demo_discord.avif" 
+            style="display: block; margin-left: auto; margin-right: auto; max-width: 100%">
+    </div>
+    <div>
+        <p>
+            To make it easier to monitor the health of the server, I added Discord webhook support. If the server runs into
+            trouble, it'll send error reports with logs to a private discord server I setup. And when new videos are successfully
+            downloaded, I get a quick summary of what's been downloaded.
+        </p>
+    </div>
+</div>
+
+<p>
+    <span id="footnote-1" class="footnote">
+        [1] currently, the only external source I've bothered to support is YouTube. The server is
+        configured to look at the feeds of some explicitly listed YouTube channels and pull their latest
+        videos.
+    </span><br >
+    <span id="footnote-2" class="footnote">
+        [2] accessible from my home network and <em>only</em> from my home network i.e., by design,
+        it's not exposed to the public internet. If I'm out and about, I'm not taking updates.
+    </span><br >
+    <span id="footnote-3" class="footnote">
+        [3] currently, when I run out of space, the server stops attempting to fetch new videos and sends me a
+        notification of the problem.
+    </span><br >
+</p>
+
+<h2 id="problems-with-podcast-apps" class="section-title">
+    Problems with podcast apps
+</h2>
+
+<p>
+    As mentioned earlier, I haven't yet been able to get my home feed working with my longtime-preferred
+    podcast app, "Overcast", or the "Apple Podcasts" app. These apps allow you to subscribe to
+    user-provided feed URLs, but when I try to use the address of my home server it fails with a
+    non-specific error message saying it couldn't use the URL.
+</p>
+
+<p>
+    I still haven't quite figured out what the problem is, but I did spend a little time trying to
+    investigate. Or rather, I spent a few days trying to capture the app's HTTPS traffic with Fiddler,
+    and, when I couldn't get that to work, I ran out of ideas on how to gather data necessary to
+    investigate where/why fetching my feed was failing. Some suspicions I have include...
+</p>
+
+<ol>
+    <li>I believe these apps probably do cert pinning. At the very least, I'm pretty sure this is why I
+    wasn't able to Fiddler the HTTPS traffic, and it doesn't seem totally out of the realm of
+    possibility that these apps require HTTPS authenticated feeds (which I haven't setup yet) and
+    possibly pin certs for a handful of well-known feed services.
+    </li>
+
+    <li>It's possible that these apps do some validation/sanitization of the user-provided URLs intended
+    to guard against having the apps fetch data from malicious sources.
+    </li>
+
+    <li>It's possible that these apps don't handle URLs well using the hostname format I'm specifying.
+    I've tried using addresses of the form <code>http://{hostname}:{port}/</code> and <code>
+        http://{hostname}.local:{port}/</code> and neither seemed to make a difference.
+        <ul>
+            <li>Though it just occurs to me that I was always using and specifying a development port
+            rather than the standard port 80 (HTTP) or 443 (HTTPS). Maybe I'll try exposing the server
+            on port 80, omitting the port in the URL, and seeing if that changes anything.
+            </li>
+        </ul>
+    </li>
+</ol>
+
+<h2 id="a-thought-on-security" class="section-title">
+    A Thought on Security...
+</h2>
+
+<p>
+    I am not a programmer with a lot of security expertise, but I'd be remiss to not reflect on a
+    possible (probable?) security gap that I haven't yet addressed.
+</p>
+
+<p>That is...</p>
+<ol>
+    <li>the feed is currently served via HTTP and not HTTPS.
+    </li>
+
+    <li>the feed's address is my feed's hostname on the local network and not some reserved public
+    internet name.
+    </li>
+</ol>
+
+<p>
+    There's nothing preventing my phone from trying to reach this hostname on a network other than my
+    home network, unexpectedly resolving the wrong host, and trying to talk to something/someone it
+    shouldn't. Of course, the likelihood of this happening is minimal, and, in theory, the attack
+    surface is isolated to my podcast app (which is why I haven't frontloaded addressing it), but I'd
+    still feel more comfortable knowing the security gap wasn't there at all.
+</p>
+
+<p>
+    I think the right way to fix it would probably be to expose the feed from an HTTPS endpoint with a
+    cert that chains back to some trusted root. Or maybe I could get by using a self-signed cert that I
+    keep secure and installing that self-signed cert on my phone. Maybe there's an even further future
+    where I could somehow setup some cert pinning such that only my self-signed cert would be trusted
+    when trying to reach my feed (though I think that implies writing my own bespoke podcast app which
+    is... uh... a little more work than I'm excited about).
+</p>
+
+<p>
+    Guess that's a problem for future-me.
+</p>
+
+<h2 id="future-improvements" class="section-title">
+    Future Improvements
+</h2>
+
+<p>
+    Speaking of the future, while I'm comfortable with where this project is right now and may let it
+    rest for a while there are a handful of features on my wish list that I'd like to address
+    eventually:
+</p>
+
+<ol>
+    <li>Make more of the feed's runtime behavior configurable from the web portal (i.e., managing
+    currently subscribed channels and shared metadata)
+    </li>
+
+    <li>Enable better management of the feeds from the web portal (i.e., deleting items from the feed
+    that I no longer want/need)
+    </li>
+
+    <li>Make setting up the server more "plug-n-play" with docker containers
+    </li>
+
+    <li>Flagging some content to not be downloaded (e.g., YouTube shorts)
+    </li>
+
+    <li>Setting up an automatic eviction policy for older downloads
+    </li>
+</ol>
+
+<p>
+    Here's to hoping I get around to this stuff!
+</p>
+
+<p>
+    Edit 12/13/2023: I got around to some of this stuff! Not all of it, but enough to mark a new <a href="https://scottnm.com/pages/vtpp/0.2.0/2023_12_13_vtpp_0.2.0.html">v0.2.0</a>. Check it out.
+</p>]]></content>
   </entry>
   <entry>
     <title>Surprising Monkey Muck Data</title>
     <link href="https://www.scottnm.com/pages/surprising_monkey_muck_data/2022_10_29_surprising_monkey_muck_data.html" />
     <id>urn:uuid:60056cef-a018-4db7-83e7-b9467b9b8e25</id>
-    <updated>2022-10-29T00:00:00Z</updated>
+    <updated>2022-10-28T17:00:00-07:00</updated>
     <summary>Looking at itch.io analytics for an old project. Why are people playing this demo?</summary>
+    <content type="html"><![CDATA[<p>
+    I learned recently that my <a href="https://scottnm.itch.io/muck">"Monkey Muck" demo</a> on itch.io
+    has a much larger reach that I ever expected.
+</p>
+
+<p>
+    As of Oct. 29 2022 (i.e. in <em>just</em> 6 years), Monkey Muck...
+</p>
+
+<ul>
+    <li>has 2,225 views
+    </li>
+
+    <li>has 204 downloads of its Win32 build
+    </li>
+
+    <li>is a part of 14 itch.io collections
+    </li>
+</ul>
+
+<p>
+    <img class="post-img" src="https://scottnm.com/site_images/monkeymuckanalytics.avif" alt="Monkey Muck analytics dashboard" >
+</p>
+
+<p>
+    In today's internet landscape, these numbers are incredibly small, but "incredibly small" is still
+    about 100x the attention I expected this demo to receive. It makes me wonder what compounding
+    coincidences led to any traffic at all. I never shared this demo with anyone (aside from linking it
+    on my personal site which I also don't share with anyone), so I have to imagine it's mostly
+    coincidence. Maybe having "horror" in the tags list gave it some attention for people browsing
+    itch.io for horror games.
+</p>
+
+<p>
+    I think my favorite of the above data points is that the demo is in 14 itch.io collections. As far
+    as I can tell, there's no (easy) way to set up "smart" collections which fill themselves, so this
+    tells me that at least a handful of people thought my demo was worthy of adding to their own
+    personal curated lists. Cool!
+</p>
+
+<p>
+    This past May, without knowing about these numbers, I went through the exercise of <a href=
+    "https://github.com/scottnm/MonkeyMuck/commit/e5b27902d21ddd8ce8ebaf661dccc0e8f29ac12d">revisiting
+    this demo and adding a WebGL build</a>. My motivation for doing this was purely nostalgia; I wanted
+    to revisit something I'd made years ago and see if it was still tweakable. It was, and I was able to
+    publish the WebGL version on my itch page so that folks could play it without having to download and
+    run a Win32 binary. In 5 months, it's only gotten 4 browser plays, so I'm glad my motivation wasn't
+    anything more. Maybe 6 years from now, I'll come back to Muck's analytics dashboard and see 200
+    browser plays! Wouldn't that be funny.
+</p>]]></content>
   </entry>
   <entry>
     <title>Hair Log</title>
     <link href="https://www.scottnm.com/pages/hair_log/hair_log.html" />
     <id>urn:uuid:3ff30857-8734-44eb-bc0f-f711d8c61b64</id>
-    <updated>2022-10-02T00:11:00Z</updated>
+    <updated>2022-10-01T17:11:00-07:00</updated>
     <summary>I kept track of my hair growing for about a year.</summary>
+    <content type="html"><![CDATA[<p>Midway through 2021 I buzzed my head. I thought it'd be fun to keep track of my hair growing back. Watch before your eyes as I slowly transform like a Huey Freeman chia pet.</p>
+<div id="progress-pic-grid">
+    <div class="progress-cell" >
+        <h3>Jun 12, 2021</h3>
+        <img class="progress-pic" src="imgs/2021_06_12_FreshBuzz_c.avif" alt="hair growth progress from 2021/06/12" >
+    </div>
+    <div class="progress-cell" >
+        <h3>Jul 12, 2021</h3>
+        <img class="progress-pic" src="imgs/2021_07_12_c.avif" alt="hair growth progress from 2021/07/12" >
+    </div>
+    <div class="progress-cell" >
+        <h3>Aug 08, 2021</h3>
+        <img class="progress-pic" src="imgs/2021_08_12_c.avif" alt="hair growth progress from 2021/08/12" >
+    </div>
+    <div class="progress-cell" >
+        <h3>Sep 11, 2021</h3>
+        <img class="progress-pic" src="imgs/2021_09_11_c.avif" alt="hair growth progress from 2021/09/11" >
+    </div>
+    <div class="progress-cell" >
+        <h3>Oct 10, 2021</h3>
+        <img class="progress-pic" src="imgs/2021_10_10_c.avif" alt="hair growth progress from 2021/10/10" >
+    </div>
+    <div class="progress-cell" >
+        <h3>Nov 09, 2021</h3>
+        <img class="progress-pic" src="imgs/2021_11_09_c.avif" alt="hair growth progress from 2021/11/09" >
+    </div>
+    <div class="progress-cell" >
+        <h3>Dec 09, 2021</h3>
+        <img class="progress-pic" src="imgs/2021_12_09_c.avif" alt="hair growth progress from 2021/12/09" >
+    </div>
+    <div class="progress-cell" >
+        <h3>Jan 08, 2022</h3>
+        <img class="progress-pic" src="imgs/2022_01_08_c.avif" alt="hair growth progress from 2022/01/08" >
+    </div>
+    <div class="progress-cell" >
+        <h3>Feb 07, 2022</h3>
+        <img class="progress-pic" src="imgs/2022_02_07_c.avif" alt="hair growth progress from 2022/02/07" >
+    </div>
+    <div class="progress-cell" >
+        <h3>Apr 09, 2022</h3>
+        <img class="progress-pic" src="imgs/2022_04_09_c.avif" alt="hair growth progress from 2022/04/09" >
+    </div>
+</div>]]></content>
   </entry>
   <entry>
     <title>Dig Deep Retrospective</title>
     <link href="https://www.scottnm.com/pages/digdeepretro/digdeepretro.html" />
     <id>urn:uuid:733d73ba-b45f-44c0-a8f2-150c9b7c96f5</id>
-    <updated>2022-05-30T00:00:00Z</updated>
+    <updated>2022-05-29T17:00:00-07:00</updated>
     <summary>Reflecting on my experience making Dig Deep during the "Classic Collards" Game Jam</summary>
+    <content type="html"><![CDATA[<p>This past March, I helped host and participated in a 2 week Game Jam: <a href="https://itch.io/jam/culture-bytes-classic-collards-jam">The Classic Collards Jam</a>.</p>
+<p>My team built an isometric digging game in Pico-8 called <a href="https://scottnm.itch.io/dig-deep">Dig Deep</a>.</p>
+<p>I had an absurd amount of fun and felt like I grew a lot as a hobbyist game dev from the experience.</p>
+<p>
+    I really wanted to write some sort of cool, formal &quot;dev retrospective&quot; thing where I gave a well-structured breakdown of everything I learned and experienced during the jam. Ya know, really sit down and reflect on everything
+    with an intention of taking all those lessons and using them to build something even cooler next time!
+</p>
+<p>
+    ...But, I've been slow to write it so my memory is getting hazy and my motivation has plummeted.
+</p>
+<p>Shame shame shame on me.</p>
+<p>In an attempt to half-assedly salvage this, I'm instead going to jot down a simple, contextless bulleted list of takeaways that are still semi-fresh in my memory. Without further ado, here we goooooooo...</p>
+<ul>
+    <li>
+        I'm very proud of how &quot;complete&quot; our submission felt. The game was end-to-end playable, we had music, we had no placeholder art, and we even had a proper ending with story text. Something that feels this close to
+        &quot;complete&quot; was a new jam experience for me.
+    </li>
+    <li>
+        Knowing how long to spend on initial design is tough. We spent our first two (of fourteen) days coming up with an initial idea. I really wanted to start iterating as quickly as possible and find out what was fun by playtesting
+        rather than just thinking about it and even two days felt like we might be spending too much time &quot;thinking about it&quot;. On the other hand, it takes just as long to build a bad game as a good game so its not like the design
+        phase isn't time well spent. It's certainly a tricky balance, especially for a game jam.
+    </li>
+    <li>
+        I think designing was easier once we established what our limitations and constraints were. Some constraints were self-imposed, but many of them were imposed by working in Pico-8. Once we had a much narrower design space, ideas
+        flowed more naturally. Our constraints were:
+        <ol>
+            <li>Complex physics and collision are a no-go. Pico-8 basically makes you implement everything but the sprite and audio renderer yourself.</li>
+            <li>Pico-8 forces you to make very real trade-offs between in-game text and code you can write. In-game text is a very scarce resource. Use it carefully, use it wisely.</li>
+            <li>The game had to be playable with only 6 buttons. I am still shocked at how many interesting game ideas this constraint banished to scrap pile.</li>
+            <li>
+                We have limited time to test our game and basically no ways to automate testing so games need to be easily testable. The best way to keep things testable was to keep design simple. Reduce &quot;if-this-then-that&quot; ideas
+                where possible.
+            </li>
+        </ol>
+    </li>
+    <li>Doing this Game Jam with a team was a such an amazing experience. I may never go back to solo jamming.</li>
+    <li>
+        I like to fool myself into thinking I can pickup slack from other areas of the project (art, sound effects, music) in addition to my programming duties. I cannot and I've gotta stop pretending. Leaning on others made all the difference in
+        this jam.
+    </li>
+    <li>
+        When working on a team, defining shared processes and strategies early on is very important. Our processes felt like they developed over time and so ended up feeling more isolated and confusing. I think we could have improved this
+        coordination.
+    </li>
+    <li>Pico-8 feels ideal for solo work. Multiple people working on the same cart felt clunkier for all non-code assets.</li>
+    <li>
+        My rough, back-of-hand estimates suggest I worked 60-70 hours on this jam. Roughly 3-4 hours a night on weekdays and at least 8 hours a day on weekends. I think that number is a little high for my taste. It's not clear where/how I
+        would reclaim time (smaller designs, better tools, demanding less of myself, etc)
+    </li>
+    <li>Pico-8's export tools are awesome and way more powerful than I first understood. Generating an HTML5 web version and standalone PC executables was trivial.</li>
+    <li>Pico-8's screenshot and gif capture tools were super useful for our remote Game Jam. I shared so many gif screen captures to get feedback on in-progress features.</li>
+    <li>
+        Pico-8's cart size limitations don't hit you until late in the game and when they do they hit you <strong>hard</strong>. This is specifically troublesome for a game jam where the late-game is where you really start scrambling. It
+        sucks to know what you need to do but to just be straight up out of cart space.
+    </li>
+    <li>I refuse to write unreadably terse, uncommented code and Pico-8 is more than happy to punish me for this.</li>
+    <li>I wasn't comfortable using Pico-8's map editor for laying out levels and I think that showed and cost us in the long run.</li>
+    <li>I'm really happy with the isometric look we achieved in the game.</li>
+    <li>I'm proud of the janky way I implemented movement, collision, and hitboxes for the isometric view.</li>
+    <li>
+        <a href="https://www.youtube.com/watch?v=aXTOUnzNo64">&quot;Lessons Learned Making Gunpoint Quickly Without Going Mad&quot;</a> is an awesome GDC talk that I wish I had watched before the jam. The &quot;easy-to-implement vs
+        fun-to-play&quot; matrix for determining whether to implement a feature is a great idea for game jams.
+    </li>
+</ul>
+<p>...and I think that's about all I've got.</p>
+<p>
+    One cool consequence of working in Pico-8 was that I had to make frequent use of its gif capture tool to share progress with my team as I was working on new features. Almost by accident, I ended up capturing effectively the entire
+    development history of the project in gifs. Here they are! I think it looks pretty cool.
+</p>
+<div id="progress-pic-grid">
+    <img class="progress-pic" src="progress_imgs/01.avif" alt="isometric map prototype" >
+    <img class="progress-pic" src="progress_imgs/02.gif" alt="first timer prototype" >
+    <img class="progress-pic" src="progress_imgs/03.gif" alt="animating a sample character" >
+    <img class="progress-pic" src="progress_imgs/04.gif" alt="moving around on a grid" >
+    <img class="progress-pic" src="progress_imgs/05.gif" alt="advancing across the grid to find goals" >
+    <img class="progress-pic" src="progress_imgs/06.gif" alt="animating a player character on the grid" >
+    <img class="progress-pic" src="progress_imgs/07.gif" alt="locking the player's movement to the grid" >
+    <img class="progress-pic" src="progress_imgs/08.gif" alt="grid collision with free player movement" >
+    <img class="progress-pic" src="progress_imgs/09.gif" alt="our first real iso maps" >
+    <img class="progress-pic" src="progress_imgs/10.gif" alt="tweaking iso maps" >
+    <img class="progress-pic" src="progress_imgs/11.gif" alt="scrolling camera" >
+    <img class="progress-pic" src="progress_imgs/12.avif" alt="hint arrows" >
+    <img class="progress-pic" src="progress_imgs/13.gif" alt="dig animation" >
+    <img class="progress-pic" src="progress_imgs/14.gif" alt="death prompt" >
+    <img class="progress-pic" src="progress_imgs/15.gif" alt="bombs" >
+    <img class="progress-pic" src="progress_imgs/16.gif" alt="game over text crawl" >
+    <img class="progress-pic" src="progress_imgs/17.gif" alt="final demo" >
+    <img class="progress-pic" src="progress_imgs/18.gif" alt="post-game-jam adding an item sensor" >
+</div>]]></content>
   </entry>
   <entry>
     <title>Scrapewood</title>
     <link href="https://www.scottnm.com/pages/scrapewood/2024_01_07_scrapewood.html" />
     <id>urn:uuid:6f03bc17-c13a-4eec-9ab5-31acf7097292</id>
-    <updated>2024-01-14T00:11:00Z</updated>
+    <updated>2024-01-13T16:11:00-08:00</updated>
     <summary>Assembled the Achewood web comic into an e-reader compatible EPUB</summary>
+    <content type="html"><![CDATA[<p>
+    <em>Scrapewood</em> is an e-book collection that I assembled of the <a href=
+    "https://achewood.com/"><em>Achewood</em></a> webcomic series by Chris Onstad. None of the content
+    of the e-book is my own (all credit to Onstad), but I did a significant amount of work collecting
+    and assembling that source material into something that I could read on an e-reader, and that
+    resulting e-book is <em>Scrapewood</em>.
+</p>
+
+<p>
+    <img class="post-img" src="https://scottnm.com/site_images/scrapewood_on_reader.avif" alt=
+    "A page of the Scrapewood e-book rendered on a kobo e-reader" >
+</p>
+
+<p>
+    If you're not familiar with <em>Achewood</em>, this post isn't the right venue for me to explain it
+    to you. The only context you need to understand the rest of this post is that...
+</p>
+
+<ol>
+    <li>I like <em>Achewood</em> quite a bit.
+    </li>
+
+    <li>The <a href="https://achewood.com/">Achewood website</a> is <em>really</em> the only place you
+    can read the comic without spending hundreds of dollars for copies of older print collections.
+    </li>
+
+    <li>Reading <em>Achewood</em> from a mobile device is not a pleasant experience (or at least it
+    wasn't for me the last time I tried back in 2021<sup><a href="#footnote-1">[1]</a></sup>).
+    </li>
+</ol>
+
+<p>
+    I wanted a nicer way to read <em>Achewood</em>, and since it hasn't been formally published for
+    e-books yet, I set out to fill that need for myself.
+</p>
+
+<p>
+    I wrote a web scraper in <a href="https://www.rust-lang.org/">Rust</a><sup><a href="#footnote-2">[2]</a></sup> to crawl the
+    <em>Achewood</em> site and download all of the comics from all of the major <em>Achewood</em> story
+    arcs. The comics were all downloaded in their original format: tiny GIFs (this webcomic started in
+    the early 2000s. It was a different time!)
+</p>
+
+<p>
+    My first attempt to make the comics e-reader compatible was just to generate a PDF where each page
+    was a different comic. There were probably smarter ways to do this, but how I ended up doing this
+    was by selecting all of the files on my PC and running them collectively through Window's "Print as
+    PDF" functionality. It worked... <em>ok</em>..., but a bunch of manual editing and oversight was
+    needed<sup><a href="#footnote-3">[3]</a></sup> and since the original images were small, there were pretty bad rendering artifacts when
+    the e-reader would try to expand the image to fill the screen.
+</p>
+
+<p>
+    So, next, I ran all of source images through an AI upscaler to deal with those rendering artifacts.
+    Honestly, I don't remember much about this part of the process (I'm writing this in 2024 when I
+    originally did most of this work back in 2021). I have been able to dig up that I used <a href=
+    "https://bigjpg.com/">BigJPG</a> as my upscaler and I think I have some memory of writing scripts to
+    automate some parts of the process for me, but I can't seem to find any of those old scripts.
+</p>
+
+<p>
+    With all of the comics HD-ified, I constructed another PDF with the same ugly manual process, and
+    that worked ok for quite a while. PDFs are always a bit awkward to read on an e-reader since the
+    e-reader can't make smart decisions about how to layout the content. So, you end up with awkwardly
+    small text and an interface that has to support zooming which is usually pretty terrible on e-ink
+    e-readers.
+</p>
+
+<p>
+    Near the end of 2022, I finally had enough and took the plunge to redo <em>Scrapewood</em> (yet
+    again) but this time in EPUB format which my e-reader works best with. Figuring out how to format
+    this as an EPUB was a really interesting process. EPUB is a well-enough documented format, but
+    rather than read a spec I took the lazy/fun path and sort of reverse engineered the whole thing.
+    Once I discovered<sup><a href="#footnote-4">[4]</a></sup> that an EPUB is really just a zip archive of some XHTML files and other assets
+    (e.g. image files), it was almost faster to just extract the contents from a working EPUB file and
+    work my way backwards to creating my own. Sometimes, it's easier to iterate with something that's
+    already working than to read a long spec full of information that isn't relevant to the task at
+    hand. Ultimately, I ended up being able to generate the whole e-book from a collection of template
+    XHTML files that I worked out by example and a &lt;300 line PowerShell script. How cool! No fancy
+    tools needed here, no sir!
+</p>
+
+<p>
+    And that's it. I've read through <em>Achewood</em> in full about 4 times and 2 of those times were
+    using my own <em>Scrapewood</em> e-book. To me, that's a very satisfying experience and I'm happy I
+    took the time to write about the process.
+</p>
+
+<h2 id="source">
+    Source?
+</h2>
+
+<p>
+    Unlike most of my projects, I'm not sharing much of what I actually built (the PDFs and EPUBs) or
+    the source code of the tools I used to build it (e.g. the web scraper and EPUB generator script).
+</p>
+
+<p>
+    This is intentional.
+</p>
+
+<p>
+    While <em>Achewood</em> is free to read online, it's not my property to redistribute in other forms.
+    If you're looking for a fun project, I've outlined how you could do this yourself (and hopefully
+    helped you avoid my own missteps), but that's as far as I'll go.
+</p>
+
+<h2 id="footnotes">
+    Footnotes
+</h2>
+
+<p>
+    <span id="footnote-1" class="footnote">
+        [1] Jan 14th 2024: I just checked and the mobile version has significantly improved! Buttons are appropriately sized, you can scroll to view more comics, the viewport is fit for mobile... it's beautiful! Almost makes me feel like some of this effort was wasted but whatever, I got multiple years of use out of it and it's still mine!
+    </span>
+    <br >
+    <span id="footnote-2" class="footnote">
+        [2] Why Rust? No reason other than I wanted an excuse to write some Rust.
+    </span>
+    <br >
+    <span id="footnote-3" class="footnote">
+        [3] I do not understand why, but, sometimes, Windows would print some comics rotated and other times not and it took a look of fiddling around in the PDF options to coax Windows to generate the PDF semi-correctly.
+    </span>
+    <br >
+    <span id="footnote-4" class="footnote">
+        [4] By "discovered", I mean that I tried to open an EPUB file in Vim hoping that it was somehow just a plaintext file and was surprised to see Vim trying to read it like a ZIP archive (which Vim has native functionality for browsing).
+    </span>
+    <br >
+</p>]]></content>
   </entry>
   <entry>
     <title>Favorite Albums of 2018</title>
     <link href="https://www.scottnm.com/pages/albumsof2018/albumsof2018.html" />
     <id>urn:uuid:97cadbe1-9d59-4776-8b67-cf4ae49f1089</id>
-    <updated>2018-11-30T00:00:00Z</updated>
+    <updated>2018-11-29T16:00:00-08:00</updated>
     <summary>A non-exhaustive list of my favorite albums released in 2018.</summary>
+    <content type="html"><![CDATA[<section class="welcome-section">
+    <div id="log-header-pane" class="intro-text section-with-buffer">
+        <h1 class="article-title p-name">Music Goodness in 2018</h1>
+        <span id="log-header-text">Here's a (non-exhaustive) list of albums from Nov 2017 to Nov 2018 that I grew really
+            attached to. While not every album on this list is a 10/10, I think they each have something really
+            interesting that kept me coming back for repeat listens.</span>
+        <br>
+        <a class="spotify-btn"
+            href="https://open.spotify.com/user/124516351/playlist/0TTq0EpSPoeym3rxPrIdwv?si=C-wEr6dWQTaDju4sxzV3ow"
+            target="_blank">listen on spotify</a>
+    </div>
+</section>
+<section class="albums-section">
+    <div class="section-with-buffer">
+        <div id="entry-subpane" class="subpane bg-dark">
+            <section class="center-cropped" style="background-image: url('/site_images/paranoidvoid.avif');">
+                <div class="entry entry_info_frame_border section-with-small-buffer">
+                    <div class="entry entry_info_frame">
+                        <div class="entry_title">
+                            <h3>Literary Math</h3>
+                        </div>
+                        <div class="entry_title">
+                            <h4>Paranoid Void</h4>
+                        </div>
+                        <div class="entry_date">01 Nov 2017</div>
+                        <div class="entry_description">Paranoid Void is a japanese rock outfit and their debut(?) album
+                            "Literary Math" sees the band toying around in a pretty progressive/experimental place. The
+                            guitars flip between enormous ethereal, yet distorted echo tones and a twangy jam-band
+                            sound. The bass is incredibly present in the mix and is often found riffing right alongside
+                            the guitars. I'm no drummer so I have difficulty describing the drums (maybe bombastic?),
+                            but they feel like a lot of fun. I've come back to this album A LOT this year and it's the
+                            reason I made an exception to allow for albums from the end of 2017 to make this list.
+                            Sadly, I don't speak japanese so a lot of the vocal themes are lost on me. But despite the
+                            language barrier, I still love this album.</div>
+                        <div class="entry_favtrack">favorite track(s): Track 1, Track 3, Track 8</div>
+                        <div class="entry_link"><a class="spotify-btn"
+                                href="https://open.spotify.com/album/7cHvJpTVGuum5Y69ZbKUmg?si=fbJ2U3SDRA62rT7iG4xHVQ"
+                                target="_blank">listen on spotify</a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="center-cropped" style="background-image: url('/site_images/inlovewithaghost.avif');">
+                <div class="entry entry_info_frame_border section-with-small-buffer">
+                    <div class="entry entry_info_frame">
+                        <div class="entry_title">
+                            <h3>Gay Story</h3>
+                        </div>
+                        <div class="entry_title">
+                            <h4>In Love With A Ghost</h4>
+                        </div>
+                        <div class="entry_date">01 Apr 2018</div>
+                        <div class="entry_description">This album is a warm blanket and a hot cup of tea on a bad day.
+                            This album is melting snow at the end of winter break. This album is 20% melancholy and 80%
+                            cute incarnate. Tranquil synths meet buzzy melodica(?) meet acoustic strings in a short,
+                            11-minute, instrumental package that just makes me feel good inside. Multiple tracks seem to
+                            revisit and transform the same musical motifs over and over again. To some this might sound
+                            repetitive but I find it really creative and fun. It may be the only way an 11-minute album
+                            can work.</div>
+                        <div class="entry_favtrack">favorite track(s): The whole thing is 11 minutes long. It's
+                            basically one track and it's all good.</div>
+                        <div class="entry_link"><a class="spotify-btn"
+                                href="https://open.spotify.com/album/6wNgoamY7ZcZA1mEVXAuZV?si=FWU0uNxJS_aDi_9mtovI0g"
+                                target="_blank">listen on spotify</a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="center-cropped" style="background-image: url('/site_images/slothandturtle.avif');">
+                <div class="entry entry_info_frame_border section-with-small-buffer">
+                    <div class="entry entry_info_frame">
+                        <div class="entry_title">
+                            <h3>Sloth &amp; Turtle</h3>
+                        </div>
+                        <div class="entry_title">
+                            <h4>Sloth &amp; Turtle</h4>
+                        </div>
+                        <div class="entry_date">03 Apr 2018</div>
+                        <div class="entry_description">Sloth &amp; Turtle's eponymous 2018 record is probably my
+                            favorite album in the "instrumental" space that I stumbled across this year. Lots of
+                            tippy-tapping, noodly riffs paired with wild effect-chains and acoustic guitars. The closing
+                            track is one of my favorites and takes on more of a post-rock slant with a super beachy
+                            reverb and marching-band-esque drums.</div>
+                        <div class="entry_favtrack">favorite track(s): The Toys Are Back In Town, Toys, A Song For Ants
+                        </div>
+                        <div class="entry_link"><a class="spotify-btn"
+                                href="https://open.spotify.com/album/5rzJOlcNZdjp2JTgvGfdze?si=OTs2pygIQUCloFmh-9nSqg"
+                                target="_blank">listen on spotify</a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="center-cropped" style="background-image: url('/site_images/senmorimoto.avif');">
+                <div class="entry entry_info_frame_border section-with-small-buffer">
+                    <div class="entry entry_info_frame">
+                        <div class="entry_title">
+                            <h3>Cannonball!</h3>
+                        </div>
+                        <div class="entry_title">
+                            <h4>Sen Morimoto</h4>
+                        </div>
+                        <div class="entry_date">18 May 2018</div>
+                        <div class="entry_description">Cannonball!`s biggest strength is by far its wild jazz
+                            instrumentation. Morimoto's background is as a saxophonist and he makes great use of his
+                            horn to set dreamy atmospheres (see: Sections) and toot out cacophonous brass tones (see:
+                            Picture of a Painting). You'll also find lots of fun drum bits, bright piano, and strange
+                            synth tones such as the bloopy foundation of the title track, "Cannonball!." Vocally,
+                            Morimoto has a soft, monotonous vibe that meshes well with his vocal delivery and
+                            occasionally touches on something that sounds mildly annoyed (see: This is Not). I had the
+                            pleasure of seeing Sen Morimoto perform live this year and it was a blast. The drumming was
+                            insane, the saxophone was powerful, and the tone was inviting.</div>
+                        <div class="entry_favtrack">favorite track(s): Sections, This Is Not, People Watching</div>
+                        <div class="entry_link"><a class="spotify-btn"
+                                href="https://open.spotify.com/album/0Gy6pQqmY6QATlaYxqflek?si=G-3v98EQSqOFBxmxKUzlqA"
+                                target="_blank">listen on spotify</a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="center-cropped" style="background-image: url('/site_images/benlevingroup.avif');">
+                <div class="entry entry_info_frame_border section-with-small-buffer">
+                    <div class="entry entry_info_frame">
+                        <div class="entry_title">
+                            <h3>Our Place</h3>
+                        </div>
+                        <div class="entry_title">
+                            <h4>Ben Levin Group</h4>
+                        </div>
+                        <div class="entry_date">18 May 2018</div>
+                        <div class="entry_description">"Our Place" is absolutely the album I most respect from 2018. I
+                            wish I had a better word than "experimental" to describe it. It's beautiful. It fuses art
+                            rock, folk, and spacey psychedelic (psy-fi?) music into a narrative of existential fear and
+                            acceptance framed by the death of of a loved one. The heart and soul of this album is the
+                            dynamism that drives all 34 minutes of it. The intensity and composition of the music
+                            drastically shifts and changes from moment to moment. Pounding drums give way to whirring
+                            strings. Whirring strings give way to squealing synths. Vocal delivery softens and explodes,
+                            not at random, but exactly when it should. Some tracks like "Waiting Room" have more
+                            straightforward composition. Others like "Bless the Decomposers" could practically rub
+                            elbows with `musique concrete` tunes. Best of all, despite all of this shifting and changing
+                            and transforming, the album feels cohesive; it makes sense from start to end.</div>
+                        <div class="entry_favtrack">favorite track(s): The User, In, Out, Bless the Decomposers</div>
+                        <div class="entry_link"><a class="spotify-btn"
+                                href="https://open.spotify.com/album/5rzJOlcNZdjp2JTgvGfdze?si=OTs2pygIQUCloFmh-9nSqg"
+                                target="_blank">listen on spotify</a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="center-cropped" style="background-image: url('/site_images/iglooghost.avif');">
+                <div class="entry entry_info_frame_border section-with-small-buffer">
+                    <div class="entry entry_info_frame">
+                        <div class="entry_title">
+                            <h3>Clear Tamei/Steel Mogu</h3>
+                        </div>
+                        <div class="entry_title">
+                            <h4>Iglooghost</h4>
+                        </div>
+                        <div class="entry_date">08 Aug 2018</div>
+                        <div class="entry_description">Frankly, I don't know what Iglooghost or this split EP is. It's
+                            chaotic and quick with instrumentation that sounds like every sound ever sampled is being
+                            thrown at you all at once. Everything about it feels intentionally difficult to parse
+                            including its visual presentation which features mysterious gumball-machine-figures with
+                            dunce caps and glossy marble exteriors. That being said, I think the confusing presentation
+                            may be one of my favorite aspects of the music. I love the character art, the black and
+                            white design of the split EPs, and the visual world building around the music. Maybe at some
+                            very very very far removed level it reminds me of my first, notably confused-yet-intrigued
+                            experience with The Chariot and their album "One Wing." Everyday is certainly not an
+                            "Iglooghost day", but there certainly are some and when they happen there is nothing more
+                            satisfying than this special combination of crystalline synths, robotronic drums, distorted
+                            woodwinds, conlang babel, and lore Googling.</div>
+                        <div class="entry_favtrack">favorite track(s): Shrine Hacker, Black Light Ultra</div>
+                        <div class="entry_link"><a class="spotify-btn"
+                                href="https://open.spotify.com/artist/7LCDnUQYE07fnKbo46SVLB?si=WEwGXqWdRBicTkRmMc_flw"
+                                target="_blank">listen on spotify</a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="center-cropped" style="background-image: url('/site_images/deltasleep.avif');">
+                <div class="entry entry_info_frame_border section-with-small-buffer">
+                    <div class="entry entry_info_frame">
+                        <div class="entry_title">
+                            <h3>Ghost City</h3>
+                        </div>
+                        <div class="entry_title">
+                            <h4>Delta Sleep</h4>
+                        </div>
+                        <div class="entry_date">10 Aug 2018</div>
+                        <div class="entry_description">Delta Sleep's "Ghost City" is an album that knows where to draw
+                            the line between being "Mathy" and being palatable. Rhythmically, the album adopts a lot of
+                            the jerky,rapid-start-stop patterns that I love without sacrificing memorable hooks or
+                            catchy motifs in their melodies. There are a lot of familiar math-rock-y timbres and tones
+                            on this album: bright guitars, indie-rock vocals, and sharp drums. Narratively the album
+                            touches upon themes of "nature vs machine" that I find a bit goofy and cliche, but the
+                            themes are sonically well-supported and delivered. I don't think this is an album that will
+                            convince anyone to like math rock if they don't already, but it might convince them it's not
+                            a hopeless contest to write the least presentable music in the holy name of "odd time
+                            signatures."</div>
+                        <div class="entry_favtrack">favorite track(s): El Pastor, Dotwork, Single File</div>
+                        <div class="entry_link"><a class="spotify-btn"
+                                href="https://open.spotify.com/album/63PgGSb6ZkwPVfMZVOhObO?si=d8YJPFT0TpSqH-E5Pu8rGw"
+                                target="_blank">listen on spotify</a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="center-cropped" style="background-image: url('/site_images/toucheamore.avif');">
+                <div class="entry entry_info_frame_border section-with-small-buffer">
+                    <div class="entry entry_info_frame">
+                        <div class="entry_title">
+                            <h3>Green (single)</h3>
+                        </div>
+                        <div class="entry_title">
+                            <h4>Touche Amore</h4>
+                        </div>
+                        <div class="entry_date">19 Aug 2018</div>
+                        <div class="entry_description">This may not be a full album, but I cannot get enough of this
+                            track. It kicks off like some kind goth "Monster Mash" remix and before you know it the
+                            guitars swell to this beautiful ringing chorus. Bolm's vocal delivery is fairly tempered
+                            throughout most of the song which juxtaposes really well against the aggressive closing
+                            lines of the chorus.</div>
+                        <div class="entry_link"><a class="spotify-btn"
+                                href="https://open.spotify.com/track/5FR0YMb1HFGI2gHHPiW9qk?si=2o7ERLbPSo28nUX_Aw4UzQ"
+                                target="_blank">listen on spotify</a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="center-cropped" style="background-image: url('/site_images/joji.avif');">
+                <div class="entry entry_info_frame_border section-with-small-buffer">
+                    <div class="entry entry_info_frame">
+                        <div class="entry_title">
+                            <h3>Ballads 1</h3>
+                        </div>
+                        <div class="entry_title">
+                            <h4>Joji</h4>
+                        </div>
+                        <div class="entry_date">26 Oct 2018</div>
+                        <div class="entry_description">I've kept up with Joji's music since I stumbled upon "rain on me"
+                            a year and a half ago. The moody piano and tired mumble-voice appealed to my own sense of
+                            self-importance and coincided with a period of my life where I spent hours getting lost in
+                            "lofi hip hop" youtube playlists (don't tell anyone but I still do sometimes). Months later,
+                            I was disappointed when the debut EP "In Tongues" released and didn't hook me the same way.
+                            I haven't figured out why. Maybe I just fell out of love with the somber, romantic style of
+                            mumbly RnB. Regardless, I didn't pay much mind when he dropped the single "Yeah Right" and I
+                            kept my distance from the summer pop album that he dropped with the rest of his 88rising
+                            labelmates. "Ballads 1" has me tuned back in though. The album is not without its problems
+                            -- the obnoxious bass on "Attention", the grimey guitar solo on "Wanted U", the test
+                            drive/long ride wordplay on "Test Drive" -- but I think the good largely outweighs the bad
+                            on the album. The chorus to "Wanted U" and the entirety of "Why Am I Still in LA" could go
+                            toe-to-toe with some of my favorite emo tracks. The rising vocal composition on "Slow
+                            Dancing in the Dark" pairs beautifully with the synthetic harp and buzzy synth that forms
+                            the song's musical foundation. "Can't Get Over You" is short-n-sweet with minimal production
+                            that makes every harp pluck, every drum hit, and every clap that much more memorable.</div>
+                        <div class="entry_favtrack">favorite track(s): Slow Dancing in the Dark, Can't Get Over You, Why
+                            Am I Still in LA, No Fun</div>
+                        <div class="entry_link"><a class="spotify-btn"
+                                href="https://open.spotify.com/album/34GQP3dILpyCN018y2k61L?si=7jbV9ivQQU6nJXobLLYR4w"
+                                target="_blank">listen on spotify</a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="center-cropped" style="background-image: url('/site_images/monobody.avif');">
+                <div class="entry entry_info_frame_border section-with-small-buffer">
+                    <div class="entry entry_info_frame">
+                        <div class="entry_title">
+                            <h3>Raytracing</h3>
+                        </div>
+                        <div class="entry_title">
+                            <h4>Monobody</h4>
+                        </div>
+                        <div class="entry_date">01 Nov 2018</div>
+                        <div class="entry_description">I don't have too much to say about this album. I really like it,
+                            but a lot of it feels foreign to me. It's a blend of jazz, progrock, mathrock, and ambient
+                            electronic music (ala C418) that either has me bobbing my head or scratching it. It's a very
+                            indulgent record with long track-times and wandering arrangements that can make you feel
+                            lost if you don't know what to expect. But this indulgence affords them the opportunity to
+                            write an album that always has something new to discover. I first found this band through
+                            their stellar Audiotree Live performance awhile ago and was pleasantly surprised to find
+                            their drummer was Nnamdi Ogbannaya who took a spot in my "favorite albums of 2017" last year
+                            with his release "Drool."</div>
+                        <div class="entry_favtrack">favorite track(s): Ilha Verde, Former Islands</div>
+                        <div class="entry_link"><a class="spotify-btn"
+                                href="https://open.spotify.com/album/291cUbF4RbZOUqViqmJ9K6?si=gFT7zDuVTyujMUyhfre-4g"
+                                target="_blank">listen on spotify</a></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+<section class="honorable-mentions-section">
+    <div id="honorable-mention-pane" class="intro-text section-with-buffer">
+        <h2 class="section-title">Honorable Mentions</h2>
+        <div id="honorablementions">
+            <ul>
+                <li class="honorable-mention"><span class="honorable-mention-album">Artificial Selection</span> -- <span
+                        class="honorable-mention-artist">Dance Gavin Dance</span><br><span
+                        class="honorable-mention-oneline">It's another Dance Gavin Dance record.</span><br></li>
+                <li class="honorable-mention"><span class="honorable-mention-album">The Rise of Hobo Johnson</span> --
+                    <span class="honorable-mention-artist">Hobo Johnson and the Love Makers</span><br><span
+                        class="honorable-mention-oneline">Explosive, choppy spoken word that reminds me of Listener
+                        mixed with immature pop-punk.</span><br></li>
+                <li class="honorable-mention"><span class="honorable-mention-album">Tres</span> -- <span
+                        class="honorable-mention-artist">Mouse on the Keys</span><br><span
+                        class="honorable-mention-oneline">Instrumental keyboard trio make neat music</span><br></li>
+                <li class="honorable-mention"><span class="honorable-mention-album">Excursions</span> -- <span
+                        class="honorable-mention-artist">C418</span><br><span class="honorable-mention-oneline">Not as
+                        catchy as 148, but scratches that ambient itch</span><br></li>
+                <li class="honorable-mention"><span class="honorable-mention-album">Mental Knife</span> -- <span
+                        class="honorable-mention-artist">Hail the Sun</span><br><span
+                        class="honorable-mention-oneline">Good post-hardcore. Arcane Justice is twisted.</span><br></li>
+                <li class="honorable-mention"><span class="honorable-mention-album">Royal Coda</span> -- <span
+                        class="honorable-mention-artist">Royal Coda</span><br><span class="honorable-mention-oneline">A
+                        powerhouse trio with a disappointing debut. My ears are open but not searching.</span><br></li>
+                <li class="honorable-mention"><span class="honorable-mention-album">Somewhere At the Bottom of the River
+                        [..] 10th Anniversary Remaster</span> -- <span class="honorable-mention-artist">La
+                        Dispute</span><br><span class="honorable-mention-oneline">Remasters are illegal on new-release
+                        retrospectives, but I love this album with all my heart.</span><br></li>
+            </ul>
+        </div>
+    </div>
+</section>]]></content>
   </entry>
 
 </feed>
