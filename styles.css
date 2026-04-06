@@ -264,3 +264,8 @@ ul.unbulleted-list {
 .recipe-list ul li:last-child {
     margin-bottom: 0;
 }
+
+/* gmi styles */
+.gemlink-prefix {
+    font: monospace
+}
