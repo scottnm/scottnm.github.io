@@ -1,29 +1,34 @@
-/* Light Theme (Default) */
 :root {
-    --main-bg-color: #fff;
-    --main-text-color: #333;
-    --unvisited-link-color: #1566ca;
-    --visited-link-color: #78424f;
-    --hover-link-color: #b8860b;
-    --active-link-color: #ed4e76;
-    --icon-color-filter: invert(0%);
-    --blockquote-bg-color: #f9f9f9;
-    --blockquote-bar-color: #ccc;
-}
+    /* Light Theme (Default) */
+    --main-bg-color-light: #fff;
+    --main-text-color-light: #333;
+    --unvisited-link-color-light: #1566ca;
+    --visited-link-color-light: #78424f;
+    --hover-link-color-light: #b8860b;
+    --active-link-color-light: #ed4e76;
+    --blockquote-bg-color-light: #f9f9f9;
+    --blockquote-bar-color-light: #ccc;
 
-/* Dark Theme */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --main-bg-color: #202020;
-        --main-text-color: #eee;
-        --unvisited-link-color: #34baeb;
-        --visited-link-color: #7d4c58;
-        --hover-link-color: #b8860b;
-        --active-link-color: #ed4e76;
-        --icon-color-filter: invert(100%);
-        --blockquote-bg-color: #303030;
-        --blockquote-bar-color: #404040;
-    }
+    /* Dark Theme */
+    --main-bg-color-dark: #202020;
+    --main-text-color-dark: #eee;
+    --unvisited-link-color-dark: #34baeb;
+    --visited-link-color-dark: #7d4c58;
+    --hover-link-color-dark: #b8860b;
+    --active-link-color-dark: #ed4e76;
+    --blockquote-bg-color-dark: #303030;
+    --blockquote-bar-color-dark: #404040;
+
+    /* Select light or dark based on preference */
+    --main-bg-color: light-dark(var(--main-bg-color-light), var(--main-bg-color-dark));
+    --main-text-color: light-dark(var(--main-text-color-light), var(--main-text-color-dark));
+    --unvisited-link-color: light-dark(var(--unvisited-link-color-light), var(--unvisited-link-color-dark));
+    --visited-link-color: light-dark(var(--visited-link-color-light), var(--visited-link-color-dark));
+    --hover-link-color: light-dark(var(--hover-link-color-light), var(--hover-link-color-dark));
+    --active-link-color: light-dark(var(--active-link-color-light), var(--active-link-color-dark));
+    --blockquote-bg-color: light-dark(var(--blockquote-bg-color-light), var(--blockquote-bg-color-dark));
+    --blockquote-bar-color: light-dark(var(--blockquote-bar-color-light), var(--blockquote-bar-color-dark));
+
 }
 
 body {
@@ -34,9 +39,13 @@ body {
 a { color: var(--unvisited-link-color) }
 a:visited { color: var(--visited-link-color) }
 a:active { color: var(--active-link-color) }
-a:hover { 
+a:hover {
     transition: all 0.3s;
-    color: var(--hover-link-color) 
+    color: var(--hover-link-color)
+}
+a:hover > * {
+    transition: all 0.3s;
+    color: var(--hover-link-color)
 }
 
 @media screen and (max-width: 600px) {
@@ -98,7 +107,6 @@ footer .title-text {
 header .title-icon,
 footer .title-icon {
     transform: translateY(3px);
-    filter: var(--icon-color-filter);
 }
 
 header .header-links-separator {
@@ -118,7 +126,7 @@ footer {
 .project-title, .social-btn {
     font-family: verdana;
 }
- 
+
 span {
     font-family: georgia;
 }
@@ -194,7 +202,7 @@ blockquote p {
     text-align: center;
 }
 
-/* N.B. I'd like to get ellipsis for text rather than line breaks but can't quite get it to work 
+/* N.B. I'd like to get ellipsis for text rather than line breaks but can't quite get it to work
 .pic-grid-cell-text-overlay > .project-title {
     overflow: hidden;
     white-space: nowrap;
