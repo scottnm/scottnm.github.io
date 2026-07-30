@@ -119,6 +119,10 @@ footer {
     margin-bottom: 20px;
 }
 
+.article-title {
+    text-align: center;
+}
+
 .article-title, .section-title {
     font-family: monospace;
 }

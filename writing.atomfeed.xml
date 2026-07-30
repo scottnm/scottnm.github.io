@@ -122,9 +122,8 @@ an un-haunted house</p>
 <p>Without further rambling preamble... here it is!</p>
 <hr />
 <h2>Companyon</h2>
-<div class="byline">
-<p><em>by ChatGPO Bot #SNM0726</em></p>
-</div>
+<div id="story-section">
+<div class="byline">*by ChatGPO Bot #SNM0726*</div>
 <p>Tomorrow would mark two years. Two years since Isaac had boarded TransSol's courier starship with the pilot's certification he felt had been issued too easily. Two years of routine inventory inspections and system diagnostics. Two years of rigid diet and exercise he could never have maintained on his own back home. Two years of the self-sanctified ritual he found himself currently practicing: laying in the observation bay flat on his back, taking in the star-fields, and cataloguing constellations that he never seemed to be able to find two days in a row. </p>
 <p>The prevailing wisdom had been that a view <em>of</em> space <em>from</em> space would fundamentally change you: the "Overview Effect" they called it. But it was important what you were viewing, Isaac learned. Viewing your home from that specially distanced orbit flooded you with reverence for the human experience. Its insignificance made significant by juxtaposition with the void engulfing it. But to stargaze so far from home and so regularly was a different experience entirely. Day in, day out, Isaac saw stunning fields of utterly depersonalized stars. <em>He</em> should have been the insignificance made significant, but no audience of stars could make his world aboard the courier ship feel significant. It was just Isaac and his inventory. But even still, time in the observation bay was time well spent. Time well spent alone.</p>
 <p>Behind Isaac, the observation bay door opened flooding the room with soft light. Isaac craned his neck back squinting to adjust his eyes.</p>
@@ -146,7 +145,6 @@ an un-haunted house</p>
 <p>"<em>Change of pace</em>?"</p>
 <p>Isaac stumbled over his own lost words and into another memory; his and Zac's first meeting. In fact, what might have been called Zac's birthday, when Isaac gave Zac his name. </p>
 <p class="story-perspective-shift-separator">***</p>
-
 <p>Isaac stared at his synthetic skinned mirror image, lost for words. The new Companyon model stared back, feeling no pressure to find any words.</p>
 <p>"Uh... hello...", Isaac said, putting his hand to hand to his chest, "Isaac. I'm Isaac."</p>
 <p>"Isaac..." the doppelganger responded.</p>
@@ -155,10 +153,8 @@ an un-haunted house</p>
 <p>Isaac internally bit his lips closed with his teeth to keep the rest of his "very funny jokes" contained.</p>
 <p>"Sure. I can be Zac."</p>
 <p class="story-perspective-shift-separator">***</p>
-
 <p>Back in the present, Isaac's face had mimicked the same tight-lipped cringe, and he force-flung his daydreaming further forward to their first day on the job to ease out of the embarrassment.</p>
 <p class="story-perspective-shift-separator">***</p>
-
 <p>Isaac and Zac took their first steps into the microgravity cargo hold. Isaac had expected a warehouse layout of boxes and shipping containers like the delivery hubs back home: corridors of shelves stacked high with labeled packages and a small fleet of forklift drones to fetch and rearrange inventory as deliveries went out. Isaac's expectations were quickly forgotten. The cargo hold stretched 40 meters to the left and 40 meters to the right. 5 meters from the entrance sat a terminal and a chair, and a meter beyond that rose an impenetrable wall of shipping containers.</p>
 <p>The arrangement of cargo ran floor to ceiling and the entire 80-meter width of the cargo hold. Surrounding the monolith on all sides -- left, right, top, and bottom -- was just a few inches of clearance that the cargo sat suspended within. The individual cargo composing the monolith were nonuniform but somehow arranged together like a 3D jigsaw puzzle. Pressing his face to the floor, Isaac peered beneath the monolith to test if he could see how far back it ran, but the cargo hold's limited light only reached a few feet back.
 Isaac stepped back, at first gormless. Turning to Zac, his stupor morphed into indignation.</p>
@@ -168,9 +164,9 @@ Isaac stepped back, at first gormless. Turning to Zac, his stupor morphed into i
 <p>"Are you considering disassembly as part of your inspection processes? I would not advise that." Zac softened his tone and Isaac was all too aware. "Why are you so interested in manually inspecting the cargo? Even if you were able to, there's far too much to sift through and we have more effective tools..." Zac gestured to the terminal.</p>
 <p>"I know, I know." Isaac sat at the terminal and brought the IMS -- inventory management system -- to life. With no great effort, Isaac flexed his training and drove the terminal through its management routines. Glyphs, graphs, and summaries flooded the screen. Bookending the flood, the system reported 62,000 packages, 0 container defects, 0 environmental flags, 0 required actions, and 0 suggested actions. "I'm here after all, right? I did the training. I can read the reports." Isaac pinched the bridge of his nose. "I just... it's not a lack of trust. But it feels like a limitation... a bottleneck. I'm trying to describe a world that I can only view through a pinhole in a steel plate. I just wish I could poke a few more holes to see it from a different angle."</p>
 <p class="story-perspective-shift-separator">***</p>
-
 <p>Isaac released the pinch on his nose, again letting go of the memory, as they rounded the corner and passed by the rec-room. He and Zac had gone back and forth a lot that day, making no ground, and reaching no resolution. In the end, Isaac resigned himself to the absurdity of it all. And in a way, time had proven his concerns to hold no weight. Days had come and gone, and the mission had continued smoothly. Most days the reports were the same as that first day. "62,000 packages, 0 container defects, 0 environmental flags, 0 required actions, and 0 suggested actions." On the rare occasion there was a required or suggested action, Isaac was able to quickly mitigate the issue from his terminal: adjusting the microgravity to soften cargo stress points, resolving conflicts in the report data, rebooting the terminal itself. And in the quiet days between, he and Zac had busied themselves in the rec room with games of cards.</p>
 <p>...</p>
+</div>
 <hr />
 <p>And that's where my draft ended. ◡̈</p>
 <p>I know how I wanted it to end and the "feel" that I wanted that ending to have (hint: there's a problem with the cargo and the delivery never mattered), but I just... couldn't get it there.</p>
