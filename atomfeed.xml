@@ -7,7 +7,7 @@
   <link href="https://scottnm.com/atomfeed.xml" rel="self"/>
   <link href="https://scottnm.com/"/>
   <icon>/site_images/icon/atomfeedicon.png</icon>
-  <updated>2026-08-01T22:27:47.664480-07:00</updated>
+  <updated>2026-10-03T18:21:58.593872-07:00</updated>
   <id>urn:uuid:bfae4b33-aa4e-48a6-96b7-09e66d905159</id>
   <author>
     <name>Scott Munro</name>
@@ -15,7 +15,26 @@
 
   <!-- FEED ENTRIES -->
   <entry>
-    <title>Edge of Town</title>
+    <title>Writing: Power Outage</title>
+    <link href="https://www.scottnm.com/pages/2026_10_03_power_outage/2026_10_03_power_outage.html" />
+    <id>urn:uuid:c540a2e3-f3b0-4681-bb33-ca2179498811</id>
+    <updated>2026-10-03T18:21:58.593872-07:00</updated>
+    <summary></summary>
+    <content type="html"><![CDATA[<p>3AM.</p>
+<p>The power's just gone out: ten blocks to the north and ten more blocks to the south.</p>
+<p>Outside, I can see the twinkle of a handful of stars. Clearing the light pollution has made room for them, but they must not feel welcome. They are still so very dim and distant.</p>
+<p>I've lit two candles to mark the occassion. It feels like I'm spoiling a unique opportunity for this darkness by immediately filling my living room with candlelight, but I think that's just my predisposition to guilt. It's just as true that it's a unique opportunity to fill my room with candlelight in just this particular kind of darkness. What useless guilt.</p>
+<p>Behind me, I hear the deep snore of a large dog: Silent inhales and effortful, full-nostriled exhales. But, I don't have a large dog. I have a very small dog, and she's not behind me. She's upstairs resting comfortably.</p>
+<p>No, the snore seems to be coming from the house around me in a very tangible, very much not metaphorical way. I sit still and listen trying to rationalize the noise. Is the house always making this noise below its usual hum of electric current powering appliances, and I'm only now noticing it as things are finally quiet?</p>
+<p>Rising from my table and candles to investigate, I trace the sound to my refrigerator. Standing with my ear and cheek an intimate distance from the fridge's broadside, I'm relieved to find the source of the snore. Something must be thawing, settling, and returning to the house's ambient temperature in the fridge's machinery. My first thought is "something about the coolant lines?" but I know I'm just playing word-association games and making uneducated guesses.</p>
+<p>I sit back down and hope I haven't robbed the moment of its magic. To live for a brief moment with the genuine belief that the house might be possessed of some gentle, snoring spirit.</p>
+<p>There's that useless guilt again.</p>
+<p>The oven chimes, startling me, and the streetlights return outside.</p>
+<p>Damnit.</p>
+<p>I'll let the candles burn a little longer to avoid the wax melting awkwardly and then return to bed.</p>]]></content>
+  </entry>
+  <entry>
+    <title>Writing: Edge of Town</title>
     <link href="https://www.scottnm.com/pages/2026_08_01_edge_of_town/2026_08_01_edge_of_town.html" />
     <id>urn:uuid:fa1883a3-75a9-40bb-b85b-538ea8196d38</id>
     <updated>2026-08-01T22:27:47.664480-07:00</updated>
