@@ -73,14 +73,20 @@
         <div class="e-content" id="post-content">
           <style>
           model-viewer.book-3d-model {
-            width: 250px;
+            width: 200px;
             height: 250px;
           }
           @media screen and (max-width: 600px) {
             model-viewer.book-3d-model {
-              width: 200px;
+              width: 150px;
               height: 200px;
             }
+          }
+          #models-div {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
           }
           </style>
 
@@ -90,13 +96,68 @@
           <p>Welcome to my virtual library!</p>
           <p>It's still under construction.</p>
           <p>All book covers are photos of physical books in my real library.</p>
-          <p>
-            <model-viewer id="shomg" class="book-3d-model" alt="3d model of 'The Secret History of Mac Gaming' by Richard Moss" src="/files/library/OBJS/book/amigos3d-book-red.glb" shadow-intensity="1" camera-controls orientation="0deg 60deg 0deg" touch-action="pan-y">
+          <div id="models-div">
+            <model-viewer id="anasazi" class="book-3d-model" alt="3d model of 'Anasazi' by Mike Mccubbins and Matt Bryan" src="/files/library/OBJS/book/amigos3d-book-red.glb" shadow-intensity="1" camera-controls orientation="0deg 60deg 0deg" touch-action="pan-y">
               <script>
               {
-                let model = document.querySelector("model-viewer#shomg");
+                let model = document.querySelector("model-viewer#anasazi");
                 function onModelLoad() {
-                  loadTexture(model, "/files/library/TEX/books/shomg.png");
+                  loadTexture(model, "/files/library/TEX/books/anasazi.png");
+                }
+                model.addEventListener("load", onModelLoad);
+              }
+              </script>
+            </model-viewer>
+            <model-viewer id="atcwop1" class="book-3d-model" alt="3d model of 'All the Clever Words on Pages' by Paul Matthew Harrison" src="/files/library/OBJS/book/amigos3d-book-red.glb" shadow-intensity="1" camera-controls orientation="0deg 60deg 0deg" touch-action="pan-y">
+              <script>
+              {
+                let model = document.querySelector("model-viewer#atcwop1");
+                function onModelLoad() {
+                  loadTexture(model, "/files/library/TEX/books/atcwop1.png");
+                }
+                model.addEventListener("load", onModelLoad);
+              }
+              </script>
+            </model-viewer>
+            <model-viewer id="atcwop2" class="book-3d-model" alt="3d model of 'All the Clever Words on Pages (Pt. 2)' by Paul Matthew Harrison" src="/files/library/OBJS/book/amigos3d-book-red.glb" shadow-intensity="1" camera-controls orientation="0deg 60deg 0deg" touch-action="pan-y">
+              <script>
+              {
+                let model = document.querySelector("model-viewer#atcwop2");
+                function onModelLoad() {
+                  loadTexture(model, "/files/library/TEX/books/atcwop2.png");
+                }
+                model.addEventListener("load", onModelLoad);
+              }
+              </script>
+            </model-viewer>
+            <model-viewer id="bfb_007" class="book-3d-model" alt="3d model of 'GoldenEye: 007' by Alyse Knorr" src="/files/library/OBJS/book/amigos3d-book-red.glb" shadow-intensity="1" camera-controls orientation="0deg 60deg 0deg" touch-action="pan-y">
+              <script>
+              {
+                let model = document.querySelector("model-viewer#bfb_007");
+                function onModelLoad() {
+                  loadTexture(model, "/files/library/TEX/books/bfb_007.png");
+                }
+                model.addEventListener("load", onModelLoad);
+              }
+              </script>
+            </model-viewer>
+            <model-viewer id="bfb_mm" class="book-3d-model" alt="3d model of 'Majora's Mask' by Gabe Durham" src="/files/library/OBJS/book/amigos3d-book-red.glb" shadow-intensity="1" camera-controls orientation="0deg 60deg 0deg" touch-action="pan-y">
+              <script>
+              {
+                let model = document.querySelector("model-viewer#bfb_mm");
+                function onModelLoad() {
+                  loadTexture(model, "/files/library/TEX/books/bfb_mm.png");
+                }
+                model.addEventListener("load", onModelLoad);
+              }
+              </script>
+            </model-viewer>
+            <model-viewer id="bfb_sh2" class="book-3d-model" alt="3d model of 'Silent Hill 2' by Mike Drucker" src="/files/library/OBJS/book/amigos3d-book-red.glb" shadow-intensity="1" camera-controls orientation="0deg 60deg 0deg" touch-action="pan-y">
+              <script>
+              {
+                let model = document.querySelector("model-viewer#bfb_sh2");
+                function onModelLoad() {
+                  loadTexture(model, "/files/library/TEX/books/bfb_sh2.png");
                 }
                 model.addEventListener("load", onModelLoad);
               }
@@ -113,9 +174,79 @@
               }
               </script>
             </model-viewer>
-          </p>
+            <model-viewer id="mon03" class="book-3d-model" alt="3d model of 'Monster Vol 3' by Naoki Urasawa" src="/files/library/OBJS/book/amigos3d-book-red.glb" shadow-intensity="1" camera-controls orientation="0deg 60deg 0deg" touch-action="pan-y">
+              <script>
+              {
+                let model = document.querySelector("model-viewer#mon03");
+                function onModelLoad() {
+                  loadTexture(model, "/files/library/TEX/books/mon03.png");
+                }
+                model.addEventListener("load", onModelLoad);
+              }
+              </script>
+            </model-viewer>
+            <model-viewer id="mon04" class="book-3d-model" alt="3d model of 'Monster Vol 4' by Naoki Urasawa" src="/files/library/OBJS/book/amigos3d-book-red.glb" shadow-intensity="1" camera-controls orientation="0deg 60deg 0deg" touch-action="pan-y">
+              <script>
+              {
+                let model = document.querySelector("model-viewer#mon04");
+                function onModelLoad() {
+                  loadTexture(model, "/files/library/TEX/books/mon04.png");
+                }
+                model.addEventListener("load", onModelLoad);
+              }
+              </script>
+            </model-viewer>
+            <model-viewer id="mwbp" class="book-3d-model" alt="3d model of 'Math with Bad Drawings' by Ben Orlin" src="/files/library/OBJS/book/amigos3d-book-red.glb" shadow-intensity="1" camera-controls orientation="0deg 60deg 0deg" touch-action="pan-y">
+              <script>
+              {
+                let model = document.querySelector("model-viewer#mwbp");
+                function onModelLoad() {
+                  loadTexture(model, "/files/library/TEX/books/mwbp.png");
+                }
+                model.addEventListener("load", onModelLoad);
+              }
+              </script>
+            </model-viewer>
+            <model-viewer id="shomg" class="book-3d-model" alt="3d model of 'The Secret History of Mac Gaming' by Richard Moss" src="/files/library/OBJS/book/amigos3d-book-red.glb" shadow-intensity="1" camera-controls orientation="0deg 60deg 0deg" touch-action="pan-y">
+              <script>
+              {
+                let model = document.querySelector("model-viewer#shomg");
+                function onModelLoad() {
+                  loadTexture(model, "/files/library/TEX/books/shomg.png");
+                }
+                model.addEventListener("load", onModelLoad);
+              }
+              </script>
+            </model-viewer>
+            <model-viewer id="uzumaki" class="book-3d-model" alt="3d model of 'Uzumaki' by Junji Ito" src="/files/library/OBJS/book/amigos3d-book-red.glb" shadow-intensity="1" camera-controls orientation="0deg 60deg 0deg" touch-action="pan-y">
+              <script>
+              {
+                let model = document.querySelector("model-viewer#uzumaki");
+                function onModelLoad() {
+                  loadTexture(model, "/files/library/TEX/books/uzumaki.png");
+                }
+                model.addEventListener("load", onModelLoad);
+              }
+              </script>
+            </model-viewer>
+            <model-viewer id="whalitc" class="book-3d-model" alt="3d model of 'We Have Always Lived in the Castle' by Shirley Jackson" src="/files/library/OBJS/book/amigos3d-book-red.glb" shadow-intensity="1" camera-controls orientation="0deg 60deg 0deg" touch-action="pan-y">
+              <script>
+              {
+                let model = document.querySelector("model-viewer#whalitc");
+                function onModelLoad() {
+                  loadTexture(model, "/files/library/TEX/books/whalitc.png");
+                }
+                model.addEventListener("load", onModelLoad);
+              }
+              </script>
+            </model-viewer>
+          </div>
+
           <p>
-            <small>3D book model from <a href="https://sketchfab.com/3d-models/book-red-92141799863342578fc3da5afa10c01e">Amigos3D</a> licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></small>
+            <small
+              >3D book model from <a href="https://sketchfab.com/3d-models/book-red-92141799863342578fc3da5afa10c01e">Amigos3D</a>
+              licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></small
+            >
           </p>
         </div>
       </article>
