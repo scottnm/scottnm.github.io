@@ -347,6 +347,14 @@
 </ol>]]></content>
   </entry>
   <entry>
+    <title>Virtual Library</title>
+    <link href="https://www.scottnm.com/pages/library/library.html" />
+    <id>urn:uuid:c515a3de-4ca2-4d03-af51-d32e6384b084</id>
+    <updated>2026-10-08T20:51:49.995395-07:00</updated>
+    <summary>A virtual representation of my physical library</summary>
+    <content type="html"><![CDATA[<body><h1>Virtual Library</h1><p>A virtual representation of my physical library</p></body>]]></content>
+  </entry>
+  <entry>
     <title>Writing: Power Outage</title>
     <link href="https://www.scottnm.com/pages/2026_10_03_power_outage/2026_10_03_power_outage.html" />
     <id>urn:uuid:c540a2e3-f3b0-4681-bb33-ca2179498811</id>
