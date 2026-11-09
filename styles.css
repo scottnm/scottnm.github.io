@@ -8,6 +8,7 @@
     --active-link-color-light: #ed4e76;
     --blockquote-bg-color-light: #f9f9f9;
     --blockquote-bar-color-light: #ccc;
+    --deemph-text-color-light: gray;
 
     /* Dark Theme */
     --main-bg-color-dark: #202020;
@@ -18,6 +19,7 @@
     --active-link-color-dark: #ed4e76;
     --blockquote-bg-color-dark: #303030;
     --blockquote-bar-color-dark: #404040;
+    --deemph-text-color-dark: gray;
 
     /* Select light or dark based on preference */
     --main-bg-color: light-dark(var(--main-bg-color-light), var(--main-bg-color-dark));
@@ -28,7 +30,7 @@
     --active-link-color: light-dark(var(--active-link-color-light), var(--active-link-color-dark));
     --blockquote-bg-color: light-dark(var(--blockquote-bg-color-light), var(--blockquote-bg-color-dark));
     --blockquote-bar-color: light-dark(var(--blockquote-bar-color-light), var(--blockquote-bar-color-dark));
-
+    --deemph-text-color: light-dark(var(--deemph-text-color-light), var(--deemph-text-color-dark));
 }
 
 body {
@@ -275,6 +277,11 @@ ul.unbulleted-list {
 /* Optional: remove the margin from the very last item if necessary */
 .recipe-list ul li:last-child {
     margin-bottom: 0;
+}
+
+.deemph-text {
+    font-size: 0.75em;
+    color: var(--deemph-text-color);
 }
 
 /* gmi styles */
